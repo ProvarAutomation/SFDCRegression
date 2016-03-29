@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Error_Emails__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>Comma separated list of email addresses to send error messages to for the Update Account Team Flow</inlineHelpText>
+        <label>Error Emails</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Regions__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>NOT USED YET: Comma separated list of Regions to include in Account Team Flow process</inlineHelpText>
+        <label>Regions</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Account Team Update Settings</label>
+    <pluralLabel>Account Team Update Settings</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

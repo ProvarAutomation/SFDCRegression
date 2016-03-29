@@ -72,7 +72,7 @@
       <picklistEntryIds>1315,1316,1317,1318,1319</picklistEntryIds>
     </sfField>
     <sfField createable="false" length="40" n="Priority" type="picklist" updateable="false">
-      <picklistEntryIds>1320,1321,1322</picklistEntryIds>
+      <picklistEntryIds>691,1321,692</picklistEntryIds>
     </sfField>
     <sfField createable="false" n="IsHighPriority" t="High Priority" type="_boolean" updateable="false"/>
     <sfField createable="false" length="40" n="ActivityType" t="Type" type="picklist" updateable="false">
@@ -129,7 +129,7 @@
       </referenceTos>
     </sfField>
     <sfField createable="false" length="40" n="ActivitySubtype" restrictedPicklist="true" t="Activity Subtype" type="picklist" updateable="false">
-      <picklistEntryIds>1336,1337,1338,1339</picklistEntryIds>
+      <picklistEntryIds>1332,1324,1323,1339</picklistEntryIds>
     </sfField>
     <sfField createable="false" n="Date_Completed__c" t="Date Completed" type="date" updateable="false"/>
     <sfField createable="false" length="100" n="Preview__c" summary="updated by workflow - pulls the first 97 characters of the logged activity for viewing in related list and views" t="Preview" updateable="false"/>
@@ -140,7 +140,7 @@
     <sfField calculated="true" createable="false" formula="CreatedBy.Division" length="1300" n="Assigned_Division__c" t="Assigned Division" updateable="false"/>
     <sfField createable="false" length="50" n="Activity_Type_2__c" t="Activity Type" updateable="false"/>
     <sfField createable="false" length="255" n="Activity_Type_3__c" t="Activity Type 3" type="picklist" updateable="false">
-      <picklistEntryIds>1343,1338,1344,1345,153</picklistEntryIds>
+      <picklistEntryIds>1327,1323,1326,1328,153</picklistEntryIds>
     </sfField>
     <sfField calculated="true" createable="false" formula="IF( \nActivity_Type_2__c  = &quot;Outbound Call/Fax&quot;,TODAY()-Date_Completed__c,0 )" n="Days_Since_Last_OB_Call__c" precision="18" t="Days Since Last OB Call" type="_double" updateable="false"/>
     <sfField createable="false" length="255" n="Location__c" t="Location" updateable="false"/>

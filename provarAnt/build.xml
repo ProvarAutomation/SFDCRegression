@@ -4,9 +4,9 @@
 
 <property environment="env"/>
 
-<property name="testproject.home" value="C:\Users\bjweber\ProvarProjects\SFDCRegression\Regression"/>
+<property name="testproject.home" value="C:\Users\bjweber\ProvarProjects\SFDCRegression\Regression\"/>
 
-<property name="testproject.results" value="C:\Users\bjweber\ProvarProjects\SFDCRegression\provarAnt\RegressionRunResults"/>
+<property name="testproject.results" value="C:\Users\bjweber\ProvarProjects\SFDCRegression\provarAnt\NightResults\RegressionRunResults"/>
 
 
 <target name="runtests">
@@ -23,7 +23,7 @@ resultsPath="${testproject.results}">
 <fileset dir="C:\Users\bjweber\ProvarProjects\SFDCRegression\Regression\tests\">
 <exclude name="Callable Tests\**\*.*"/>
 <exclude name="Examples\**\*.*"/>
-<exclude name-"Sprints\**\*.*"/>-->
+<exclude name="Sprints\**\*.*"/>
 <!--<include name="Account\**\*.*"/>-->
 
 

@@ -3049,7 +3049,7 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="316" title="With RelatedOrderItemList rows {Product2 = $Product3}">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="316" title="With Row">
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">JasonJohn</value>
@@ -3068,7 +3068,7 @@
                   </value>
                 </argument>
                 <argument id="locatorDescription">
-                  <value class="value" valueClass="string">With RelatedOrderItemList rows {Product2 = $Product3}</value>
+                  <value class="value" valueClass="string">With Row</value>
                 </argument>
                 <argument id="failIfNotFound">
                   <value class="value" valueClass="boolean">true</value>
@@ -3121,14 +3121,7 @@
                   </steps>
                 </clause>
               </clauses>
-              <generatedParameters>
-                <apiParam group="options" name="autoPaginate" title="Auto Paginate">
-                  <summary>Whether Show More/Next is clicked till the match condition succeeds.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-              </generatedParameters>
+              <generatedParameters/>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="319" title="UI Assert">
               <arguments>
@@ -4078,7 +4071,7 @@
                         </argument>
                       </arguments>
                       <parameterValueSources>
-                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=New+Car&amp;range=A1%3ABC21&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct3%7D" variableName="ExcelData" variableScope="Test">
+                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=New+Car&amp;range=A1%3ABC21&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo" variableName="ExcelData" variableScope="Test">
                           <cacheToken>C:/Users/jtjohn/Provar/Workspace/ProvarTesting2/Test/templates/FillData.xlsx;1438091420870</cacheToken>
                           <cachedParameters>
                             <apiParam name="RowNumber"/>

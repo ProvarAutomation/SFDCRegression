@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Geopointe Check In action.</description>
+    <height>375</height>
+    <icon>geopointe__Check_In_Icon</icon>
+    <label>Check In</label>
+    <page>geopointe__CheckIn</page>
+    <type>VisualforcePage</type>
+    <width>-100</width>
+</QuickAction>

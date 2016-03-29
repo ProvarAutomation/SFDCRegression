@@ -47,7 +47,7 @@
     <sfField length="100" n="Billing_City__c" t="Billing City"/>
     <sfField length="40" n="Billing_Phone__c" t="Billing Phone" type="phone"/>
     <sfField length="255" n="Billing_State__c" t="Billing State" type="picklist">
-      <picklistEntryIds>15231,15232,15233,15234,15235,15236,15237,15238,15239,15240,15241,15242,15243,15244,15245,15246,15247,15248,15249,15250,15251,15252,15253,15254,15255,15256,15257,15258,15259,15260,15261,15262,15263,15264,15265,15266,15267,15268,15269,15270,15271,15272,15273,15274,15275,15276,15277,15278,15279,15280,15281,15282</picklistEntryIds>
+      <picklistEntryIds>15231,15232,15233,15234,694,15236,15237,15238,15239,15240,11905,15242,15243,15244,15245,15246,15247,15248,15249,15250,15251,15252,15253,15254,15255,15256,15257,15258,15259,15260,15261,15262,15263,15264,15265,15266,15267,15268,15269,15270,15271,15272,15273,15274,15275,15276,15277,15278,15279,15280,15281,15282</picklistEntryIds>
     </sfField>
     <sfField length="150" n="Billing_Street__c" t="Billing Street"/>
     <sfField length="10" n="Billing_Zip__c" t="Billing Zip"/>
@@ -63,7 +63,7 @@
     </sfField>
     <sfField calculated="true" createable="false" formula="Dealer_Group_Account__r.SVOC_Id__c" length="1300" n="Dealer_Group_SVOC_Id__c" summary="formula field that displays the SVOC id related to the dealer in the Dealer Group Account lookup field" t="Dealer Group SVOC Id" updateable="false"/>
     <sfField length="4099" n="Dealer_Nameplates__c" precision="10" summary="select the franchises that apply to this dealer, if dealer is a Independent, select the value &quot;Independent&quot;" t="Dealer Nameplates" type="multipicklist">
-      <picklistEntryIds>15296,192,194,193,195,196,197,198,199,200,201,202,203,204,205,206,207,15297,209,210,211,213,214,215,216,217,218,219,220,221,222,223,224,225,15298,227,228,229,230,15299,232,233,234,3703,15300,236,237,238,239,240,15301,242</picklistEntryIds>
+      <picklistEntryIds>15296,192,194,193,195,196,197,198,199,200,201,202,203,204,205,206,207,2698,209,210,211,213,214,215,216,217,218,219,220,221,222,223,224,225,2699,227,228,229,230,2700,232,233,234,2701,2702,236,237,238,239,240,2705,242</picklistEntryIds>
     </sfField>
     <sfField length="255" n="Dealer_Type__c" summary="selec't the type that best represents the Dealer's status" t="Dealer Type" type="picklist">
       <picklistEntryIds>191,190</picklistEntryIds>
@@ -81,23 +81,23 @@
     <sfField n="Monthly_Sales_Volume__c" precision="18" scale="2" summary="Enter the amount that reflects the monthly volume of sales the dealer sells" t="Monthly Sales Volume" type="currency"/>
     <sfField n="New_Account_Inserted__c" summary="updated by the integration whenever a new primary or secondary is inserted from a change request" t="New Account Inserted" type="_boolean"/>
     <sfField length="255" n="New_Car_Lot_Size__c" summary="enter the value range that applies to the dealer" t="Lot Size-New" type="picklist">
-      <picklistEntryIds>659,660,661,662,663,664,665,666,667,668,669,670,671,672,673,15302</picklistEntryIds>
+      <picklistEntryIds>659,660,661,662,663,664,665,666,667,668,669,670,671,672,673,2666</picklistEntryIds>
     </sfField>
     <sfField length="150" n="New_Customer_Name__c" summary="type in the name of the customer" t="New Customer Name"/>
     <sfField length="40" n="Phone__c" summary="enter the primary phone number for the new account" t="Phone" type="phone"/>
     <sfField length="255" n="Relationship_Type__c" summary="updated by the integration when the request has been processed by the CDG Team" t="Relationship Type" type="picklist">
-      <picklistEntryIds>15303,15304</picklistEntryIds>
+      <picklistEntryIds>12985,3595</picklistEntryIds>
     </sfField>
     <sfField calculated="true" createable="false" formula="IF(TEXT(Request_Status__c) = &quot;Submitted&quot;, Today()-  DATEVALUE(CreatedDate),  DATEVALUE(Request_Complete_Date__c) - DATEVALUE(Request_Submitted_Date__c ))" n="Request_Age__c" precision="18" t="Request Age" type="_double" updateable="false"/>
     <sfField n="Request_Complete_Date__c" summary="updated by workflow when the CDG team processed the request" t="Date Request Complete" type="datetime"/>
     <sfField calculated="true" createable="false" formula="CASE( Request_Status__c , \n&quot;New&quot;, IMAGE(&quot;/servlet/servlet.ImageServer?id=015E0000002kqNV&amp;oid=00D1b0000000d5b&amp;lastMod=1386292929000&quot;, &quot;NOT SUBMITTED&quot;), \n&quot;Submitted&quot;, IMAGE(&quot;/servlet/servlet.ImageServer?id=015E0000002kqNa&amp;oid=00D1b0000000d5b&amp;lastMod=1386292959000&quot;, &quot;SUBMITTED&quot; ),\n&quot;Completed - Approved&quot;, IMAGE(&quot;/servlet/servlet.ImageServer?id=015E0000002kqNf&amp;oid=00D1b0000000d5b&amp;lastMod=1386292991000&quot;, &quot;COMPLETED&quot; ),\nNULL)" length="1300" n="Request_Information__c" summary="formula field that looks at the submit request checkbox and if the box is checked displays a visual &quot;not submitted&quot; or displays submitted" t="Request Information" updateable="false"/>
     <sfField length="100" n="Request_Instructions__c" summary="read only field that gives the user instructions regarding the change request" t="Request Instructions"/>
     <sfField length="255" n="Request_Status__c" summary="updated by workflow has the request is processed" t="Request Status" type="picklist">
-      <picklistEntryIds>1943,15305,15306,15307</picklistEntryIds>
+      <picklistEntryIds>1943,705,15306,15307</picklistEntryIds>
     </sfField>
     <sfField n="Request_Submitted_Date__c" summary="updated by workflow when the user checks the &quot;Submit Request&quot; Checkbox" t="Date Request Submitted" type="datetime"/>
     <sfField length="255" n="Request_Type__c" summary="SVOC Customer Provisioning Group may assign a Create Request to an existing account or may create a new account on a Maintain Request.  Check the Final Account or Final Account Feature for the request result." t="Request Type" type="picklist">
-      <picklistEntryIds>15308,15309,15310</picklistEntryIds>
+      <picklistEntryIds>15096,15309,15310</picklistEntryIds>
     </sfField>
     <sfField length="100" n="SVOC_Id__c" summary="For a “Create” type request this will house the value that was assigned by SVOC. For a “Maintain” type request this will be the SVOC ID of the original customer that the request relates to." t="SVOC Id"/>
     <sfField calculated="true" createable="false" formula="TEXT( Source_Account__r.SVOC_Sub_Type__c )" length="1300" n="SVOC_Sub_Type__c" summary="formula field that reads the SVOC Sub Type from the Account" t="Source Account SVOC Sub Type" updateable="false"/>
@@ -118,7 +118,7 @@
     <sfField calculated="true" createable="false" formula="Source_Account__r.Lot_Size_Used__c" length="1300" n="Source_Account_Lot_Size_Used__c" summary="formula field that reads the used car lot size from the source account" t="Source Account Lot Size - Used" updateable="false"/>
     <sfField length="100" n="Source_Account_Web_City__c" summary="if not populated from the lead, enter the city listed on the customer's website" t="Source Account Web City"/>
     <sfField length="255" n="Source_Account_Web_State__c" summary="if not populated from the lead, enter the state listed on the customer's website" t="Source Account Web State" type="picklist">
-      <picklistEntryIds>15231,15232,15233,15234,15235,15236,15237,15238,15239,15240,15241,15242,15243,15244,15245,15246,15247,15248,15249,15250,15251,15252,15253,15254,15255,15256,15257,15258,15259,15260,15261,15262,15263,15264,15265,15266,15267,15268,15269,15270,15271,15272,15273,15274,15275,15276,15277,15278,15279,15280,15281</picklistEntryIds>
+      <picklistEntryIds>15231,15232,15233,15234,694,15236,15237,15238,15239,15240,11905,15242,15243,15244,15245,15246,15247,15248,15249,15250,15251,15252,15253,15254,15255,15256,15257,15258,15259,15260,15261,15262,15263,15264,15265,15266,15267,15268,15269,15270,15271,15272,15273,15274,15275,15276,15277,15278,15279,15280,15281</picklistEntryIds>
     </sfField>
     <sfField length="150" n="Source_Account_Web_Street_Address__c" summary="if not populated from the lead, enter the street address that is listed on the customer's webiste" t="Source Account Web Street Address"/>
     <sfField length="11" n="Source_Account_Web_Zip__c" summary="if not populated from the lead, enter the zip code listed on the customer's website" t="Source Account Web Zip"/>
@@ -130,7 +130,7 @@
     </sfField>
     <sfField calculated="true" createable="false" formula="TEXT(Source_Account__r.Type)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Source_Type__c" summary="formula field that reads the standard sfdc type field from the account" t="Source Type" updateable="false"/>
     <sfField length="255" n="State__c" summary="select the state where the customer is located" t="Address State" type="picklist">
-      <picklistEntryIds>15231,15232,15233,15234,15235,15236,15237,15238,15239,15240,15241,15242,15243,15244,15245,15246,15247,15248,15249,15250,15251,15252,15253,15254,15255,15256,15257,15258,15259,15260,15261,15262,15263,15264,15265,15266,15267,15268,15269,15270,15271,15272,15273,15274,15275,15276,15277,15278,15279,15280,15281,15282</picklistEntryIds>
+      <picklistEntryIds>15231,15232,15233,15234,694,15236,15237,15238,15239,15240,11905,15242,15243,15244,15245,15246,15247,15248,15249,15250,15251,15252,15253,15254,15255,15256,15257,15258,15259,15260,15261,15262,15263,15264,15265,15266,15267,15268,15269,15270,15271,15272,15273,15274,15275,15276,15277,15278,15279,15280,15281,15282</picklistEntryIds>
     </sfField>
     <sfField length="150" n="Street_Name__c" summary="enter the street address of the customer's location" t="Address Street Name"/>
     <sfField n="Submit_Request__c" summary="check this box to submit your svoc request" t="Submit Request" type="_boolean"/>
@@ -138,7 +138,7 @@
     <sfField calculated="true" createable="false" formula="&quot;STREET&quot;&amp;&quot;:&quot;&amp; Source_Account_Lead_Billing_Street__c  &amp;&quot; &quot;&amp; &quot;CITY&quot;&amp;&quot;:&quot;&amp;  Source_Account_Lead_City__c  &amp;&quot; &quot;&amp; &quot;STATE&quot;&amp;&quot;:&quot;&amp;  Source_Account_Lead_Billing_State__c  &amp;&quot; &quot;&amp; &quot;ZIP&quot;&amp;&quot;:&quot;&amp;  Source_Account_Lead_Billing_Zip__c" length="1300" n="Unverified_Prospect_Billing_Address__c" summary="formula field that concatenates the billing info mapped into the account from the lead" t="Source Account Lead Billing Address" updateable="false"/>
     <sfField calculated="true" createable="false" formula="&quot;STREET&quot;&amp;&quot;:&quot;&amp;  Source_Account__r.Web_Address_Street__c   &amp;&quot; &quot;&amp; &quot;CITY&quot;&amp;&quot;:&quot;&amp;   Source_Account__r.Web_Address_City__c   &amp;&quot; &quot;&amp; &quot;STATE&quot;&amp;&quot;:&quot;&amp; Source_Account__r.Web_Address_State__c &amp;&quot; &quot;&amp; &quot;ZIP&quot;&amp;&quot;:&quot;&amp;   Source_Account__r.Web_Address_zipcode__c" length="1300" n="Unverified_Prospect_Web_Address__c" summary="formula field that reads the website address information and concatenates into 1 string for the email template" t="Source Account Web Address" updateable="false"/>
     <sfField length="255" n="Used_Car_Lot_Size__c" summary="select the value that applies to the Dealer" t="Lot Size-Used" type="picklist">
-      <picklistEntryIds>659,660,661,662,663,664,665,666,667,668,669,670,671,672,673,15302</picklistEntryIds>
+      <picklistEntryIds>659,660,661,662,663,664,665,666,667,668,669,670,671,672,673,2666</picklistEntryIds>
     </sfField>
     <sfField length="100" n="Web_Address_City__c" t="Web Address City"/>
     <sfField length="40" n="Web_Address_Phone__c" t="Web Address Phone" type="phone"/>
@@ -146,7 +146,7 @@
       <picklistEntryIds>640,639</picklistEntryIds>
     </sfField>
     <sfField length="255" n="Web_Address_State__c" t="Web Address State" type="picklist">
-      <picklistEntryIds>15231,15232,15233,15234,15235,15236,15237,15238,15239,15240,15241,15242,15243,15244,15245,15246,15247,15248,15249,15250,15251,15252,15253,15254,15255,15256,15257,15258,15259,15260,15261,15262,15263,15264,15265,15266,15267,15268,15269,15270,15271,15272,15273,15274,15275,15276,15277,15278,15279,15280,15281,15282</picklistEntryIds>
+      <picklistEntryIds>15231,15232,15233,15234,694,15236,15237,15238,15239,15240,11905,15242,15243,15244,15245,15246,15247,15248,15249,15250,15251,15252,15253,15254,15255,15256,15257,15258,15259,15260,15261,15262,15263,15264,15265,15266,15267,15268,15269,15270,15271,15272,15273,15274,15275,15276,15277,15278,15279,15280,15281,15282</picklistEntryIds>
     </sfField>
     <sfField length="150" n="Web_Address_Street__c" t="Web Address Street"/>
     <sfField length="10" n="Web_Address_Zipcode__c" t="Web Address Zipcode"/>

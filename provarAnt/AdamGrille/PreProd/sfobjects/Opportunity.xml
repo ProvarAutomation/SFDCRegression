@@ -15,17 +15,17 @@
     <sfField length="120" n="Name" nameField="true" required="true" summary="set by the system, please do not modify"/>
     <sfField extraTypeInfo="plaintextarea" length="32000" n="Description" type="textarea"/>
     <sfField length="40" n="StageName" required="true" t="Stage" type="picklist">
-      <picklistEntryIds>8491,8492,8493,13879,13880,13881,13882</picklistEntryIds>
+      <picklistEntryIds>8491,8492,8493,13879,13880,8547,13882</picklistEntryIds>
     </sfField>
     <sfField n="Amount" precision="18" scale="2" type="currency"/>
     <sfField n="Probability" precision="3" summary="users can override the probability during a stage" t="Probability (%)" type="percent"/>
     <sfField n="CloseDate" required="true" summary="upon creation of Opportunity the system sets the close date to 30 days from the create date by workflow - user can update the date accordingly" t="Close Date" type="date"/>
     <sfField length="40" n="Type" t="Opportunity Type" type="picklist">
-      <picklistEntryIds>13883,1292,13884,1293,13885</picklistEntryIds>
+      <picklistEntryIds>13883,1292,2755,1293,13885</picklistEntryIds>
     </sfField>
     <sfField length="255" n="NextStep" t="Next Step"/>
     <sfField length="40" n="LeadSource" t="Lead Source" type="picklist">
-      <picklistEntryIds>551,3302,552,553,554,555,556,557,558,559,560,561,562,563,564,565,566,3303,3304,567,568,569,570,571,153,3305,572,573,1891,3306,3307,574,3308,575,1993,576,577,578,579,3309</picklistEntryIds>
+      <picklistEntryIds>551,681,552,553,554,555,556,557,558,559,560,561,562,563,564,565,566,682,683,567,568,569,570,571,153,684,572,573,685,686,687,574,688,575,689,576,577,578,579,690</picklistEntryIds>
     </sfField>
     <sfField createable="false" n="IsClosed" t="Closed" type="_boolean" updateable="false"/>
     <sfField createable="false" n="IsWon" t="Won" type="_boolean" updateable="false"/>
@@ -91,7 +91,7 @@
       <picklistEntryIds>13889,299,129,130,131,132,133,134</picklistEntryIds>
     </sfField>
     <sfField controllerName="StageName" dependentPicklist="true" length="255" n="Lost_Reason__c" t="Lost Reason" type="picklist">
-      <picklistEntryIds>13890,13891,144,13892,13893,657,13894,13895,13896,643,13897,13898,13899,13885,13900</picklistEntryIds>
+      <picklistEntryIds>13890,13891,144,13892,13893,657,2689,13895,13896,643,13897,13898,13899,13885,13900</picklistEntryIds>
     </sfField>
     <sfField calculated="true" createable="false" n="Total_List_Price__c" precision="18" scale="2" summarizedField="OpportunityLineItem.List_Price_Grand_Total__c" summaryForeignKey="OpportunityLineItem.OpportunityId" summaryOperation="sum" t="Total List Price" type="currency" updateable="false"/>
     <sfField calculated="true" createable="false" formula="IF(Total_List_Price__c &gt;0,  ( Total_List_Price__c - Amount)/ Total_List_Price__c, null)" formulaTreatBlanksAs="BlankAsZero" n="Total_Discount__c" precision="18" scale="2" t="Total Discount %" type="percent" updateable="false"/>

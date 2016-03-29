@@ -6,7 +6,7 @@
 
 <property name="testproject.home" value="C:\Users\bjweber\ProvarProjects\SFDCRegression\Regression\"/>
 
-<property name="testproject.results" value="C:\Users\bjweber\ProvarProjects\SFDCRegression\provarAnt\SprintRunResults"/>
+<property name="testproject.results" value="C:\Users\bjweber\ProvarProjects\SFDCRegression\provarAnt\NightResults\SprintRunResults"/>
 
 
 <target name="runtests">

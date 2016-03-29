@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permission Set with Read Write Access to the elements of the Package</description>
+    <label>DSA Administrator V4 - unmanaged</label>
+    <userLicense>Salesforce</userLicense>
+</PermissionSet>

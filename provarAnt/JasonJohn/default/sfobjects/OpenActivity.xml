@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?><sfObject label="Open Activity" labelPlural="Open Activities" n="OpenActivity" s="" standardLabel="Open Activity" t="Open Activity">
+  <fields>
+    <sfField createable="false" length="18" n="Id" t="Activity ID" type="id" updateable="false"/>
+    <sfField createable="false" length="18" n="AccountId" relationshipName="Account" t="Account ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>Account</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" length="18" n="WhoId" relationshipName="Who" t="Name ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>Contact</string>
+        <string>Lead</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" length="18" n="WhatId" relationshipName="What" t="Related To ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>APXTConga4__Conga_Email_Staging__c</string>
+        <string>APXTConga4__Conga_Email_Template__c</string>
+        <string>ATDSA_bookshelf__Cat_Content_Junction__c</string>
+        <string>ATG_Product__c</string>
+        <string>Account</string>
+        <string>AccountTeamMember_History__c</string>
+        <string>Action_Plan__c</string>
+        <string>Asset</string>
+        <string>BU_Referrals__c</string>
+        <string>Billing_Item__c</string>
+        <string>CRMfusionDBR101__Duplicate_Warning__c</string>
+        <string>Campaign</string>
+        <string>Case</string>
+        <string>Contract</string>
+        <string>Corporate_Affairs__c</string>
+        <string>County__c</string>
+        <string>Customer_Survey__c</string>
+        <string>Digital_Audience_Analysis__c</string>
+        <string>FormPos__Former_Position__c</string>
+        <string>FulfillmentSnapshotActivities__c</string>
+        <string>FulfillmentSnapshotCases__c</string>
+        <string>FulfillmentSnapshotPOA__c</string>
+        <string>FulfillmentSnapshotProduct__c</string>
+        <string>FulfillmentSnapshotSummary__c</string>
+        <string>Opp_Product__c</string>
+        <string>Opportunity</string>
+        <string>Order</string>
+        <string>Product2</string>
+        <string>Product_Configuration__c</string>
+        <string>Quote</string>
+        <string>Rate_Card_Detail__c</string>
+        <string>SLX__Change_Control__c</string>
+        <string>SVOC_Request__c</string>
+        <string>SWOT__c</string>
+        <string>SalesIQ__Account_Movement_Request__c</string>
+        <string>SalesIQ__Position_Account__c</string>
+        <string>SalesIQ__Position__c</string>
+        <string>SalesIQ__SVOC_Request__c</string>
+        <string>SalesIQ__Territory__c</string>
+        <string>SkyEditor2__SkyEditorDummy__c</string>
+        <string>Solution</string>
+        <string>et4ae5__Triggered_Send_Execution__c</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" length="80" n="Subject" nameField="true" type="combobox" updateable="false">
+      <picklistEntryIds>1273</picklistEntryIds>
+    </sfField>
+    <sfField createable="false" n="IsTask" t="Task" type="_boolean" updateable="false"/>
+    <sfField createable="false" n="ActivityDate" t="Date" type="date" updateable="false"/>
+    <sfField createable="false" length="18" n="OwnerId" relationshipName="Owner" t="Assigned To ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" length="40" n="Status" type="picklist" updateable="false">
+      <picklistEntryIds>1274,1275,1276,1277,1278</picklistEntryIds>
+    </sfField>
+    <sfField createable="false" length="40" n="Priority" type="picklist" updateable="false">
+      <picklistEntryIds>666,1280,667</picklistEntryIds>
+    </sfField>
+    <sfField createable="false" n="IsHighPriority" t="High Priority" type="_boolean" updateable="false"/>
+    <sfField createable="false" length="40" n="ActivityType" t="Type" type="picklist" updateable="false">
+      <picklistEntryIds>1282,1283,1284,1285,1285,1286,1287,1287,127,127,1288,1289,1290,1291</picklistEntryIds>
+    </sfField>
+    <sfField createable="false" n="IsClosed" t="Closed" type="_boolean" updateable="false"/>
+    <sfField createable="false" n="IsAllDayEvent" t="All-Day Event" type="_boolean" updateable="false"/>
+    <sfField createable="false" digits="9" n="DurationInMinutes" t="Duration" type="_int" updateable="false"/>
+    <sfField createable="false" length="80" n="Location" updateable="false"/>
+    <sfField createable="false" extraTypeInfo="plaintextarea" length="32000" n="Description" t="Comments" type="textarea" updateable="false"/>
+    <sfField createable="false" n="IsDeleted" t="Deleted" type="_boolean" updateable="false"/>
+    <sfField createable="false" n="CreatedDate" t="Created Date" type="datetime" updateable="false"/>
+    <sfField createable="false" length="18" n="CreatedById" relationshipName="CreatedBy" t="Created By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" n="LastModifiedDate" t="Last Modified Date" type="datetime" updateable="false"/>
+    <sfField createable="false" length="18" n="LastModifiedById" relationshipName="LastModifiedBy" t="Last Modified By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" n="SystemModstamp" t="System Modstamp" type="datetime" updateable="false"/>
+    <sfField createable="false" digits="8" n="CallDurationInSeconds" t="Call Duration" type="_int" updateable="false"/>
+    <sfField createable="false" length="40" n="CallType" restrictedPicklist="true" t="Call Type" type="picklist" updateable="false">
+      <picklistEntryIds>1292,1293,1294</picklistEntryIds>
+    </sfField>
+    <sfField createable="false" length="255" n="CallDisposition" t="Call Result" updateable="false"/>
+    <sfField createable="false" length="255" n="CallObject" t="Call Object Identifier" updateable="false"/>
+    <sfField createable="false" n="ReminderDateTime" t="Reminder Date/Time" type="datetime" updateable="false"/>
+    <sfField createable="false" n="IsReminderSet" t="Reminder Set" type="_boolean" updateable="false"/>
+    <sfField createable="false" n="EndDateTime" t="End" type="datetime" updateable="false"/>
+    <sfField createable="false" length="18" n="ConnectionReceivedId" relationshipName="ConnectionReceived" t="Partner Network Connection ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>PartnerNetworkConnection</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" length="18" n="ConnectionSentId" relationshipName="ConnectionSent" t="Partner Network Connection ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>PartnerNetworkConnection</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" n="StartDateTime" t="Start" type="datetime" updateable="false"/>
+    <sfField createable="false" length="18" n="PrimaryWhoId" relationshipName="PrimaryWho" t="Primary Name ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>Contact</string>
+        <string>Lead</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" length="18" n="PrimaryAccountId" relationshipName="PrimaryAccount" t="Primary Account ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>Account</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" length="40" n="ActivitySubtype" restrictedPicklist="true" t="Activity Subtype" type="picklist" updateable="false">
+      <picklistEntryIds>1291,1283,1282,1298</picklistEntryIds>
+    </sfField>
+    <sfField createable="false" n="Date_Completed__c" t="Date Completed" type="date" updateable="false"/>
+    <sfField createable="false" length="100" n="Preview__c" summary="updated by workflow - pulls the first 97 characters of the logged activity for viewing in related list and views" t="Preview" updateable="false"/>
+    <sfField createable="false" length="100" n="Created_by_Role__c" summary="updated by workflow" t="Created by Role" updateable="false"/>
+    <sfField createable="false" length="255" n="Meeting_Status__c" t="Meeting Status" type="picklist" updateable="false">
+      <picklistEntryIds>1299,1300,1301,1276,115</picklistEntryIds>
+    </sfField>
+    <sfField calculated="true" createable="false" formula="CreatedBy.Division" length="1300" n="Assigned_Division__c" t="Assigned Division" updateable="false"/>
+    <sfField createable="false" length="50" n="Activity_Type_2__c" t="Activity Type" updateable="false"/>
+    <sfField createable="false" length="255" n="Activity_Type_3__c" t="Activity Type 3" type="picklist" updateable="false">
+      <picklistEntryIds>1286,1282,1285,1287,127</picklistEntryIds>
+    </sfField>
+    <sfField calculated="true" createable="false" formula="IF( \nActivity_Type_2__c  = &quot;Outbound Call/Fax&quot;,TODAY()-Date_Completed__c,0 )" n="Days_Since_Last_OB_Call__c" precision="18" t="Days Since Last OB Call" type="_double" updateable="false"/>
+    <sfField createable="false" length="255" n="Location__c" t="Location" updateable="false"/>
+    <sfField createable="false" length="4099" n="Task_Reason__c" precision="10" summary="Select as many Action Plan Task Reasons that apply" t="Task Reason" type="multipicklist" updateable="false">
+      <picklistEntryIds>1305,1306,1307,1308,1309,1310,1311,1312,1313,1314,1315,1316,1317,1318,1319,1320,1321,1322,1323,1324,1325,1326,1327,1328,1329,1330,1331,1332,1333,1334,1335,1336</picklistEntryIds>
+    </sfField>
+    <sfField createable="false" length="255" n="AES_SFConnector__AgentType__c" t="AgentType" updateable="false"/>
+    <sfField createable="false" length="255" n="AES_SFConnector__CallReference__c" t="CallReference" type="url" updateable="false"/>
+    <sfField createable="false" length="40" n="AES_SFConnector__Called__c" t="Called" type="phone" updateable="false"/>
+    <sfField createable="false" length="40" n="AES_SFConnector__Caller__c" t="Caller" type="phone" updateable="false"/>
+    <sfField createable="false" length="20" n="AES_SFConnector__UCID__c" t="UCID" updateable="false"/>
+    <sfField createable="false" length="96" n="AES_SFConnector__UUI__c" t="UUI" updateable="false"/>
+    <sfField createable="false" n="Task_Completed_Date__c" t="Task Completed Date" type="datetime" updateable="false"/>
+    <sfField createable="false" extraTypeInfo="plaintextarea" length="255" n="RCD_Geography_Text_del__c" t="RCD Geography Text" type="textarea" updateable="false"/>
+  </fields>
+  <childRelationships/>
+  <recordTypes/>
+  <standardActions>
+    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
+    <sfActionLink modes="Lead OpenActivities" n="task" t="New Task" target="sf:ui:target?object=Task&amp;action=New"/>
+    <sfActionLink modes="Lead OpenActivities" n="event" t="New Event" target="sf:ui:target?object=OpenActivity&amp;action=new&amp;mapping=screenmappings/OpenActivityEvent.screenmapping"/>
+    <sfActionLink modes="Lead OpenActivities" n="newproposemeeting" t="New Meeting Request"/>
+    <sfActionLink n="new" t="New"/>
+    <sfActionLink locator="{repeatingGroupRows}[{rowLocator}]/td[contains(@class, 'actionColumn')]/a[contains(@href, '/e?retURL=')]" modes="OpenActivities" n="Edit" requiresRow="true"/>
+    <sfActionLink locator="{repeatingGroupRows}[{rowLocator}]/td[contains(@class, 'actionColumn')]/a[contains(@href, '/e?close=1')]" modes="OpenActivities" n="cls" requiresRow="true" t="Close"/>
+  </standardActions>
+  <weblinks/>
+</sfObject>

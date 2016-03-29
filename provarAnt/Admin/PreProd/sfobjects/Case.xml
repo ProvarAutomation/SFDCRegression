@@ -32,11 +32,11 @@
       <picklistEntryIds>1949,1950,657</picklistEntryIds>
     </sfField>
     <sfField length="40" n="Origin" t="Case Origin" type="picklist">
-      <picklistEntryIds>1951,1952,1953,1954,1955,1956,1957,1958,1959,1960,1961,1962,1963,1964,1965,1966,1967,1968,1337,1969,1970,1871,1971,1333,1972,1973,1974,1975,1976,1977,1978,1979,570,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994</picklistEntryIds>
+      <picklistEntryIds>1951,1952,1953,1954,1955,1956,1957,1958,1959,1960,1961,1962,1963,1964,1965,1966,1967,1968,1324,1969,1970,817,1971,1333,1972,1973,1974,1975,1976,1977,1978,1979,570,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,689,1994</picklistEntryIds>
     </sfField>
     <sfField length="255" n="Subject"/>
     <sfField length="40" n="Priority" type="picklist">
-      <picklistEntryIds>1995,1996,1320,1997,1998,1999,2000,2001</picklistEntryIds>
+      <picklistEntryIds>1995,676,691,1997,1998,1999,2000,2001</picklistEntryIds>
     </sfField>
     <sfField extraTypeInfo="plaintextarea" length="32000" n="Description" type="textarea"/>
     <sfField createable="false" n="IsClosed" t="Closed" type="_boolean" updateable="false"/>
@@ -78,7 +78,7 @@
       <picklistEntryIds>1307,2002,2003,2004,2005,2006,2007,2008,1916,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026,2027,1959,2028,2029,2030,2031,2032,2033,2034,2035,2036,2037,2038,2039,2040,2041,2042,2043,2044,2045,2046,2047,2048,2049,2050,2051,2052,2053,2054,2055,2056,2057,2058,2059,2060,2061,2062,2063,2064,2065,2066,2067,2068,2069,2070,2071,2072,2073,623,2074,1227,2075,2076,153,2077,2078,2079,2080,2081,2082,2083,2084,2085,2086,2087,2088,2089,2090,2091,2092,2093,2094,2095,2096,2097,2098,2099,2100,2101,2102,2103,2104,2105,2106</picklistEntryIds>
     </sfField>
     <sfField controllerName="ATC_Case_Reason__c" dependentPicklist="true" length="255" n="ATC_Sub_Reason__c" t="ATC Sub Reason" type="picklist">
-      <picklistEntryIds>147,2107,2108,2007,2109,2110,2111,2112,2113,2114,2009,2115,2116,2117,2118,2119,2120,2121,148,2122,2123,2124,2125,2126,2127,2128,2129,2130,2131,2132,2133,2134,2135,2048,2136,2137,2138,2139,2140,2141,2142,2143,2144,2145,2146,2147,2148,2149,2150,2151,2152,2153,2154,2155,2156,2157,2158,2159,2160,2161,2162,2163,2164,2165,2166,2167,2168,2169,2170,2171,1373,2172,1374,2173,2174,2175,2176,2177,2178,2179,2180,1913,2181,2182,2183,2184,2185,2186,1950,2187,2188,2189,2190,2191,2192,2103,2193</picklistEntryIds>
+      <picklistEntryIds>147,2107,2108,2007,2109,2110,2111,2112,2113,2114,2009,2115,2116,2117,2118,2119,2120,2121,148,2122,2123,2124,2125,2126,2127,2128,2129,2130,2131,2132,2133,2134,2135,2048,723,2137,2138,2139,2140,2141,2142,2143,2144,2145,2146,2147,2148,2149,2150,2151,2152,2153,2154,2155,2156,2157,2158,2159,2160,2161,2162,2163,2164,2165,2166,2167,2168,2169,2170,2171,1373,2172,1374,2173,2174,2175,2176,2177,2178,2179,2180,1913,2181,2182,2183,2184,2185,2186,1950,2187,2188,2189,2190,2191,2192,2103,2193</picklistEntryIds>
     </sfField>
     <sfField length="255" n="Approval_Detail_URL__c" t="Approval Detail URL" type="url"/>
     <sfField extraTypeInfo="plaintextarea" length="255" n="Approval_Detail__c" t="Approval Detail" type="textarea"/>
@@ -96,7 +96,7 @@
       </referenceTos>
     </sfField>
     <sfField length="255" n="ATC_One_and_Done__c" t="One and Done" type="picklist">
-      <picklistEntryIds>639,1875</picklistEntryIds>
+      <picklistEntryIds>639,704</picklistEntryIds>
     </sfField>
     <sfField length="18" n="ATC_Product__c" relationshipLabel="Cases" relationshipName="ATC_Product__r" summary="ATC Product related to this issue." t="Product" type="reference">
       <referenceTos>
@@ -136,7 +136,7 @@
     </sfField>
     <sfField calculated="true" createable="false" formula="Contract__r.Name" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Contract_Name__c" t="Contract Name" updateable="false"/>
     <sfField length="255" n="Contract_Placed_on_Hold__c" t="Contract Placed on Hold" type="picklist">
-      <picklistEntryIds>1875,639</picklistEntryIds>
+      <picklistEntryIds>704,639</picklistEntryIds>
     </sfField>
     <sfField length="255" n="Contract_Rejected__c" t="Contract Rejected" type="picklist">
       <picklistEntryIds>640,639</picklistEntryIds>
@@ -165,7 +165,7 @@
     </sfField>
     <sfField calculated="true" createable="false" formula="Contract__r.Delivery_Date__c" formulaTreatBlanksAs="BlankAsZero" n="Delivery_Date__c" t="APFD Date" type="date" updateable="false"/>
     <sfField length="255" n="Duplicate_Contract__c" t="Duplicate Contract" type="picklist">
-      <picklistEntryIds>1875,639</picklistEntryIds>
+      <picklistEntryIds>704,639</picklistEntryIds>
     </sfField>
     <sfField length="255" n="ESO_Contract_Name__c" t="ESO Contract Name"/>
     <sfField extraTypeInfo="plaintextarea" length="255" n="Order_Entry_QF_Error_Comments__c" t="Order Entry QF Error Comments" type="textarea"/>
@@ -187,7 +187,7 @@
       <picklistEntryIds>2526,1407</picklistEntryIds>
     </sfField>
     <sfField length="255" n="New_Creative_Brief__c" t="New Creative Brief" type="picklist">
-      <picklistEntryIds>1875,639</picklistEntryIds>
+      <picklistEntryIds>704,639</picklistEntryIds>
     </sfField>
     <sfField n="Number_of_Extensions__c" precision="2" t="Number of Extensions" type="_double"/>
     <sfField extraTypeInfo="plaintextarea" length="255" n="Order_Entry_Fail_Error_Comments__c" t="Order Entry Fail Error Comments" type="textarea"/>
@@ -267,7 +267,7 @@
       <picklistEntryIds>2652,1317,2653,2654</picklistEntryIds>
     </sfField>
     <sfField length="255" n="Cloned_KBB_Case__c" summary="For KBB Support Use Only - default value is NO until case is cloned" t="Cloned KBB Case" type="picklist">
-      <picklistEntryIds>1875,639</picklistEntryIds>
+      <picklistEntryIds>704,639</picklistEntryIds>
     </sfField>
     <sfField length="80" n="Case_Final_Owner__c" notVisibleToMetadataUser="true" summary="Read-only field populated by workflow that indicates who the owner of the case was at the time of case closure (FIRST case closure only)." t="Case Final Owner"/>
     <sfField formula="if (($User.Id = CreatedById &amp;&amp; OwnerId !=$User.Id) ,&quot;Yes&quot;,&quot;No&quot;)" n="My_case__c" notVisibleToMetadataUser="true" t="My case?"/>

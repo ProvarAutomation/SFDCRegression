@@ -4368,6 +4368,9 @@
               </generatedParameters>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiHandleAlert" name="UiHandleAlert" testItemId="774" title="Handle UI Alerts">
+              <tags>
+                <string>disabled</string>
+              </tags>
               <arguments>
                 <argument id="alerts">
                   <value class="valueList" mutable="Mutable">

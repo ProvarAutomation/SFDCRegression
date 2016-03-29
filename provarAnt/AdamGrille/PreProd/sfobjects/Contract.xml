@@ -99,7 +99,7 @@
     <sfField length="50" n="ATC_Dynamics_Contract_ID__c" summary="MS Dynamics Contract ID" t="ATC Dynamics Contract ID"/>
     <sfField length="200" n="ATC_Package_Name__c" t="Package Name"/>
     <sfField length="255" n="ATC_Priority_Code__c" t="Priority Code" type="picklist">
-      <picklistEntryIds>3788,1320</picklistEntryIds>
+      <picklistEntryIds>3788,691</picklistEntryIds>
     </sfField>
     <sfField length="100" n="ATC_Sales_Order_Category__c" t="Sales Order Category"/>
     <sfField length="75" n="ATC_BPM_Process_Instance_ID__c" summary="Unique id for ATC contracts across all systems (webMethods, Sterling)" t="ATC BPM Process Instance ID"/>
@@ -119,7 +119,7 @@
       </referenceTos>
     </sfField>
     <sfField length="255" n="Co_Op__c" t="Co-Op" type="picklist">
-      <picklistEntryIds>1875,639</picklistEntryIds>
+      <picklistEntryIds>704,639</picklistEntryIds>
     </sfField>
     <sfField length="30" n="DMA__c" t="DMA"/>
     <sfField n="DMD__c" t="DMD" type="_boolean"/>

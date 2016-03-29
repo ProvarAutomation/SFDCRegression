@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This permission set is used for those people that need access to the custom mass account team reassignment functionality.</description>
+    <label>Mass Account Team Reassignment</label>
+    <userLicense>Salesforce</userLicense>
+</PermissionSet>
