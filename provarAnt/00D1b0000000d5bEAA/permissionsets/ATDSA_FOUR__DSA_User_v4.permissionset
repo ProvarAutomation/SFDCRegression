@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
-    <description>Permission Set That allows Read Access to the Configs.</description>
-    <label>DSA_User_v4</label>
-    <userLicense>Salesforce</userLicense>
-</PermissionSet>

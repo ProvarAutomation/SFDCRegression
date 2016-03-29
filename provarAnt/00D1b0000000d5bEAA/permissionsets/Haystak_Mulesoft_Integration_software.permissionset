@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
-    <description>This permission set has complete permission on Quick view objects and is used for integration id</description>
-    <label>Haystak_Mulesoft Integration_software</label>
-    <userLicense>Salesforce</userLicense>
-</PermissionSet>

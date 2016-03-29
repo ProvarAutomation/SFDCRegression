@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<HomePageComponent xmlns="http://soap.sforce.com/2006/04/metadata">
-    <body>&lt;a href=&quot;https://account.walkme.com/ExtensionDownload/downloadPage.html?guid=f46be2bb4cb74c8f876b6e1b23b765b8&amp;amp;customer=SA-CoxAutoMediaCore&amp;amp;profile=Production&quot; target=&quot;_blank&quot;&gt;Click to Install the WalkMe Browser Extension&lt;/a&gt;</body>
-    <pageComponentType>htmlArea</pageComponentType>
-    <width>narrow</width>
-</HomePageComponent>

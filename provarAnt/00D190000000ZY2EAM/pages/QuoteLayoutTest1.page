@@ -1,0 +1,274 @@
+<apex:page standardcontroller="Quote">
+<apex:messages />
+	<apex:sectionheader title="{!$ObjectType.Quote.label} Detail" subtitle="{!Quote.Name}"/>
+	<chatter:feedwithfollowers entityId="{!Quote.Id}"/>
+	<apex:form >
+		<apex:pageblock mode="maindetail" title="{!$ObjectType.Quote.label} Detail">
+			<apex:pageblockbuttons >
+				<apex:commandbutton value="Edit" action="{!Edit}"/>
+				<apex:commandbutton value="Delete" action="{!Delete}"/>
+				<!-- *************** Uncomment as needed LAYOUT PAGE :: http://WWW.CLERISOFT.COM (2008-2014) *************** -->
+					<!-- <apex:commandbutton value="Include Offline" action="{!URLFOR($Action.Quote.IncludeOffline,Quote.id)}"/> -->
+					<!-- <apex:commandbutton value="Clone" action="{!URLFOR($Action.Quote.Clone,Quote.id)}"/> -->
+					<!-- <apex:commandbutton value="Convert" action="{!URLFOR($Action.Quote.Convert,Quote.id)}"/> -->
+					<!-- <apex:commandbutton value="Find Duplicates" action="{!URLFOR($Action.Quote.FindDup,Quote.id)}"/> -->
+					<!-- <apex:commandbutton value="Request Update" action="{!URLFOR($Action.Quote.RequestUpdate,Quote.id)}"/> -->
+					<!-- <apex:commandbutton value="Advanced Setup" action="{!URLFOR($Action.Quote.AdvancedSetup,Quote.id)}"/> -->
+					<!-- <apex:commandbutton value="Manage Members" action="{!URLFOR($Action.Quote.ManageMembers,Quote.id)}"/> -->
+					<!-- <apex:commandbutton value="Close Case" action="{!URLFOR($Action.Quote.CloseCase,Quote.id)}"/> -->
+				<!-- *************** Uncomment as needed LAYOUT PAGE :: http://WWW.CLERISOFT.COM (2008-2014) *************** -->
+			</apex:pageblockbuttons>
+
+			<!-- **********   [Record Type : Quote Not Synced ]   **********  -->
+			<apex:outputpanel rendered="{!OR(ISNULL(Quote.RecordTypeId),CASESAFEID(Quote.RecordTypeId)='012190000008hB3AAI')}">
+				<apex:pageblocksection title="Quote Information" showheader="false" collapsible="false" columns="2">
+					<apex:outputfield value="{!Quote.QuoteNumber}"/>
+					<apex:outputfield value="{!Quote.ExpirationDate}"/>
+					<apex:outputfield value="{!Quote.Name}"/>
+					<apex:outputfield value="{!Quote.IsSyncing}"/>
+					<apex:outputfield value="{!Quote.OpportunityId}"/>
+					<apex:outputfield value="{!Quote.Status}"/>
+					<apex:pageblocksectionitem />
+					<apex:outputfield value="{!Quote.Description}"/>
+				</apex:pageblocksection>
+				<apex:pageblocksection title="Totals" showheader="true" collapsible="true" columns="2">
+					<apex:outputfield value="{!Quote.Total_Retail__c}"/>
+					<apex:outputfield value="{!Quote.Tax}"/>
+					<apex:outputfield value="{!Quote.TotalPrice}"/>
+					<apex:outputfield value="{!Quote.ShippingHandling}"/>
+					<apex:pageblocksectionitem />
+					<apex:outputfield value="{!Quote.GrandTotal}"/>
+				</apex:pageblocksection>
+				<apex:pageblocksection title="Prepared For" showheader="true" collapsible="true" columns="2">
+					<apex:outputfield value="{!Quote.ContactId}"/>
+					<apex:outputfield value="{!Quote.Phone}"/>
+					<apex:outputfield value="{!Quote.Email}"/>
+					<apex:outputfield value="{!Quote.Fax}"/>
+				</apex:pageblocksection>
+				<apex:pageblocksection title="Address Information" showheader="true" collapsible="true" columns="2">
+					<apex:outputfield value="{!Quote.BillingName}"/>
+					<apex:outputfield value="{!Quote.ShippingName}"/>
+					<apex:pageblocksectionitem >
+						<apex:outputlabel value="Bill To"/>
+						<apex:outputpanel >
+							<apex:outputfield value="{!Quote.BillingStreet}"/>&nbsp;
+
+							<apex:outputfield value="{!Quote.BillingCity}"/>&nbsp;,&nbsp; 
+							<apex:outputfield value="{!Quote.BillingState}"/>&nbsp; 
+							<apex:outputfield value="{!Quote.BillingPostalCode}"/>&nbsp;
+
+							<apex:outputfield value="{!Quote.BillingCountry}"/>
+						</apex:outputpanel>
+					</apex:pageblocksectionitem>
+					<apex:pageblocksectionitem >
+						<apex:outputlabel value="Ship To"/>
+						<apex:outputpanel >
+							<apex:outputfield value="{!Quote.ShippingStreet}"/>&nbsp;
+
+							<apex:outputfield value="{!Quote.ShippingCity}"/>&nbsp;,&nbsp; 
+							<apex:outputfield value="{!Quote.ShippingState}"/>&nbsp; 
+							<apex:outputfield value="{!Quote.ShippingPostalCode}"/>&nbsp;
+
+							<apex:outputfield value="{!Quote.ShippingCountry}"/>
+						</apex:outputpanel>
+					</apex:pageblocksectionitem>
+				</apex:pageblocksection>
+				<apex:pageblocksection title="System Information" showheader="true" collapsible="true" columns="2">
+					<apex:pageblocksectionitem >
+						<apex:outputlabel value="Created By"/>
+						<apex:outputpanel >
+							<apex:outputfield value="{!Quote.CreatedById}"/>&nbsp;, 
+							<apex:outputfield value="{!Quote.CreatedDate}"/>
+						</apex:outputpanel>
+					</apex:pageblocksectionitem>
+					<apex:pageblocksectionitem >
+						<apex:outputlabel value="Last Modified By"/>
+						<apex:outputpanel >
+							<apex:outputfield value="{!Quote.LastModifiedById}"/>&nbsp;, 
+							<apex:outputfield value="{!Quote.LastModifiedDate}"/>
+						</apex:outputpanel>
+					</apex:pageblocksectionitem>
+				</apex:pageblocksection>
+			</apex:outputpanel>
+
+			<!-- **********   [Record Type : Quote Synced ]   **********  -->
+			<apex:outputpanel rendered="{!CASESAFEID(Quote.RecordTypeId)='012190000008hAeAAI'}">
+				<apex:pageblocksection title="Quote Information" showheader="false" collapsible="false" columns="2">
+					<apex:outputfield value="{!Quote.QuoteNumber}"/>
+					<apex:outputfield value="{!Quote.ExpirationDate}"/>
+					<apex:outputfield value="{!Quote.Name}"/>
+					<apex:outputfield value="{!Quote.IsSyncing}"/>
+					<apex:outputfield value="{!Quote.OpportunityId}"/>
+					<apex:outputfield value="{!Quote.Status}"/>
+					<apex:pageblocksectionitem />
+					<apex:outputfield value="{!Quote.Description}"/>
+					<apex:pageblocksectionitem />
+					<apex:outputfield value="{!Quote.RecordTypeId}"/>
+				</apex:pageblocksection>
+				<apex:pageblocksection title="Totals" showheader="true" collapsible="true" columns="2">
+					<apex:outputfield value="{!Quote.Total_Retail__c}"/>
+					<apex:outputfield value="{!Quote.Tax}"/>
+					<apex:outputfield value="{!Quote.TotalPrice}"/>
+					<apex:outputfield value="{!Quote.ShippingHandling}"/>
+					<apex:pageblocksectionitem />
+					<apex:outputfield value="{!Quote.GrandTotal}"/>
+				</apex:pageblocksection>
+				<apex:pageblocksection title="Prepared For" showheader="true" collapsible="true" columns="2">
+					<apex:outputfield value="{!Quote.ContactId}"/>
+					<apex:outputfield value="{!Quote.Phone}"/>
+					<apex:outputfield value="{!Quote.Email}"/>
+					<apex:outputfield value="{!Quote.Fax}"/>
+				</apex:pageblocksection>
+				<apex:pageblocksection title="Address Information" showheader="true" collapsible="true" columns="2">
+					<apex:outputfield value="{!Quote.BillingName}"/>
+					<apex:outputfield value="{!Quote.ShippingName}"/>
+					<apex:pageblocksectionitem >
+						<apex:outputlabel value="Bill To"/>
+						<apex:outputpanel >
+							<apex:outputfield value="{!Quote.BillingStreet}"/>&nbsp;
+
+							<apex:outputfield value="{!Quote.BillingCity}"/>&nbsp;,&nbsp; 
+							<apex:outputfield value="{!Quote.BillingState}"/>&nbsp; 
+							<apex:outputfield value="{!Quote.BillingPostalCode}"/>&nbsp;
+
+							<apex:outputfield value="{!Quote.BillingCountry}"/>
+						</apex:outputpanel>
+					</apex:pageblocksectionitem>
+					<apex:pageblocksectionitem >
+						<apex:outputlabel value="Ship To"/>
+						<apex:outputpanel >
+							<apex:outputfield value="{!Quote.ShippingStreet}"/>&nbsp;
+
+							<apex:outputfield value="{!Quote.ShippingCity}"/>&nbsp;,&nbsp; 
+							<apex:outputfield value="{!Quote.ShippingState}"/>&nbsp; 
+							<apex:outputfield value="{!Quote.ShippingPostalCode}"/>&nbsp;
+
+							<apex:outputfield value="{!Quote.ShippingCountry}"/>
+						</apex:outputpanel>
+					</apex:pageblocksectionitem>
+				</apex:pageblocksection>
+				<apex:pageblocksection title="System Information" showheader="true" collapsible="true" columns="2">
+					<apex:pageblocksectionitem >
+						<apex:outputlabel value="Created By"/>
+						<apex:outputpanel >
+							<apex:outputfield value="{!Quote.CreatedById}"/>&nbsp;, 
+							<apex:outputfield value="{!Quote.CreatedDate}"/>
+						</apex:outputpanel>
+					</apex:pageblocksectionitem>
+					<apex:pageblocksectionitem >
+						<apex:outputlabel value="Last Modified By"/>
+						<apex:outputpanel >
+							<apex:outputfield value="{!Quote.LastModifiedById}"/>&nbsp;, 
+							<apex:outputfield value="{!Quote.LastModifiedDate}"/>
+						</apex:outputpanel>
+					</apex:pageblocksectionitem>
+				</apex:pageblocksection>
+			</apex:outputpanel>
+
+			<!-- **********   [Record Type : Master ]   **********  -->
+			<apex:outputpanel rendered="{!CASESAFEID(Quote.RecordTypeId)='012000000000000AAA'}">
+				<apex:pageblocksection title="Quote Information" showheader="false" collapsible="false" columns="2">
+					<apex:outputfield value="{!Quote.QuoteNumber}"/>
+					<apex:outputfield value="{!Quote.ExpirationDate}"/>
+					<apex:outputfield value="{!Quote.Name}"/>
+					<apex:outputfield value="{!Quote.IsSyncing}"/>
+					<apex:outputfield value="{!Quote.OpportunityId}"/>
+					<apex:outputfield value="{!Quote.Status}"/>
+					<apex:pageblocksectionitem />
+					<apex:outputfield value="{!Quote.Description}"/>
+				</apex:pageblocksection>
+				<apex:pageblocksection title="Totals" showheader="true" collapsible="true" columns="2">
+					<apex:outputfield value="{!Quote.Total_Retail__c}"/>
+					<apex:outputfield value="{!Quote.Tax}"/>
+					<apex:outputfield value="{!Quote.TotalPrice}"/>
+					<apex:outputfield value="{!Quote.ShippingHandling}"/>
+					<apex:pageblocksectionitem />
+					<apex:outputfield value="{!Quote.GrandTotal}"/>
+				</apex:pageblocksection>
+				<apex:pageblocksection title="Prepared For" showheader="true" collapsible="true" columns="2">
+					<apex:outputfield value="{!Quote.ContactId}"/>
+					<apex:outputfield value="{!Quote.Phone}"/>
+					<apex:outputfield value="{!Quote.Email}"/>
+					<apex:outputfield value="{!Quote.Fax}"/>
+				</apex:pageblocksection>
+				<apex:pageblocksection title="Address Information" showheader="true" collapsible="true" columns="2">
+					<apex:outputfield value="{!Quote.BillingName}"/>
+					<apex:outputfield value="{!Quote.ShippingName}"/>
+					<apex:pageblocksectionitem >
+						<apex:outputlabel value="Bill To"/>
+						<apex:outputpanel >
+							<apex:outputfield value="{!Quote.BillingStreet}"/>&nbsp;
+
+							<apex:outputfield value="{!Quote.BillingCity}"/>&nbsp;,&nbsp; 
+							<apex:outputfield value="{!Quote.BillingState}"/>&nbsp; 
+							<apex:outputfield value="{!Quote.BillingPostalCode}"/>&nbsp;
+
+							<apex:outputfield value="{!Quote.BillingCountry}"/>
+						</apex:outputpanel>
+					</apex:pageblocksectionitem>
+					<apex:pageblocksectionitem >
+						<apex:outputlabel value="Ship To"/>
+						<apex:outputpanel >
+							<apex:outputfield value="{!Quote.ShippingStreet}"/>&nbsp;
+
+							<apex:outputfield value="{!Quote.ShippingCity}"/>&nbsp;,&nbsp; 
+							<apex:outputfield value="{!Quote.ShippingState}"/>&nbsp; 
+							<apex:outputfield value="{!Quote.ShippingPostalCode}"/>&nbsp;
+
+							<apex:outputfield value="{!Quote.ShippingCountry}"/>
+						</apex:outputpanel>
+					</apex:pageblocksectionitem>
+				</apex:pageblocksection>
+				<apex:pageblocksection title="System Information" showheader="true" collapsible="true" columns="2">
+					<apex:pageblocksectionitem >
+						<apex:outputlabel value="Created By"/>
+						<apex:outputpanel >
+							<apex:outputfield value="{!Quote.CreatedById}"/>&nbsp;, 
+							<apex:outputfield value="{!Quote.CreatedDate}"/>
+						</apex:outputpanel>
+					</apex:pageblocksectionitem>
+					<apex:pageblocksectionitem >
+						<apex:outputlabel value="Last Modified By"/>
+						<apex:outputpanel >
+							<apex:outputfield value="{!Quote.LastModifiedById}"/>&nbsp;, 
+							<apex:outputfield value="{!Quote.LastModifiedDate}"/>
+						</apex:outputpanel>
+					</apex:pageblocksectionitem>
+				</apex:pageblocksection>
+			</apex:outputpanel>
+		</apex:pageblock>
+	</apex:form>
+
+	<!-- **********   [Related Lists for Record Type : Quote Not Synced ]   **********  -->
+	<apex:outputpanel rendered="{!OR(ISNULL(Quote.RecordTypeId),CASESAFEID(Quote.RecordTypeId)='012190000008hB3AAI')}">
+		<apex:relatedlist list="Orders" title="Orders"/>
+		<apex:relatedlist list="QuoteLineItems" title="Quote Line Items"/>
+		<apex:relatedlist list="QuoteDocuments" title="Quote PDFs"/>
+		<apex:relatedlist list="OpenActivities" title="Open Activities"/>
+		<apex:relatedlist list="ActivityHistories" title="Activity History"/>
+		<apex:relatedlist list="CombinedAttachments" title="Notes & Attachments"/>
+	</apex:outputpanel>
+
+	<!-- **********   [Related Lists for Record Type : Quote Synced ]   **********  -->
+	<apex:outputpanel rendered="{!CASESAFEID(Quote.RecordTypeId)='012190000008hAeAAI'}">
+		<apex:relatedlist list="Orders" title="Orders"/>
+		<apex:relatedlist list="QuoteLineItems" title="Quote Line Items"/>
+		<apex:relatedlist list="QuoteDocuments" title="Quote PDFs"/>
+		<apex:relatedlist list="OpenActivities" title="Open Activities"/>
+		<apex:relatedlist list="ActivityHistories" title="Activity History"/>
+		<apex:relatedlist list="CombinedAttachments" title="Notes & Attachments"/>
+	</apex:outputpanel>
+
+	<!-- **********   [Related Lists for Record Type : Master ]   **********  -->
+	<apex:outputpanel rendered="{!CASESAFEID(Quote.RecordTypeId)='012000000000000AAA'}">
+		<apex:relatedlist list="Orders" title="Orders"/>
+		<apex:relatedlist list="QuoteLineItems" title="Quote Line Items"/>
+		<apex:relatedlist list="QuoteDocuments" title="Quote PDFs"/>
+		<apex:relatedlist list="OpenActivities" title="Open Activities"/>
+		<apex:relatedlist list="ActivityHistories" title="Activity History"/>
+		<apex:relatedlist list="CombinedAttachments" title="Notes & Attachments"/>
+	</apex:outputpanel>
+	<center><br/>
+		<i style="font-size:10px;color:#aaa;">Generated By LAYOUT PAGE <a href="http://www.clerisoft.com" target="_blank">[http://www.clerisoft.com]</a> (2008-2014) : Wed Feb 10 2016 10:15:37 GMT-0500 (Eastern Standard Time)</i>
+	</center><br/>
+</apex:page>

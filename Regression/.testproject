@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testProject selectedBrowserConfigurationName="Full Screen" selectedEnvironment="PreProd" selectedWebBrowserType="Chrome">
+<testProject selectedBrowserConfigurationName="Full Screen" selectedEnvironment="Quoting" selectedWebBrowserType="Chrome">
   <title>/Regression/.testproject</title>
   <configPath>config</configPath>
   <testsPath>tests</testsPath>
@@ -16,6 +16,9 @@
     </environment>
     <environment name="Quoting">
       <summary>Salesforce Pricing Environment</summary>
+    </environment>
+    <environment name="qUAT">
+      <summary>SalesForce qUAT</summary>
     </environment>
   </environments>
   <variables>
@@ -51,6 +54,7 @@
             <connectionUrl envName="QA" secureStorageNodeId="5ed7d772-11fb-4964-be1a-a40e641a66fe" url="sf:user=provar.tester@coxauto.com.qa;password={password};securityToken={securityToken};environment=SANDBOX"/>
             <connectionUrl envName="PreProd" secureStorageNodeId="cb695e41-0284-4116-90ce-182ff8a37ef4" url="sf:user=provar.tester@autotrader.com.preprod;password={password};securityToken={securityToken};environment=SANDBOX"/>
             <connectionUrl envName="Quoting" secureStorageNodeId="535e0277-3a98-44ea-af13-a2c834d4c311" url="sf:user=provar.tester@coxauto.com.quoting;password={password};environment=SANDBOX;userLoginUrl=https://atgdealer--preprod.cs25.my.salesforce.com"/>
+            <connectionUrl envName="qUAT" secureStorageNodeId="b6cc7348-a3d4-4566-8fb6-75f61bf1edeb" url="sf:user=provar.tester@coxauto.com.quat;password={password};environment=SANDBOX;userLoginUrl=https://atgdealer--quoting.cs24.my.salesforce.com"/>
           </connectionUrls>
         </connection>
         <connection name="ServiceTestUser">
@@ -141,6 +145,22 @@
             <connectionUrl envName="QA" url="sf:user=ed.merrick@autotrader.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="PreProd" url="sf:user=ed.merrick@autotrader.com.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="Quoting" url="sf:user=ed.merrick@autotrader.com.quoting;environment=PROD_DEV;logonAsConnection=Admin"/>
+          </connectionUrls>
+        </connection>
+        <connection name="JasonJohn">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl url="sf:user=jason.john@autotradergroup.com.quoting;environment=PROD_DEV;logonAsConnection=Admin"/>
+          </connectionUrls>
+        </connection>
+      </connections>
+    </connectionClass>
+    <connectionClass name="google">
+      <connections>
+        <connection name="Google">
+          <summary>Google</summary>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="54461570-6689-4a66-ad85-1bf2ba796123" url="google:user=autotradertestuser@gmail.com;accessToken={accessToken};refreshToken={refreshToken};expiry=1459272722000;proxyHost=;proxyUser="/>
           </connectionUrls>
         </connection>
       </connections>

@@ -23,7 +23,7 @@ resultsPath="${testproject.results}">
 <fileset dir="C:\Users\bjweber\ProvarProjects\SFDCRegression\Regression\tests\">
 <exclude name="Callable Tests\**\*.*"/>
 <exclude name="Examples\**\*.*"/>
-<!--<exclude name-"Sprint 6 Pricing Tests\**\*.*"/>-->
+<exclude name-"Sprints\**\*.*"/>-->
 <!--<include name="Account\**\*.*"/>-->
 
 
