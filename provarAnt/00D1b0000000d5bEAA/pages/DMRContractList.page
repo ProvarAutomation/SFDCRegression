@@ -1,0 +1,45 @@
+<apex:page controller="DMRContractWrapperController">
+
+<apex:pageMessages />
+    <apex:form >
+        <apex:pageBlock title="Related Contracts">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Submit" action="{!processSelected}" rerender="table"/>
+                <apex:commandbutton value="Cancel" action="{!backToPrevousPage}"/>
+            </apex:pageBlockButtons>
+
+            <apex:pageBlockSection id="Selected_contracts">
+            	<apex:pageBlockTable value="{!contracts}" var="c" id="table">
+                	<apex:column >
+                        <apex:facet name="header"> <apex:inputCheckbox >
+                            <apex:actionSupport event="onclick"  onsubmit="checkAll(this)" action="{!setSelected}" rerender="Selected_contracts"/>
+                            </apex:inputCheckbox>
+                        </apex:facet>                        
+                    <!-- This is our selected Boolean property in our wrapper class -->
+                    <apex:inputCheckbox value="{!c.selected}"/>
+                	</apex:column>
+                	<!-- This is how we access the contact values within our cContact container/wrapper -->
+                	<apex:column value="{!c.con.ContractNumber}" />
+                	<apex:column value="{!c.con.ATC_Package_Name__c}" />
+                	<apex:column value="{!c.con.Make__c}" />
+                	<apex:column value="{!c.con.DMA__c}" />
+                	<apex:column value="{!c.con.Co_Op__c}" />
+                	<apex:column value="{!c.con.StartDate}" />
+            	</apex:pageBlockTable>
+			</apex:pageBlockSection>                
+        </apex:pageBlock>
+    </apex:form>
+<script>
+    
+    function checkAll(cb)
+    {
+            var inputElem = document.getElementsByTagName("input");
+            for(var i=0; i<inputElem.length; i++)
+            {
+                if(inputElem[i].id.indexOf("checkedone")!=-1)
+                inputElem[i].checked = cb.checked;
+            }
+     }
+</script>   
+        
+</apex:page>

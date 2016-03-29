@@ -4,9 +4,9 @@
 
 <property environment="env"/>
 
-<property name="testproject.home" value="C:\Users\bjweber\Provar Projects\Regression\Service Regression"/>
+<property name="testproject.home" value="C:\Users\bjweber\ProvarProjects\SFDCRegression\Regression"/>
 
-<property name="testproject.results" value="C:\Users\bjweber\Provar Projects\provarAnt\AntRunResults"/>
+<property name="testproject.results" value="C:\Users\bjweber\ProvarProjects\SFDCRegression\provarAnt\RegressionRunResults"/>
 
 
 <target name="runtests">
@@ -20,10 +20,10 @@ testEnvironment="PreProd"
 
 resultsPath="${testproject.results}">
 
-<fileset dir="C:\Users\bjweber\Provar Projects\Regression\Service Regression\tests\">
+<fileset dir="C:\Users\bjweber\ProvarProjects\SFDCRegression\Regression\tests\">
 <exclude name="Callable Tests\**\*.*"/>
 <exclude name="Examples\**\*.*"/>
-<exclude name-"Sprint 6 Pricing Tests\**\*.*"/>
+<!--<exclude name-"Sprint 6 Pricing Tests\**\*.*"/>-->
 <!--<include name="Account\**\*.*"/>-->
 
 

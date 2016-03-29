@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <links>My_Activities_This_Week</links>
+    <links>Request_New_Dealer_Setup1</links>
+    <links>My_Pod_s_Accounts_Director</links>
+    <links>My_Pod_s_Accounts_Sales_Manager</links>
+    <links>My_Pod_s_Opportunities</links>
+    <links>Request_Help_w_Salesforce</links>
+    <pageComponentType>links</pageComponentType>
+</HomePageComponent>

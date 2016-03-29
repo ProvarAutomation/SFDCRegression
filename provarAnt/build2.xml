@@ -4,9 +4,9 @@
 
 <property environment="env"/>
 
-<property name="testproject.home" value="C:\Users\bjweber\Provar Projects\Regression\Service Regression"/>
+<property name="testproject.home" value="C:\Users\bjweber\ProvarProjects\SFDCRegression\Regression\"/>
 
-<property name="testproject.results" value="C:\Users\bjweber\Provar Projects\provarAnt\AntRunResults"/>
+<property name="testproject.results" value="C:\Users\bjweber\ProvarProjects\SFDCRegression\provarAnt\SprintRunResults"/>
 
 
 <target name="runtests">
@@ -20,7 +20,7 @@ testEnvironment="qUAT"
 
 resultsPath="${testproject.results}">
 
-<fileset dir="C:\Users\bjweber\Provar Projects\Regression\Service Regression\tests\Sprint 6 Pricing Tests\">
+<fileset dir="C:\Users\bjweber\Provar Projects\Regression\Service Regression\tests - Busted\">
 <!--<exclude name-"Sprint 6 Pricing Tests\**\*.*"/>-->
 <!--<include name="Account\**\*.*"/>-->
 

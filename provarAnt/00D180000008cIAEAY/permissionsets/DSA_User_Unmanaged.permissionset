@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Created to grant access to certain custom fields required for DSA apps.  Permission sets included with managed packages are not editable.</description>
+    <label>DSA User - Unmanaged</label>
+    <userLicense>Salesforce</userLicense>
+</PermissionSet>
