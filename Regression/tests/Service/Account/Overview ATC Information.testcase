@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="36">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: ServiceTestUser (Test)">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">ServiceTestUser</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">ServiceTestUser</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="uiApplicationName">
+          <value class="value" valueClass="string">ATC_Sales</value>
+        </argument>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="reuseConnectionName"/>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="vfDebug"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="environment"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="7" title="On SF Account view (Dealer) screen">
+      <arguments>
+        <argument id="uiConnectionName">
+          <value class="value" valueClass="string">ServiceTestUser</value>
+        </argument>
+        <argument id="target">
+          <value class="uiTarget" uri="sf:ui:target?object=Account&amp;action=View&amp;recordType=Dealer"/>
+        </argument>
+        <argument id="navigate">
+          <value class="value" valueClass="string">Dont</value>
+        </argument>
+        <argument id="scTabType">
+          <value class="value" valueClass="string">CurrentTab</value>
+        </argument>
+        <argument id="sfUiTargetObjectId">
+          <value class="variable">
+            <path element="CrownKiaAccount"/>
+          </value>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">On SF Account view (Dealer) screen</value>
+        </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore"/>
+        <argument id="captureAfter"/>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="8">
+          <steps>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiRead" name="UiRead" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.UiReadTestStepCommand" testItemId="13" title="UI Read/Assert">
+              <arguments>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">Values</value>
+                </argument>
+                <argument id="attributesResultName">
+                  <value class="value" valueClass="string">Attributes</value>
+                </argument>
+                <argument id="errorsResultName">
+                  <value class="value" valueClass="string">Errors</value>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+              </arguments>
+              <resultAssertions>
+                <resultAssertion comparisonType="IsPresent" negative="true" resultName="field__ATC_Collection_Status__c" title="Check ATC_Collection_Status__c value"/>
+                <resultAssertion comparisonType="IsPresent" negative="true" resultName="field__ATC_Security_Question__c" title="Check ATC_Security_Question__c value"/>
+              </resultAssertions>
+              <parameterValueSources/>
+              <parameterGeneratorProperties>
+                <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.UiReadTestStepCommand.ConnectionName">ServiceTestUser</propertyValue>
+                <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.UiReadTestStepCommand.CustomObjectName"/>
+              </parameterGeneratorProperties>
+              <generatedParameters>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=ATC_Collection_Status__c" name="field__ATC_Collection_Status__c" title="ATC Collection Status">
+                  <summary>ATC</summary>
+                  <type>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="boundedValues">In Good Standing:In Good Standing|Restricted:Restricted|Hibernation:Hibernation</valueConstraint>
+                        <valueConstraint name="unrestricted">true</valueConstraint>
+                      </constraints>
+                    </choiceType>
+                  </type>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=ATC_Security_Question__c" name="field__ATC_Security_Question__c" title="ATC Security Question">
+                  <type>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="boundedValues">Name a fictional hero:Name a fictional hero|Name a type of mammal:Name a type of mammal|Name an international city:Name an international city|Name an exotic color:Name an exotic color</valueConstraint>
+                        <valueConstraint name="unrestricted">true</valueConstraint>
+                      </constraints>
+                    </choiceType>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+      <generatedParameters>
+        <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
+          <summary>The Id of the SF Object to be Viewed or Edited.</summary>
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
+  </steps>
+</testCase>
