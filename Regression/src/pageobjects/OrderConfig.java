@@ -59,6 +59,9 @@ public class OrderConfig {
 	@FindByLabel(label = "Link", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
 	public WebElement Link;
 	@TextType()
+	@FindByLabel(label = "Haystak URL", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
+	public WebElement HaystakURL;
+	@TextType()
 	@FindByLabel(label = "Click-thru URL", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
 	public WebElement ClickThruURL;
 	@TextType()

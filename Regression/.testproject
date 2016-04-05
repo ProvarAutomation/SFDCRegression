@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testProject selectedBrowserConfigurationName="Full Screen" selectedEnvironment="PreProd" selectedWebBrowserType="Chrome">
+<testProject selectedBrowserConfigurationName="Full Screen" selectedEnvironment="qUAT" selectedWebBrowserType="Chrome">
   <title>/Regression/.testproject</title>
   <configPath>config</configPath>
   <testsPath>tests</testsPath>
@@ -40,6 +40,9 @@
         </testVariableValue>
         <testVariableValue envName="Quoting">
           <value class="value" valueClass="string">0011900000Dazi4</value>
+        </testVariableValue>
+        <testVariableValue envName="qUAT">
+          <value class="value" valueClass="string">0011800000KvNJb</value>
         </testVariableValue>
       </values>
     </testVariable>
@@ -151,6 +154,7 @@
           <summary/>
           <connectionUrls>
             <connectionUrl url="sf:user=jason.john@autotradergroup.com.quoting;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="qUAT" url="sf:user=jason.john@autotradergroup.com.quat;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
       </connections>
