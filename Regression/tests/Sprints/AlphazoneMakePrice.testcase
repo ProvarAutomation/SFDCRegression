@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="18">
+<testCase id="8">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="329" title="Create Opp">
@@ -112,7 +112,11 @@
                 <argument id="resultScope">
                   <value class="value" valueClass="string">Test</value>
                 </argument>
+                <argument id="OwnerId">
+                  <value class="value" valueClass="string">005180000014oZs</value>
+                </argument>
               </arguments>
+              <parameterValueSources/>
               <parameterGeneratorProperties>
                 <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.ConnectionName">Admin</propertyValue>
                 <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.CustomObjectName">Opportunity</propertyValue>
@@ -141,29 +145,30 @@
                 </apiParam>
                 <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=BU_Type__c" name="BU_Type__c" title="BU_Type__c"/>
                 <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=mti_pb__PriceBook_To_Use__c" name="mti_pb__PriceBook_To_Use__c" title="mti_pb__PriceBook_To_Use__c"/>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=OwnerId" name="OwnerId" title="OwnerId"/>
               </generatedParameters>
             </apiCall>
           </steps>
         </clause>
       </clauses>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="333" title="Sign back in as Jason John">
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="333" title="Sign back in as DOF Sales User">
       <arguments>
         <argument id="description">
-          <value class="value" valueClass="string">Sign back in as Jason John</value>
+          <value class="value" valueClass="string">Sign back in as DOF Sales User</value>
         </argument>
       </arguments>
       <clauses>
         <clause name="hidden" testItemId="334"/>
       </clauses>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="335" title="Salesforce Connect: JasonJohn (Test)">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="335" title="Salesforce Connect: DOFSalesUser (Test)">
       <arguments>
         <argument id="connectionName">
-          <value class="value" valueClass="string">JasonJohn</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="resultName">
-          <value class="value" valueClass="string">JasonJohn</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="reuseConnectionName"/>
         <argument id="resultScope">
@@ -198,7 +203,7 @@
       <tags/>
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">JasonJohn</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Opportunity&amp;action=View"/>
@@ -243,7 +248,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="24" title="On SF Opportunity view screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">JasonJohn</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Opportunity&amp;action=View"/>
@@ -327,7 +332,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="27" title="On SF Opportunity Product add product screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=OpportunityLineItem&amp;action=addProd"/>
@@ -357,7 +362,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="751" title="On ProductSelection page">
                       <arguments>
                         <argument id="uiConnectionName">
-                          <value class="value" valueClass="string">JasonJohn</value>
+                          <value class="value" valueClass="string">DOFSalesUser</value>
                         </argument>
                         <argument id="target">
                           <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.ProductSelection"/>
@@ -427,7 +432,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="57" title="With Product Table rows {productName = $Product1}">
                       <arguments>
                         <argument id="uiConnectionName">
-                          <value class="value" valueClass="string">JasonJohn</value>
+                          <value class="value" valueClass="string">DOFSalesUser</value>
                         </argument>
                         <argument id="locator">
                           <value class="uiLocator" uri="sf:ui:locator:row?table=productTable"/>
@@ -503,7 +508,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="60" title="With Product Table rows {productName = $Product2}">
                       <arguments>
                         <argument id="uiConnectionName">
-                          <value class="value" valueClass="string">JasonJohn</value>
+                          <value class="value" valueClass="string">DOFSalesUser</value>
                         </argument>
                         <argument id="locator">
                           <value class="uiLocator" uri="sf:ui:locator:row?table=productTable"/>
@@ -579,7 +584,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="63" title="With Product Table rows {productName = $Product3}">
                       <arguments>
                         <argument id="uiConnectionName">
-                          <value class="value" valueClass="string">JasonJohn</value>
+                          <value class="value" valueClass="string">DOFSalesUser</value>
                         </argument>
                         <argument id="locator">
                           <value class="uiLocator" uri="sf:ui:locator:row?table=productTable"/>
@@ -700,7 +705,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="68" title="On SF Opportunity Product add product2 screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=OpportunityLineItem&amp;action=addProd2"/>
@@ -730,7 +735,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="70" title="With OpportunityLineItem rows {Product2Id = $Product1}">
                       <arguments>
                         <argument id="uiConnectionName">
-                          <value class="value" valueClass="string">JasonJohn</value>
+                          <value class="value" valueClass="string">DOFSalesUser</value>
                         </argument>
                         <argument id="locator">
                           <value class="uiLocator" uri="sf:ui:locator:row?table=OpportunityLineItemTable"/>
@@ -823,7 +828,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="74" title="With OpportunityLineItem rows {Product2Id = $Product2}">
                       <arguments>
                         <argument id="uiConnectionName">
-                          <value class="value" valueClass="string">JasonJohn</value>
+                          <value class="value" valueClass="string">DOFSalesUser</value>
                         </argument>
                         <argument id="locator">
                           <value class="uiLocator" uri="sf:ui:locator:row?table=OpportunityLineItemTable"/>
@@ -910,7 +915,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="78" title="With OpportunityLineItem rows {Product2Id = $Product3}">
                       <arguments>
                         <argument id="uiConnectionName">
-                          <value class="value" valueClass="string">JasonJohn</value>
+                          <value class="value" valueClass="string">DOFSalesUser</value>
                         </argument>
                         <argument id="locator">
                           <value class="uiLocator" uri="sf:ui:locator:row?table=OpportunityLineItemTable"/>
@@ -1058,7 +1063,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="83" title="On SF Opportunity view (ATC) screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=Opportunity&amp;action=View&amp;recordType=ATC"/>
@@ -1132,7 +1137,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="86" title="On SF Quote new (Quote Not Priced) screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=Quote&amp;action=New&amp;recordType=Quote+Not+Priced"/>
@@ -1306,7 +1311,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="91" title="On SF Quote detail (Quote Not Priced) screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=Quote&amp;action=View&amp;recordType=Quote+Not+Priced"/>
@@ -1338,7 +1343,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="93" title="With QuoteLineItems rows {QUOTE_LI_PRODUCT2 = $Product1}">
                       <arguments>
                         <argument id="uiConnectionName">
-                          <value class="value" valueClass="string">JasonJohn</value>
+                          <value class="value" valueClass="string">DOFSalesUser</value>
                         </argument>
                         <argument id="locator">
                           <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FQuoteLineItems%2FQuoteLineItemsTable"/>
@@ -1429,7 +1434,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="96" title="On SF PriceOppProductLaunch screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?pageObject=pageobjects.PriceOppProductLaunch&amp;page=PriceOppProductLaunch"/>
@@ -1683,7 +1688,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="135" title="On SF Quote detail (Quote Not Priced) screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">JasonJohn</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Quote&amp;action=View&amp;recordType=Quote+Not+Priced"/>
@@ -1715,7 +1720,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="138" title="With QuoteLineItems rows {QUOTE_LI_PRODUCT2 = $Product1}">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="locator">
                   <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FQuoteLineItems%2FQuoteLineItemsTable"/>
@@ -1818,7 +1823,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="253" title="On SF Quote detail (Quote Not Priced) screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=Quote&amp;action=View&amp;recordType=Quote+Not+Priced"/>
@@ -1850,7 +1855,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="255" title="With QuoteLineItems rows {QUOTE_LI_PRODUCT2 = $Product2}">
                       <arguments>
                         <argument id="uiConnectionName">
-                          <value class="value" valueClass="string">JasonJohn</value>
+                          <value class="value" valueClass="string">DOFSalesUser</value>
                         </argument>
                         <argument id="locator">
                           <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FQuoteLineItems%2FQuoteLineItemsTable"/>
@@ -1903,9 +1908,10 @@
                                 <argument id="interactionDescription">
                                   <value class="value" valueClass="string">Click the Calculate Price field</value>
                                 </argument>
+                                <argument id="wait"/>
                               </arguments>
                               <generatedParameters>
-                                <apiParam group="value" name="hover" title="Hover before Clicking">
+                                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
                                   <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                                   <type>
                                     <booleanType/>
@@ -1940,7 +1946,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="258" title="On SF PriceOppProductLaunch screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?pageObject=pageobjects.PriceOppProductLaunch&amp;page=PriceOppProductLaunch"/>
@@ -2194,7 +2200,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="239" title="On SF Quote detail (Quote Not Priced) screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">JasonJohn</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Quote&amp;action=View&amp;recordType=Quote+Not+Priced"/>
@@ -2226,7 +2232,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="266" title="With QuoteLineItems rows {QUOTE_LI_PRODUCT2 = $Product2}">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="locator">
                   <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FQuoteLineItems%2FQuoteLineItemsTable"/>
@@ -2329,7 +2335,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="270" title="On SF Quote detail (Quote Not Priced) screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=Quote&amp;action=View&amp;recordType=Quote+Not+Priced"/>
@@ -2361,7 +2367,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="272" title="With QuoteLineItems rows {QUOTE_LI_PRODUCT2 = $Product3}">
                       <arguments>
                         <argument id="uiConnectionName">
-                          <value class="value" valueClass="string">JasonJohn</value>
+                          <value class="value" valueClass="string">DOFSalesUser</value>
                         </argument>
                         <argument id="locator">
                           <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FQuoteLineItems%2FQuoteLineItemsTable"/>
@@ -2451,7 +2457,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="275" title="On SF PriceOppProductLaunch screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?pageObject=pageobjects.PriceOppProductLaunch&amp;page=PriceOppProductLaunch"/>
@@ -2705,7 +2711,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="287" title="On SF Quote detail (Quote Not Priced) screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">JasonJohn</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Quote&amp;action=View&amp;recordType=Quote+Not+Priced"/>
@@ -2737,7 +2743,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="289" title="With QuoteLineItems rows {QUOTE_LI_PRODUCT2 = $Product3}">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="locator">
                   <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FQuoteLineItems%2FQuoteLineItemsTable"/>
@@ -2831,7 +2837,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="292" title="On SF Quote detail (Quote Not Synced) screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">JasonJohn</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Quote&amp;action=View&amp;recordType=Quote+Not+Synced"/>
@@ -2905,7 +2911,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="295" title="On MyPageObject page">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">JasonJohn</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.MyPageObject"/>
@@ -3000,7 +3006,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="299" title="On SF Quote detail (Quote Synced) screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">JasonJohn</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Quote&amp;action=View&amp;recordType=Quote+Synced"/>
@@ -3075,7 +3081,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="302" title="On SF Quote detail (Quote Synced) screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">JasonJohn</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Quote&amp;action=View&amp;recordType=Quote+Synced"/>
@@ -3104,19 +3110,19 @@
       <clauses>
         <clause name="substeps" testItemId="303">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="308" title="With Orders rows {1}">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="308" title="With RelatedOrderList rows {1}">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="locator">
-                  <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FOrders%2FOrdersTable"/>
+                  <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FRelatedOrderList%2FRelatedOrderListTable"/>
                 </argument>
                 <argument id="uiRowLocator">
                   <value class="value" valueClass="decimal">1</value>
                 </argument>
                 <argument id="locatorDescription">
-                  <value class="value" valueClass="string">With Orders rows {1}</value>
+                  <value class="value" valueClass="string">With RelatedOrderList rows {1}</value>
                 </argument>
                 <argument id="failIfNotFound">
                   <value class="value" valueClass="boolean">true</value>
@@ -3220,7 +3226,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="311" title="On SF Order view screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">JasonJohn</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Order&amp;action=View"/>
@@ -3252,7 +3258,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="313" title="With RelatedOrderItemList rows {Product2 = $Product1}">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="locator">
                   <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FRelatedOrderItemList%2FRelatedOrderItemListTable"/>
@@ -3333,7 +3339,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="320" title="With RelatedOrderItemList rows {Product2 = $Product2}">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="locator">
                   <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FRelatedOrderItemList%2FRelatedOrderItemListTable"/>
@@ -3414,7 +3420,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="316" title="With RelatedOrderItemList rows {Product2 = $Product3}">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="locator">
                   <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FRelatedOrderItemList%2FRelatedOrderItemListTable"/>
@@ -3540,7 +3546,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="337" title="On SF Order view (Order Master Layout) screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">JasonJohn</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Order&amp;action=View&amp;recordType=Order+Master+Layout"/>
@@ -3572,7 +3578,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="339" title="With RelatedOrderItemList rows {Product2 = $Product1}">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="locator">
                   <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FRelatedOrderItemList%2FRelatedOrderItemListTable"/>
@@ -3651,7 +3657,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="342" title="On OrderConfig page">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.OrderConfig"/>
@@ -3683,7 +3689,7 @@
                         </argument>
                       </arguments>
                       <parameterValueSources>
-                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=AlphazoneMakeCounties&amp;range=A1%3AAF7&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct1%7D" variableName="ExcelData" variableScope="Test">
+                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=AlphazoneMakeCounties&amp;range=A1%3AAG7&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct1%7D" variableName="ExcelData" variableScope="Test">
                           <cacheToken>C:/Users/jtjohn/Provar/Workspace/ProvarTesting2/Test/templates/FillData.xlsx;1438091420870</cacheToken>
                           <cachedParameters>
                             <apiParam name="RowNumber"/>
@@ -3952,7 +3958,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="754" title="With RelatedOrderItemList rows {Product2 = $Product2}">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="locator">
                   <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FRelatedOrderItemList%2FRelatedOrderItemListTable"/>
@@ -4005,9 +4011,10 @@
                         <argument id="interactionDescription">
                           <value class="value" valueClass="string">Click the Product2 link</value>
                         </argument>
+                        <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="hover" title="Hover before Clicking">
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
                           <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                           <type>
                             <booleanType/>
@@ -4030,7 +4037,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="757" title="On OrderConfig page">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.OrderConfig"/>
@@ -4062,7 +4069,7 @@
                         </argument>
                       </arguments>
                       <parameterValueSources>
-                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=AlphazoneMakeCounties&amp;range=A1%3AAF7&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct2%7D" variableName="ExcelData" variableScope="Test">
+                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=AlphazoneMakeCounties&amp;range=A1%3AAG7&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct2%7D" variableName="ExcelData" variableScope="Test">
                           <cacheToken>C:/Users/jtjohn/Provar/Workspace/ProvarTesting2/Test/templates/FillData.xlsx;1438091420870</cacheToken>
                           <cachedParameters>
                             <apiParam name="RowNumber"/>
@@ -4331,7 +4338,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="763" title="With RelatedOrderItemList rows {Product2 = $Product3}">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="locator">
                   <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FRelatedOrderItemList%2FRelatedOrderItemListTable"/>
@@ -4410,7 +4417,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="766" title="On OrderConfig page">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.OrderConfig"/>
@@ -4442,7 +4449,7 @@
                         </argument>
                       </arguments>
                       <parameterValueSources>
-                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=AlphazoneMakeCounties&amp;range=A1%3AAF7&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct3%7D" variableName="ExcelData" variableScope="Test">
+                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=AlphazoneMakeCounties&amp;range=A1%3AAG7&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct3%7D" variableName="ExcelData" variableScope="Test">
                           <cacheToken>C:/Users/jtjohn/Provar/Workspace/ProvarTesting2/Test/templates/FillData.xlsx;1438091420870</cacheToken>
                           <cachedParameters>
                             <apiParam name="RowNumber"/>
@@ -4738,31 +4745,6 @@
                   </type>
                 </apiParam>
               </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiHandleAlert" name="UiHandleAlert" testItemId="781" title="Handle UI Alerts">
-              <tags>
-                <string>disabled</string>
-              </tags>
-              <arguments>
-                <argument id="alerts">
-                  <value class="valueList" mutable="Mutable">
-                    <namedValues mutable="Mutable">
-                      <namedValue name="expectedMessage">
-                        <value class="value" valueClass="string">Please verify that all products have 'Form Completed' checked before sending for Dealer signature.</value>
-                      </namedValue>
-                      <namedValue name="response">
-                        <value class="value" valueClass="string">OK</value>
-                      </namedValue>
-                      <namedValue name="wait"/>
-                    </namedValues>
-                  </value>
-                </argument>
-                <argument id="captureBefore"/>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="boolean">true</value>
-                </argument>
-              </arguments>
-              <expectedExceptions/>
             </apiCall>
           </steps>
         </clause>

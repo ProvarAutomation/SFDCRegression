@@ -298,6 +298,9 @@ public class OrderConfig {
 	@FindByLabel(label = "TIM Dealership Contact Mobile Number", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
 	public WebElement TIMDealershipContactMobileNumber;
 	@TextType()
+	@FindByLabel(label = "TIM Dealership Contact phone", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
+	public WebElement TIMDealershipContactPhone;
+	@TextType()
 	@FindByLabel(label = "TIM Dealership XML Email Address", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
 	public WebElement TIMDealershipXMLEmailAddress;
 	@TextType()
@@ -939,11 +942,11 @@ public class OrderConfig {
 	@FindByLabel(label = "Full Rate / Below Rate", labelType = LabelType.PrecedingCell, qualifierXpath = "select")
 	public WebElement FullRateBelowRate;
 	@TextType()
-	@FindByLabel(label = "Co-op Contact Email 1", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
-	public WebElement CoOpContactEmail1;
-	@TextType()
 	@FindByLabel(label = "Co-op Contact Email", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
 	public WebElement CoOpContactEmail;
+	@TextType()
+	@FindByLabel(label = "Co-op Contact Email 1", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
+	public WebElement CoOpContactEmail1;
 	@TextType()
 	@FindByLabel(label = "New Co-op Contact Email 1", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
 	public WebElement NewCoOpContactEmail1;
@@ -965,4 +968,10 @@ public class OrderConfig {
 	@LinkType()
 	@FindBy(xpath = "//*[@id=\"801c00000002WCT_RelatedOrderItemList_body\"]/div/a[1]")
 	public WebElement ShowMore;
+	@LinkType()
+	@FindBy(xpath = "//div[@class=\"pShowMore\"]/a[1]")
+	public WebElement ShowMoreProducts;
+	@FindBy(xpath = "//input[@name=\"pgId:frmId:mainPgBlkId:j_id130:j_id131:16:j_id132:j_id134\"]")
+	@TextType()
+	public WebElement TIMDealershipContactTitle;
 }

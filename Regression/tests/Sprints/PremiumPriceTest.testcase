@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="29">
+<testCase id="11">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="590" title="Create Opp">
@@ -9,158 +9,167 @@
         </argument>
       </arguments>
       <clauses>
-        <clause name="hidden" testItemId="591"/>
+        <clause name="hidden" testItemId="591">
+          <steps>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: Admin (GroupStep)">
+              <arguments>
+                <argument id="connectionName">
+                  <value class="value" valueClass="string">Admin</value>
+                </argument>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">Admin</value>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">GroupStep</value>
+                </argument>
+                <argument id="uiApplicationName">
+                  <value class="value" valueClass="string">ATC_Sales</value>
+                </argument>
+                <argument id="quickUiLogin">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
+                <argument id="closeAllPrimaryTabs">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
+                <argument id="reuseConnectionName">
+                  <value class="variable">
+                    <path element="reuseConnectionName"/>
+                  </value>
+                </argument>
+                <argument id="alreadyOpenBehaviour">
+                  <value class="value" valueClass="string">Fail</value>
+                </argument>
+                <argument id="vfDebug"/>
+                <argument id="enableObjectIdLogging">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
+                <argument id="autoCleanup"/>
+                <argument id="cleanupConnectionName"/>
+                <argument id="logFileLocation"/>
+                <argument id="username"/>
+                <argument id="password"/>
+                <argument id="environment"/>
+                <argument id="securityToken"/>
+              </arguments>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="3" title="Create Object: Opportunity=&gt;OpportunityId">
+              <arguments>
+                <argument id="objectType">
+                  <value class="value" valueClass="string">Opportunity</value>
+                </argument>
+                <argument id="resultIdName">
+                  <value class="value" valueClass="string">OpportunityId</value>
+                </argument>
+                <argument id="apexConnectionName">
+                  <value class="value" valueClass="string">Admin</value>
+                </argument>
+                <argument id="AccountId">
+                  <value class="variable">
+                    <path element="JimEllisMazdaATL"/>
+                  </value>
+                </argument>
+                <argument id="RecordTypeId">
+                  <value class="value" valueClass="string">ATC</value>
+                </argument>
+                <argument id="Name">
+                  <value class="value" valueClass="string">Crown KIA - ATC Media - Test Product Using Provar</value>
+                </argument>
+                <argument id="StageName">
+                  <value class="value" valueClass="string">Prospect</value>
+                </argument>
+                <argument id="Amount">
+                  <value class="value" valueClass="decimal">2000.0</value>
+                </argument>
+                <argument id="Probability">
+                  <value class="value" valueClass="decimal">0.0</value>
+                </argument>
+                <argument id="CloseDate">
+                  <value class="value" valueClass="date">1453939200000</value>
+                </argument>
+                <argument id="Type">
+                  <value class="value" valueClass="string">New Business</value>
+                </argument>
+                <argument id="ForecastCategoryName">
+                  <value class="value" valueClass="string">Prospect</value>
+                </argument>
+                <argument id="Pricebook2Id">
+                  <value class="value" valueClass="string">01sE00000000vk4IAA</value>
+                </argument>
+                <argument id="BU__c">
+                  <value class="value" valueClass="string">ATC Media</value>
+                </argument>
+                <argument id="Cost_Factor__c">
+                  <value class="value" valueClass="decimal">1.0</value>
+                </argument>
+                <argument id="Product_Line__c">
+                  <value class="value" valueClass="string">Provar 1-Weber2</value>
+                </argument>
+                <argument id="BU_Type__c">
+                  <value class="value" valueClass="string">Media</value>
+                </argument>
+                <argument id="mti_pb__PriceBook_To_Use__c">
+                  <value class="value" valueClass="string">ATC Price book</value>
+                </argument>
+                <argument id="assignmentRuleId"/>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+                <argument id="OwnerId">
+                  <value class="value" valueClass="string">005180000014oZs</value>
+                </argument>
+              </arguments>
+              <parameterGeneratorProperties>
+                <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.ConnectionName">Admin</propertyValue>
+                <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.CustomObjectName">Opportunity</propertyValue>
+              </parameterGeneratorProperties>
+              <generatedParameters>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=AccountId" name="AccountId" title="AccountId"/>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=RecordTypeId" name="RecordTypeId" title="RecordTypeId"/>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=Name" name="Name" title="Name">
+                  <summary>set by the system, please do not modify</summary>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=StageName" name="StageName" title="StageName"/>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=Amount" name="Amount" title="Amount"/>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=Probability" name="Probability" title="Probability">
+                  <summary>users can override the probability during a stage</summary>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=CloseDate" name="CloseDate" title="CloseDate">
+                  <summary>upon creation of Opportunity the system sets the close date to 30 days from the create date by workflow - user can update the date accordingly</summary>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=Type" name="Type" title="Type"/>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=ForecastCategoryName" name="ForecastCategoryName" title="ForecastCategoryName"/>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=Pricebook2Id" name="Pricebook2Id" title="Pricebook2Id"/>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=BU__c" name="BU__c" title="BU__c"/>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=Cost_Factor__c" name="Cost_Factor__c" title="Cost_Factor__c"/>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=Product_Line__c" name="Product_Line__c" title="Product_Line__c">
+                  <summary>The BU Type must be selected with the appropriate BU (i.e. ATC Media, KBB, TIM, vAuto,etc ) in order to be captured in reporting. The “Dealer Interested Product” field is only added to the opportunity title.</summary>
+                </apiParam>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=BU_Type__c" name="BU_Type__c" title="BU_Type__c"/>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=mti_pb__PriceBook_To_Use__c" name="mti_pb__PriceBook_To_Use__c" title="mti_pb__PriceBook_To_Use__c"/>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=OwnerId" name="OwnerId" title="OwnerId"/>
+              </generatedParameters>
+            </apiCall>
+          </steps>
+        </clause>
       </clauses>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: Admin (GroupStep)">
-      <arguments>
-        <argument id="connectionName">
-          <value class="value" valueClass="string">Admin</value>
-        </argument>
-        <argument id="resultName">
-          <value class="value" valueClass="string">Admin</value>
-        </argument>
-        <argument id="resultScope">
-          <value class="value" valueClass="string">GroupStep</value>
-        </argument>
-        <argument id="uiApplicationName">
-          <value class="value" valueClass="string">ATC_Sales</value>
-        </argument>
-        <argument id="quickUiLogin">
-          <value class="value" valueClass="boolean">true</value>
-        </argument>
-        <argument id="closeAllPrimaryTabs">
-          <value class="value" valueClass="boolean">true</value>
-        </argument>
-        <argument id="reuseConnectionName">
-          <value class="variable">
-            <path element="reuseConnectionName"/>
-          </value>
-        </argument>
-        <argument id="alreadyOpenBehaviour">
-          <value class="value" valueClass="string">Fail</value>
-        </argument>
-        <argument id="vfDebug"/>
-        <argument id="enableObjectIdLogging">
-          <value class="value" valueClass="boolean">true</value>
-        </argument>
-        <argument id="autoCleanup"/>
-        <argument id="cleanupConnectionName"/>
-        <argument id="logFileLocation"/>
-        <argument id="username"/>
-        <argument id="password"/>
-        <argument id="environment"/>
-        <argument id="securityToken"/>
-      </arguments>
-    </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="3" title="Create Object: Opportunity=&gt;OpportunityId">
-      <arguments>
-        <argument id="objectType">
-          <value class="value" valueClass="string">Opportunity</value>
-        </argument>
-        <argument id="resultIdName">
-          <value class="value" valueClass="string">OpportunityId</value>
-        </argument>
-        <argument id="apexConnectionName">
-          <value class="value" valueClass="string">Admin</value>
-        </argument>
-        <argument id="AccountId">
-          <value class="value" valueClass="string">0011900000Dazi4AAB</value>
-        </argument>
-        <argument id="RecordTypeId">
-          <value class="value" valueClass="string">ATC</value>
-        </argument>
-        <argument id="Name">
-          <value class="value" valueClass="string">Crown KIA - ATC Media - Test Product Using Provar</value>
-        </argument>
-        <argument id="StageName">
-          <value class="value" valueClass="string">Prospect</value>
-        </argument>
-        <argument id="Amount">
-          <value class="value" valueClass="decimal">2000.0</value>
-        </argument>
-        <argument id="Probability">
-          <value class="value" valueClass="decimal">0.0</value>
-        </argument>
-        <argument id="CloseDate">
-          <value class="value" valueClass="date">1453939200000</value>
-        </argument>
-        <argument id="Type">
-          <value class="value" valueClass="string">New Business</value>
-        </argument>
-        <argument id="ForecastCategoryName">
-          <value class="value" valueClass="string">Prospect</value>
-        </argument>
-        <argument id="Pricebook2Id">
-          <value class="value" valueClass="string">01sE00000000vk4IAA</value>
-        </argument>
-        <argument id="BU__c">
-          <value class="value" valueClass="string">ATC Media</value>
-        </argument>
-        <argument id="Cost_Factor__c">
-          <value class="value" valueClass="decimal">1.0</value>
-        </argument>
-        <argument id="Product_Line__c">
-          <value class="value" valueClass="string">Provar 1-Weber2</value>
-        </argument>
-        <argument id="BU_Type__c">
-          <value class="value" valueClass="string">Media</value>
-        </argument>
-        <argument id="mti_pb__PriceBook_To_Use__c">
-          <value class="value" valueClass="string">ATC Price book</value>
-        </argument>
-        <argument id="assignmentRuleId"/>
-        <argument id="resultScope">
-          <value class="value" valueClass="string">Test</value>
-        </argument>
-      </arguments>
-      <parameterGeneratorProperties>
-        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.ConnectionName">Admin</propertyValue>
-        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.CustomObjectName">Opportunity</propertyValue>
-      </parameterGeneratorProperties>
-      <generatedParameters>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=AccountId" name="AccountId" title="AccountId"/>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=RecordTypeId" name="RecordTypeId" title="RecordTypeId"/>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=Name" name="Name" title="Name">
-          <summary>set by the system, please do not modify</summary>
-        </apiParam>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=StageName" name="StageName" title="StageName"/>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=Amount" name="Amount" title="Amount"/>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=Probability" name="Probability" title="Probability">
-          <summary>users can override the probability during a stage</summary>
-        </apiParam>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=CloseDate" name="CloseDate" title="CloseDate">
-          <summary>upon creation of Opportunity the system sets the close date to 30 days from the create date by workflow - user can update the date accordingly</summary>
-        </apiParam>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=Type" name="Type" title="Type"/>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=ForecastCategoryName" name="ForecastCategoryName" title="ForecastCategoryName"/>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=Pricebook2Id" name="Pricebook2Id" title="Pricebook2Id"/>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=BU__c" name="BU__c" title="BU__c"/>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=Cost_Factor__c" name="Cost_Factor__c" title="Cost_Factor__c"/>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=Product_Line__c" name="Product_Line__c" title="Product_Line__c">
-          <summary>The BU Type must be selected with the appropriate BU (i.e. ATC Media, KBB, TIM, vAuto,etc ) in order to be captured in reporting. The “Dealer Interested Product” field is only added to the opportunity title.</summary>
-        </apiParam>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=BU_Type__c" name="BU_Type__c" title="BU_Type__c"/>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=mti_pb__PriceBook_To_Use__c" name="mti_pb__PriceBook_To_Use__c" title="mti_pb__PriceBook_To_Use__c"/>
-      </generatedParameters>
-    </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="592" title="Sign back in as Jason John">
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="592" title="Sign back in as DOF Sales User">
       <arguments>
         <argument id="description">
-          <value class="value" valueClass="string">Sign back in as Jason John</value>
+          <value class="value" valueClass="string">Sign back in as DOF Sales User</value>
         </argument>
       </arguments>
       <clauses>
         <clause name="hidden" testItemId="593"/>
       </clauses>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="594" title="Salesforce Connect: JasonJohn (Test)">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="594" title="Salesforce Connect: DOFSalesUser (Test)">
       <arguments>
         <argument id="connectionName">
-          <value class="value" valueClass="string">JasonJohn</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="resultName">
-          <value class="value" valueClass="string">JasonJohn</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="reuseConnectionName"/>
         <argument id="resultScope">
@@ -195,7 +204,7 @@
       <tags/>
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">JasonJohn</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Opportunity&amp;action=View"/>
@@ -242,7 +251,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="24" title="On SF Opportunity view (ATC) screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">JasonJohn</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Opportunity&amp;action=View&amp;recordType=ATC"/>
@@ -326,7 +335,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="27" title="On SF Opportunity Product add product screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=OpportunityLineItem&amp;action=addProd"/>
@@ -409,7 +418,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="57" title="With Product Table rows {productName = $Product1}">
                       <arguments>
                         <argument id="uiConnectionName">
-                          <value class="value" valueClass="string">JasonJohn</value>
+                          <value class="value" valueClass="string">DOFSalesUser</value>
                         </argument>
                         <argument id="locator">
                           <value class="uiLocator" uri="sf:ui:locator:row?table=productTable"/>
@@ -485,7 +494,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="60" title="With Product Table rows {productName = $Product2}">
                       <arguments>
                         <argument id="uiConnectionName">
-                          <value class="value" valueClass="string">JasonJohn</value>
+                          <value class="value" valueClass="string">DOFSalesUser</value>
                         </argument>
                         <argument id="locator">
                           <value class="uiLocator" uri="sf:ui:locator:row?table=productTable"/>
@@ -561,7 +570,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="63" title="With Product Table rows {productName = $Product3}">
                       <arguments>
                         <argument id="uiConnectionName">
-                          <value class="value" valueClass="string">JasonJohn</value>
+                          <value class="value" valueClass="string">DOFSalesUser</value>
                         </argument>
                         <argument id="locator">
                           <value class="uiLocator" uri="sf:ui:locator:row?table=productTable"/>
@@ -637,7 +646,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="488" title="With Product Table rows {productName = $Product4}">
                       <arguments>
                         <argument id="uiConnectionName">
-                          <value class="value" valueClass="string">JasonJohn</value>
+                          <value class="value" valueClass="string">DOFSalesUser</value>
                         </argument>
                         <argument id="locator">
                           <value class="uiLocator" uri="sf:ui:locator:row?table=productTable"/>
@@ -713,7 +722,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="491" title="With Product Table rows {productName = $Product5}">
                       <arguments>
                         <argument id="uiConnectionName">
-                          <value class="value" valueClass="string">JasonJohn</value>
+                          <value class="value" valueClass="string">DOFSalesUser</value>
                         </argument>
                         <argument id="locator">
                           <value class="uiLocator" uri="sf:ui:locator:row?table=productTable"/>
@@ -786,13 +795,13 @@
                         </clause>
                       </clauses>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="494" title="With Customize Options rows {productName = $Product6}">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="494" title="With Product Table rows {productName = $Product6}">
                       <arguments>
                         <argument id="uiConnectionName">
-                          <value class="value" valueClass="string">JasonJohn</value>
+                          <value class="value" valueClass="string">DOFSalesUser</value>
                         </argument>
                         <argument id="locator">
-                          <value class="uiLocator" uri="sf:ui:locator:row?table=customizeOptions"/>
+                          <value class="uiLocator" uri="sf:ui:locator:row?table=productTable"/>
                         </argument>
                         <argument id="uiRowLocator">
                           <value class="eq">
@@ -805,7 +814,7 @@
                           </value>
                         </argument>
                         <argument id="locatorDescription">
-                          <value class="value" valueClass="string">With Customize Options rows {productName = $Product6}</value>
+                          <value class="value" valueClass="string">With Product Table rows {productName = $Product6}</value>
                         </argument>
                         <argument id="failIfNotFound">
                           <value class="value" valueClass="boolean">true</value>
@@ -908,7 +917,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="68" title="On SF Opportunity Product add product2 screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=OpportunityLineItem&amp;action=addProd2"/>
@@ -938,7 +947,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="70" title="With OpportunityLineItem rows {Product2Id = $Product1}">
                       <arguments>
                         <argument id="uiConnectionName">
-                          <value class="value" valueClass="string">JasonJohn</value>
+                          <value class="value" valueClass="string">DOFSalesUser</value>
                         </argument>
                         <argument id="locator">
                           <value class="uiLocator" uri="sf:ui:locator:row?table=OpportunityLineItemTable"/>
@@ -1031,7 +1040,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="74" title="With OpportunityLineItem rows {Product2Id = $Product2}">
                       <arguments>
                         <argument id="uiConnectionName">
-                          <value class="value" valueClass="string">JasonJohn</value>
+                          <value class="value" valueClass="string">DOFSalesUser</value>
                         </argument>
                         <argument id="locator">
                           <value class="uiLocator" uri="sf:ui:locator:row?table=OpportunityLineItemTable"/>
@@ -1118,7 +1127,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="78" title="With OpportunityLineItem rows {Product2Id = $Product3}">
                       <arguments>
                         <argument id="uiConnectionName">
-                          <value class="value" valueClass="string">JasonJohn</value>
+                          <value class="value" valueClass="string">DOFSalesUser</value>
                         </argument>
                         <argument id="locator">
                           <value class="uiLocator" uri="sf:ui:locator:row?table=OpportunityLineItemTable"/>
@@ -1205,7 +1214,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="498" title="With OpportunityLineItem rows {Product2Id = $Product4}">
                       <arguments>
                         <argument id="uiConnectionName">
-                          <value class="value" valueClass="string">JasonJohn</value>
+                          <value class="value" valueClass="string">DOFSalesUser</value>
                         </argument>
                         <argument id="locator">
                           <value class="uiLocator" uri="sf:ui:locator:row?table=OpportunityLineItemTable"/>
@@ -1298,7 +1307,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="502" title="With OpportunityLineItem rows {Product2Id = $Product5}">
                       <arguments>
                         <argument id="uiConnectionName">
-                          <value class="value" valueClass="string">JasonJohn</value>
+                          <value class="value" valueClass="string">DOFSalesUser</value>
                         </argument>
                         <argument id="locator">
                           <value class="uiLocator" uri="sf:ui:locator:row?table=OpportunityLineItemTable"/>
@@ -1391,7 +1400,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="506" title="With OpportunityLineItem rows {Product2Id = $Product6}">
                       <arguments>
                         <argument id="uiConnectionName">
-                          <value class="value" valueClass="string">JasonJohn</value>
+                          <value class="value" valueClass="string">DOFSalesUser</value>
                         </argument>
                         <argument id="locator">
                           <value class="uiLocator" uri="sf:ui:locator:row?table=OpportunityLineItemTable"/>
@@ -1540,7 +1549,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="83" title="On SF Opportunity view (ATC) screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=Opportunity&amp;action=View&amp;recordType=ATC"/>
@@ -1589,9 +1598,10 @@
                         <argument id="interactionDescription">
                           <value class="value" valueClass="string">Click the Quotes NewQuote button</value>
                         </argument>
+                        <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="hover" title="Hover before Clicking">
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
                           <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                           <type>
                             <booleanType/>
@@ -1614,7 +1624,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="86" title="On SF Quote new (Quote Not Priced) screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=Quote&amp;action=New&amp;recordType=Quote+Not+Priced"/>
@@ -1788,7 +1798,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="91" title="On SF Quote detail (Quote Not Priced) screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=Quote&amp;action=View&amp;recordType=Quote+Not+Priced"/>
@@ -1820,7 +1830,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="93" title="With QuoteLineItems rows {QUOTE_LI_PRODUCT2 = $Product1}">
                       <arguments>
                         <argument id="uiConnectionName">
-                          <value class="value" valueClass="string">JasonJohn</value>
+                          <value class="value" valueClass="string">DOFSalesUser</value>
                         </argument>
                         <argument id="locator">
                           <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FQuoteLineItems%2FQuoteLineItemsTable"/>
@@ -1911,7 +1921,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="96" title="On SF PriceOppProductLaunch screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?pageObject=pageobjects.PriceOppProductLaunch&amp;page=PriceOppProductLaunch"/>
@@ -1935,7 +1945,7 @@
               <clauses>
                 <clause name="substeps" testItemId="97">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="98" title="Set the Lot Size control to 20">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="98" title="Set the Lot Size control to 100">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=LotSize"/>
@@ -1944,7 +1954,7 @@
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">20</value>
+                          <value class="value" valueClass="string">100</value>
                         </argument>
                         <argument id="blur">
                           <value class="value" valueClass="boolean">false</value>
@@ -1959,7 +1969,7 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Lot Size control to 20</value>
+                          <value class="value" valueClass="string">Set the Lot Size control to 100</value>
                         </argument>
                         <argument id="wait">
                           <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
@@ -2041,7 +2051,7 @@
                         </apiParam>
                       </generatedParameters>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="100" title="Set the Quantity control to 5">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="100" title="Set the Quantity control to 10">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=Quantity"/>
@@ -2050,7 +2060,7 @@
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">5</value>
+                          <value class="value" valueClass="string">10</value>
                         </argument>
                         <argument id="blur">
                           <value class="value" valueClass="boolean">true</value>
@@ -2065,7 +2075,7 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Quantity control to 5</value>
+                          <value class="value" valueClass="string">Set the Quantity control to 10</value>
                         </argument>
                         <argument id="wait">
                           <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
@@ -2173,7 +2183,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="135" title="On SF Quote detail (Quote Not Priced) screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">JasonJohn</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Quote&amp;action=View&amp;recordType=Quote+Not+Priced"/>
@@ -2205,7 +2215,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="138" title="With QuoteLineItems rows {QUOTE_LI_PRODUCT2 = $Product1}">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="locator">
                   <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FQuoteLineItems%2FQuoteLineItemsTable"/>
@@ -2308,7 +2318,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="253" title="On SF Quote detail (Quote Not Priced) screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=Quote&amp;action=View&amp;recordType=Quote+Not+Priced"/>
@@ -2340,7 +2350,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="255" title="With QuoteLineItems rows {QUOTE_LI_PRODUCT2 = $Product2}">
                       <arguments>
                         <argument id="uiConnectionName">
-                          <value class="value" valueClass="string">JasonJohn</value>
+                          <value class="value" valueClass="string">DOFSalesUser</value>
                         </argument>
                         <argument id="locator">
                           <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FQuoteLineItems%2FQuoteLineItemsTable"/>
@@ -2430,7 +2440,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="258" title="On SF PriceOppProductLaunch screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?pageObject=pageobjects.PriceOppProductLaunch&amp;page=PriceOppProductLaunch"/>
@@ -2454,7 +2464,7 @@
               <clauses>
                 <clause name="substeps" testItemId="259">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="260" title="Set the Lot Size control to 25">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="260" title="Set the Lot Size control to 100">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=LotSize"/>
@@ -2463,7 +2473,7 @@
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">25</value>
+                          <value class="value" valueClass="string">100</value>
                         </argument>
                         <argument id="blur">
                           <value class="value" valueClass="boolean">false</value>
@@ -2478,7 +2488,7 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Lot Size control to 25</value>
+                          <value class="value" valueClass="string">Set the Lot Size control to 100</value>
                         </argument>
                         <argument id="wait">
                           <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
@@ -2488,7 +2498,11 @@
                         <apiParam group="value" name="value" seq="10000" title="Value">
                           <summary>The value to be populated.</summary>
                           <type>
-                            <choiceType/>
+                            <textType>
+                              <constraints>
+                                <valueConstraint name="mimeType">text/plain</valueConstraint>
+                              </constraints>
+                            </textType>
                           </type>
                         </apiParam>
                         <apiParam group="value" name="blur" seq="10001" title="Tab off field">
@@ -2688,7 +2702,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="239" title="On SF Quote detail (Quote Not Priced) screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">JasonJohn</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Quote&amp;action=View&amp;recordType=Quote+Not+Priced"/>
@@ -2720,7 +2734,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="266" title="With QuoteLineItems rows {QUOTE_LI_PRODUCT2 = $Product2}">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="locator">
                   <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FQuoteLineItems%2FQuoteLineItemsTable"/>
@@ -2823,7 +2837,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="270" title="On SF Quote detail (Quote Not Priced) screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=Quote&amp;action=View&amp;recordType=Quote+Not+Priced"/>
@@ -2855,7 +2869,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="272" title="With QuoteLineItems rows {QUOTE_LI_PRODUCT2 = $Product3}">
                       <arguments>
                         <argument id="uiConnectionName">
-                          <value class="value" valueClass="string">JasonJohn</value>
+                          <value class="value" valueClass="string">DOFSalesUser</value>
                         </argument>
                         <argument id="locator">
                           <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FQuoteLineItems%2FQuoteLineItemsTable"/>
@@ -2945,7 +2959,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="275" title="On SF PriceOppProductLaunch screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?pageObject=pageobjects.PriceOppProductLaunch&amp;page=PriceOppProductLaunch"/>
@@ -2969,7 +2983,7 @@
               <clauses>
                 <clause name="substeps" testItemId="276">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="277" title="Set the Lot Size control to 20">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="277" title="Set the Lot Size control to 100">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=LotSize"/>
@@ -2978,7 +2992,7 @@
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">20</value>
+                          <value class="value" valueClass="string">100</value>
                         </argument>
                         <argument id="blur">
                           <value class="value" valueClass="boolean">false</value>
@@ -2993,7 +3007,7 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Lot Size control to 20</value>
+                          <value class="value" valueClass="string">Set the Lot Size control to 100</value>
                         </argument>
                         <argument id="wait">
                           <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
@@ -3003,7 +3017,11 @@
                         <apiParam group="value" name="value" seq="10000" title="Value">
                           <summary>The value to be populated.</summary>
                           <type>
-                            <choiceType/>
+                            <textType>
+                              <constraints>
+                                <valueConstraint name="mimeType">text/plain</valueConstraint>
+                              </constraints>
+                            </textType>
                           </type>
                         </apiParam>
                         <apiParam group="value" name="blur" seq="10001" title="Tab off field">
@@ -3071,7 +3089,7 @@
                         </apiParam>
                       </generatedParameters>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="279" title="Set the Quantity control to 5">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="279" title="Set the Quantity control to 10">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=Quantity"/>
@@ -3080,7 +3098,7 @@
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">5</value>
+                          <value class="value" valueClass="string">10</value>
                         </argument>
                         <argument id="blur">
                           <value class="value" valueClass="boolean">true</value>
@@ -3095,7 +3113,7 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Quantity control to 5</value>
+                          <value class="value" valueClass="string">Set the Quantity control to 10</value>
                         </argument>
                         <argument id="wait">
                           <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
@@ -3203,7 +3221,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="287" title="On SF Quote detail (Quote Not Priced) screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">JasonJohn</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Quote&amp;action=View&amp;recordType=Quote+Not+Priced"/>
@@ -3235,7 +3253,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="289" title="With QuoteLineItems rows {QUOTE_LI_PRODUCT2 = $Product3}">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="locator">
                   <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FQuoteLineItems%2FQuoteLineItemsTable"/>
@@ -3338,7 +3356,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="391" title="On SF Quote detail (Quote Not Priced) screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=Quote&amp;action=View&amp;recordType=Quote+Not+Priced"/>
@@ -3370,7 +3388,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="393" title="With QuoteLineItems rows {QUOTE_LI_PRODUCT2 = $Product4}">
                       <arguments>
                         <argument id="uiConnectionName">
-                          <value class="value" valueClass="string">JasonJohn</value>
+                          <value class="value" valueClass="string">DOFSalesUser</value>
                         </argument>
                         <argument id="locator">
                           <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FQuoteLineItems%2FQuoteLineItemsTable"/>
@@ -3461,7 +3479,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="396" title="On SF PriceOppProductLaunch screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?pageObject=pageobjects.PriceOppProductLaunch&amp;page=PriceOppProductLaunch"/>
@@ -3485,7 +3503,7 @@
               <clauses>
                 <clause name="substeps" testItemId="397">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="398" title="Set the Lot Size control to 25">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="398" title="Set the Lot Size control to 100">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=LotSize"/>
@@ -3494,7 +3512,7 @@
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">25</value>
+                          <value class="value" valueClass="string">100</value>
                         </argument>
                         <argument id="blur">
                           <value class="value" valueClass="boolean">false</value>
@@ -3509,7 +3527,7 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Lot Size control to 25</value>
+                          <value class="value" valueClass="string">Set the Lot Size control to 100</value>
                         </argument>
                         <argument id="wait">
                           <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
@@ -3519,7 +3537,11 @@
                         <apiParam group="value" name="value" seq="10000" title="Value">
                           <summary>The value to be populated.</summary>
                           <type>
-                            <choiceType/>
+                            <textType>
+                              <constraints>
+                                <valueConstraint name="mimeType">text/plain</valueConstraint>
+                              </constraints>
+                            </textType>
                           </type>
                         </apiParam>
                         <apiParam group="value" name="blur" seq="10001" title="Tab off field">
@@ -3719,7 +3741,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="403" title="On SF Quote detail (Quote Not Priced) screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">JasonJohn</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Quote&amp;action=View&amp;recordType=Quote+Not+Priced"/>
@@ -3751,7 +3773,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="405" title="With QuoteLineItems rows {QUOTE_LI_PRODUCT2 = $Product4}">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">Admin</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="locator">
                   <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FQuoteLineItems%2FQuoteLineItemsTable"/>
@@ -3854,7 +3876,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="339" title="On SF Quote detail (Quote Not Priced) screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=Quote&amp;action=View&amp;recordType=Quote+Not+Priced"/>
@@ -3886,7 +3908,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="341" title="With QuoteLineItems rows {QUOTE_LI_PRODUCT2 = $Product5}">
                       <arguments>
                         <argument id="uiConnectionName">
-                          <value class="value" valueClass="string">JasonJohn</value>
+                          <value class="value" valueClass="string">DOFSalesUser</value>
                         </argument>
                         <argument id="locator">
                           <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FQuoteLineItems%2FQuoteLineItemsTable"/>
@@ -3977,7 +3999,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="344" title="On SF PriceOppProductLaunch screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?pageObject=pageobjects.PriceOppProductLaunch&amp;page=PriceOppProductLaunch"/>
@@ -4001,7 +4023,7 @@
               <clauses>
                 <clause name="substeps" testItemId="345">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="346" title="Set the Lot Size control to 20">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="346" title="Set the Lot Size control to 100">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=LotSize"/>
@@ -4010,7 +4032,7 @@
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">20</value>
+                          <value class="value" valueClass="string">100</value>
                         </argument>
                         <argument id="blur">
                           <value class="value" valueClass="boolean">false</value>
@@ -4025,7 +4047,7 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Lot Size control to 20</value>
+                          <value class="value" valueClass="string">Set the Lot Size control to 100</value>
                         </argument>
                         <argument id="wait">
                           <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
@@ -4035,7 +4057,11 @@
                         <apiParam group="value" name="value" seq="10000" title="Value">
                           <summary>The value to be populated.</summary>
                           <type>
-                            <choiceType/>
+                            <textType>
+                              <constraints>
+                                <valueConstraint name="mimeType">text/plain</valueConstraint>
+                              </constraints>
+                            </textType>
                           </type>
                         </apiParam>
                         <apiParam group="value" name="blur" seq="10001" title="Tab off field">
@@ -4052,7 +4078,7 @@
                         </apiParam>
                       </generatedParameters>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="347" title="Set the Type select to Dodge">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="347" title="Set the Type select to Hyundai">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=Type"/>
@@ -4061,7 +4087,7 @@
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">Dodge</value>
+                          <value class="value" valueClass="string">Hyundai</value>
                         </argument>
                         <argument id="blur">
                           <value class="value" valueClass="boolean">false</value>
@@ -4076,7 +4102,7 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Type select to Dodge</value>
+                          <value class="value" valueClass="string">Set the Type select to Hyundai</value>
                         </argument>
                         <argument id="wait">
                           <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
@@ -4103,7 +4129,7 @@
                         </apiParam>
                       </generatedParameters>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="348" title="Set the Quantity control to 5">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="348" title="Set the Quantity control to 10">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=Quantity"/>
@@ -4112,7 +4138,7 @@
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">5</value>
+                          <value class="value" valueClass="string">10</value>
                         </argument>
                         <argument id="blur">
                           <value class="value" valueClass="boolean">true</value>
@@ -4127,7 +4153,7 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Quantity control to 5</value>
+                          <value class="value" valueClass="string">Set the Quantity control to 10</value>
                         </argument>
                         <argument id="wait">
                           <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
@@ -4235,7 +4261,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="459" title="On SF Quote detail (Quote Not Priced) screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">JasonJohn</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Quote&amp;action=View&amp;recordType=Quote+Not+Priced"/>
@@ -4267,7 +4293,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="451" title="With QuoteLineItems rows {QUOTE_LI_PRODUCT2 = $Product5}">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="locator">
                   <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FQuoteLineItems%2FQuoteLineItemsTable"/>
@@ -4370,7 +4396,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="353" title="On SF Quote detail (Quote Not Priced) screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=Quote&amp;action=View&amp;recordType=Quote+Not+Priced"/>
@@ -4433,7 +4459,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="573" title="With QuoteLineItems rows {QUOTE_LI_PRODUCT2 = $Product6}">
                       <arguments>
                         <argument id="uiConnectionName">
-                          <value class="value" valueClass="string">JasonJohn</value>
+                          <value class="value" valueClass="string">DOFSalesUser</value>
                         </argument>
                         <argument id="locator">
                           <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FQuoteLineItems%2FQuoteLineItemsTable"/>
@@ -4518,7 +4544,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="358" title="On SF PriceOppProductLaunch screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?pageObject=pageobjects.PriceOppProductLaunch&amp;page=PriceOppProductLaunch"/>
@@ -4542,7 +4568,7 @@
               <clauses>
                 <clause name="substeps" testItemId="359">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="360" title="Set the Lot Size control to 25">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="360" title="Set the Lot Size control to 100">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=LotSize"/>
@@ -4551,7 +4577,7 @@
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">25</value>
+                          <value class="value" valueClass="string">100</value>
                         </argument>
                         <argument id="blur">
                           <value class="value" valueClass="boolean">false</value>
@@ -4566,7 +4592,7 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Lot Size control to 25</value>
+                          <value class="value" valueClass="string">Set the Lot Size control to 100</value>
                         </argument>
                         <argument id="wait">
                           <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
@@ -4576,7 +4602,11 @@
                         <apiParam group="value" name="value" seq="10000" title="Value">
                           <summary>The value to be populated.</summary>
                           <type>
-                            <choiceType/>
+                            <textType>
+                              <constraints>
+                                <valueConstraint name="mimeType">text/plain</valueConstraint>
+                              </constraints>
+                            </textType>
                           </type>
                         </apiParam>
                         <apiParam group="value" name="blur" seq="10001" title="Tab off field">
@@ -4772,7 +4802,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="580" title="On SF Quote detail (Quote Not Priced) screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=Quote&amp;action=View&amp;recordType=Quote+Not+Priced"/>
@@ -4835,7 +4865,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="582" title="With QuoteLineItems rows {QUOTE_LI_PRODUCT2 = $Product6}">
                       <arguments>
                         <argument id="uiConnectionName">
-                          <value class="value" valueClass="string">JasonJohn</value>
+                          <value class="value" valueClass="string">DOFSalesUser</value>
                         </argument>
                         <argument id="locator">
                           <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FQuoteLineItems%2FQuoteLineItemsTable"/>
@@ -4933,7 +4963,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="292" title="On SF Quote detail (Quote Not Synced) screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">JasonJohn</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Quote&amp;action=View&amp;recordType=Quote+Not+Synced"/>
@@ -5007,7 +5037,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="295" title="On MyPageObject page">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">JasonJohn</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.MyPageObject"/>
@@ -5102,7 +5132,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="299" title="On SF Quote detail (Quote Synced) screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">JasonJohn</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Quote&amp;action=View&amp;recordType=Quote+Synced"/>
@@ -5177,7 +5207,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="302" title="On SF Quote detail (Quote Synced) screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">JasonJohn</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Quote&amp;action=View&amp;recordType=Quote+Synced"/>
@@ -5206,19 +5236,19 @@
       <clauses>
         <clause name="substeps" testItemId="303">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="308" title="With Orders rows {1}">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="308" title="With RelatedOrderList rows {1}">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="locator">
-                  <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FOrders%2FOrdersTable"/>
+                  <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FRelatedOrderList%2FRelatedOrderListTable"/>
                 </argument>
                 <argument id="uiRowLocator">
                   <value class="value" valueClass="decimal">1</value>
                 </argument>
                 <argument id="locatorDescription">
-                  <value class="value" valueClass="string">With Orders rows {1}</value>
+                  <value class="value" valueClass="string">With RelatedOrderList rows {1}</value>
                 </argument>
                 <argument id="failIfNotFound">
                   <value class="value" valueClass="boolean">true</value>
@@ -5321,7 +5351,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="311" title="On SF Order view (Order Master Layout) screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">JasonJohn</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Order&amp;action=View&amp;recordType=Order+Master+Layout"/>
@@ -5353,7 +5383,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="313" title="With RelatedOrderItemList rows {Product2 = $Product1}">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="locator">
                   <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FRelatedOrderItemList%2FRelatedOrderItemListTable"/>
@@ -5400,7 +5430,9 @@
                               <fieldLocator uri="ui:locator?name=TotalPrice&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOrder%26field%3DTotalPrice%26relationship%3DOrderItems"/>
                               <attributeAssertions>
                                 <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
-                                  <value class="value" valueClass="string">$1,260.00</value>
+                                  <value class="variable">
+                                    <path element="Price1d"/>
+                                  </value>
                                 </uiAttributeAssertion>
                               </attributeAssertions>
                             </uiFieldAssertion>
@@ -5432,7 +5464,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="320" title="With RelatedOrderItemList rows {Product2 = $Product2}">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="locator">
                   <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FRelatedOrderItemList%2FRelatedOrderItemListTable"/>
@@ -5479,7 +5511,9 @@
                               <fieldLocator uri="ui:locator?name=TotalPrice&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOrder%26field%3DTotalPrice%26relationship%3DOrderItems"/>
                               <attributeAssertions>
                                 <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
-                                  <value class="value" valueClass="string">$1,640.00</value>
+                                  <value class="variable">
+                                    <path element="Price2d"/>
+                                  </value>
                                 </uiAttributeAssertion>
                               </attributeAssertions>
                             </uiFieldAssertion>
@@ -5511,7 +5545,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="316" title="With RelatedOrderItemList rows {Product2 = $Product3}">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="locator">
                   <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FRelatedOrderItemList%2FRelatedOrderItemListTable"/>
@@ -5558,7 +5592,9 @@
                               <fieldLocator uri="ui:locator?name=TotalPrice&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOrder%26field%3DTotalPrice%26relationship%3DOrderItems"/>
                               <attributeAssertions>
                                 <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
-                                  <value class="value" valueClass="string">$2,170.00</value>
+                                  <value class="variable">
+                                    <path element="Price3d"/>
+                                  </value>
                                 </uiAttributeAssertion>
                               </attributeAssertions>
                             </uiFieldAssertion>
@@ -5590,7 +5626,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="479" title="With RelatedOrderItemList rows {Product2 = $Product4}">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="locator">
                   <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FRelatedOrderItemList%2FRelatedOrderItemListTable"/>
@@ -5637,7 +5673,9 @@
                               <fieldLocator uri="ui:locator?name=TotalPrice&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOrder%26field%3DTotalPrice%26relationship%3DOrderItems"/>
                               <attributeAssertions>
                                 <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
-                                  <value class="value" valueClass="string">$3,870.00</value>
+                                  <value class="variable">
+                                    <path element="Price4d"/>
+                                  </value>
                                 </uiAttributeAssertion>
                               </attributeAssertions>
                             </uiFieldAssertion>
@@ -5666,13 +5704,16 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="482" title="With RelatedOrderItemList rows {Product2 = $Product6}">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="775" title="With RelatedOrderItemList rows {Product2 = $Product5}">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="locator">
                   <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FRelatedOrderItemList%2FRelatedOrderItemListTable"/>
+                </argument>
+                <argument id="locatorDescription">
+                  <value class="value" valueClass="string">With RelatedOrderItemList rows {Product2 = $Product5}</value>
                 </argument>
                 <argument id="uiRowLocator">
                   <value class="eq">
@@ -5680,12 +5721,9 @@
                       <path element="Product2"/>
                     </lhs>
                     <rhs class="variable" topLevel="true">
-                      <path element="Product6"/>
+                      <path element="Product5"/>
                     </rhs>
                   </value>
-                </argument>
-                <argument id="locatorDescription">
-                  <value class="value" valueClass="string">With RelatedOrderItemList rows {Product2 = $Product6}</value>
                 </argument>
                 <argument id="failIfNotFound">
                   <value class="value" valueClass="boolean">true</value>
@@ -5700,30 +5738,23 @@
                 <argument id="autoPaginate"/>
               </arguments>
               <clauses>
-                <clause name="substeps" testItemId="483">
+                <clause name="substeps" testItemId="776">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="484" title="UI Assert">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="777" title="UI Assert">
                       <arguments>
-                        <argument id="resultName">
-                          <value class="value" valueClass="string">Values</value>
-                        </argument>
-                        <argument id="resultScope">
-                          <value class="value" valueClass="string">Test</value>
-                        </argument>
                         <argument id="fieldAssertions">
                           <value class="valueList" mutable="Mutable">
                             <uiFieldAssertion resultName="TotalPrice">
                               <fieldLocator uri="ui:locator?name=TotalPrice&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOrder%26field%3DTotalPrice%26relationship%3DOrderItems"/>
                               <attributeAssertions>
                                 <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
-                                  <value class="value" valueClass="string">$1,805.00</value>
+                                  <value class="variable">
+                                    <path element="Price5d"/>
+                                  </value>
                                 </uiAttributeAssertion>
                               </attributeAssertions>
                             </uiFieldAssertion>
                           </value>
-                        </argument>
-                        <argument id="captureAfter">
-                          <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="columnAssertions">
                           <value class="valueList" mutable="Mutable"/>
@@ -5731,7 +5762,13 @@
                         <argument id="pageAssertions">
                           <value class="valueList" mutable="Mutable"/>
                         </argument>
+                        <argument id="resultName"/>
+                        <argument id="resultScope">
+                          <value class="value" valueClass="string">Test</value>
+                        </argument>
+                        <argument id="captureAfter"/>
                       </arguments>
+                      <resultAssertions/>
                     </apiCall>
                   </steps>
                 </clause>
@@ -5779,7 +5816,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="485" title="With RelatedOrderItemList rows {Product2 = $Product6}">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="locator">
                   <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FRelatedOrderItemList%2FRelatedOrderItemListTable"/>
@@ -5826,7 +5863,9 @@
                               <fieldLocator uri="ui:locator?name=TotalPrice&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOrder%26field%3DTotalPrice%26relationship%3DOrderItems"/>
                               <attributeAssertions>
                                 <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
-                                  <value class="value" valueClass="string">$3,500.00</value>
+                                  <value class="variable">
+                                    <path element="Price6d"/>
+                                  </value>
                                 </uiAttributeAssertion>
                               </attributeAssertions>
                             </uiFieldAssertion>
@@ -5869,7 +5908,9 @@
                       <fieldLocator uri="ui:locator?name=TotalAmount&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOrder%26field%3DTotalAmount"/>
                       <attributeAssertions>
                         <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
-                          <value class="value" valueClass="string">$14,245.00</value>
+                          <value class="variable">
+                            <path element="Totald"/>
+                          </value>
                         </uiAttributeAssertion>
                       </attributeAssertions>
                     </uiFieldAssertion>
@@ -5901,7 +5942,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="595" title="On SF Order view (Order Master Layout) screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">JasonJohn</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Order&amp;action=View&amp;recordType=Order+Master+Layout"/>
@@ -5931,7 +5972,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="597" title="With RelatedOrderItemList rows {Product2 = $Product1}">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="locator">
                   <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FRelatedOrderItemList%2FRelatedOrderItemListTable"/>
@@ -6009,7 +6050,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="600" title="On OrderConfig page">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.OrderConfig"/>
@@ -6041,7 +6082,7 @@
                         </argument>
                       </arguments>
                       <parameterValueSources>
-                        <parameterValueSource url="excel:templates/ProductConfigFields.xls?worksheet=ProductConfigs&amp;range=A1%3AFW114&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct1%7D" variableName="ExcelData" variableScope="Test">
+                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=Premium-NonPremium&amp;range=A1%3ABP24&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct1%7D" variableName="ExcelData" variableScope="Test">
                           <cacheToken>C:/Users/jtjohn/Provar/Workspace/ProvarTesting2/Test/templates/FillData.xlsx;1438091420870</cacheToken>
                           <cachedParameters>
                             <apiParam name="RowNumber"/>
@@ -6310,7 +6351,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="754" title="With RelatedOrderItemList rows {Product2 = $Product2}">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="locator">
                   <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FRelatedOrderItemList%2FRelatedOrderItemListTable"/>
@@ -6388,7 +6429,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="757" title="On OrderConfig page">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.OrderConfig"/>
@@ -6420,7 +6461,7 @@
                         </argument>
                       </arguments>
                       <parameterValueSources>
-                        <parameterValueSource url="excel:templates/ProductConfigFields.xls?worksheet=ProductConfigs&amp;range=A1%3AFW114&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct2%7D" variableName="ExcelData" variableScope="Test">
+                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=Premium-NonPremium&amp;range=A1%3ABP24&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct2%7D" variableName="ExcelData" variableScope="Test">
                           <cacheToken>C:/Users/jtjohn/Provar/Workspace/ProvarTesting2/Test/templates/FillData.xlsx;1438091420870</cacheToken>
                           <cachedParameters>
                             <apiParam name="RowNumber"/>
@@ -6689,7 +6730,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="763" title="With RelatedOrderItemList rows {Product2 = $Product3}">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="locator">
                   <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FRelatedOrderItemList%2FRelatedOrderItemListTable"/>
@@ -6768,7 +6809,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="766" title="On OrderConfig page">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">JasonJohn</value>
+                  <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.OrderConfig"/>
@@ -6793,14 +6834,14 @@
               <clauses>
                 <clause name="substeps" testItemId="767">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="768" title="Read Excel Sheet">
+                    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="837" title="Read Excel Sheet">
                       <arguments>
                         <argument id="description">
                           <value class="value" valueClass="string">Read Excel Sheet</value>
                         </argument>
                       </arguments>
                       <parameterValueSources>
-                        <parameterValueSource url="excel:templates/ProductConfigFields.xls?worksheet=ProductConfigs&amp;range=A1%3AFW114&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct3%7D" variableName="ExcelData" variableScope="Test">
+                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=Premium-NonPremium&amp;range=A1%3ABP24&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct3%7D" variableName="ExcelData" variableScope="Test">
                           <cacheToken>C:/Users/jtjohn/Provar/Workspace/ProvarTesting2/Test/templates/FillData.xlsx;1438091420870</cacheToken>
                           <cachedParameters>
                             <apiParam name="RowNumber"/>
@@ -7003,7 +7044,7 @@
                         </parameterValueSource>
                       </parameterValueSources>
                       <clauses>
-                        <clause name="hidden" testItemId="769">
+                        <clause name="hidden" testItemId="838">
                           <steps/>
                         </clause>
                       </clauses>
@@ -7062,6 +7103,1279 @@
                 <apiParam group="target" name="uiTargetUrl" title="Web Page">
                   <type>
                     <textType/>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="782" title="With RelatedOrderItemList rows {Product2 = $Product4}">
+              <arguments>
+                <argument id="uiConnectionName">
+                  <value class="value" valueClass="string">DOFSalesUser</value>
+                </argument>
+                <argument id="locator">
+                  <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FRelatedOrderItemList%2FRelatedOrderItemListTable"/>
+                </argument>
+                <argument id="uiRowLocator">
+                  <value class="eq">
+                    <lhs class="variable">
+                      <path element="Product2"/>
+                    </lhs>
+                    <rhs class="variable" topLevel="true">
+                      <path element="Product4"/>
+                    </rhs>
+                  </value>
+                </argument>
+                <argument id="locatorDescription">
+                  <value class="value" valueClass="string">With RelatedOrderItemList rows {Product2 = $Product4}</value>
+                </argument>
+                <argument id="failIfNotFound">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
+                <argument id="debugRowLocator"/>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">Row</value>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Local</value>
+                </argument>
+                <argument id="autoPaginate"/>
+              </arguments>
+              <clauses>
+                <clause name="substeps" testItemId="783">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="784" title="Click the Product2 link">
+                      <arguments>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:locator?name=Product2&amp;rowLocator=Product2+%3D+%27Alpha+2014%27&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOrder%26field%3DProduct2%26relationship%3DOrderItems"/>
+                        </argument>
+                        <argument id="interaction">
+                          <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                        </argument>
+                        <argument id="hover">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Click the Product2 link</value>
+                        </argument>
+                        <argument id="wait"/>
+                      </arguments>
+                      <generatedParameters>
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
+                          <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
+                  </steps>
+                </clause>
+              </clauses>
+              <generatedParameters>
+                <apiParam group="options" name="autoPaginate" title="Auto Paginate">
+                  <summary>Whether Show More/Next is clicked till the match condition succeeds.</summary>
+                  <type>
+                    <booleanType/>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="791" title="On OrderConfig page">
+              <arguments>
+                <argument id="uiConnectionName">
+                  <value class="value" valueClass="string">DOFSalesUser</value>
+                </argument>
+                <argument id="target">
+                  <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.OrderConfig"/>
+                </argument>
+                <argument id="navigate">
+                  <value class="value" valueClass="string">Dont</value>
+                </argument>
+                <argument id="targetDescription">
+                  <value class="value" valueClass="string">On OrderConfig page</value>
+                </argument>
+                <argument id="windowSelection">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="windowSize">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="closeWindow"/>
+                <argument id="captureBefore"/>
+                <argument id="captureAfter"/>
+                <argument id="uiTargetUrl"/>
+              </arguments>
+              <clauses>
+                <clause name="substeps" testItemId="792">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="841" title="Read Excel Sheet">
+                      <arguments>
+                        <argument id="description">
+                          <value class="value" valueClass="string">Read Excel Sheet</value>
+                        </argument>
+                      </arguments>
+                      <parameterValueSources>
+                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=Premium-NonPremium&amp;range=A1%3ABP24&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct4%7D" variableName="ExcelData" variableScope="Test">
+                          <cacheToken>C:/Users/jtjohn/Provar/Workspace/ProvarTesting2/Test/templates/FillData.xlsx;1438091420870</cacheToken>
+                          <cachedParameters>
+                            <apiParam name="RowNumber"/>
+                            <apiParam name="ProductTitle"/>
+                            <apiParam name="LineDescription"/>
+                            <apiParam name="TotalUsedCarLotSize"/>
+                            <apiParam name="TotalProductionCost"/>
+                            <apiParam name="BMWDealerCenter"/>
+                            <apiParam name="Notes"/>
+                            <apiParam name="EnhancedCallTracking"/>
+                            <apiParam name="FormCompleted"/>
+                            <apiParam name="RedirectNo"/>
+                            <apiParam name="FirstName"/>
+                            <apiParam name="LastName"/>
+                            <apiParam name="EmailAddress"/>
+                            <apiParam name="PhoneNumber"/>
+                            <apiParam name="Link"/>
+                            <apiParam name="ClickThruURL"/>
+                            <apiParam name="NewCarContactEmail"/>
+                            <apiParam name="OtherEmail"/>
+                            <apiParam name="PrimaryContactEmail"/>
+                            <apiParam name="SitelinkUsedAdvanced"/>
+                            <apiParam name="SitelinkUsedProOptIn"/>
+                            <apiParam name="SitelinkUsedUseExisting"/>
+                            <apiParam name="UseExistingFacebook"/>
+                            <apiParam name="UseExistingTwitter"/>
+                            <apiParam name="SitelinkedUsedURL"/>
+                            <apiParam name="FacebookId"/>
+                            <apiParam name="FacebookInventory"/>
+                            <apiParam name="TwitterId"/>
+                            <apiParam name="FacebookDotComSlash"/>
+                            <apiParam name="TransactionType"/>
+                            <apiParam name="AlphaFullRate"/>
+                            <apiParam name="UsedCarInventorySource"/>
+                            <apiParam name="OptOutCoOpSubmissionCPO"/>
+                            <apiParam name="Provider"/>
+                            <apiParam name="SCAArtwork"/>
+                            <apiParam name="DMA"/>
+                            <apiParam name="Zone"/>
+                            <apiParam name="Make"/>
+                            <apiParam name="Franchise"/>
+                            <apiParam name="FrontLineProModel"/>
+                            <apiParam name="NewQuantity"/>
+                            <apiParam name="SpotlightQuantity"/>
+                            <apiParam name="TotalInventoryNewUsedCertified"/>
+                            <apiParam name="TotalNewCarLotSize"/>
+                            <apiParam name="MonthlyAdvertisingBudget"/>
+                            <apiParam name="TierGovernorVehicleQuantity"/>
+                            <apiParam name="TierGovernorVehicleMonthlyRate"/>
+                            <apiParam name="NewCarMakeQuantity1"/>
+                            <apiParam name="NewCarMakeQuantity2"/>
+                            <apiParam name="NewCarMakeQuantity3"/>
+                            <apiParam name="NewCarMakeQuantity4"/>
+                            <apiParam name="NewCarMakeQuantity5"/>
+                            <apiParam name="UsedCarMakeQuantity1"/>
+                            <apiParam name="UsedCarMakeQuantity2"/>
+                            <apiParam name="UsedCarMakeQuantity3"/>
+                            <apiParam name="UsedCarMakeQuantity4"/>
+                            <apiParam name="UsedCarMakeQuantity5"/>
+                            <apiParam name="TermDuration"/>
+                            <apiParam name="Agency"/>
+                            <apiParam name="BACCode"/>
+                            <apiParam name="DealerCode"/>
+                            <apiParam name="BMWLocationId"/>
+                            <apiParam name="MINIDealerCenterId"/>
+                            <apiParam name="MINILocationId"/>
+                            <apiParam name="HaystakDealerCode"/>
+                            <apiParam name="NameOfCRMSystem"/>
+                            <apiParam name="TIMDealershipContact"/>
+                            <apiParam name="TIMDealershipContactEmailAddress"/>
+                            <apiParam name="TIMDealershipContactMobileCarrier"/>
+                            <apiParam name="TIMDealershipContactMobileNumber"/>
+                            <apiParam name="TIMDealershipXMLEmailAddress"/>
+                            <apiParam name="TIMDealerWebsiteAddress"/>
+                            <apiParam name="TrainingHeadcount"/>
+                            <apiParam name="VAutoId"/>
+                            <apiParam name="TechnicalContactEmail"/>
+                            <apiParam name="TechnicalContactName"/>
+                            <apiParam name="TechnicalContactPhone"/>
+                            <apiParam name="FullRateAmount"/>
+                            <apiParam name="ArtworkPreapproveCaseNo"/>
+                            <apiParam name="DealershipWebsite"/>
+                            <apiParam name="CarsComId"/>
+                            <apiParam name="ReportRecipientsName1"/>
+                            <apiParam name="ReportRecipientsName2"/>
+                            <apiParam name="ReportRecipientsName3"/>
+                            <apiParam name="ReportRecipientsEmailAddress1"/>
+                            <apiParam name="ReportRecipientsEmailAddress2"/>
+                            <apiParam name="ReportRecipientsEmailAddress3"/>
+                            <apiParam name="Top6Citites1"/>
+                            <apiParam name="Top6Citites2"/>
+                            <apiParam name="Top6Citites3"/>
+                            <apiParam name="Top6Citites4"/>
+                            <apiParam name="Top6Citites5"/>
+                            <apiParam name="Top6Citites6"/>
+                            <apiParam name="TrackingNumber"/>
+                            <apiParam name="CobaltURL"/>
+                            <apiParam name="DealerWebsiteURL"/>
+                            <apiParam name="Deliver1stOfTheNextMonth"/>
+                            <apiParam name="ReplaceCurrentSpotlights"/>
+                            <apiParam name="DealerSpecialtiesCustomer"/>
+                            <apiParam name="DealerLogoSubmittedToAutotrader"/>
+                            <apiParam name="SitelinkNewAdvanced"/>
+                            <apiParam name="SitelinkNewProOptIn"/>
+                            <apiParam name="SitelinkNewUseExisting"/>
+                            <apiParam name="CoOpLevelOfService"/>
+                            <apiParam name="CustomURLType"/>
+                            <apiParam name="AdvertisedMake"/>
+                            <apiParam name="SpotlightMake"/>
+                            <apiParam name="SpotlightDuration"/>
+                            <apiParam name="SkyscapersBuckets"/>
+                            <apiParam name="Skyscrapers_Slots"/>
+                            <apiParam name="Tier_Governor_Type"/>
+                            <apiParam name="TierGovernorValue"/>
+                            <apiParam name="TierGovernorAdvertisedMake"/>
+                            <apiParam name="TierGovernorCoopLevelOfService"/>
+                            <apiParam name="NewCarMake1"/>
+                            <apiParam name="NewCarMake2"/>
+                            <apiParam name="NewCarMake3"/>
+                            <apiParam name="UsedCarMake1"/>
+                            <apiParam name="UsedCarMake2"/>
+                            <apiParam name="UsedCarMake3"/>
+                            <apiParam name="NewCarInventorySource"/>
+                            <apiParam name="TierGovernorSequence"/>
+                            <apiParam name="TierGovernorSorting"/>
+                            <apiParam name="TermDurationAlphaAllOthers"/>
+                            <apiParam name="TermDurationSkyscrapers"/>
+                            <apiParam name="IMROptIn"/>
+                            <apiParam name="OptOutCoopSubmission"/>
+                            <apiParam name="CarTypeRestrictions"/>
+                            <apiParam name="ArtworkDropdown"/>
+                            <apiParam name="InlineDisplayNewCarAdArtwork"/>
+                            <apiParam name="InlineDisplayNewCarAdArtworkGM"/>
+                            <apiParam name="InlineDisplayUsedCarAdArtwork"/>
+                            <apiParam name="InlineDisplayUsedCarAdArtworkGM"/>
+                            <apiParam name="LeaderboardNewArtwork"/>
+                            <apiParam name="LeaderboardNewArtworkGMPackages"/>
+                            <apiParam name="LeaderboardUsedArtwork"/>
+                            <apiParam name="LeaderboardUsedArtworkGMPackages"/>
+                            <apiParam name="SkyscrapersCoOpArtwork"/>
+                            <apiParam name="SkyscrapersCoOpArtworkGMPackages"/>
+                            <apiParam name="FeaturedType"/>
+                            <apiParam name="FeaturedValue"/>
+                            <apiParam name="FeaturedAdvertisedMake"/>
+                            <apiParam name="FeaturedCoOpLevelOfService"/>
+                            <apiParam name="TermDuration12"/>
+                            <apiParam name="TermDuration1m2m3m6m"/>
+                            <apiParam name="TermDuration3m6m9m12m"/>
+                            <apiParam name="ProductionCost"/>
+                            <apiParam name="FeatuedVehicleQuantity"/>
+                            <apiParam name="FeaturedVehicleMonthlyRate"/>
+                            <apiParam name="CallTrackingNewRedirect"/>
+                            <apiParam name="CallTrackingUsedRedirect"/>
+                            <apiParam name="DealerRatingsLi"/>
+                            <apiParam name="KBBDealerRatingsLink"/>
+                            <apiParam name="KBBDealerRatingsProvider"/>
+                            <apiParam name="VehicleSequence"/>
+                            <apiParam name="VehicleSorting"/>
+                            <apiParam name="CallTrackingNewCallRecord"/>
+                            <apiParam name="CallTrackingNewEnhanced"/>
+                            <apiParam name="CallTrackingNewWhisper"/>
+                            <apiParam name="CallTrackingUsedCallRecord"/>
+                            <apiParam name="CallTrackingUsedEnhanced"/>
+                            <apiParam name="CallTrackingUsedWhisper"/>
+                            <apiParam name="KBBCallTrackingNewCallRecord"/>
+                            <apiParam name="KBBCallTrackingNewWhisper"/>
+                            <apiParam name="KBBCallTrackingNewRedirect"/>
+                            <apiParam name="KBBCallTrackingUsedCallRecord"/>
+                            <apiParam name="KBBCallTrackingUsedWhisper"/>
+                            <apiParam name="KBBCallTrackingUsedRedirect"/>
+                            <apiParam name="KBBShowcaseCallTrackingCallRecord"/>
+                            <apiParam name="KBBShowcaseCallTrackingWhisper"/>
+                            <apiParam name="KBBShowcaseCallTrackingRedirect"/>
+                            <apiParam name="KBBShowcaseXMLEmailAddress"/>
+                            <apiParam name="KBBShowcaseTextEmailAddress"/>
+                            <apiParam name="LeaderboardNewClickThruURL"/>
+                            <apiParam name="LeaderboardNewCoOpPreApprovalCase"/>
+                            <apiParam name="LeaderboardUsedClickThruURL"/>
+                            <apiParam name="LeaderboardUsedCoOpPreApprovalCase"/>
+                            <apiParam name="SkyscrapersClickThruURL"/>
+                            <apiParam name="SkyscrapersCoOpPreApprovalCaseNo"/>
+                            <apiParam name="LeadDriverTextEmailAddress"/>
+                            <apiParam name="LeadDriverXMLEmailAddress"/>
+                            <apiParam name="PremiumType1"/>
+                            <apiParam name="PremiumValue1"/>
+                            <apiParam name="PremiumAdvertisedMake1"/>
+                            <apiParam name="PremiumVehicleQuantity1"/>
+                            <apiParam name="PremiumVehicleMonthlyRate1"/>
+                            <apiParam name="PremiumCoOpLevelOfService1"/>
+                            <apiParam name="AddCarMakeFields"/>
+                            <apiParam name="APFDToday"/>
+                            <apiParam name="BillAccountLookup"/>
+                            <apiParam name="AdvertisedMakeGM"/>
+                            <apiParam name="APFDDate"/>
+                            <apiParam name="DealerRatingsProvider"/>
+                            <apiParam name="DBAName1"/>
+                            <apiParam name="OEMId1"/>
+                            <apiParam name="FullRateBelowRate"/>
+                          </cachedParameters>
+                        </parameterValueSource>
+                      </parameterValueSources>
+                      <clauses>
+                        <clause name="hidden" testItemId="842">
+                          <steps/>
+                        </clause>
+                      </clauses>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiFill" name="UiFill" testItemId="797" title="UI Fill">
+                      <arguments>
+                        <argument id="values">
+                          <value class="variable">
+                            <path element="ExcelData">
+                              <filter class="index">
+                                <index valueClass="decimal">0</index>
+                              </filter>
+                            </path>
+                          </value>
+                        </argument>
+                        <argument id="ignoreFields">
+                          <value class="value" valueClass="string">ProductTitle, PremiumFields</value>
+                        </argument>
+                      </arguments>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="798" title="Click the Save">
+                      <arguments>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:pageobject:field?field=Save&amp;pageId=pageobjects.OrderConfig"/>
+                        </argument>
+                        <argument id="interaction">
+                          <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                        </argument>
+                        <argument id="hover">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Click the Save</value>
+                        </argument>
+                        <argument id="wait"/>
+                      </arguments>
+                      <generatedParameters>
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
+                          <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
+                  </steps>
+                </clause>
+              </clauses>
+              <generatedParameters>
+                <apiParam group="target" name="uiTargetUrl" title="Web Page">
+                  <type>
+                    <textType/>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="785" title="With RelatedOrderItemList rows {Product2 = $Product5}">
+              <arguments>
+                <argument id="uiConnectionName">
+                  <value class="value" valueClass="string">DOFSalesUser</value>
+                </argument>
+                <argument id="locator">
+                  <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FRelatedOrderItemList%2FRelatedOrderItemListTable"/>
+                </argument>
+                <argument id="uiRowLocator">
+                  <value class="eq">
+                    <lhs class="variable">
+                      <path element="Product2"/>
+                    </lhs>
+                    <rhs class="variable" topLevel="true">
+                      <path element="Product5"/>
+                    </rhs>
+                  </value>
+                </argument>
+                <argument id="locatorDescription">
+                  <value class="value" valueClass="string">With RelatedOrderItemList rows {Product2 = $Product5}</value>
+                </argument>
+                <argument id="failIfNotFound">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
+                <argument id="debugRowLocator"/>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">Row</value>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Local</value>
+                </argument>
+                <argument id="autoPaginate"/>
+              </arguments>
+              <clauses>
+                <clause name="substeps" testItemId="786">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="787" title="Click the Product2 link">
+                      <arguments>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:locator?name=Product2&amp;rowLocator=Product2+%3D+%27Alpha+2014%27&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOrder%26field%3DProduct2%26relationship%3DOrderItems"/>
+                        </argument>
+                        <argument id="interaction">
+                          <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                        </argument>
+                        <argument id="hover">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Click the Product2 link</value>
+                        </argument>
+                        <argument id="wait"/>
+                      </arguments>
+                      <generatedParameters>
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
+                          <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
+                  </steps>
+                </clause>
+              </clauses>
+              <generatedParameters>
+                <apiParam group="options" name="autoPaginate" title="Auto Paginate">
+                  <summary>Whether Show More/Next is clicked till the match condition succeeds.</summary>
+                  <type>
+                    <booleanType/>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="799" title="On OrderConfig page">
+              <arguments>
+                <argument id="uiConnectionName">
+                  <value class="value" valueClass="string">DOFSalesUser</value>
+                </argument>
+                <argument id="target">
+                  <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.OrderConfig"/>
+                </argument>
+                <argument id="navigate">
+                  <value class="value" valueClass="string">Dont</value>
+                </argument>
+                <argument id="targetDescription">
+                  <value class="value" valueClass="string">On OrderConfig page</value>
+                </argument>
+                <argument id="windowSelection">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="windowSize">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="closeWindow"/>
+                <argument id="captureBefore"/>
+                <argument id="captureAfter"/>
+                <argument id="uiTargetUrl"/>
+              </arguments>
+              <clauses>
+                <clause name="substeps" testItemId="800">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="845" title="Read Excel Sheet">
+                      <arguments>
+                        <argument id="description">
+                          <value class="value" valueClass="string">Read Excel Sheet</value>
+                        </argument>
+                      </arguments>
+                      <parameterValueSources>
+                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=Premium-NonPremium&amp;range=A1%3ABP24&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct5%7D" variableName="ExcelData" variableScope="Test">
+                          <cacheToken>C:/Users/jtjohn/Provar/Workspace/ProvarTesting2/Test/templates/FillData.xlsx;1438091420870</cacheToken>
+                          <cachedParameters>
+                            <apiParam name="RowNumber"/>
+                            <apiParam name="ProductTitle"/>
+                            <apiParam name="LineDescription"/>
+                            <apiParam name="TotalUsedCarLotSize"/>
+                            <apiParam name="TotalProductionCost"/>
+                            <apiParam name="BMWDealerCenter"/>
+                            <apiParam name="Notes"/>
+                            <apiParam name="EnhancedCallTracking"/>
+                            <apiParam name="FormCompleted"/>
+                            <apiParam name="RedirectNo"/>
+                            <apiParam name="FirstName"/>
+                            <apiParam name="LastName"/>
+                            <apiParam name="EmailAddress"/>
+                            <apiParam name="PhoneNumber"/>
+                            <apiParam name="Link"/>
+                            <apiParam name="ClickThruURL"/>
+                            <apiParam name="NewCarContactEmail"/>
+                            <apiParam name="OtherEmail"/>
+                            <apiParam name="PrimaryContactEmail"/>
+                            <apiParam name="SitelinkUsedAdvanced"/>
+                            <apiParam name="SitelinkUsedProOptIn"/>
+                            <apiParam name="SitelinkUsedUseExisting"/>
+                            <apiParam name="UseExistingFacebook"/>
+                            <apiParam name="UseExistingTwitter"/>
+                            <apiParam name="SitelinkedUsedURL"/>
+                            <apiParam name="FacebookId"/>
+                            <apiParam name="FacebookInventory"/>
+                            <apiParam name="TwitterId"/>
+                            <apiParam name="FacebookDotComSlash"/>
+                            <apiParam name="TransactionType"/>
+                            <apiParam name="AlphaFullRate"/>
+                            <apiParam name="UsedCarInventorySource"/>
+                            <apiParam name="OptOutCoOpSubmissionCPO"/>
+                            <apiParam name="Provider"/>
+                            <apiParam name="SCAArtwork"/>
+                            <apiParam name="DMA"/>
+                            <apiParam name="Zone"/>
+                            <apiParam name="Make"/>
+                            <apiParam name="Franchise"/>
+                            <apiParam name="FrontLineProModel"/>
+                            <apiParam name="NewQuantity"/>
+                            <apiParam name="SpotlightQuantity"/>
+                            <apiParam name="TotalInventoryNewUsedCertified"/>
+                            <apiParam name="TotalNewCarLotSize"/>
+                            <apiParam name="MonthlyAdvertisingBudget"/>
+                            <apiParam name="TierGovernorVehicleQuantity"/>
+                            <apiParam name="TierGovernorVehicleMonthlyRate"/>
+                            <apiParam name="NewCarMakeQuantity1"/>
+                            <apiParam name="NewCarMakeQuantity2"/>
+                            <apiParam name="NewCarMakeQuantity3"/>
+                            <apiParam name="NewCarMakeQuantity4"/>
+                            <apiParam name="NewCarMakeQuantity5"/>
+                            <apiParam name="UsedCarMakeQuantity1"/>
+                            <apiParam name="UsedCarMakeQuantity2"/>
+                            <apiParam name="UsedCarMakeQuantity3"/>
+                            <apiParam name="UsedCarMakeQuantity4"/>
+                            <apiParam name="UsedCarMakeQuantity5"/>
+                            <apiParam name="TermDuration"/>
+                            <apiParam name="Agency"/>
+                            <apiParam name="BACCode"/>
+                            <apiParam name="DealerCode"/>
+                            <apiParam name="BMWLocationId"/>
+                            <apiParam name="MINIDealerCenterId"/>
+                            <apiParam name="MINILocationId"/>
+                            <apiParam name="HaystakDealerCode"/>
+                            <apiParam name="NameOfCRMSystem"/>
+                            <apiParam name="TIMDealershipContact"/>
+                            <apiParam name="TIMDealershipContactEmailAddress"/>
+                            <apiParam name="TIMDealershipContactMobileCarrier"/>
+                            <apiParam name="TIMDealershipContactMobileNumber"/>
+                            <apiParam name="TIMDealershipXMLEmailAddress"/>
+                            <apiParam name="TIMDealerWebsiteAddress"/>
+                            <apiParam name="TrainingHeadcount"/>
+                            <apiParam name="VAutoId"/>
+                            <apiParam name="TechnicalContactEmail"/>
+                            <apiParam name="TechnicalContactName"/>
+                            <apiParam name="TechnicalContactPhone"/>
+                            <apiParam name="FullRateAmount"/>
+                            <apiParam name="ArtworkPreapproveCaseNo"/>
+                            <apiParam name="DealershipWebsite"/>
+                            <apiParam name="CarsComId"/>
+                            <apiParam name="ReportRecipientsName1"/>
+                            <apiParam name="ReportRecipientsName2"/>
+                            <apiParam name="ReportRecipientsName3"/>
+                            <apiParam name="ReportRecipientsEmailAddress1"/>
+                            <apiParam name="ReportRecipientsEmailAddress2"/>
+                            <apiParam name="ReportRecipientsEmailAddress3"/>
+                            <apiParam name="Top6Citites1"/>
+                            <apiParam name="Top6Citites2"/>
+                            <apiParam name="Top6Citites3"/>
+                            <apiParam name="Top6Citites4"/>
+                            <apiParam name="Top6Citites5"/>
+                            <apiParam name="Top6Citites6"/>
+                            <apiParam name="TrackingNumber"/>
+                            <apiParam name="CobaltURL"/>
+                            <apiParam name="DealerWebsiteURL"/>
+                            <apiParam name="Deliver1stOfTheNextMonth"/>
+                            <apiParam name="ReplaceCurrentSpotlights"/>
+                            <apiParam name="DealerSpecialtiesCustomer"/>
+                            <apiParam name="DealerLogoSubmittedToAutotrader"/>
+                            <apiParam name="SitelinkNewAdvanced"/>
+                            <apiParam name="SitelinkNewProOptIn"/>
+                            <apiParam name="SitelinkNewUseExisting"/>
+                            <apiParam name="CoOpLevelOfService"/>
+                            <apiParam name="CustomURLType"/>
+                            <apiParam name="AdvertisedMake"/>
+                            <apiParam name="SpotlightMake"/>
+                            <apiParam name="SpotlightDuration"/>
+                            <apiParam name="SkyscapersBuckets"/>
+                            <apiParam name="Skyscrapers_Slots"/>
+                            <apiParam name="Tier_Governor_Type"/>
+                            <apiParam name="TierGovernorValue"/>
+                            <apiParam name="TierGovernorAdvertisedMake"/>
+                            <apiParam name="TierGovernorCoopLevelOfService"/>
+                            <apiParam name="NewCarMake1"/>
+                            <apiParam name="NewCarMake2"/>
+                            <apiParam name="NewCarMake3"/>
+                            <apiParam name="UsedCarMake1"/>
+                            <apiParam name="UsedCarMake2"/>
+                            <apiParam name="UsedCarMake3"/>
+                            <apiParam name="NewCarInventorySource"/>
+                            <apiParam name="TierGovernorSequence"/>
+                            <apiParam name="TierGovernorSorting"/>
+                            <apiParam name="TermDurationAlphaAllOthers"/>
+                            <apiParam name="TermDurationSkyscrapers"/>
+                            <apiParam name="IMROptIn"/>
+                            <apiParam name="OptOutCoopSubmission"/>
+                            <apiParam name="CarTypeRestrictions"/>
+                            <apiParam name="ArtworkDropdown"/>
+                            <apiParam name="InlineDisplayNewCarAdArtwork"/>
+                            <apiParam name="InlineDisplayNewCarAdArtworkGM"/>
+                            <apiParam name="InlineDisplayUsedCarAdArtwork"/>
+                            <apiParam name="InlineDisplayUsedCarAdArtworkGM"/>
+                            <apiParam name="LeaderboardNewArtwork"/>
+                            <apiParam name="LeaderboardNewArtworkGMPackages"/>
+                            <apiParam name="LeaderboardUsedArtwork"/>
+                            <apiParam name="LeaderboardUsedArtworkGMPackages"/>
+                            <apiParam name="SkyscrapersCoOpArtwork"/>
+                            <apiParam name="SkyscrapersCoOpArtworkGMPackages"/>
+                            <apiParam name="FeaturedType"/>
+                            <apiParam name="FeaturedValue"/>
+                            <apiParam name="FeaturedAdvertisedMake"/>
+                            <apiParam name="FeaturedCoOpLevelOfService"/>
+                            <apiParam name="TermDuration12"/>
+                            <apiParam name="TermDuration1m2m3m6m"/>
+                            <apiParam name="TermDuration3m6m9m12m"/>
+                            <apiParam name="ProductionCost"/>
+                            <apiParam name="FeatuedVehicleQuantity"/>
+                            <apiParam name="FeaturedVehicleMonthlyRate"/>
+                            <apiParam name="CallTrackingNewRedirect"/>
+                            <apiParam name="CallTrackingUsedRedirect"/>
+                            <apiParam name="DealerRatingsLi"/>
+                            <apiParam name="KBBDealerRatingsLink"/>
+                            <apiParam name="KBBDealerRatingsProvider"/>
+                            <apiParam name="VehicleSequence"/>
+                            <apiParam name="VehicleSorting"/>
+                            <apiParam name="CallTrackingNewCallRecord"/>
+                            <apiParam name="CallTrackingNewEnhanced"/>
+                            <apiParam name="CallTrackingNewWhisper"/>
+                            <apiParam name="CallTrackingUsedCallRecord"/>
+                            <apiParam name="CallTrackingUsedEnhanced"/>
+                            <apiParam name="CallTrackingUsedWhisper"/>
+                            <apiParam name="KBBCallTrackingNewCallRecord"/>
+                            <apiParam name="KBBCallTrackingNewWhisper"/>
+                            <apiParam name="KBBCallTrackingNewRedirect"/>
+                            <apiParam name="KBBCallTrackingUsedCallRecord"/>
+                            <apiParam name="KBBCallTrackingUsedWhisper"/>
+                            <apiParam name="KBBCallTrackingUsedRedirect"/>
+                            <apiParam name="KBBShowcaseCallTrackingCallRecord"/>
+                            <apiParam name="KBBShowcaseCallTrackingWhisper"/>
+                            <apiParam name="KBBShowcaseCallTrackingRedirect"/>
+                            <apiParam name="KBBShowcaseXMLEmailAddress"/>
+                            <apiParam name="KBBShowcaseTextEmailAddress"/>
+                            <apiParam name="LeaderboardNewClickThruURL"/>
+                            <apiParam name="LeaderboardNewCoOpPreApprovalCase"/>
+                            <apiParam name="LeaderboardUsedClickThruURL"/>
+                            <apiParam name="LeaderboardUsedCoOpPreApprovalCase"/>
+                            <apiParam name="SkyscrapersClickThruURL"/>
+                            <apiParam name="SkyscrapersCoOpPreApprovalCaseNo"/>
+                            <apiParam name="LeadDriverTextEmailAddress"/>
+                            <apiParam name="LeadDriverXMLEmailAddress"/>
+                            <apiParam name="PremiumType1"/>
+                            <apiParam name="PremiumValue1"/>
+                            <apiParam name="PremiumAdvertisedMake1"/>
+                            <apiParam name="PremiumVehicleQuantity1"/>
+                            <apiParam name="PremiumVehicleMonthlyRate1"/>
+                            <apiParam name="PremiumCoOpLevelOfService1"/>
+                            <apiParam name="AddCarMakeFields"/>
+                            <apiParam name="APFDToday"/>
+                            <apiParam name="BillAccountLookup"/>
+                            <apiParam name="AdvertisedMakeGM"/>
+                            <apiParam name="APFDDate"/>
+                            <apiParam name="DealerRatingsProvider"/>
+                            <apiParam name="DBAName1"/>
+                            <apiParam name="OEMId1"/>
+                            <apiParam name="FullRateBelowRate"/>
+                          </cachedParameters>
+                        </parameterValueSource>
+                      </parameterValueSources>
+                      <clauses>
+                        <clause name="hidden" testItemId="846">
+                          <steps/>
+                        </clause>
+                      </clauses>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiFill" name="UiFill" testItemId="805" title="UI Fill">
+                      <arguments>
+                        <argument id="values">
+                          <value class="variable">
+                            <path element="ExcelData">
+                              <filter class="index">
+                                <index valueClass="decimal">0</index>
+                              </filter>
+                            </path>
+                          </value>
+                        </argument>
+                        <argument id="ignoreFields">
+                          <value class="value" valueClass="string">ProductTitle, PremiumFields</value>
+                        </argument>
+                      </arguments>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="806" title="Click the Save">
+                      <arguments>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:pageobject:field?field=Save&amp;pageId=pageobjects.OrderConfig"/>
+                        </argument>
+                        <argument id="interaction">
+                          <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                        </argument>
+                        <argument id="hover">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Click the Save</value>
+                        </argument>
+                        <argument id="wait"/>
+                      </arguments>
+                      <generatedParameters>
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
+                          <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
+                  </steps>
+                </clause>
+              </clauses>
+              <generatedParameters>
+                <apiParam group="target" name="uiTargetUrl" title="Web Page">
+                  <type>
+                    <textType/>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="854" title="On OrderConfig page">
+              <arguments>
+                <argument id="uiConnectionName">
+                  <value class="value" valueClass="string">DOFSalesUser</value>
+                </argument>
+                <argument id="target">
+                  <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.OrderConfig"/>
+                </argument>
+                <argument id="navigate">
+                  <value class="value" valueClass="string">Dont</value>
+                </argument>
+                <argument id="targetDescription">
+                  <value class="value" valueClass="string">On OrderConfig page</value>
+                </argument>
+                <argument id="windowSelection">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="windowSize">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="closeWindow"/>
+                <argument id="captureBefore"/>
+                <argument id="captureAfter"/>
+                <argument id="uiTargetUrl"/>
+              </arguments>
+              <clauses>
+                <clause name="substeps" testItemId="855">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="860" title="Click the ShowMoreProducts">
+                      <arguments>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:pageobject:field?field=ShowMoreProducts&amp;pageId=pageobjects.OrderConfig"/>
+                        </argument>
+                        <argument id="interaction">
+                          <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                        </argument>
+                        <argument id="hover">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Click the ShowMoreProducts</value>
+                        </argument>
+                        <argument id="wait"/>
+                      </arguments>
+                      <generatedParameters>
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
+                          <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
+                  </steps>
+                </clause>
+              </clauses>
+              <generatedParameters>
+                <apiParam group="target" name="uiTargetUrl" title="Web Page">
+                  <type>
+                    <textType/>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="788" title="With RelatedOrderItemList rows {Product2 = $Product6}">
+              <arguments>
+                <argument id="uiConnectionName">
+                  <value class="value" valueClass="string">DOFSalesUser</value>
+                </argument>
+                <argument id="locator">
+                  <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FRelatedOrderItemList%2FRelatedOrderItemListTable"/>
+                </argument>
+                <argument id="uiRowLocator">
+                  <value class="eq">
+                    <lhs class="variable">
+                      <path element="Product2"/>
+                    </lhs>
+                    <rhs class="variable" topLevel="true">
+                      <path element="Product6"/>
+                    </rhs>
+                  </value>
+                </argument>
+                <argument id="locatorDescription">
+                  <value class="value" valueClass="string">With RelatedOrderItemList rows {Product2 = $Product6}</value>
+                </argument>
+                <argument id="failIfNotFound">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
+                <argument id="debugRowLocator"/>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">Row</value>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Local</value>
+                </argument>
+                <argument id="autoPaginate"/>
+              </arguments>
+              <clauses>
+                <clause name="substeps" testItemId="789">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="790" title="Click the Product2 link">
+                      <arguments>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:locator?name=Product2&amp;rowLocator=Product2+%3D+%27Alpha+2014%27&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOrder%26field%3DProduct2%26relationship%3DOrderItems"/>
+                        </argument>
+                        <argument id="interaction">
+                          <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                        </argument>
+                        <argument id="hover">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Click the Product2 link</value>
+                        </argument>
+                        <argument id="wait"/>
+                      </arguments>
+                      <generatedParameters>
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
+                          <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
+                  </steps>
+                </clause>
+              </clauses>
+              <generatedParameters>
+                <apiParam group="options" name="autoPaginate" title="Auto Paginate">
+                  <summary>Whether Show More/Next is clicked till the match condition succeeds.</summary>
+                  <type>
+                    <booleanType/>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="807" title="On OrderConfig page">
+              <arguments>
+                <argument id="uiConnectionName">
+                  <value class="value" valueClass="string">DOFSalesUser</value>
+                </argument>
+                <argument id="target">
+                  <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.OrderConfig"/>
+                </argument>
+                <argument id="navigate">
+                  <value class="value" valueClass="string">Dont</value>
+                </argument>
+                <argument id="targetDescription">
+                  <value class="value" valueClass="string">On OrderConfig page</value>
+                </argument>
+                <argument id="windowSelection">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="windowSize">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="closeWindow"/>
+                <argument id="captureBefore"/>
+                <argument id="captureAfter"/>
+                <argument id="uiTargetUrl"/>
+              </arguments>
+              <clauses>
+                <clause name="substeps" testItemId="808">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="849" title="Read Excel Sheet">
+                      <arguments>
+                        <argument id="description">
+                          <value class="value" valueClass="string">Read Excel Sheet</value>
+                        </argument>
+                      </arguments>
+                      <parameterValueSources>
+                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=Premium-NonPremium&amp;range=A1%3ABP24&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct6%7D" variableName="ExcelData" variableScope="Test">
+                          <cacheToken>C:/Users/jtjohn/Provar/Workspace/ProvarTesting2/Test/templates/FillData.xlsx;1438091420870</cacheToken>
+                          <cachedParameters>
+                            <apiParam name="RowNumber"/>
+                            <apiParam name="ProductTitle"/>
+                            <apiParam name="LineDescription"/>
+                            <apiParam name="TotalUsedCarLotSize"/>
+                            <apiParam name="TotalProductionCost"/>
+                            <apiParam name="BMWDealerCenter"/>
+                            <apiParam name="Notes"/>
+                            <apiParam name="EnhancedCallTracking"/>
+                            <apiParam name="FormCompleted"/>
+                            <apiParam name="RedirectNo"/>
+                            <apiParam name="FirstName"/>
+                            <apiParam name="LastName"/>
+                            <apiParam name="EmailAddress"/>
+                            <apiParam name="PhoneNumber"/>
+                            <apiParam name="Link"/>
+                            <apiParam name="ClickThruURL"/>
+                            <apiParam name="NewCarContactEmail"/>
+                            <apiParam name="OtherEmail"/>
+                            <apiParam name="PrimaryContactEmail"/>
+                            <apiParam name="SitelinkUsedAdvanced"/>
+                            <apiParam name="SitelinkUsedProOptIn"/>
+                            <apiParam name="SitelinkUsedUseExisting"/>
+                            <apiParam name="UseExistingFacebook"/>
+                            <apiParam name="UseExistingTwitter"/>
+                            <apiParam name="SitelinkedUsedURL"/>
+                            <apiParam name="FacebookId"/>
+                            <apiParam name="FacebookInventory"/>
+                            <apiParam name="TwitterId"/>
+                            <apiParam name="FacebookDotComSlash"/>
+                            <apiParam name="TransactionType"/>
+                            <apiParam name="AlphaFullRate"/>
+                            <apiParam name="UsedCarInventorySource"/>
+                            <apiParam name="OptOutCoOpSubmissionCPO"/>
+                            <apiParam name="Provider"/>
+                            <apiParam name="SCAArtwork"/>
+                            <apiParam name="DMA"/>
+                            <apiParam name="Zone"/>
+                            <apiParam name="Make"/>
+                            <apiParam name="Franchise"/>
+                            <apiParam name="FrontLineProModel"/>
+                            <apiParam name="NewQuantity"/>
+                            <apiParam name="SpotlightQuantity"/>
+                            <apiParam name="TotalInventoryNewUsedCertified"/>
+                            <apiParam name="TotalNewCarLotSize"/>
+                            <apiParam name="MonthlyAdvertisingBudget"/>
+                            <apiParam name="TierGovernorVehicleQuantity"/>
+                            <apiParam name="TierGovernorVehicleMonthlyRate"/>
+                            <apiParam name="NewCarMakeQuantity1"/>
+                            <apiParam name="NewCarMakeQuantity2"/>
+                            <apiParam name="NewCarMakeQuantity3"/>
+                            <apiParam name="NewCarMakeQuantity4"/>
+                            <apiParam name="NewCarMakeQuantity5"/>
+                            <apiParam name="UsedCarMakeQuantity1"/>
+                            <apiParam name="UsedCarMakeQuantity2"/>
+                            <apiParam name="UsedCarMakeQuantity3"/>
+                            <apiParam name="UsedCarMakeQuantity4"/>
+                            <apiParam name="UsedCarMakeQuantity5"/>
+                            <apiParam name="TermDuration"/>
+                            <apiParam name="Agency"/>
+                            <apiParam name="BACCode"/>
+                            <apiParam name="DealerCode"/>
+                            <apiParam name="BMWLocationId"/>
+                            <apiParam name="MINIDealerCenterId"/>
+                            <apiParam name="MINILocationId"/>
+                            <apiParam name="HaystakDealerCode"/>
+                            <apiParam name="NameOfCRMSystem"/>
+                            <apiParam name="TIMDealershipContact"/>
+                            <apiParam name="TIMDealershipContactEmailAddress"/>
+                            <apiParam name="TIMDealershipContactMobileCarrier"/>
+                            <apiParam name="TIMDealershipContactMobileNumber"/>
+                            <apiParam name="TIMDealershipXMLEmailAddress"/>
+                            <apiParam name="TIMDealerWebsiteAddress"/>
+                            <apiParam name="TrainingHeadcount"/>
+                            <apiParam name="VAutoId"/>
+                            <apiParam name="TechnicalContactEmail"/>
+                            <apiParam name="TechnicalContactName"/>
+                            <apiParam name="TechnicalContactPhone"/>
+                            <apiParam name="FullRateAmount"/>
+                            <apiParam name="ArtworkPreapproveCaseNo"/>
+                            <apiParam name="DealershipWebsite"/>
+                            <apiParam name="CarsComId"/>
+                            <apiParam name="ReportRecipientsName1"/>
+                            <apiParam name="ReportRecipientsName2"/>
+                            <apiParam name="ReportRecipientsName3"/>
+                            <apiParam name="ReportRecipientsEmailAddress1"/>
+                            <apiParam name="ReportRecipientsEmailAddress2"/>
+                            <apiParam name="ReportRecipientsEmailAddress3"/>
+                            <apiParam name="Top6Citites1"/>
+                            <apiParam name="Top6Citites2"/>
+                            <apiParam name="Top6Citites3"/>
+                            <apiParam name="Top6Citites4"/>
+                            <apiParam name="Top6Citites5"/>
+                            <apiParam name="Top6Citites6"/>
+                            <apiParam name="TrackingNumber"/>
+                            <apiParam name="CobaltURL"/>
+                            <apiParam name="DealerWebsiteURL"/>
+                            <apiParam name="Deliver1stOfTheNextMonth"/>
+                            <apiParam name="ReplaceCurrentSpotlights"/>
+                            <apiParam name="DealerSpecialtiesCustomer"/>
+                            <apiParam name="DealerLogoSubmittedToAutotrader"/>
+                            <apiParam name="SitelinkNewAdvanced"/>
+                            <apiParam name="SitelinkNewProOptIn"/>
+                            <apiParam name="SitelinkNewUseExisting"/>
+                            <apiParam name="CoOpLevelOfService"/>
+                            <apiParam name="CustomURLType"/>
+                            <apiParam name="AdvertisedMake"/>
+                            <apiParam name="SpotlightMake"/>
+                            <apiParam name="SpotlightDuration"/>
+                            <apiParam name="SkyscapersBuckets"/>
+                            <apiParam name="Skyscrapers_Slots"/>
+                            <apiParam name="Tier_Governor_Type"/>
+                            <apiParam name="TierGovernorValue"/>
+                            <apiParam name="TierGovernorAdvertisedMake"/>
+                            <apiParam name="TierGovernorCoopLevelOfService"/>
+                            <apiParam name="NewCarMake1"/>
+                            <apiParam name="NewCarMake2"/>
+                            <apiParam name="NewCarMake3"/>
+                            <apiParam name="UsedCarMake1"/>
+                            <apiParam name="UsedCarMake2"/>
+                            <apiParam name="UsedCarMake3"/>
+                            <apiParam name="NewCarInventorySource"/>
+                            <apiParam name="TierGovernorSequence"/>
+                            <apiParam name="TierGovernorSorting"/>
+                            <apiParam name="TermDurationAlphaAllOthers"/>
+                            <apiParam name="TermDurationSkyscrapers"/>
+                            <apiParam name="IMROptIn"/>
+                            <apiParam name="OptOutCoopSubmission"/>
+                            <apiParam name="CarTypeRestrictions"/>
+                            <apiParam name="ArtworkDropdown"/>
+                            <apiParam name="InlineDisplayNewCarAdArtwork"/>
+                            <apiParam name="InlineDisplayNewCarAdArtworkGM"/>
+                            <apiParam name="InlineDisplayUsedCarAdArtwork"/>
+                            <apiParam name="InlineDisplayUsedCarAdArtworkGM"/>
+                            <apiParam name="LeaderboardNewArtwork"/>
+                            <apiParam name="LeaderboardNewArtworkGMPackages"/>
+                            <apiParam name="LeaderboardUsedArtwork"/>
+                            <apiParam name="LeaderboardUsedArtworkGMPackages"/>
+                            <apiParam name="SkyscrapersCoOpArtwork"/>
+                            <apiParam name="SkyscrapersCoOpArtworkGMPackages"/>
+                            <apiParam name="FeaturedType"/>
+                            <apiParam name="FeaturedValue"/>
+                            <apiParam name="FeaturedAdvertisedMake"/>
+                            <apiParam name="FeaturedCoOpLevelOfService"/>
+                            <apiParam name="TermDuration12"/>
+                            <apiParam name="TermDuration1m2m3m6m"/>
+                            <apiParam name="TermDuration3m6m9m12m"/>
+                            <apiParam name="ProductionCost"/>
+                            <apiParam name="FeatuedVehicleQuantity"/>
+                            <apiParam name="FeaturedVehicleMonthlyRate"/>
+                            <apiParam name="CallTrackingNewRedirect"/>
+                            <apiParam name="CallTrackingUsedRedirect"/>
+                            <apiParam name="DealerRatingsLi"/>
+                            <apiParam name="KBBDealerRatingsLink"/>
+                            <apiParam name="KBBDealerRatingsProvider"/>
+                            <apiParam name="VehicleSequence"/>
+                            <apiParam name="VehicleSorting"/>
+                            <apiParam name="CallTrackingNewCallRecord"/>
+                            <apiParam name="CallTrackingNewEnhanced"/>
+                            <apiParam name="CallTrackingNewWhisper"/>
+                            <apiParam name="CallTrackingUsedCallRecord"/>
+                            <apiParam name="CallTrackingUsedEnhanced"/>
+                            <apiParam name="CallTrackingUsedWhisper"/>
+                            <apiParam name="KBBCallTrackingNewCallRecord"/>
+                            <apiParam name="KBBCallTrackingNewWhisper"/>
+                            <apiParam name="KBBCallTrackingNewRedirect"/>
+                            <apiParam name="KBBCallTrackingUsedCallRecord"/>
+                            <apiParam name="KBBCallTrackingUsedWhisper"/>
+                            <apiParam name="KBBCallTrackingUsedRedirect"/>
+                            <apiParam name="KBBShowcaseCallTrackingCallRecord"/>
+                            <apiParam name="KBBShowcaseCallTrackingWhisper"/>
+                            <apiParam name="KBBShowcaseCallTrackingRedirect"/>
+                            <apiParam name="KBBShowcaseXMLEmailAddress"/>
+                            <apiParam name="KBBShowcaseTextEmailAddress"/>
+                            <apiParam name="LeaderboardNewClickThruURL"/>
+                            <apiParam name="LeaderboardNewCoOpPreApprovalCase"/>
+                            <apiParam name="LeaderboardUsedClickThruURL"/>
+                            <apiParam name="LeaderboardUsedCoOpPreApprovalCase"/>
+                            <apiParam name="SkyscrapersClickThruURL"/>
+                            <apiParam name="SkyscrapersCoOpPreApprovalCaseNo"/>
+                            <apiParam name="LeadDriverTextEmailAddress"/>
+                            <apiParam name="LeadDriverXMLEmailAddress"/>
+                            <apiParam name="PremiumType1"/>
+                            <apiParam name="PremiumValue1"/>
+                            <apiParam name="PremiumAdvertisedMake1"/>
+                            <apiParam name="PremiumVehicleQuantity1"/>
+                            <apiParam name="PremiumVehicleMonthlyRate1"/>
+                            <apiParam name="PremiumCoOpLevelOfService1"/>
+                            <apiParam name="AddCarMakeFields"/>
+                            <apiParam name="APFDToday"/>
+                            <apiParam name="BillAccountLookup"/>
+                            <apiParam name="AdvertisedMakeGM"/>
+                            <apiParam name="APFDDate"/>
+                            <apiParam name="DealerRatingsProvider"/>
+                            <apiParam name="DBAName1"/>
+                            <apiParam name="OEMId1"/>
+                            <apiParam name="FullRateBelowRate"/>
+                          </cachedParameters>
+                        </parameterValueSource>
+                      </parameterValueSources>
+                      <clauses>
+                        <clause name="hidden" testItemId="850">
+                          <steps/>
+                        </clause>
+                      </clauses>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiFill" name="UiFill" testItemId="813" title="UI Fill">
+                      <arguments>
+                        <argument id="values">
+                          <value class="variable">
+                            <path element="ExcelData">
+                              <filter class="index">
+                                <index valueClass="decimal">0</index>
+                              </filter>
+                            </path>
+                          </value>
+                        </argument>
+                        <argument id="ignoreFields">
+                          <value class="value" valueClass="string">ProductTitle, PremiumFields</value>
+                        </argument>
+                      </arguments>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="814" title="Click the Save">
+                      <arguments>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:pageobject:field?field=Save&amp;pageId=pageobjects.OrderConfig"/>
+                        </argument>
+                        <argument id="interaction">
+                          <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                        </argument>
+                        <argument id="hover">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Click the Save</value>
+                        </argument>
+                        <argument id="wait"/>
+                      </arguments>
+                      <generatedParameters>
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
+                          <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
+                  </steps>
+                </clause>
+              </clauses>
+              <generatedParameters>
+                <apiParam group="target" name="uiTargetUrl" title="Web Page">
+                  <type>
+                    <textType/>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+      <generatedParameters>
+        <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
+          <summary>The Id of the SF Object to be Viewed or Edited.</summary>
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="864" title="On SF Order view screen">
+      <arguments>
+        <argument id="uiConnectionName">
+          <value class="value" valueClass="string">DOFSalesUser</value>
+        </argument>
+        <argument id="target">
+          <value class="uiTarget" uri="sf:ui:target?object=Order&amp;action=View"/>
+        </argument>
+        <argument id="navigate">
+          <value class="value" valueClass="string">Dont</value>
+        </argument>
+        <argument id="sfUiTargetObjectId">
+          <value class="value" valueClass="string">801180000008huLAAQ</value>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">On SF Order view screen</value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="865">
+          <steps>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="866" title="Click the Send for Dealer Signature button">
+              <arguments>
+                <argument id="locator">
+                  <value class="uiLocator" uri="ui:locator?name=Send_to_EchoSign_dloop&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOrder%26action%3DSend_to_EchoSign_dloop"/>
+                </argument>
+                <argument id="interaction">
+                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                </argument>
+                <argument id="hover">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="interactionDescription">
+                  <value class="value" valueClass="string">Click the Send for Dealer Signature button</value>
+                </argument>
+              </arguments>
+              <generatedParameters>
+                <apiParam group="value" name="hover" title="Hover before Clicking">
+                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                  <type>
+                    <booleanType/>
                   </type>
                 </apiParam>
               </generatedParameters>
@@ -7224,6 +8538,90 @@
         </textType>
       </type>
     </param>
+    <param name="Price1d" title="Price1d">
+      <summary/>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+            <valueConstraint name="regex"/>
+          </constraints>
+        </textType>
+      </type>
+    </param>
+    <param name="Price2d" title="Price2d">
+      <summary/>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+            <valueConstraint name="regex"/>
+          </constraints>
+        </textType>
+      </type>
+    </param>
+    <param name="Price3d" title="Price3d">
+      <summary/>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+            <valueConstraint name="regex"/>
+          </constraints>
+        </textType>
+      </type>
+    </param>
+    <param name="Price4d" title="Price4d">
+      <summary/>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+            <valueConstraint name="regex"/>
+          </constraints>
+        </textType>
+      </type>
+    </param>
+    <param name="Price5d" title="Price5d">
+      <summary/>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+            <valueConstraint name="regex"/>
+          </constraints>
+        </textType>
+      </type>
+    </param>
+    <param name="Price6d" title="Price6d">
+      <summary/>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+            <valueConstraint name="regex"/>
+          </constraints>
+        </textType>
+      </type>
+    </param>
+    <param name="Totald" title="Totald">
+      <summary/>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+            <valueConstraint name="regex"/>
+          </constraints>
+        </textType>
+      </type>
+    </param>
   </params>
   <args>
     <argument id="Product1">
@@ -7245,22 +8643,43 @@
       <value class="value" valueClass="string">Premium Plus with CPO</value>
     </argument>
     <argument id="Price1">
-      <value class="value" valueClass="string">1260.00</value>
+      <value class="value" valueClass="string">2660.00</value>
     </argument>
     <argument id="Price2">
-      <value class="value" valueClass="string">1640.00</value>
+      <value class="value" valueClass="string">2990.00</value>
     </argument>
     <argument id="Price3">
-      <value class="value" valueClass="string">2170.00</value>
+      <value class="value" valueClass="string">4420.00</value>
     </argument>
     <argument id="Price4">
-      <value class="value" valueClass="string">3870.00</value>
+      <value class="value" valueClass="string">7025.00</value>
     </argument>
     <argument id="Price5">
-      <value class="value" valueClass="string">1805.00</value>
+      <value class="value" valueClass="string">3670.00</value>
     </argument>
     <argument id="Price6">
-      <value class="value" valueClass="string">3500.00</value>
+      <value class="value" valueClass="string">5575.00</value>
+    </argument>
+    <argument id="Price1d">
+      <value class="value" valueClass="string">$2,660.00</value>
+    </argument>
+    <argument id="Price2d">
+      <value class="value" valueClass="string">$2,990.00</value>
+    </argument>
+    <argument id="Price3d">
+      <value class="value" valueClass="string">$4,420.00</value>
+    </argument>
+    <argument id="Price4d">
+      <value class="value" valueClass="string">$7,025.00</value>
+    </argument>
+    <argument id="Price5d">
+      <value class="value" valueClass="string">$3,670.00</value>
+    </argument>
+    <argument id="Price6d">
+      <value class="value" valueClass="string">$5,575.00</value>
+    </argument>
+    <argument id="Totald">
+      <value class="value" valueClass="string">$26,340.00</value>
     </argument>
   </args>
 </testCase>
