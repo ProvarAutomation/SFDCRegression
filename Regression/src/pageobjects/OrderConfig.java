@@ -31,6 +31,9 @@ public class OrderConfig {
 	@TextType()
 	@FindByLabel(label = "Notes", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
 	public WebElement Notes;
+	@TextType()
+	@FindByLabel(label = "Non-reimbursable amount", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
+	public WebElement NonReimbursableAmount;
 	@BooleanType()
 	@FindByLabel(label = "Enhanced Call Tracking", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
 	public WebElement EnhancedCallTracking;
@@ -141,64 +144,7 @@ public class OrderConfig {
 	@ChoiceListType(values = { @ChoiceListValue(value = "Not Applicable") })
 	@FindByLabel(label = "Zone", labelType = LabelType.PrecedingCell, qualifierXpath = "span/select")
 	public WebElement Zone;
-	@ChoiceListType(values = { @ChoiceListValue(value = "Acura"),
-			@ChoiceListValue(value = "Alfa Romeo"),
-			@ChoiceListValue(value = "AMC"),
-			@ChoiceListValue(value = "Aston Martin"),
-			@ChoiceListValue(value = "Audi"),
-			@ChoiceListValue(value = "Bentley"),
-			@ChoiceListValue(value = "BMW"), @ChoiceListValue(value = "Buick"),
-			@ChoiceListValue(value = "Cadillac"),
-			@ChoiceListValue(value = "Chevrolet"),
-			@ChoiceListValue(value = "Chrysler"),
-			@ChoiceListValue(value = "Daewoo"),
-			@ChoiceListValue(value = "Datsun"),
-			@ChoiceListValue(value = "DeLorean"),
-			@ChoiceListValue(value = "Dodge"),
-			@ChoiceListValue(value = "Eagle"),
-			@ChoiceListValue(value = "Ferrari"),
-			@ChoiceListValue(value = "FIAT"),
-			@ChoiceListValue(value = "Fisker"),
-			@ChoiceListValue(value = "Ford"),
-			@ChoiceListValue(value = "Freightliner"),
-			@ChoiceListValue(value = "Geo"), @ChoiceListValue(value = "GMC"),
-			@ChoiceListValue(value = "Honda"),
-			@ChoiceListValue(value = "HUMMER"),
-			@ChoiceListValue(value = "Hyundai"),
-			@ChoiceListValue(value = "Infiniti"),
-			@ChoiceListValue(value = "Isuzu"),
-			@ChoiceListValue(value = "Jaguar"),
-			@ChoiceListValue(value = "Jeep"), @ChoiceListValue(value = "Kia"),
-			@ChoiceListValue(value = "Lamborghini"),
-			@ChoiceListValue(value = "Land Rover"),
-			@ChoiceListValue(value = "Lexus"),
-			@ChoiceListValue(value = "Lincoln"),
-			@ChoiceListValue(value = "Lotus"),
-			@ChoiceListValue(value = "Maserati"),
-			@ChoiceListValue(value = "Maybach"),
-			@ChoiceListValue(value = "Mazda"),
-			@ChoiceListValue(value = "McLaren"),
-			@ChoiceListValue(value = "Mercedes-Benz"),
-			@ChoiceListValue(value = "Mercury"),
-			@ChoiceListValue(value = "MINI"),
-			@ChoiceListValue(value = "Mitsubishi"),
-			@ChoiceListValue(value = "Nissan"),
-			@ChoiceListValue(value = "Oldsmobile"),
-			@ChoiceListValue(value = "Plymouth"),
-			@ChoiceListValue(value = "Pontiac"),
-			@ChoiceListValue(value = "Porsche"),
-			@ChoiceListValue(value = "RAM"),
-			@ChoiceListValue(value = "Rolls-Royce"),
-			@ChoiceListValue(value = "Saab"),
-			@ChoiceListValue(value = "Saturn"),
-			@ChoiceListValue(value = "Scion"),
-			@ChoiceListValue(value = "smart"), @ChoiceListValue(value = "SRT"),
-			@ChoiceListValue(value = "Subaru"),
-			@ChoiceListValue(value = "Suzuki"),
-			@ChoiceListValue(value = "Tesla"),
-			@ChoiceListValue(value = "Toyota"),
-			@ChoiceListValue(value = "Volkswagen"),
-			@ChoiceListValue(value = "Volvo"), @ChoiceListValue(value = "Yugo") })
+	@ChoiceListType(values = { @ChoiceListValue(value = "Acura"), @ChoiceListValue(value = "Alfa Romeo"), @ChoiceListValue(value = "AMC"), @ChoiceListValue(value = "Aston Martin"), @ChoiceListValue(value = "Audi"), @ChoiceListValue(value = "Bentley"), @ChoiceListValue(value = "BMW"), @ChoiceListValue(value = "Buick"), @ChoiceListValue(value = "Cadillac"), @ChoiceListValue(value = "Chevrolet"), @ChoiceListValue(value = "Chrysler"), @ChoiceListValue(value = "Daewoo"), @ChoiceListValue(value = "Datsun"), @ChoiceListValue(value = "DeLorean"), @ChoiceListValue(value = "Dodge"), @ChoiceListValue(value = "Eagle"), @ChoiceListValue(value = "Ferrari"), @ChoiceListValue(value = "FIAT"), @ChoiceListValue(value = "Fisker"), @ChoiceListValue(value = "Ford"), @ChoiceListValue(value = "Freightliner"), @ChoiceListValue(value = "Geo"), @ChoiceListValue(value = "GMC"), @ChoiceListValue(value = "Honda"), @ChoiceListValue(value = "HUMMER"), @ChoiceListValue(value = "Hyundai"), @ChoiceListValue(value = "Infiniti"), @ChoiceListValue(value = "Isuzu"), @ChoiceListValue(value = "Jaguar"), @ChoiceListValue(value = "Jeep"), @ChoiceListValue(value = "Kia"), @ChoiceListValue(value = "Lamborghini"), @ChoiceListValue(value = "Land Rover"), @ChoiceListValue(value = "Lexus"), @ChoiceListValue(value = "Lincoln"), @ChoiceListValue(value = "Lotus"), @ChoiceListValue(value = "Maserati"), @ChoiceListValue(value = "Maybach"), @ChoiceListValue(value = "Mazda"), @ChoiceListValue(value = "McLaren"), @ChoiceListValue(value = "Mercedes-Benz"), @ChoiceListValue(value = "Mercury"), @ChoiceListValue(value = "MINI"), @ChoiceListValue(value = "Mitsubishi"), @ChoiceListValue(value = "Nissan"), @ChoiceListValue(value = "Oldsmobile"), @ChoiceListValue(value = "Plymouth"), @ChoiceListValue(value = "Pontiac"), @ChoiceListValue(value = "Porsche"), @ChoiceListValue(value = "RAM"), @ChoiceListValue(value = "Rolls-Royce"), @ChoiceListValue(value = "Saab"), @ChoiceListValue(value = "Saturn"), @ChoiceListValue(value = "Scion"), @ChoiceListValue(value = "smart"), @ChoiceListValue(value = "SRT"), @ChoiceListValue(value = "Subaru"), @ChoiceListValue(value = "Suzuki"), @ChoiceListValue(value = "Tesla"), @ChoiceListValue(value = "Toyota"), @ChoiceListValue(value = "Volkswagen"), @ChoiceListValue(value = "Volvo"), @ChoiceListValue(value = "Yugo") })
 	@FindByLabel(label = "Make", labelType = LabelType.PrecedingCell, qualifierXpath = "select")
 	public WebElement Make; 
 	@TextType()
@@ -206,7 +152,7 @@ public class OrderConfig {
 	public WebElement Franchise; 
 	@TextType()
 	@FindByLabel(label = "Front-Line Pro Model", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
-	public WebElement FrontLineProModel; 
+	public WebElement FrontLineProModel;
 	@TextType()
 	@FindByLabel(label = "New Quantity", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
 	public WebElement NewQuantity; 
@@ -974,4 +920,7 @@ public class OrderConfig {
 	@FindBy(xpath = "//input[@name=\"pgId:frmId:mainPgBlkId:j_id130:j_id131:16:j_id132:j_id134\"]")
 	@TextType()
 	public WebElement TIMDealershipContactTitle;
+	@TextType()
+	@FindBy(name = "pgId:frmId:mainPgBlkId:j_id48:j_id49:4:j_id50:j_id52")
+	public WebElement New1GMFrontLinePro;
 }
