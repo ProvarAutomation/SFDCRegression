@@ -217,6 +217,9 @@ public class OrderConfig {
 	@FindByLabel(label = "Dealer Code", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
 	public WebElement DealerCode;
 	@TextType()
+	@FindByLabel(label = "Porsche Dealer Code", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
+	public WebElement PorscheDealerCode;
+	@TextType()
     @FindBy(xpath = "//label[normalize-space(text())=\"BMW's Location ID\"]/../following-sibling::td[1]//input")
     public WebElement BMWLocationID;
 	@TextType()
