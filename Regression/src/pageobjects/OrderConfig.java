@@ -926,4 +926,7 @@ public class OrderConfig {
 	@TextType()
 	@FindBy(name = "pgId:frmId:mainPgBlkId:j_id48:j_id49:4:j_id50:j_id52")
 	public WebElement New1GMFrontLinePro;
+	@BooleanType()
+	@FindByLabel(label = "Additional Contract", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
+	public WebElement AdditionalContract;
 }
