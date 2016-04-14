@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="3">
+<testCase id="17" registryId="e062a1ef-a131-4401-865a-5ef607a6722b">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="590" title="Create Opp">
@@ -65,7 +65,7 @@
                 </argument>
                 <argument id="AccountId">
                   <value class="variable">
-                    <path element="CrownKiaAccount"/>
+                    <path element="JimEllisMazdaATL"/>
                   </value>
                 </argument>
                 <argument id="RecordTypeId">
@@ -698,7 +698,7 @@
                             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="490" title="Check the Select control">
                               <arguments>
                                 <argument id="locator">
-                                  <value class="uiLocator" uri="ui:locator?name=select"/>
+                                  <value class="uiLocator" uri="ui:locator?name=select&amp;rowLocator=productName+%3D+%27KBB+Elite%27"/>
                                 </argument>
                                 <argument id="interaction">
                                   <value class="uiInteraction" uri="ui:interaction?name=check"/>
@@ -718,27 +718,16 @@
                                 <argument id="wait"/>
                               </arguments>
                               <generatedParameters>
-                                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
+                                <apiParam group="value" name="blur" title="Tab off field">
                                   <summary>Whether the tab key should be pressed after the value is populated.</summary>
                                   <type>
                                     <booleanType/>
                                   </type>
                                 </apiParam>
-                                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
+                                <apiParam group="value" name="pressEnter" title="Press Enter">
                                   <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                                   <type>
                                     <booleanType/>
-                                  </type>
-                                </apiParam>
-                                <apiParam group="value" modelBinding="sf:ui:binding:object?object=Product2&amp;field=Name" name="value" seq="10000" title="Value">
-                                  <summary>The value to be populated.</summary>
-                                  <type>
-                                    <textType>
-                                      <constraints>
-                                        <valueConstraint name="maxLength">255</valueConstraint>
-                                        <valueConstraint name="maxLines">1</valueConstraint>
-                                      </constraints>
-                                    </textType>
                                   </type>
                                 </apiParam>
                               </generatedParameters>
@@ -1344,7 +1333,7 @@
               <clauses>
                 <clause name="substeps" testItemId="87">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="88" title="Set the Quote Name field to Weber Inventory Only Products">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="88" title="Set the Quote Name field to Weber Skyscraper Slots Products">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=Name&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DQuote%26field%3DName"/>
@@ -1353,7 +1342,7 @@
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">Weber Inventory Only Products</value>
+                          <value class="value" valueClass="string">Weber Skyscraper Slots Products</value>
                         </argument>
                         <argument id="blur">
                           <value class="value" valueClass="boolean">false</value>
@@ -1368,7 +1357,7 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Quote Name field to Weber Inventory Only Products</value>
+                          <value class="value" valueClass="string">Set the Quote Name field to Weber Skyscraper Slots Products</value>
                         </argument>
                         <argument id="wait"/>
                       </arguments>
@@ -1476,10 +1465,10 @@
         </clause>
       </clauses>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="183" title="Pricing KBB New Car Fusion">
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="183" title="Pricing Skyscraper Base">
       <arguments>
         <argument id="description">
-          <value class="value" valueClass="string">Pricing KBB New Car Fusion</value>
+          <value class="value" valueClass="string">Pricing Skyscraper Base</value>
         </argument>
       </arguments>
       <clauses>
@@ -1635,22 +1624,22 @@
               <clauses>
                 <clause name="substeps" testItemId="97">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="98" title="Set the Lot Size control to 100">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="98" title="Set the Slots select to 3">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=lotSize"/>
+                          <value class="uiLocator" uri="ui:locator?name=Slots"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">100</value>
+                          <value class="value" valueClass="string">3</value>
                         </argument>
                         <argument id="blur">
-                          <value class="value" valueClass="boolean">false</value>
+                          <value class="value" valueClass="boolean">true</value>
                         </argument>
                         <argument id="pressEnter">
-                          <value class="value" valueClass="boolean">true</value>
+                          <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="captureBefore">
                           <value class="value" valueClass="boolean">false</value>
@@ -1659,58 +1648,10 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Lot Size control to 100</value>
+                          <value class="value" valueClass="string">Set the Slots select to 3</value>
                         </argument>
                         <argument id="wait">
                           <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
-                        </argument>
-                      </arguments>
-                      <generatedParameters>
-                        <apiParam group="value" name="value" seq="10000" title="Value">
-                          <summary>The value to be populated.</summary>
-                          <type>
-                            <textType>
-                              <constraints>
-                                <valueConstraint name="mimeType">text/plain</valueConstraint>
-                              </constraints>
-                            </textType>
-                          </type>
-                        </apiParam>
-                        <apiParam group="value" name="blur" seq="10001" title="Tab off field">
-                          <summary>Whether the tab key should be pressed after the value is populated.</summary>
-                          <type>
-                            <booleanType/>
-                          </type>
-                        </apiParam>
-                        <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
-                          <summary>Whether the Enter key should be pressed after the value is populated.</summary>
-                          <type>
-                            <booleanType/>
-                          </type>
-                        </apiParam>
-                      </generatedParameters>
-                    </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="875" title="Set the Make select to Audi">
-                      <arguments>
-                        <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=Make"/>
-                        </argument>
-                        <argument id="interaction">
-                          <value class="uiInteraction" uri="ui:interaction?name=set"/>
-                        </argument>
-                        <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Make select to Audi</value>
-                        </argument>
-                        <argument id="wait"/>
-                        <argument id="captureBefore"/>
-                        <argument id="captureAfter"/>
-                        <argument id="pressEnter"/>
-                        <argument id="hover"/>
-                        <argument id="value">
-                          <value class="value" valueClass="string">Audi</value>
-                        </argument>
-                        <argument id="blur">
-                          <value class="value" valueClass="boolean">true</value>
                         </argument>
                       </arguments>
                       <generatedParameters>
@@ -1934,10 +1875,10 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="197" title="Pricing GM KBB New Car Fusion">
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="197" title="Pricing Skyscraper Gold">
       <arguments>
         <argument id="description">
-          <value class="value" valueClass="string">Pricing GM KBB New Car Fusion</value>
+          <value class="value" valueClass="string">Pricing Skyscraper Gold</value>
         </argument>
       </arguments>
       <clauses>
@@ -2031,10 +1972,9 @@
                                 <argument id="interactionDescription">
                                   <value class="value" valueClass="string">Click the Calculate Price field</value>
                                 </argument>
-                                <argument id="wait"/>
                               </arguments>
                               <generatedParameters>
-                                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
+                                <apiParam group="value" name="hover" title="Hover before Clicking">
                                   <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                                   <type>
                                     <booleanType/>
@@ -2093,19 +2033,19 @@
               <clauses>
                 <clause name="substeps" testItemId="259">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="260" title="Set the Lot Size control to 100">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="260" title="Set the Slots select to 3">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=lotSize"/>
+                          <value class="uiLocator" uri="ui:locator?name=Slots"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">100</value>
+                          <value class="value" valueClass="string">3</value>
                         </argument>
                         <argument id="blur">
-                          <value class="value" valueClass="boolean">false</value>
+                          <value class="value" valueClass="boolean">true</value>
                         </argument>
                         <argument id="pressEnter">
                           <value class="value" valueClass="boolean">false</value>
@@ -2117,58 +2057,11 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Lot Size control to 100</value>
+                          <value class="value" valueClass="string">Set the Slots select to 3</value>
                         </argument>
                         <argument id="wait">
                           <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
                         </argument>
-                      </arguments>
-                      <generatedParameters>
-                        <apiParam group="value" name="value" seq="10000" title="Value">
-                          <summary>The value to be populated.</summary>
-                          <type>
-                            <textType>
-                              <constraints>
-                                <valueConstraint name="mimeType">text/plain</valueConstraint>
-                              </constraints>
-                            </textType>
-                          </type>
-                        </apiParam>
-                        <apiParam group="value" name="blur" seq="10001" title="Tab off field">
-                          <summary>Whether the tab key should be pressed after the value is populated.</summary>
-                          <type>
-                            <booleanType/>
-                          </type>
-                        </apiParam>
-                        <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
-                          <summary>Whether the Enter key should be pressed after the value is populated.</summary>
-                          <type>
-                            <booleanType/>
-                          </type>
-                        </apiParam>
-                      </generatedParameters>
-                    </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="876" title="Set the Make select to Dodge">
-                      <arguments>
-                        <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=Make"/>
-                        </argument>
-                        <argument id="interaction">
-                          <value class="uiInteraction" uri="ui:interaction?name=set"/>
-                        </argument>
-                        <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Make select to Dodge</value>
-                        </argument>
-                        <argument id="wait"/>
-                        <argument id="captureBefore"/>
-                        <argument id="captureAfter"/>
-                        <argument id="value">
-                          <value class="value" valueClass="string">Dodge</value>
-                        </argument>
-                        <argument id="blur">
-                          <value class="value" valueClass="boolean">true</value>
-                        </argument>
-                        <argument id="pressEnter"/>
                       </arguments>
                       <generatedParameters>
                         <apiParam group="value" name="value" seq="10000" title="Value">
@@ -2391,10 +2284,10 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="211" title="Pricing KBB New Car Fusion (Standalone)">
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="211" title="Pricing GM Skyscraper Base">
       <arguments>
         <argument id="description">
-          <value class="value" valueClass="string">Pricing KBB New Car Fusion (Standalone)</value>
+          <value class="value" valueClass="string">Pricing GM Skyscraper Base</value>
         </argument>
       </arguments>
       <clauses>
@@ -2488,10 +2381,9 @@
                                 <argument id="interactionDescription">
                                   <value class="value" valueClass="string">Click the Calculate Price field</value>
                                 </argument>
-                                <argument id="wait"/>
                               </arguments>
                               <generatedParameters>
-                                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
+                                <apiParam group="value" name="hover" title="Hover before Clicking">
                                   <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                                   <type>
                                     <booleanType/>
@@ -2550,19 +2442,19 @@
               <clauses>
                 <clause name="substeps" testItemId="276">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="277" title="Set the Lot Size control to 100">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="277" title="Set the Slots select to 3">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=lotSize"/>
+                          <value class="uiLocator" uri="ui:locator?name=Slots"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">100</value>
+                          <value class="value" valueClass="string">3</value>
                         </argument>
                         <argument id="blur">
-                          <value class="value" valueClass="boolean">false</value>
+                          <value class="value" valueClass="boolean">true</value>
                         </argument>
                         <argument id="pressEnter">
                           <value class="value" valueClass="boolean">false</value>
@@ -2574,56 +2466,11 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Lot Size control to 100</value>
+                          <value class="value" valueClass="string">Set the Slots select to 3</value>
                         </argument>
                         <argument id="wait">
                           <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
                         </argument>
-                      </arguments>
-                      <generatedParameters>
-                        <apiParam group="value" name="value" seq="10000" title="Value">
-                          <summary>The value to be populated.</summary>
-                          <type>
-                            <textType>
-                              <constraints>
-                                <valueConstraint name="mimeType">text/plain</valueConstraint>
-                              </constraints>
-                            </textType>
-                          </type>
-                        </apiParam>
-                        <apiParam group="value" name="blur" seq="10001" title="Tab off field">
-                          <summary>Whether the tab key should be pressed after the value is populated.</summary>
-                          <type>
-                            <booleanType/>
-                          </type>
-                        </apiParam>
-                        <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
-                          <summary>Whether the Enter key should be pressed after the value is populated.</summary>
-                          <type>
-                            <booleanType/>
-                          </type>
-                        </apiParam>
-                      </generatedParameters>
-                    </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="877" title="Set the Make select to Acura">
-                      <arguments>
-                        <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=Make"/>
-                        </argument>
-                        <argument id="interaction">
-                          <value class="uiInteraction" uri="ui:interaction?name=set"/>
-                        </argument>
-                        <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Make select to Acura</value>
-                        </argument>
-                        <argument id="wait"/>
-                        <argument id="captureBefore"/>
-                        <argument id="captureAfter"/>
-                        <argument id="value">
-                          <value class="value" valueClass="string">Acura</value>
-                        </argument>
-                        <argument id="blur"/>
-                        <argument id="pressEnter"/>
                       </arguments>
                       <generatedParameters>
                         <apiParam group="value" name="value" seq="10000" title="Value">
@@ -2846,10 +2693,10 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="389" title="Pricing GM KBB New Car Fusion (Standalone)">
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="389" title="Pricing GM Skyscraper Gold">
       <arguments>
         <argument id="description">
-          <value class="value" valueClass="string">Pricing GM KBB New Car Fusion (Standalone)</value>
+          <value class="value" valueClass="string">Pricing GM Skyscraper Gold</value>
         </argument>
       </arguments>
       <clauses>
@@ -2918,9 +2765,7 @@
                         <argument id="resultScope">
                           <value class="value" valueClass="string">Local</value>
                         </argument>
-                        <argument id="autoPaginate">
-                          <value class="value" valueClass="boolean">true</value>
-                        </argument>
+                        <argument id="autoPaginate"/>
                       </arguments>
                       <clauses>
                         <clause name="substeps" testItemId="394">
@@ -3007,19 +2852,19 @@
               <clauses>
                 <clause name="substeps" testItemId="397">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="398" title="Set the Lot Size control to 100">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="398" title="Set the Slots select to 3">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=lotSize"/>
+                          <value class="uiLocator" uri="ui:locator?name=Slots"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">100</value>
+                          <value class="value" valueClass="string">3</value>
                         </argument>
                         <argument id="blur">
-                          <value class="value" valueClass="boolean">false</value>
+                          <value class="value" valueClass="boolean">true</value>
                         </argument>
                         <argument id="pressEnter">
                           <value class="value" valueClass="boolean">false</value>
@@ -3031,58 +2876,11 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Lot Size control to 100</value>
+                          <value class="value" valueClass="string">Set the Slots select to 3</value>
                         </argument>
                         <argument id="wait">
                           <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
                         </argument>
-                      </arguments>
-                      <generatedParameters>
-                        <apiParam group="value" name="value" seq="10000" title="Value">
-                          <summary>The value to be populated.</summary>
-                          <type>
-                            <textType>
-                              <constraints>
-                                <valueConstraint name="mimeType">text/plain</valueConstraint>
-                              </constraints>
-                            </textType>
-                          </type>
-                        </apiParam>
-                        <apiParam group="value" name="blur" seq="10001" title="Tab off field">
-                          <summary>Whether the tab key should be pressed after the value is populated.</summary>
-                          <type>
-                            <booleanType/>
-                          </type>
-                        </apiParam>
-                        <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
-                          <summary>Whether the Enter key should be pressed after the value is populated.</summary>
-                          <type>
-                            <booleanType/>
-                          </type>
-                        </apiParam>
-                      </generatedParameters>
-                    </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="878" title="Set the Make select to Honda">
-                      <arguments>
-                        <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=Make"/>
-                        </argument>
-                        <argument id="interaction">
-                          <value class="uiInteraction" uri="ui:interaction?name=set"/>
-                        </argument>
-                        <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Make select to Honda</value>
-                        </argument>
-                        <argument id="wait"/>
-                        <argument id="captureBefore"/>
-                        <argument id="captureAfter"/>
-                        <argument id="value">
-                          <value class="value" valueClass="string">Honda</value>
-                        </argument>
-                        <argument id="blur">
-                          <value class="value" valueClass="boolean">true</value>
-                        </argument>
-                        <argument id="pressEnter"/>
                       </arguments>
                       <generatedParameters>
                         <apiParam group="value" name="value" seq="10000" title="Value">
@@ -3242,9 +3040,7 @@
                 <argument id="resultScope">
                   <value class="value" valueClass="string">Local</value>
                 </argument>
-                <argument id="autoPaginate">
-                  <value class="value" valueClass="boolean">true</value>
-                </argument>
+                <argument id="autoPaginate"/>
               </arguments>
               <clauses>
                 <clause name="substeps" testItemId="406">
@@ -3307,7 +3103,7 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="881" title="On SF Quote detail (Quote Not Synced) screen">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="292" title="On SF Quote detail (Quote Not Synced) screen">
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">DOFSalesUser</value>
@@ -3337,9 +3133,9 @@
         <argument id="captureAfter"/>
       </arguments>
       <clauses>
-        <clause name="substeps" testItemId="882">
+        <clause name="substeps" testItemId="293">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="883" title="Click the SyncQuote button">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="294" title="Click the SyncQuote button">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=SyncQuote&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DQuote%26action%3DSyncQuote"/>
@@ -3390,7 +3186,7 @@
           <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.MyPageObject"/>
         </argument>
         <argument id="navigate">
-          <value class="value" valueClass="string">Always</value>
+          <value class="value" valueClass="string">Dont</value>
         </argument>
         <argument id="targetDescription">
           <value class="value" valueClass="string">On MyPageObject page</value>
@@ -3409,7 +3205,7 @@
       <clauses>
         <clause name="substeps" testItemId="296">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="879" title="Click the Sync">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="307" title="Click the Sync">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:pageobject:field?field=sync&amp;pageId=pageobjects.MyPageObject"/>
@@ -4001,9 +3797,7 @@
                 <argument id="resultScope">
                   <value class="value" valueClass="string">Local</value>
                 </argument>
-                <argument id="autoPaginate">
-                  <value class="value" valueClass="boolean">true</value>
-                </argument>
+                <argument id="autoPaginate"/>
               </arguments>
               <clauses>
                 <clause name="substeps" testItemId="480">
@@ -4110,9 +3904,7 @@
           <value class="value" valueClass="string">Dont</value>
         </argument>
         <argument id="sfUiTargetObjectId">
-          <value class="variable">
-            <path element="OrderNumber"/>
-          </value>
+          <value class="value" valueClass="string">801190000009FS9</value>
         </argument>
         <argument id="targetDescription">
           <value class="value" valueClass="string">On SF Order view (Order Master Layout) screen</value>
@@ -4243,7 +4035,7 @@
                         </argument>
                       </arguments>
                       <parameterValueSources>
-                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=Inventory-Market-Make&amp;range=A1%3ABI20&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct1%7D" variableName="ExcelData" variableScope="Test">
+                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=Skyscraper-Spotlight&amp;range=A1%3AAH17&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct1%7D" variableName="ExcelData" variableScope="Test">
                           <cacheToken>C:/Users/jtjohn/Provar/Workspace/ProvarTesting2/Test/templates/FillData.xlsx;1438091420870</cacheToken>
                           <cachedParameters>
                             <apiParam name="RowNumber"/>
@@ -4622,7 +4414,7 @@
                         </argument>
                       </arguments>
                       <parameterValueSources>
-                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=Inventory-Market-Make&amp;range=A1%3ABI20&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct2%7D" variableName="ExcelData" variableScope="Test">
+                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=Skyscraper-Spotlight&amp;range=A1%3AAH17&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct2%7D" variableName="ExcelData" variableScope="Test">
                           <cacheToken>C:/Users/jtjohn/Provar/Workspace/ProvarTesting2/Test/templates/FillData.xlsx;1438091420870</cacheToken>
                           <cachedParameters>
                             <apiParam name="RowNumber"/>
@@ -5002,7 +4794,7 @@
                         </argument>
                       </arguments>
                       <parameterValueSources>
-                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=Inventory-Market-Make&amp;range=A1%3ABI20&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct3%7D" variableName="ExcelData" variableScope="Test">
+                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=Skyscraper-Spotlight&amp;range=A1%3AAH17&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct3%7D" variableName="ExcelData" variableScope="Test">
                           <cacheToken>C:/Users/jtjohn/Provar/Workspace/ProvarTesting2/Test/templates/FillData.xlsx;1438091420870</cacheToken>
                           <cachedParameters>
                             <apiParam name="RowNumber"/>
@@ -5299,9 +5091,7 @@
                 <argument id="resultScope">
                   <value class="value" valueClass="string">Local</value>
                 </argument>
-                <argument id="autoPaginate">
-                  <value class="value" valueClass="boolean">true</value>
-                </argument>
+                <argument id="autoPaginate"/>
               </arguments>
               <clauses>
                 <clause name="substeps" testItemId="783">
@@ -5384,7 +5174,7 @@
                         </argument>
                       </arguments>
                       <parameterValueSources>
-                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=Inventory-Market-Make&amp;range=A1%3ABI20&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct4%7D" variableName="ExcelData" variableScope="Test">
+                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=Skyscraper-Spotlight&amp;range=A1%3AAH17&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct4%7D" variableName="ExcelData" variableScope="Test">
                           <cacheToken>C:/Users/jtjohn/Provar/Workspace/ProvarTesting2/Test/templates/FillData.xlsx;1438091420870</cacheToken>
                           <cachedParameters>
                             <apiParam name="RowNumber"/>
@@ -5592,7 +5382,7 @@
                         </clause>
                       </clauses>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiFill" name="UiFill" testItemId="874" title="UI Fill">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiFill" name="UiFill" testItemId="797" title="UI Fill">
                       <arguments>
                         <argument id="values">
                           <value class="variable">
@@ -5886,43 +5676,43 @@
   </params>
   <args>
     <argument id="Product1">
-      <value class="value" valueClass="string">KBB New Car Fusion</value>
+      <value class="value" valueClass="string">Skyscraper Base</value>
     </argument>
     <argument id="Product2">
-      <value class="value" valueClass="string">GM KBB New Car Fusion</value>
+      <value class="value" valueClass="string">Skyscraper Gold</value>
     </argument>
     <argument id="Product3">
-      <value class="value" valueClass="string">KBB New Car Fusion (Standalone)</value>
+      <value class="value" valueClass="string">GM Skyscraper Base</value>
     </argument>
     <argument id="Product4">
-      <value class="value" valueClass="string">GM KBB New Car Fusion (Standalone)</value>
+      <value class="value" valueClass="string">GM Skyscraper Gold</value>
     </argument>
     <argument id="Price1">
-      <value class="value" valueClass="string">125.00</value>
+      <value class="value" valueClass="string">1500.00</value>
     </argument>
     <argument id="Price2">
-      <value class="value" valueClass="string">175.00</value>
+      <value class="value" valueClass="string">1800.00</value>
     </argument>
     <argument id="Price3">
-      <value class="value" valueClass="string">150.00</value>
+      <value class="value" valueClass="string">1500.00</value>
     </argument>
     <argument id="Price4">
-      <value class="value" valueClass="string">200.00</value>
+      <value class="value" valueClass="string">1800.00</value>
     </argument>
     <argument id="Price1d">
-      <value class="value" valueClass="string">$125.00</value>
+      <value class="value" valueClass="string">$1,500.00</value>
     </argument>
     <argument id="Price2d">
-      <value class="value" valueClass="string">$175.00</value>
+      <value class="value" valueClass="string">$1,800.00</value>
     </argument>
     <argument id="Price3d">
-      <value class="value" valueClass="string">$150.00</value>
+      <value class="value" valueClass="string">$1,500.00</value>
     </argument>
     <argument id="Price4d">
-      <value class="value" valueClass="string">$200.00</value>
+      <value class="value" valueClass="string">$1,800.00</value>
     </argument>
     <argument id="Totald">
-      <value class="value" valueClass="string">$650.00</value>
+      <value class="value" valueClass="string">$6,600.00</value>
     </argument>
   </args>
 </testCase>

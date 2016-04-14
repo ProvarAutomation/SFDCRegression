@@ -372,7 +372,7 @@ public class OrderConfig {
 	public WebElement SpotlightDuration;
 	@ChoiceListType(values = { @ChoiceListValue(value = "1"), @ChoiceListValue(value = "2"), @ChoiceListValue(value = "3"), @ChoiceListValue(value = "4"), @ChoiceListValue(value = "5"), @ChoiceListValue(value = "6") })
 	@FindByLabel(label = "Skyscrapers Buckets", labelType = LabelType.PrecedingCell, qualifierXpath = "select")
-	public WebElement SkyscapersBuckets;
+	public WebElement SkyscrapersBuckets;
 	@ChoiceListType(values = { @ChoiceListValue(value = "1"), @ChoiceListValue(value = "2"), @ChoiceListValue(value = "3"), @ChoiceListValue(value = "4"), @ChoiceListValue(value = "5"), @ChoiceListValue(value = "6") })
 	@FindByLabel(label = "Skyscrapers Slots", labelType = LabelType.PrecedingCell, qualifierXpath = "select")
 	public WebElement SkyscrapersSlots;
