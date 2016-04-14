@@ -13,7 +13,6 @@
 
 <provar:compile projectPath="${testproject.home}"/>
 
-
 <provar:run projectPath="${testproject.home}" 
 webBrowserConfiguration="Full Screen" 
 testEnvironment="PreProd" 
