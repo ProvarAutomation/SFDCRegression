@@ -1,0 +1,36 @@
+
+
+<project xmlns:provar="antlib:com.provar.testrunner.ant" default="runtests">
+
+<property environment="env"/>
+
+<property name="testproject.home" value="C:\Users\bjweber\ProvarProjects\SFDCRegression\Regression\"/>
+
+<property name="testproject.results" value="C:\Users\bjweber\ProvarProjects\SFDCRegression\provarAnt\NightResults\RegressionRunResults"/>
+
+
+<target name="runtests">
+
+
+
+
+<provar:run projectPath="${testproject.home}" 
+webBrowserConfiguration="Full Screen" 
+testEnvironment="PreProd" 
+
+resultsPath="${testproject.results}">
+
+<fileset dir="C:\Users\bjweber\ProvarProjects\SFDCRegression\Regression\tests\">
+<exclude name="Callable Tests\**\*.*"/>
+<exclude name="Examples\**\*.*"/>
+<exclude name="Sprints\**\*.*"/>
+<!--<include name="Account\**\*.*"/>-->
+
+
+
+</fileset>
+</provar:run>
+
+</target>
+
+</project>
