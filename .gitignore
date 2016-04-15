@@ -1,5 +1,5 @@
 # Git Ignore
-/Service Regression/provarAnt
-/Service Regression/.settings
-/Service Regression/.metadata
+/SFDCRegression/provarAnt
+/SFDCRegression/.settings
+/SFDCRegression/.metadata
 .metadata/

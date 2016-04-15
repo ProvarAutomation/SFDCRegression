@@ -217,6 +217,9 @@ public class OrderConfig {
 	@FindByLabel(label = "Dealer Code", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
 	public WebElement DealerCode;
 	@TextType()
+	@FindByLabel(label = "Porsche Dealer Code", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
+	public WebElement PorscheDealerCode;
+	@TextType()
     @FindBy(xpath = "//label[normalize-space(text())=\"BMW's Location ID\"]/../following-sibling::td[1]//input")
     public WebElement BMWLocationID;
 	@TextType()
@@ -348,9 +351,7 @@ public class OrderConfig {
 	@BooleanType()
 	@FindByLabel(label = "Sitelink New Use Existing", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
 	public WebElement SitelinkNewUseExisting;
-	@ChoiceListType(values = { @ChoiceListValue(value = "Not Applicable"),
-			@ChoiceListValue(value = "Dealer Managed"),
-			@ChoiceListValue(value = "Autotrader Managed") })
+	@ChoiceListType(values = { @ChoiceListValue(value = "Not Applicable"), @ChoiceListValue(value = "Dealer Managed"), @ChoiceListValue(value = "Autotrader Managed") })
 	@FindByLabel(label = "Co-op Level of Service", labelType = LabelType.PrecedingCell, qualifierXpath = "select")
 	public WebElement CoOpLevelOfService;
 	@ChoiceListType(values = { @ChoiceListValue(value = "Registration"),
@@ -369,7 +370,7 @@ public class OrderConfig {
 	public WebElement SpotlightDuration;
 	@ChoiceListType(values = { @ChoiceListValue(value = "1"), @ChoiceListValue(value = "2"), @ChoiceListValue(value = "3"), @ChoiceListValue(value = "4"), @ChoiceListValue(value = "5"), @ChoiceListValue(value = "6") })
 	@FindByLabel(label = "Skyscrapers Buckets", labelType = LabelType.PrecedingCell, qualifierXpath = "select")
-	public WebElement SkyscapersBuckets;
+	public WebElement SkyscrapersBuckets;
 	@ChoiceListType(values = { @ChoiceListValue(value = "1"), @ChoiceListValue(value = "2"), @ChoiceListValue(value = "3"), @ChoiceListValue(value = "4"), @ChoiceListValue(value = "5"), @ChoiceListValue(value = "6") })
 	@FindByLabel(label = "Skyscrapers Slots", labelType = LabelType.PrecedingCell, qualifierXpath = "select")
 	public WebElement SkyscrapersSlots;
@@ -463,6 +464,9 @@ public class OrderConfig {
 			@ChoiceListValue(value = "Cadillac") })
 	@FindByLabel(label = "New Car Make 3", labelType = LabelType.PrecedingCell, qualifierXpath = "select")
 	public WebElement NewCarMake3;
+	@ChoiceListType(values = { @ChoiceListValue(value = "GMC"), @ChoiceListValue(value = "Chevrolet"), @ChoiceListValue(value = "Buick"), @ChoiceListValue(value = "Cadillac") })
+	@FindByLabel(label = "Used 1 GM Make", labelType = LabelType.PrecedingCell, qualifierXpath = "select")
+	public WebElement Used1GMMake;
 	@ChoiceListType(values = { @ChoiceListValue(value = "GMC"),
 			@ChoiceListValue(value = "Chevrolet"),
 			@ChoiceListValue(value = "Buick"),
@@ -571,70 +575,10 @@ public class OrderConfig {
 	@ChoiceListType(values = { @ChoiceListValue(value = "Not Applicable") })
 	@FindByLabel(label = "Featured Value", labelType = LabelType.PrecedingCell, qualifierXpath = "select")
 	public WebElement FeaturedValue;
-	@ChoiceListType(values = { @ChoiceListValue(value = "Acura"),
-			@ChoiceListValue(value = "Alfa Romeo"),
-			@ChoiceListValue(value = "AMC"),
-			@ChoiceListValue(value = "HUMMER"),
-			@ChoiceListValue(value = "MINI"),
-			@ChoiceListValue(value = "Scion"),
-			@ChoiceListValue(value = "Aston Martin"),
-			@ChoiceListValue(value = "Audi"),
-			@ChoiceListValue(value = "Bentley"),
-			@ChoiceListValue(value = "Ferrari"),
-			@ChoiceListValue(value = "FIAT"),
-			@ChoiceListValue(value = "Lamborghini"),
-			@ChoiceListValue(value = "BMW"), @ChoiceListValue(value = "Lotus"),
-			@ChoiceListValue(value = "Maserati"),
-			@ChoiceListValue(value = "Maybach"),
-			@ChoiceListValue(value = "Buick"),
-			@ChoiceListValue(value = "Cadillac"),
-			@ChoiceListValue(value = "Chevrolet"),
-			@ChoiceListValue(value = "Chrysler"),
-			@ChoiceListValue(value = "Rolls-Royce"),
-			@ChoiceListValue(value = "DeLorean"),
-			@ChoiceListValue(value = "Datsun"),
-			@ChoiceListValue(value = "Dodge"),
-			@ChoiceListValue(value = "Eagle"),
-			@ChoiceListValue(value = "Ford"), @ChoiceListValue(value = "Geo"),
-			@ChoiceListValue(value = "GMC"), @ChoiceListValue(value = "Honda"),
-			@ChoiceListValue(value = "Hyundai"),
-			@ChoiceListValue(value = "Infiniti"),
-			@ChoiceListValue(value = "Isuzu"),
-			@ChoiceListValue(value = "Jaguar"),
-			@ChoiceListValue(value = "Jeep"), @ChoiceListValue(value = "Kia"),
-			@ChoiceListValue(value = "Lexus"),
-			@ChoiceListValue(value = "Lincoln"),
-			@ChoiceListValue(value = "Mazda"),
-			@ChoiceListValue(value = "Mercedes-Benz"),
-			@ChoiceListValue(value = "Mercury"),
-			@ChoiceListValue(value = "Mitsubishi"),
-			@ChoiceListValue(value = "Nissan"),
-			@ChoiceListValue(value = "Oldsmobile"),
-			@ChoiceListValue(value = "Plymouth"),
-			@ChoiceListValue(value = "Pontiac"),
-			@ChoiceListValue(value = "Porsche"),
-			@ChoiceListValue(value = "Land Rover"),
-			@ChoiceListValue(value = "Saab"),
-			@ChoiceListValue(value = "Saturn"),
-			@ChoiceListValue(value = "Subaru"),
-			@ChoiceListValue(value = "Suzuki"),
-			@ChoiceListValue(value = "Toyota"),
-			@ChoiceListValue(value = "Volkswagen"),
-			@ChoiceListValue(value = "Volvo"),
-			@ChoiceListValue(value = "Yugo"),
-			@ChoiceListValue(value = "Daewoo"),
-			@ChoiceListValue(value = "RAM"), @ChoiceListValue(value = "smart"),
-			@ChoiceListValue(value = "Tesla"),
-			@ChoiceListValue(value = "McLaren"),
-			@ChoiceListValue(value = "Fisker"),
-			@ChoiceListValue(value = "Freightliner"),
-			@ChoiceListValue(value = "SRT") })
+	@ChoiceListType(values = { @ChoiceListValue(value = "Acura"), @ChoiceListValue(value = "Alfa Romeo"), @ChoiceListValue(value = "AMC"), @ChoiceListValue(value = "HUMMER"), @ChoiceListValue(value = "MINI"), @ChoiceListValue(value = "Scion"), @ChoiceListValue(value = "Aston Martin"), @ChoiceListValue(value = "Audi"), @ChoiceListValue(value = "Bentley"), @ChoiceListValue(value = "Ferrari"), @ChoiceListValue(value = "FIAT"), @ChoiceListValue(value = "Lamborghini"), @ChoiceListValue(value = "BMW"), @ChoiceListValue(value = "Lotus"), @ChoiceListValue(value = "Maserati"), @ChoiceListValue(value = "Maybach"), @ChoiceListValue(value = "Buick"), @ChoiceListValue(value = "Cadillac"), @ChoiceListValue(value = "Chevrolet"), @ChoiceListValue(value = "Chrysler"), @ChoiceListValue(value = "Rolls-Royce"), @ChoiceListValue(value = "DeLorean"), @ChoiceListValue(value = "Datsun"), @ChoiceListValue(value = "Dodge"), @ChoiceListValue(value = "Eagle"), @ChoiceListValue(value = "Ford"), @ChoiceListValue(value = "Geo"), @ChoiceListValue(value = "GMC"), @ChoiceListValue(value = "Honda"), @ChoiceListValue(value = "Hyundai"), @ChoiceListValue(value = "Infiniti"), @ChoiceListValue(value = "Isuzu"), @ChoiceListValue(value = "Jaguar"), @ChoiceListValue(value = "Jeep"), @ChoiceListValue(value = "Kia"), @ChoiceListValue(value = "Lexus"), @ChoiceListValue(value = "Lincoln"), @ChoiceListValue(value = "Mazda"), @ChoiceListValue(value = "Mercedes-Benz"), @ChoiceListValue(value = "Mercury"), @ChoiceListValue(value = "Mitsubishi"), @ChoiceListValue(value = "Nissan"), @ChoiceListValue(value = "Oldsmobile"), @ChoiceListValue(value = "Plymouth"), @ChoiceListValue(value = "Pontiac"), @ChoiceListValue(value = "Porsche"), @ChoiceListValue(value = "Land Rover"), @ChoiceListValue(value = "Saab"), @ChoiceListValue(value = "Saturn"), @ChoiceListValue(value = "Subaru"), @ChoiceListValue(value = "Suzuki"), @ChoiceListValue(value = "Toyota"), @ChoiceListValue(value = "Volkswagen"), @ChoiceListValue(value = "Volvo"), @ChoiceListValue(value = "Yugo"), @ChoiceListValue(value = "Daewoo"), @ChoiceListValue(value = "RAM"), @ChoiceListValue(value = "smart"), @ChoiceListValue(value = "Tesla"), @ChoiceListValue(value = "McLaren"), @ChoiceListValue(value = "Fisker"), @ChoiceListValue(value = "Freightliner"), @ChoiceListValue(value = "SRT") })
 	@FindByLabel(label = "Featured Advertised Make", labelType = LabelType.PrecedingCell, qualifierXpath = "select")
 	public WebElement FeaturedAdvertisedMake;
-	@ChoiceListType(values = { @ChoiceListValue(value = "Dealer Managed"),
-			@ChoiceListValue(value = "Autotrader Managed"),
-			@ChoiceListValue(value = "OEM Managed"),
-			@ChoiceListValue(value = "Not Applicable") })
+	@ChoiceListType(values = { @ChoiceListValue(value = "Dealer Managed"), @ChoiceListValue(value = "Autotrader Managed"), @ChoiceListValue(value = "OEM Managed"), @ChoiceListValue(value = "Not Applicable") })
 	@FindByLabel(label = "Featured Co-op Level of Service", labelType = LabelType.PrecedingCell, qualifierXpath = "select")
 	public WebElement FeaturedCoOpLevelOfService;
 	@ChoiceListType(values = { @ChoiceListValue(value = "12") })
@@ -923,4 +867,10 @@ public class OrderConfig {
 	@TextType()
 	@FindBy(name = "pgId:frmId:mainPgBlkId:j_id48:j_id49:4:j_id50:j_id52")
 	public WebElement New1GMFrontLinePro;
+	@BooleanType()
+	@FindByLabel(label = "Additional Contract", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
+	public WebElement AdditionalContract;
+	@TextType()
+	@FindByLabel(label = "Porsche Inventory Quantity", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
+	public WebElement PorscheInventoryQuantity;
 }

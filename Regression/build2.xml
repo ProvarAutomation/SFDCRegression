@@ -16,7 +16,7 @@
 
 <provar:run projectPath="${testproject.home}" 
 webBrowserConfiguration="Full Screen" 
-testEnvironment="qUAT" 
+testEnvironment="Quoting" 
 
 resultsPath="${testproject.results}">
 

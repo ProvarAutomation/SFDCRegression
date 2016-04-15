@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
-    <description>Additional record types and permissions needed for data loading using CopyStorm. Should only be given to COE Admins as necessary</description>
-    <label>CopyStorm DataLoad</label>
-</PermissionSet>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
-    <height>800</height>
-    <icon>echosign_dev1__AgreementLogo</icon>
-    <label>EchoSign</label>
-    <page>echosign_dev1__GlobalAgreementAction</page>
-    <type>VisualforcePage</type>
-    <width>-100</width>
-</QuickAction>

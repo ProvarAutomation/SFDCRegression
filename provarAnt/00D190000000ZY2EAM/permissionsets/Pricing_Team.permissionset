@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
-    <description>Access to Pricing Objects for DOF.  Members of the Pricing Team are managed in the Pricing Team Public Group</description>
-    <label>Pricing Team</label>
-</PermissionSet>
