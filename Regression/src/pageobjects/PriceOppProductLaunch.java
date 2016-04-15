@@ -24,7 +24,7 @@ public class PriceOppProductLaunch {
 	public WebElement type;
 	
 	@TextType()
-	@FindBy(xpath = "//label/span[text()='Quantity:']/../../input")
+	@FindBy(xpath = "//label/span[text()='Quantity:']/../../select")
 	public WebElement Quantity;
 	@ButtonType()
 	@FindByLabel(label = "Add")
@@ -72,8 +72,9 @@ public class PriceOppProductLaunch {
 	@FindByLabel(label = "Cancel")
 	public WebElement cancel;
 	
-	@ChoiceListType()
-	@FindBy(xpath = "//label/span[text()='Duration:']/../../input")
+	@PageWait.Timed(durationSeconds = 3)
+	@ChoiceListType(values = { @ChoiceListValue(value = "4"), @ChoiceListValue(value = "7"), @ChoiceListValue(value = "14"), @ChoiceListValue(value = "28") })
+	@FindBy(xpath = "//label/span[text()='Duration:']/../../select")
 	public WebElement Duration;
 	
 	@TextType()
