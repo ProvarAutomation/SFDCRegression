@@ -1,34 +1,53 @@
-
-
 <project xmlns:provar="antlib:com.provar.testrunner.ant" default="runtests">
+
 
 <property environment="env"/>
 
-<property name="testproject.home" value="C:\Users\bjweber\ProvarProjects\SFDCRegression\Regression\"/>
+<property name="testproject.home" value="."/>
 
-<property name="testproject.results" value="C:\Users\bjweber\ProvarProjects\SFDCRegression\provarAnt\NightResults\RegressionRunResults"/>
+<property name="testproject.results" value="../RegressionRunResults"/>
 
+<property name="tests.dir" value=".\tests\"/>
 
-<target name="runtests">
+<patternset id="all.tests">
+    <include name="**\*.*"/>
+    <exclude name="Callable Tests\**\*.*"/>
+    <exclude name="Examples\**\*.*"/>
+    <exclude name="Sprints\**\*.*"/>
+</patternset>
 
-<provar:compile projectPath="${testproject.home}"/>
+<patternset id="sprint.tests">
+    <include name="Sprints\**\*.*"/>
+</patternset>
 
-<provar:run projectPath="${testproject.home}" 
-webBrowserConfiguration="Full Screen" 
-testEnvironment="PreProd" 
+<target name="init">
+    <delete dir="${testproject.results}"/>
+</target>
 
-resultsPath="${testproject.results}">
+<target name="run-all-tests" depends="init">
+    <property name="test.patternset" value="all.tests"/>
+    <antcall target="run"/>
+</target>
 
-<fileset dir="C:\Users\bjweber\ProvarProjects\SFDCRegression\Regression\tests\">
-<exclude name="Callable Tests\**\*.*"/>
-<exclude name="Examples\**\*.*"/>
-<exclude name="Sprints\**\*.*"/>
-<!--<include name="Account\**\*.*"/>-->
+<target name="run-sprint-tests" depends="init">
+    <property name="test.patternset" value="sprint-tests"/>
+    <antcall target="run"/>
+</target>
 
+<target name="compile">
+    <provar:compile projectPath="${testproject.home}"/>
+</target>
 
-
-</fileset>
-</provar:run>
+<target name="run" depends="compile">
+    <provar:run projectPath="${testproject.home}" 
+            licensePath="C:\Jenkins\workspace\ProvarAutomation\Regression\provar.license"
+            webBrowserConfiguration="Full Screen" 
+            testEnvironment="PreProd" 
+            resultsPath="${testproject.results}">
+            <fileset dir="${tests.dir}">
+                <patternset refid="${test.patternset}"/>
+            </fileset>
+    </provar:run>
 
 </target>
 
