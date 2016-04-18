@@ -14,11 +14,11 @@
     <exclude name="Callable Tests\**\*.*"/>
     <exclude name="Examples\**\*.*"/>
     <exclude name="Sprints\**\*.*"/>
-</fileset>
+</patternset>
 
 <patternset id="sprint.tests">
     <include name="Sprints\**\*.*"/>
-</property>
+</patternset>
 
 <target name="init">
     <delete dir="${testproject.results}"/>
