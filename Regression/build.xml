@@ -7,29 +7,30 @@
 
 <property name="testproject.results" value="../RegressionRunResults"/>
 
-<property name="all.tests">
-    <fileset dir=".\tests\">
-        <exclude name="Callable Tests\**\*.*"/>
-        <exclude name="Examples\**\*.*"/>
-        <exclude name="Sprints\**\*.*"/>
-    </fileset>
-</property>
+<property name="tests.dir" value=".\tests\"/>
 
-<property name="sprint.tests">
-    <fileset dir=".\tests\Sprints"/>
+<patternset id="all.tests">
+    <include name="**\*.*"/>
+    <exclude name="Callable Tests\**\*.*"/>
+    <exclude name="Examples\**\*.*"/>
+    <exclude name="Sprints\**\*.*"/>
+</fileset>
+
+<patternset id="sprint.tests">
+    <include name="Sprints\**\*.*"/>
 </property>
 
 <target name="init">
-    <delete dir="testproject.results"/>
+    <delete dir="${testproject.results}"/>
 </target>
 
 <target name="run-all-tests" depends="init">
-    <property name="test.fileset" value="${all.tests}"/>
+    <property name="test.fileset" value="all.tests"/>
     <antcall target="run"/>
 </target>
 
 <target name="run-sprint-tests" depends="init">
-    <property name="test.fileset" value="${sprint-tests}"/>
+    <property name="test.patternset" value="sprint-tests"/>
     <antcall target="run"/>
 </target>
 
@@ -43,7 +44,9 @@
             webBrowserConfiguration="Full Screen" 
             testEnvironment="PreProd" 
             resultsPath="${testproject.results}">
-        ${test.fileset}
+            <fileset dir="${tests.dir}">
+                <patternset refid="${test.patternset}"/>
+            </fileset>
     </provar:run>
 
 </target>
