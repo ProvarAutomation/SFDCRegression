@@ -12,21 +12,16 @@
 <provar:compile projectPath="${testproject.home}"/>
 
 <provar:run projectPath="${testproject.home}" 
-licensePath="provar.license"
-webBrowserConfiguration="Full Screen" 
-testEnvironment="PreProd" 
+            licensePath="provar.license"
+            webBrowserConfiguration="Full Screen" 
+            testEnvironment="PreProd" 
+            resultsPath="${testproject.results}">
 
-resultsPath="${testproject.results}">
-
-<fileset dir="SFDCRegression\Regression\tests\">
-<exclude name="Callable Tests\**\*.*"/>
-<exclude name="Examples\**\*.*"/>
-<exclude name="Sprints\**\*.*"/>
-<!--<include name="Account\**\*.*"/>-->
-
-
-
-</fileset>
+    <fileset dir=".\tests\">
+        <exclude name="Callable Tests\**\*.*"/>
+        <exclude name="Examples\**\*.*"/>
+        <exclude name="Sprints\**\*.*"/>
+    </fileset>
 </provar:run>
 
 </target>
