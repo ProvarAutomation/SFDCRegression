@@ -13,7 +13,7 @@
     <exclude name="Sprints\**\*.*"/>
 </fileset>
 
-<fileset name="sprint-tests" dir="Regression\tests\Sprints">
+<fileset name="sprint-tests" dir="Regression\tests\Sprints"/>
 
 <target name="init">
     <delete dir="testproject.results"/>
