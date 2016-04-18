@@ -12,7 +12,7 @@
 <provar:compile projectPath="${testproject.home}"/>
 
 <provar:run projectPath="${testproject.home}" 
-            licensePath="./provar.license"
+            licensePath="C:\Jenkins\workspace\ProvarAutomation\Regression\provar.license"
             webBrowserConfiguration="Full Screen" 
             testEnvironment="PreProd" 
             resultsPath="${testproject.results}">
