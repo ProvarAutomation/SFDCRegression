@@ -7,13 +7,13 @@
 
 <property name="testproject.results" value="../RegressionRunResults"/>
 
-<fileset name="all-tests" dir=".\tests\">
+<fileset ref="all-tests" dir=".\tests\">
     <exclude name="Callable Tests\**\*.*"/>
     <exclude name="Examples\**\*.*"/>
     <exclude name="Sprints\**\*.*"/>
 </fileset>
 
-<fileset name="sprint-tests" dir="Regression\tests\Sprints"/>
+<fileset ref="sprint-tests" dir=".\tests\Sprints"/>
 
 <target name="init">
     <delete dir="testproject.results"/>
