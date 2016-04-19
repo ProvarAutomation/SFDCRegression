@@ -1361,7 +1361,9 @@
                         <argument id="interactionDescription">
                           <value class="value" valueClass="string">Click the Save Price</value>
                         </argument>
-                        <argument id="wait"/>
+                        <argument id="wait">
+                          <value class="uiWait" uri="ui:wait:timed?seconds=5"/>
+                        </argument>
                       </arguments>
                       <generatedParameters>
                         <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
