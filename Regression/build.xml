@@ -21,6 +21,7 @@
 </patternset>
 
 <target name="init">
+  <delete dir="${testproject.results}"/>
 </target>
 
 <target name="run-all-tests" depends="init">
