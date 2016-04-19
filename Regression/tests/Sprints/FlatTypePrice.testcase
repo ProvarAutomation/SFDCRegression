@@ -685,7 +685,7 @@
                                           <value class="value" valueClass="string">1</value>
                                         </argument>
                                         <argument id="blur">
-                                          <value class="value" valueClass="boolean">false</value>
+                                          <value class="value" valueClass="boolean">true</value>
                                         </argument>
                                         <argument id="pressEnter">
                                           <value class="value" valueClass="boolean">false</value>
@@ -755,7 +755,9 @@
                         <argument id="interactionDescription">
                           <value class="value" valueClass="string">Click the Save button</value>
                         </argument>
-                        <argument id="wait"/>
+                        <argument id="wait">
+                          <value class="uiWait" uri="ui:wait:timed?seconds=5"/>
+                        </argument>
                       </arguments>
                       <generatedParameters>
                         <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
@@ -969,6 +971,7 @@
                         <argument id="interactionDescription">
                           <value class="value" valueClass="string">Today link the Expiration Date field</value>
                         </argument>
+                        <argument id="wait"/>
                       </arguments>
                     </apiCall>
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="90" title="Click the Save button">

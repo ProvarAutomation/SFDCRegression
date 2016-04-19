@@ -1572,7 +1572,7 @@
                           <value class="value" valueClass="string">Click the Save Price button</value>
                         </argument>
                         <argument id="wait">
-                          <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
+                          <value class="uiWait" uri="ui:wait:timed?seconds=5"/>
                         </argument>
                       </arguments>
                       <generatedParameters>
@@ -1986,7 +1986,7 @@
                           <value class="value" valueClass="string">Click the Save Price button</value>
                         </argument>
                         <argument id="wait">
-                          <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
+                          <value class="uiWait" uri="ui:wait:timed?seconds=5"/>
                         </argument>
                       </arguments>
                       <generatedParameters>
@@ -2400,7 +2400,7 @@
                           <value class="value" valueClass="string">Click the Save Price button</value>
                         </argument>
                         <argument id="wait">
-                          <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
+                          <value class="uiWait" uri="ui:wait:timed?seconds=5"/>
                         </argument>
                       </arguments>
                       <generatedParameters>
