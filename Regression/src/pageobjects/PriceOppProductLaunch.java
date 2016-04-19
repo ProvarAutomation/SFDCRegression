@@ -19,12 +19,13 @@ public class PriceOppProductLaunch {
 	@FindBy(xpath = "//label/span[text()='Lot Size']/../../input")
 	public WebElement lotSize;
 	
-	@ChoiceListType()
+	@ChoiceListType(values = { @ChoiceListValue(value = "Buick"), @ChoiceListValue(value = "Cadillac"), @ChoiceListValue(value = "Chevrolet"), @ChoiceListValue(value = "GMC") })
 	@FindBy(xpath = "//label/span[text()='Type:']/../../select")
-	public WebElement type;
+	public WebElement gmtype;
 	
+	@PageWait.Timed(durationSeconds = 3)
 	@TextType()
-	@FindBy(xpath = "//label/span[text()='Quantity:']/../../select")
+	@FindBy(xpath = "//label/span[text()='Quantity:']/../../input")
 	public WebElement Quantity;
 	@ButtonType()
 	@FindByLabel(label = "Add")
@@ -112,6 +113,10 @@ public class PriceOppProductLaunch {
 	@ButtonType()
 	@FindBy(css = "div.slds-m-top--large input[type='button'][value='+']")
 	public WebElement AddCounty;
+
+	@TextType()
+	@FindBy(xpath = "//div[3]//div[2]/div/input")
+	public WebElement Quantity2;
 
 
 }
