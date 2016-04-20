@@ -24,6 +24,9 @@
   <delete dir="${testproject.results}"/>
 </target>
 
+<target name="dummy">
+</target>
+
 <target name="run-all-tests" depends="init">
     <property name="test.patternset" value="all.tests"/>
     <antcall target="run"/>
