@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="1">
+<testCase id="9">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: UiConnection (Test)">
       <arguments>
         <argument id="connectionName">
-          <value class="value" valueClass="string">ServiceUser</value>
+          <value class="value" valueClass="string">Admin</value>
         </argument>
         <argument id="resultName">
           <value class="value" valueClass="string">UiConnection</value>
@@ -573,7 +573,7 @@
                 <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" name="hover" title="Hover before Clicking">
+                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
                   <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                   <type>
                     <booleanType/>

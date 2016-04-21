@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="9">
+<testCase id="11">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: ServiceTestUser (Test)">
@@ -48,7 +48,7 @@
           <value class="uiTarget" uri="sf:ui:target?object=Account&amp;action=View&amp;recordType=Dealer"/>
         </argument>
         <argument id="navigate">
-          <value class="value" valueClass="string">Dont</value>
+          <value class="value" valueClass="string">Always</value>
         </argument>
         <argument id="scTabType">
           <value class="value" valueClass="string">CurrentTab</value>

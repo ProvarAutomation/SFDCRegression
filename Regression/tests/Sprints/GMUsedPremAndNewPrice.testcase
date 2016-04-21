@@ -3616,4 +3616,7 @@
       <value class="value" valueClass="string">$3,120.00</value>
     </argument>
   </args>
+  <tagReferences>
+    <tagRef tagName="Brad Weber" tagTypeName="maintainer"/>
+  </tagReferences>
 </testCase>

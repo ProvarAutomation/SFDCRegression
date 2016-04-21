@@ -10205,4 +10205,7 @@
       <value class="value" valueClass="string">GM KBB Used Car Fusion (Standalone)</value>
     </argument>
   </args>
+  <tagReferences>
+    <tagRef tagName="Brad Weber" tagTypeName="maintainer"/>
+  </tagReferences>
 </testCase>
