@@ -33,8 +33,8 @@
 </target>
 
 <target name="run-sprint-tests" depends="init">
-    <property name="test.patternset" value="sprint-tests"/>
-    <antcall target="run"/>
+    <property name="test.patternset" value="sprint.tests"/>
+    <antcall target="run2"/>
 </target>
 
 <target name="compile">
@@ -46,6 +46,18 @@
             licensePath="C:\Jenkins\workspace\ProvarAutomation\Regression\provar.license"
             webBrowserConfiguration="Full Screen" 
             testEnvironment="PreProd" 
+            resultsPath="${testproject.results}">
+            <fileset dir="${tests.dir}">
+                <patternset refid="${test.patternset}"/>
+            </fileset>
+    </provar:run>
+</target>
+
+<target name="run2" depends="compile">
+    <provar:run projectPath="${testproject.home}" 
+            licensePath="C:\Jenkins\workspace\ProvarAutomation\Regression\provar.license"
+            webBrowserConfiguration="Full Screen" 
+            testEnvironment="qUAT" 
             resultsPath="${testproject.results}">
             <fileset dir="${tests.dir}">
                 <patternset refid="${test.patternset}"/>
