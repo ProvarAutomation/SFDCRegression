@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="6">
+<testCase id="1">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: Amelia Goldman (Test)">
@@ -759,7 +759,9 @@
       </generatedParameters>
     </apiCall>
   </steps>
-  <tags/>
+  <tags>
+    <string>disabled</string>
+  </tags>
   <tagReferences>
     <tagRef tagName="Brad Weber" tagTypeName="maintainer"/>
   </tagReferences>

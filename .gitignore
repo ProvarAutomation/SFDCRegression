@@ -1,5 +1,4 @@
-# Git Ignore
-/SFDCRegression/provarAnt
-/SFDCRegression/.settings
-/SFDCRegression/.metadata
-.metadata/
+# Git Ignor
+/provarAnt
+/.settings
+/.metadata
