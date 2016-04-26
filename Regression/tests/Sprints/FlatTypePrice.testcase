@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="6">
+<testCase id="10">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="329" title="Create Opp">
@@ -3738,18 +3738,6 @@
         </textType>
       </type>
     </param>
-    <param name="Total" title="Total">
-      <summary/>
-      <type>
-        <textType>
-          <constraints>
-            <valueConstraint name="minLength">0</valueConstraint>
-            <valueConstraint name="maxLength">9999</valueConstraint>
-            <valueConstraint name="regex"/>
-          </constraints>
-        </textType>
-      </type>
-    </param>
     <param name="StandardPriority2011Price" title="Standard Priority 2011 Price">
       <summary/>
       <type>
@@ -3810,6 +3798,18 @@
         </textType>
       </type>
     </param>
+    <param name="Total" title="Total">
+      <summary/>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+            <valueConstraint name="regex"/>
+          </constraints>
+        </textType>
+      </type>
+    </param>
   </params>
   <args>
     <argument id="OEMSEMBusinessLinkPrice">
@@ -3849,7 +3849,7 @@
       <value class="value" valueClass="string">$500.00</value>
     </argument>
     <argument id="Total">
-      <value class="value" valueClass="string">$16,074.00</value>
+      <value class="value" valueClass="string">$17,764.00</value>
     </argument>
     <argument id="FastAdsVehicleVideoPlat2Price">
       <value class="value" valueClass="string">$600.00</value>
@@ -3858,10 +3858,10 @@
       <value class="value" valueClass="string">$99.00</value>
     </argument>
     <argument id="TIMBuyingCenterPrice">
-      <value class="value" valueClass="string">$2,825.00</value>
+      <value class="value" valueClass="string">$3,465.00</value>
     </argument>
     <argument id="TIMBuyingCenterKBBPrice">
-      <value class="value" valueClass="string">$4,650.00</value>
+      <value class="value" valueClass="string">$5,700.00</value>
     </argument>
     <argument id="TIMVehicleValuatorPlusPrice">
       <value class="value" valueClass="string">$700.00</value>

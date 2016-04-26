@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testProject selectedBrowserConfigurationName="Full Screen" selectedEnvironment="PreProd" selectedWebBrowserType="Chrome">
+<testProject selectedBrowserConfigurationName="Full Screen" selectedEnvironment="qUAT" selectedWebBrowserType="Chrome">
   <title>/Regression/.testproject</title>
   <configPath>config</configPath>
   <testsPath>tests</testsPath>
@@ -19,6 +19,9 @@
     </environment>
     <environment name="qUAT">
       <summary>SalesForce qUAT</summary>
+    </environment>
+    <environment name="Stage">
+      <summary>Salesforce Stage</summary>
     </environment>
   </environments>
   <variables>

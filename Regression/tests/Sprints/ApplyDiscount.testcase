@@ -1346,16 +1346,16 @@
                         </apiParam>
                       </generatedParameters>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="818" title="Set the Type select to Acura">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="818" title="Set the Make select to Acura">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=Type"/>
+                          <value class="uiLocator" uri="ui:locator?name=Make"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Type select to Acura</value>
+                          <value class="value" valueClass="string">Set the Make select to Acura</value>
                         </argument>
                         <argument id="wait"/>
                         <argument id="captureBefore"/>
