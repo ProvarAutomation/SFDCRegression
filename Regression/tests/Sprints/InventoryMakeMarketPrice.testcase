@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="3">
+<testCase id="26">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="590" title="Create Opp">
@@ -909,6 +909,7 @@
                                 </apiParam>
                               </generatedParameters>
                             </apiCall>
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="885"/>
                           </steps>
                         </clause>
                       </clauses>
@@ -996,6 +997,7 @@
                                 </apiParam>
                               </generatedParameters>
                             </apiCall>
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="886"/>
                           </steps>
                         </clause>
                       </clauses>
@@ -1083,6 +1085,7 @@
                                 </apiParam>
                               </generatedParameters>
                             </apiCall>
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="887"/>
                           </steps>
                         </clause>
                       </clauses>
@@ -1176,6 +1179,7 @@
                                 </apiParam>
                               </generatedParameters>
                             </apiCall>
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="888"/>
                           </steps>
                         </clause>
                       </clauses>
@@ -1245,7 +1249,7 @@
                   <value class="uiTarget" uri="sf:ui:target?object=Opportunity&amp;action=View&amp;recordType=ATC"/>
                 </argument>
                 <argument id="navigate">
-                  <value class="value" valueClass="string">Dont</value>
+                  <value class="value" valueClass="string">Always</value>
                 </argument>
                 <argument id="sfUiTargetObjectId">
                   <value class="variable">
@@ -1494,7 +1498,7 @@
                   <value class="uiTarget" uri="sf:ui:target?object=Quote&amp;action=View&amp;recordType=Quote+Not+Priced"/>
                 </argument>
                 <argument id="navigate">
-                  <value class="value" valueClass="string">Dont</value>
+                  <value class="value" valueClass="string">Always</value>
                 </argument>
                 <argument id="sfUiTargetObjectId">
                   <value class="variable">

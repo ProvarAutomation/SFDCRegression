@@ -50,10 +50,6 @@ public class PriceOppProductLaunch {
 	@FindBy(xpath = "//div[5]/div[2]//input")
 	public WebElement discountPercent;
 	
-	@TextType()
-	@FindBy(xpath = "//label/span[text()='Lot Size']/../../input")
-	public WebElement LotSize;
-	
 	@PageWait.Timed(durationSeconds = 3)
 	@FindBy(xpath = "//label/span[text()='DMA:']/../../select")
 	@ChoiceListType()
