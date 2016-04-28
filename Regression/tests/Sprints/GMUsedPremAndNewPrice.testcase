@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="2">
+<testCase id="1">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="330" title="Create Opp">
@@ -1324,7 +1324,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="325" title="Set the Lot Size control to 20">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=LotSize"/>
+                          <value class="uiLocator" uri="ui:locator?name=lotSize"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
@@ -1376,16 +1376,16 @@
                         </apiParam>
                       </generatedParameters>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="326" title="Set the Make select to Buick">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="326" title="Set the Type select to Buick">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=Make"/>
+                          <value class="uiLocator" uri="ui:locator?name=Type"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Make select to Buick</value>
+                          <value class="value" valueClass="string">Set the Type select to Buick</value>
                         </argument>
                         <argument id="wait">
                           <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
@@ -1402,11 +1402,7 @@
                         <apiParam group="value" name="value" seq="10000" title="Value">
                           <summary>The value to be populated.</summary>
                           <type>
-                            <choiceType>
-                              <constraints>
-                                <valueConstraint name="boundedValues">Buick|Cadillac|Chevrolet|GMC</valueConstraint>
-                              </constraints>
-                            </choiceType>
+                            <choiceType/>
                           </type>
                         </apiParam>
                         <apiParam group="value" name="blur" seq="10001" title="Tab off field">
@@ -1831,7 +1827,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="324" title="Set the Lot Size control to 20">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=LotSize"/>
+                          <value class="uiLocator" uri="ui:locator?name=lotSize"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
@@ -1877,16 +1873,16 @@
                         </apiParam>
                       </generatedParameters>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="328" title="Set the Make select to GMC">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="328" title="Set the Type select to GMC">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=Make"/>
+                          <value class="uiLocator" uri="ui:locator?name=Type"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Make select to GMC</value>
+                          <value class="value" valueClass="string">Set the Type select to GMC</value>
                         </argument>
                         <argument id="wait">
                           <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
@@ -1903,11 +1899,7 @@
                         <apiParam group="value" name="value" seq="10000" title="Value">
                           <summary>The value to be populated.</summary>
                           <type>
-                            <choiceType>
-                              <constraints>
-                                <valueConstraint name="boundedValues">Buick|Cadillac|Chevrolet|GMC</valueConstraint>
-                              </constraints>
-                            </choiceType>
+                            <choiceType/>
                           </type>
                         </apiParam>
                         <apiParam group="value" name="blur" seq="10001" title="Tab off field">
@@ -3582,6 +3574,69 @@
                 <apiParam group="target" name="uiTargetUrl" title="Web Page">
                   <type>
                     <textType/>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+      <generatedParameters>
+        <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
+          <summary>The Id of the SF Object to be Viewed or Edited.</summary>
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="775" title="On SF Order view screen">
+      <arguments>
+        <argument id="uiConnectionName">
+          <value class="value" valueClass="string">DOFSalesUser</value>
+        </argument>
+        <argument id="target">
+          <value class="uiTarget" uri="sf:ui:target?object=Order&amp;action=View"/>
+        </argument>
+        <argument id="navigate">
+          <value class="value" valueClass="string">Dont</value>
+        </argument>
+        <argument id="sfUiTargetObjectId">
+          <value class="value" valueClass="string">801180000000RDMAA2</value>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">On SF Order view screen</value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="776">
+          <steps>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="777" title="Click the Send for Dealer Signature button">
+              <arguments>
+                <argument id="locator">
+                  <value class="uiLocator" uri="ui:locator?name=Send_to_EchoSign_dloop&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOrder%26action%3DSend_to_EchoSign_dloop"/>
+                </argument>
+                <argument id="interaction">
+                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                </argument>
+                <argument id="hover">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="interactionDescription">
+                  <value class="value" valueClass="string">Click the Send for Dealer Signature button</value>
+                </argument>
+              </arguments>
+              <generatedParameters>
+                <apiParam group="value" name="hover" title="Hover before Clicking">
+                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                  <type>
+                    <booleanType/>
                   </type>
                 </apiParam>
               </generatedParameters>

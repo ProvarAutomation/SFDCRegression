@@ -110,9 +110,9 @@ public class PriceOppProductLaunch {
 	@FindBy(css = "div.slds-m-top--large input[type='button'][value='+']")
 	public WebElement AddCounty;
 
-	@TextType()
-	@FindBy(xpath = "//div[3]//div[2]/div/input")
-	public WebElement Quantity2;
+	@ChoiceListType()
+	@FindBy(xpath = "//select[1][@id=\"24:16;a\"]")
+	public WebElement QuantitySpots;
 
 
 }

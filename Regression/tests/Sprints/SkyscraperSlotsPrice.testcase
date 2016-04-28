@@ -898,6 +898,52 @@
                                 </apiParam>
                               </generatedParameters>
                             </apiCall>
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="868" title="Set the Net Billing Amount field to {1000}">
+                              <arguments>
+                                <argument id="locator">
+                                  <value class="uiLocator" uri="ui:locator?name=NBA_Amount__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunityLineItem%26field%3DNBA_Amount__c"/>
+                                </argument>
+                                <argument id="interaction">
+                                  <value class="uiInteraction" uri="ui:interaction?name=set"/>
+                                </argument>
+                                <argument id="interactionDescription">
+                                  <value class="value" valueClass="string">Set the Net Billing Amount field to {1000}</value>
+                                </argument>
+                                <argument id="wait"/>
+                                <argument id="captureBefore"/>
+                                <argument id="captureAfter"/>
+                                <argument id="value">
+                                  <value class="value" valueClass="decimal">1000</value>
+                                </argument>
+                                <argument id="blur"/>
+                                <argument id="pressEnter"/>
+                              </arguments>
+                              <generatedParameters>
+                                <apiParam group="value" modelBinding="sf:ui:binding:object?object=OpportunityLineItem&amp;field=NBA_Amount__c" name="value" seq="10000" title="Value">
+                                  <summary>The value to be populated.</summary>
+                                  <type>
+                                    <numericType>
+                                      <constraints>
+                                        <valueConstraint name="length">18</valueConstraint>
+                                        <valueConstraint name="decimalPlaces">2</valueConstraint>
+                                      </constraints>
+                                    </numericType>
+                                  </type>
+                                </apiParam>
+                                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
+                                  <summary>Whether the tab key should be pressed after the value is populated.</summary>
+                                  <type>
+                                    <booleanType/>
+                                  </type>
+                                </apiParam>
+                                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
+                                  <summary>Whether the Enter key should be pressed after the value is populated.</summary>
+                                  <type>
+                                    <booleanType/>
+                                  </type>
+                                </apiParam>
+                              </generatedParameters>
+                            </apiCall>
                           </steps>
                         </clause>
                       </clauses>
@@ -978,6 +1024,52 @@
                                   </type>
                                 </apiParam>
                                 <apiParam group="value" name="pressEnter" title="Press Enter">
+                                  <summary>Whether the Enter key should be pressed after the value is populated.</summary>
+                                  <type>
+                                    <booleanType/>
+                                  </type>
+                                </apiParam>
+                              </generatedParameters>
+                            </apiCall>
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="869" title="Set the Net Billing Amount field to {1000}">
+                              <arguments>
+                                <argument id="locator">
+                                  <value class="uiLocator" uri="ui:locator?name=NBA_Amount__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunityLineItem%26field%3DNBA_Amount__c"/>
+                                </argument>
+                                <argument id="interaction">
+                                  <value class="uiInteraction" uri="ui:interaction?name=set"/>
+                                </argument>
+                                <argument id="interactionDescription">
+                                  <value class="value" valueClass="string">Set the Net Billing Amount field to {1000}</value>
+                                </argument>
+                                <argument id="wait"/>
+                                <argument id="captureBefore"/>
+                                <argument id="captureAfter"/>
+                                <argument id="value">
+                                  <value class="value" valueClass="decimal">1000</value>
+                                </argument>
+                                <argument id="blur"/>
+                                <argument id="pressEnter"/>
+                              </arguments>
+                              <generatedParameters>
+                                <apiParam group="value" modelBinding="sf:ui:binding:object?object=OpportunityLineItem&amp;field=NBA_Amount__c" name="value" seq="10000" title="Value">
+                                  <summary>The value to be populated.</summary>
+                                  <type>
+                                    <numericType>
+                                      <constraints>
+                                        <valueConstraint name="length">18</valueConstraint>
+                                        <valueConstraint name="decimalPlaces">2</valueConstraint>
+                                      </constraints>
+                                    </numericType>
+                                  </type>
+                                </apiParam>
+                                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
+                                  <summary>Whether the tab key should be pressed after the value is populated.</summary>
+                                  <type>
+                                    <booleanType/>
+                                  </type>
+                                </apiParam>
+                                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
                                   <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                                   <type>
                                     <booleanType/>
@@ -1072,6 +1164,52 @@
                                 </apiParam>
                               </generatedParameters>
                             </apiCall>
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="870" title="Set the Net Billing Amount field to {1000}">
+                              <arguments>
+                                <argument id="locator">
+                                  <value class="uiLocator" uri="ui:locator?name=NBA_Amount__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunityLineItem%26field%3DNBA_Amount__c"/>
+                                </argument>
+                                <argument id="interaction">
+                                  <value class="uiInteraction" uri="ui:interaction?name=set"/>
+                                </argument>
+                                <argument id="interactionDescription">
+                                  <value class="value" valueClass="string">Set the Net Billing Amount field to {1000}</value>
+                                </argument>
+                                <argument id="wait"/>
+                                <argument id="captureBefore"/>
+                                <argument id="captureAfter"/>
+                                <argument id="value">
+                                  <value class="value" valueClass="decimal">1000</value>
+                                </argument>
+                                <argument id="blur"/>
+                                <argument id="pressEnter"/>
+                              </arguments>
+                              <generatedParameters>
+                                <apiParam group="value" modelBinding="sf:ui:binding:object?object=OpportunityLineItem&amp;field=NBA_Amount__c" name="value" seq="10000" title="Value">
+                                  <summary>The value to be populated.</summary>
+                                  <type>
+                                    <numericType>
+                                      <constraints>
+                                        <valueConstraint name="length">18</valueConstraint>
+                                        <valueConstraint name="decimalPlaces">2</valueConstraint>
+                                      </constraints>
+                                    </numericType>
+                                  </type>
+                                </apiParam>
+                                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
+                                  <summary>Whether the tab key should be pressed after the value is populated.</summary>
+                                  <type>
+                                    <booleanType/>
+                                  </type>
+                                </apiParam>
+                                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
+                                  <summary>Whether the Enter key should be pressed after the value is populated.</summary>
+                                  <type>
+                                    <booleanType/>
+                                  </type>
+                                </apiParam>
+                              </generatedParameters>
+                            </apiCall>
                           </steps>
                         </clause>
                       </clauses>
@@ -1146,6 +1284,52 @@
                                     <numericType>
                                       <constraints>
                                         <valueConstraint name="length">12</valueConstraint>
+                                        <valueConstraint name="decimalPlaces">2</valueConstraint>
+                                      </constraints>
+                                    </numericType>
+                                  </type>
+                                </apiParam>
+                                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
+                                  <summary>Whether the tab key should be pressed after the value is populated.</summary>
+                                  <type>
+                                    <booleanType/>
+                                  </type>
+                                </apiParam>
+                                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
+                                  <summary>Whether the Enter key should be pressed after the value is populated.</summary>
+                                  <type>
+                                    <booleanType/>
+                                  </type>
+                                </apiParam>
+                              </generatedParameters>
+                            </apiCall>
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="871" title="Set the Net Billing Amount field to {1000}">
+                              <arguments>
+                                <argument id="locator">
+                                  <value class="uiLocator" uri="ui:locator?name=NBA_Amount__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunityLineItem%26field%3DNBA_Amount__c"/>
+                                </argument>
+                                <argument id="interaction">
+                                  <value class="uiInteraction" uri="ui:interaction?name=set"/>
+                                </argument>
+                                <argument id="interactionDescription">
+                                  <value class="value" valueClass="string">Set the Net Billing Amount field to {1000}</value>
+                                </argument>
+                                <argument id="wait"/>
+                                <argument id="captureBefore"/>
+                                <argument id="captureAfter"/>
+                                <argument id="value">
+                                  <value class="value" valueClass="decimal">1000</value>
+                                </argument>
+                                <argument id="blur"/>
+                                <argument id="pressEnter"/>
+                              </arguments>
+                              <generatedParameters>
+                                <apiParam group="value" modelBinding="sf:ui:binding:object?object=OpportunityLineItem&amp;field=NBA_Amount__c" name="value" seq="10000" title="Value">
+                                  <summary>The value to be populated.</summary>
+                                  <type>
+                                    <numericType>
+                                      <constraints>
+                                        <valueConstraint name="length">18</valueConstraint>
                                         <valueConstraint name="decimalPlaces">2</valueConstraint>
                                       </constraints>
                                     </numericType>

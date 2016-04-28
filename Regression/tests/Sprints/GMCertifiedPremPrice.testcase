@@ -2679,6 +2679,9 @@
       <value class="value" valueClass="string">$4,295.00</value>
     </argument>
   </args>
+  <tags>
+    <string>disabled</string>
+  </tags>
   <tagReferences>
     <tagRef tagName="Brad Weber" tagTypeName="maintainer"/>
   </tagReferences>
