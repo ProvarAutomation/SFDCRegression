@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="34">
+<testCase id="10">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="326" title="Create Opp">
@@ -115,7 +115,9 @@
                   <value class="value" valueClass="string">Test</value>
                 </argument>
                 <argument id="OwnerId">
-                  <value class="value" valueClass="string">005180000014oZs</value>
+                  <value class="variable">
+                    <path element="BradWeber"/>
+                  </value>
                 </argument>
               </arguments>
               <parameterGeneratorProperties>
@@ -166,7 +168,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="330" title="Salesforce Connect: DOFSalesUser (Test)">
       <arguments>
         <argument id="connectionName">
-          <value class="value" valueClass="string">DOFSalesUser</value>
+          <value class="value" valueClass="string">BradWeber</value>
         </argument>
         <argument id="resultName">
           <value class="value" valueClass="string">DOFSalesUser</value>
@@ -220,7 +222,9 @@
           <value class="value" valueClass="string">Default</value>
         </argument>
         <argument id="closeWindow"/>
-        <argument id="captureBefore"/>
+        <argument id="captureBefore">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
         <argument id="captureAfter"/>
         <argument id="sfUiTargetObjectId">
           <value class="variable">
@@ -242,8 +246,6 @@
             <textType/>
           </type>
         </apiParam>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Quote&amp;field=Name" name="Name" title="Name"/>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Quote&amp;field=OpportunityId" name="OpportunityId" title="OpportunityId"/>
       </generatedParameters>
     </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="24" title="On SF Opportunity view (ATC) screen">
@@ -921,13 +923,13 @@
       <clauses>
         <clause name="hidden" testItemId="174">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="83" title="On SF Opportunity view (ATC) screen">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="83" title="On SF Opportunity view screen">
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
-                  <value class="uiTarget" uri="sf:ui:target?object=Opportunity&amp;action=View&amp;recordType=ATC"/>
+                  <value class="uiTarget" uri="sf:ui:target?object=Opportunity&amp;action=View"/>
                 </argument>
                 <argument id="navigate">
                   <value class="value" valueClass="string">Dont</value>
@@ -938,7 +940,7 @@
                   </value>
                 </argument>
                 <argument id="targetDescription">
-                  <value class="value" valueClass="string">On SF Opportunity view (ATC) screen</value>
+                  <value class="value" valueClass="string">On SF Opportunity view screen</value>
                 </argument>
                 <argument id="windowSelection">
                   <value class="value" valueClass="string">Default</value>
@@ -953,13 +955,13 @@
               <clauses>
                 <clause name="substeps" testItemId="84">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="85" title="Click the Quotes NewQuote button">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="85" title="Set the Net Billable Amount field">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=NewQuote&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26action%3DNewQuote%26relationship%3DQuotes"/>
+                          <value class="uiLocator" uri="ui:locator?name=NBA_Amount__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DNBA_Amount__c"/>
                         </argument>
                         <argument id="interaction">
-                          <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                          <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="hover">
                           <value class="value" valueClass="boolean">false</value>
@@ -971,13 +973,33 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Click the Quotes NewQuote button</value>
+                          <value class="value" valueClass="string">Set the Net Billable Amount field</value>
                         </argument>
                         <argument id="wait"/>
+                        <argument id="value"/>
+                        <argument id="blur"/>
+                        <argument id="pressEnter"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
-                          <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                        <apiParam group="value" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=NBA_Amount__c" name="value" seq="10000" title="Value">
+                          <summary>The value to be populated.</summary>
+                          <type>
+                            <numericType>
+                              <constraints>
+                                <valueConstraint name="length">18</valueConstraint>
+                                <valueConstraint name="decimalPlaces">2</valueConstraint>
+                              </constraints>
+                            </numericType>
+                          </type>
+                        </apiParam>
+                        <apiParam group="value" name="blur" seq="10001" title="Tab off field">
+                          <summary>Whether the tab key should be pressed after the value is populated.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                        <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
+                          <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
                           </type>
@@ -2283,7 +2305,9 @@
                 <argument id="resultScope">
                   <value class="value" valueClass="string">Local</value>
                 </argument>
-                <argument id="autoPaginate"/>
+                <argument id="autoPaginate">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
               </arguments>
               <clauses>
                 <clause name="substeps" testItemId="309">
@@ -2291,7 +2315,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="310" title="Click the ORDERS.ORDER_NUMBER link">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=ORDERS_ORDER_NUMBER&amp;rowLocator=1&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DQuote%26field%3DORDER_NUMBER%26relationship%3DOrders"/>
+                          <value class="uiLocator" uri="ui:locator?name=ORDERS_ORDER_NUMBER&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DQuote%26field%3DORDER_NUMBER%26relationship%3DRelatedOrderList"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=action"/>
@@ -2404,7 +2428,9 @@
                 <argument id="resultScope">
                   <value class="value" valueClass="string">Local</value>
                 </argument>
-                <argument id="autoPaginate"/>
+                <argument id="autoPaginate">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
               </arguments>
               <clauses>
                 <clause name="substeps" testItemId="314">
@@ -2485,7 +2511,9 @@
                 <argument id="resultScope">
                   <value class="value" valueClass="string">Local</value>
                 </argument>
-                <argument id="autoPaginate"/>
+                <argument id="autoPaginate">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
               </arguments>
               <clauses>
                 <clause name="substeps" testItemId="321">
@@ -2641,7 +2669,9 @@
                 <argument id="resultScope">
                   <value class="value" valueClass="string">Local</value>
                 </argument>
-                <argument id="autoPaginate"/>
+                <argument id="autoPaginate">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
               </arguments>
               <clauses>
                 <clause name="substeps" testItemId="340">
@@ -3020,7 +3050,9 @@
                 <argument id="resultScope">
                   <value class="value" valueClass="string">Local</value>
                 </argument>
-                <argument id="autoPaginate"/>
+                <argument id="autoPaginate">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
               </arguments>
               <clauses>
                 <clause name="substeps" testItemId="755">

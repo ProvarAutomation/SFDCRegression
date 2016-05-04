@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testProject selectedBrowserConfigurationName="Full Screen" selectedEnvironment="qUAT" selectedWebBrowserType="Chrome">
+<testProject selectedBrowserConfigurationName="Full Screen" selectedEnvironment="PreProd" selectedWebBrowserType="Chrome">
   <title>/Regression/.testproject</title>
   <configPath>config</configPath>
   <testsPath>tests</testsPath>
@@ -66,6 +66,9 @@
         <testVariableValue envName="PreProd">
           <value class="value" valueClass="string">001E000000mEZRc</value>
         </testVariableValue>
+        <testVariableValue envName="Quoting">
+          <value class="value" valueClass="string">0011900000Dazhz</value>
+        </testVariableValue>
       </values>
     </testVariable>
     <testVariable name="DOFTestUser">
@@ -82,6 +85,43 @@
         <testVariableValue envName="qUAT">
           <value class="value" valueClass="string">005180000014oZs</value>
         </testVariableValue>
+        <testVariableValue envName="Quoting">
+          <value class="value" valueClass="string">005E0000001tWvj</value>
+        </testVariableValue>
+      </values>
+    </testVariable>
+    <testVariable name="BradWeber">
+      <valueType class="textType">
+        <constraints>
+          <valueConstraint name="minLength">0</valueConstraint>
+          <valueConstraint name="maxLength">9999</valueConstraint>
+          <valueConstraint name="regex"/>
+        </constraints>
+      </valueType>
+      <summary>Brad Weber</summary>
+      <values>
+        <testVariableValue/>
+        <testVariableValue envName="Stage">
+          <value class="value" valueClass="string">005E00000073fX6</value>
+        </testVariableValue>
+        <testVariableValue envName="PreProd">
+          <value class="value" valueClass="string">005E00000073fX6</value>
+        </testVariableValue>
+      </values>
+    </testVariable>
+    <testVariable name="StageHeritageMitsubishi">
+      <valueType class="textType">
+        <constraints>
+          <valueConstraint name="minLength">0</valueConstraint>
+          <valueConstraint name="maxLength">9999</valueConstraint>
+          <valueConstraint name="regex"/>
+        </constraints>
+      </valueType>
+      <summary/>
+      <values>
+        <testVariableValue>
+          <value class="value" valueClass="string">0018A000003umPm</value>
+        </testVariableValue>
       </values>
     </testVariable>
   </variables>
@@ -96,6 +136,7 @@
             <connectionUrl envName="PreProd" secureStorageNodeId="cb695e41-0284-4116-90ce-182ff8a37ef4" url="sf:user=provar.tester@autotrader.com.preprod;password={password};securityToken={securityToken};environment=SANDBOX"/>
             <connectionUrl envName="Quoting" secureStorageNodeId="535e0277-3a98-44ea-af13-a2c834d4c311" url="sf:user=provar.tester@coxauto.com.quoting;password={password};environment=SANDBOX;userLoginUrl=https://atgdealer--preprod.cs25.my.salesforce.com"/>
             <connectionUrl envName="qUAT" secureStorageNodeId="b6cc7348-a3d4-4566-8fb6-75f61bf1edeb" url="sf:user=provar.tester@coxauto.com.quat;password={password};environment=SANDBOX;userLoginUrl=https://atgdealer--quoting.cs24.my.salesforce.com"/>
+            <connectionUrl envName="Stage" secureStorageNodeId="236c485b-360c-42b2-822c-813dced4385e" url="sf:user=provar.tester@autotrader.com.stage;password={password};environment=SANDBOX;userLoginUrl=https://atgdealer--quoting.cs24.my.salesforce.com"/>
           </connectionUrls>
         </connection>
         <connection name="ServiceTestUser">
@@ -199,6 +240,14 @@
           <summary/>
           <connectionUrls>
             <connectionUrl url="sf:user=dof.sales.test@atg.com.quat;environment=PROD_DEV;logonAsConnection=Admin"/>
+          </connectionUrls>
+        </connection>
+        <connection name="BradWeber">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl url="sf:user=brad.weber@autotrader.com.prod.stage;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="PreProd" url="sf:user=brad.weber@autotrader.com.prod.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="Stage" url="sf:user=brad.weber@autotrader.com.prod.stage;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
       </connections>

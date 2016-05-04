@@ -15,6 +15,7 @@ import com.provar.core.testapi.annotations.*;
 public class PriceOppProductLaunch {
 
 	
+	@PageWait.Timed(durationSeconds = 3)
 	@TextType()
 	@FindBy(xpath = "//label/span[text()='Lot Size']/../../input")
 	public WebElement lotSize;
