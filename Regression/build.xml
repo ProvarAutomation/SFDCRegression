@@ -57,7 +57,7 @@
     <provar:run projectPath="${testproject.home}" 
             licensePath="C:\Jenkins\workspace\ProvarAutomation\Regression\provar.license"
             webBrowserConfiguration="Full Screen" 
-            testEnvironment="qUAT" 
+            testEnvironment="PreProd" 
             resultsPath="${testproject.results}">
             <fileset dir="${tests.dir}">
                 <patternset refid="${test.patternset}"/>
