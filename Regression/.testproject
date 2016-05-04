@@ -88,6 +88,9 @@
         <testVariableValue envName="Quoting">
           <value class="value" valueClass="string">005E0000001tWvj</value>
         </testVariableValue>
+        <testVariableValue envName="PreProd">
+          <value class="value" valueClass="string">005E00000073fX6</value>
+        </testVariableValue>
       </values>
     </testVariable>
     <testVariable name="BradWeber">
@@ -120,6 +123,30 @@
       <summary/>
       <values>
         <testVariableValue>
+          <value class="value" valueClass="string">0018A000003umPm</value>
+        </testVariableValue>
+      </values>
+    </testVariable>
+    <testVariable name="Dealer">
+      <valueType class="textType">
+        <constraints>
+          <valueConstraint name="minLength">0</valueConstraint>
+          <valueConstraint name="maxLength">9999</valueConstraint>
+          <valueConstraint name="regex"/>
+        </constraints>
+      </valueType>
+      <summary>test dealer to use</summary>
+      <values>
+        <testVariableValue>
+          <value class="value" valueClass="string">001E000000MZN0B</value>
+        </testVariableValue>
+        <testVariableValue envName="PreProd">
+          <value class="value" valueClass="string">001E000000MZN0B</value>
+        </testVariableValue>
+        <testVariableValue envName="Quoting">
+          <value class="value" valueClass="string">0011900000Dazi4</value>
+        </testVariableValue>
+        <testVariableValue envName="Stage">
           <value class="value" valueClass="string">0018A000003umPm</value>
         </testVariableValue>
       </values>
@@ -240,6 +267,8 @@
           <summary/>
           <connectionUrls>
             <connectionUrl url="sf:user=dof.sales.test@atg.com.quat;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="PreProd" url="sf:user=brad.weber@autotrader.com.prod.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="qUAT" url="sf:user=dof.sales.test@atg.com.quat;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
         <connection name="BradWeber">

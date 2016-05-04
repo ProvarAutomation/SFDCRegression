@@ -65,7 +65,7 @@
                 </argument>
                 <argument id="AccountId">
                   <value class="variable">
-                    <path element="CrownKiaAccount"/>
+                    <path element="Dealer"/>
                   </value>
                 </argument>
                 <argument id="RecordTypeId">
@@ -114,7 +114,7 @@
                 </argument>
                 <argument id="OwnerId">
                   <value class="variable">
-                    <path element="BradWeber"/>
+                    <path element="DOFTestUser"/>
                   </value>
                 </argument>
               </arguments>
@@ -167,7 +167,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="335" title="Salesforce Connect: DOFSalesUser (Test)">
       <arguments>
         <argument id="connectionName">
-          <value class="value" valueClass="string">BradWeber</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="resultName">
           <value class="value" valueClass="string">DOFSalesUser</value>
@@ -1925,11 +1925,7 @@
                             <uiFieldAssertion resultName="Rate_Card_Details__c">
                               <fieldLocator uri="ui:locator?name=Rate_Card_Details__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DQuote%26field%3DRate_Card_Details__c%26relationship%3DQuoteLineItems"/>
                               <attributeAssertions>
-                                <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="Contains">
-                                  <value class="variable">
-                                    <path element="Price1"/>
-                                  </value>
-                                </uiAttributeAssertion>
+                                <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="Contains"/>
                               </attributeAssertions>
                             </uiFieldAssertion>
                           </value>
@@ -2437,11 +2433,7 @@
                             <uiFieldAssertion resultName="Rate_Card_Details__c">
                               <fieldLocator uri="ui:locator?name=Rate_Card_Details__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DQuote%26field%3DRate_Card_Details__c%26relationship%3DQuoteLineItems"/>
                               <attributeAssertions>
-                                <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="Contains">
-                                  <value class="variable">
-                                    <path element="Price2"/>
-                                  </value>
-                                </uiAttributeAssertion>
+                                <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="Contains"/>
                               </attributeAssertions>
                             </uiFieldAssertion>
                           </value>
@@ -2948,11 +2940,7 @@
                             <uiFieldAssertion resultName="Rate_Card_Details__c">
                               <fieldLocator uri="ui:locator?name=Rate_Card_Details__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DQuote%26field%3DRate_Card_Details__c%26relationship%3DQuoteLineItems"/>
                               <attributeAssertions>
-                                <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="Contains">
-                                  <value class="variable">
-                                    <path element="Price3"/>
-                                  </value>
-                                </uiAttributeAssertion>
+                                <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="Contains"/>
                               </attributeAssertions>
                             </uiFieldAssertion>
                           </value>
@@ -3544,7 +3532,7 @@
                             <uiFieldAssertion resultName="TotalPrice">
                               <fieldLocator uri="ui:locator?name=TotalPrice&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOrder%26field%3DTotalPrice%26relationship%3DOrderItems"/>
                               <attributeAssertions>
-                                <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
+                                <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="EqualTo">
                                   <value class="variable">
                                     <path element="Price2d"/>
                                   </value>
@@ -3625,7 +3613,7 @@
                             <uiFieldAssertion resultName="TotalPrice">
                               <fieldLocator uri="ui:locator?name=TotalPrice&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOrder%26field%3DTotalPrice%26relationship%3DOrderItems"/>
                               <attributeAssertions>
-                                <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
+                                <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="EqualTo">
                                   <value class="variable">
                                     <path element="Price3d"/>
                                   </value>
@@ -3670,7 +3658,7 @@
                     <uiFieldAssertion resultName="TotalAmount">
                       <fieldLocator uri="ui:locator?name=TotalAmount&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOrder%26field%3DTotalAmount"/>
                       <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
+                        <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="EqualTo">
                           <value class="variable">
                             <path element="Totald"/>
                           </value>

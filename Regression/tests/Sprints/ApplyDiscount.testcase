@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="7">
+<testCase id="5">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="329" title="Create Opp">
@@ -3944,19 +3944,19 @@
       <value class="value" valueClass="string">Alpha 2014</value>
     </argument>
     <argument id="Price1">
-      <value class="value" valueClass="string">649.93</value>
+      <value class="value" valueClass="string">1809.92</value>
     </argument>
     <argument id="Price2">
       <value class="value" valueClass="string">1507.50</value>
     </argument>
     <argument id="Price1d">
-      <value class="value" valueClass="string">$649.93</value>
+      <value class="value" valueClass="string">$1,809.92</value>
     </argument>
     <argument id="Price2d">
       <value class="value" valueClass="string">$1,507.50</value>
     </argument>
     <argument id="Totald">
-      <value class="value" valueClass="string">$2,157.43</value>
+      <value class="value" valueClass="string">$3,317.42</value>
     </argument>
   </args>
   <tagReferences>

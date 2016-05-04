@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="9">
+<testCase id="16">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="327" title="Create Opp">
@@ -65,7 +65,7 @@
                 </argument>
                 <argument id="AccountId">
                   <value class="variable">
-                    <path element="CrownKiaAccount"/>
+                    <path element="Dealer"/>
                   </value>
                 </argument>
                 <argument id="RecordTypeId">
@@ -116,7 +116,7 @@
                 </argument>
                 <argument id="OwnerId">
                   <value class="variable">
-                    <path element="BradWeber"/>
+                    <path element="DOFTestUser"/>
                   </value>
                 </argument>
               </arguments>
@@ -168,7 +168,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="331" title="Salesforce Connect: DOFSalesUser (Test)">
       <arguments>
         <argument id="connectionName">
-          <value class="value" valueClass="string">BradWeber</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="resultName">
           <value class="value" valueClass="string">DOFSalesUser</value>
@@ -202,17 +202,17 @@
         <argument id="environment"/>
       </arguments>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="6" title="On SF Opportunity view screen">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="6" title="On SF Opportunity view (ATC) screen">
       <tags/>
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="target">
-          <value class="uiTarget" uri="sf:ui:target?object=Opportunity&amp;action=View"/>
+          <value class="uiTarget" uri="sf:ui:target?object=Opportunity&amp;action=View&amp;recordType=ATC"/>
         </argument>
         <argument id="targetDescription">
-          <value class="value" valueClass="string">On SF Opportunity view screen</value>
+          <value class="value" valueClass="string">On SF Opportunity view (ATC) screen</value>
         </argument>
         <argument id="navigate">
           <value class="value" valueClass="string">IfNeccessary</value>
@@ -246,17 +246,15 @@
             <textType/>
           </type>
         </apiParam>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Quote&amp;field=Name" name="Name" title="Name"/>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Quote&amp;field=OpportunityId" name="OpportunityId" title="OpportunityId"/>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="24" title="On SF Opportunity view (ATC) screen">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="24" title="On SF Opportunity view screen">
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="target">
-          <value class="uiTarget" uri="sf:ui:target?object=Opportunity&amp;action=View&amp;recordType=ATC"/>
+          <value class="uiTarget" uri="sf:ui:target?object=Opportunity&amp;action=View"/>
         </argument>
         <argument id="navigate">
           <value class="value" valueClass="string">Dont</value>
@@ -267,7 +265,7 @@
           </value>
         </argument>
         <argument id="targetDescription">
-          <value class="value" valueClass="string">On SF Opportunity view (ATC) screen</value>
+          <value class="value" valueClass="string">On SF Opportunity view screen</value>
         </argument>
         <argument id="windowSelection">
           <value class="value" valueClass="string">Default</value>
@@ -4666,25 +4664,25 @@
       <value class="value" valueClass="string">BMW New Car Co-op Premium 2014</value>
     </argument>
     <argument id="Price1">
-      <value class="value" valueClass="string">690.00</value>
+      <value class="value" valueClass="string">1050.00</value>
     </argument>
     <argument id="Price2">
-      <value class="value" valueClass="string">2705.00</value>
+      <value class="value" valueClass="string">4135.00</value>
     </argument>
     <argument id="Price3">
-      <value class="value" valueClass="string">1665.00</value>
+      <value class="value" valueClass="string">2545.00</value>
     </argument>
     <argument id="Price1d">
-      <value class="value" valueClass="string">$690.00</value>
+      <value class="value" valueClass="string">$1,050.00</value>
     </argument>
     <argument id="Price2d">
-      <value class="value" valueClass="string">$2,705.00</value>
+      <value class="value" valueClass="string">$4,135.00</value>
     </argument>
     <argument id="Price3d">
-      <value class="value" valueClass="string">$1,665.00</value>
+      <value class="value" valueClass="string">$2,545.00</value>
     </argument>
     <argument id="Totald">
-      <value class="value" valueClass="string">$5,060.00</value>
+      <value class="value" valueClass="string">$7,730.00</value>
     </argument>
   </args>
   <tagReferences>
