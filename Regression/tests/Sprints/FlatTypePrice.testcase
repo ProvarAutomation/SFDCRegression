@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="9">
+<testCase id="30">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="329" title="Create Opp">
@@ -65,7 +65,7 @@
                 </argument>
                 <argument id="AccountId">
                   <value class="variable">
-                    <path element="CrownKiaAccount"/>
+                    <path element="Dealer"/>
                   </value>
                 </argument>
                 <argument id="RecordTypeId">
@@ -116,7 +116,7 @@
                 </argument>
                 <argument id="OwnerId">
                   <value class="variable">
-                    <path element="BradWeber"/>
+                    <path element="DOFTestUser"/>
                   </value>
                 </argument>
               </arguments>
@@ -3900,7 +3900,7 @@
       <value class="value" valueClass="string">$500.00</value>
     </argument>
     <argument id="Total">
-      <value class="value" valueClass="string">$17,764.00</value>
+      <value class="value" valueClass="string">$21,374.00</value>
     </argument>
     <argument id="FastAdsVehicleVideoPlat2Price">
       <value class="value" valueClass="string">$600.00</value>
@@ -3909,10 +3909,10 @@
       <value class="value" valueClass="string">$99.00</value>
     </argument>
     <argument id="TIMBuyingCenterPrice">
-      <value class="value" valueClass="string">$3,465.00</value>
+      <value class="value" valueClass="string">$4,830.00</value>
     </argument>
     <argument id="TIMBuyingCenterKBBPrice">
-      <value class="value" valueClass="string">$5,700.00</value>
+      <value class="value" valueClass="string">$7,945.00</value>
     </argument>
     <argument id="TIMVehicleValuatorPlusPrice">
       <value class="value" valueClass="string">$700.00</value>

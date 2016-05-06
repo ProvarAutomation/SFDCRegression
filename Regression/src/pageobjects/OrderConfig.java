@@ -237,6 +237,7 @@ public class OrderConfig {
 	@TextType()
 	@FindByLabel(label = "TIM Dealership Contact", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
 	public WebElement TIMDealershipContact;
+	@PageWait.Timed(durationSeconds = 3)
 	@TextType()
 	@FindByLabel(label = "TIM Dealership Contact Email Address", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
 	public WebElement TIMDealershipContactEmailAddress;
@@ -861,8 +862,8 @@ public class OrderConfig {
 	@LinkType()
 	@FindBy(xpath = "//div[@class=\"pShowMore\"]/a[1]")
 	public WebElement ShowMoreProducts;
-	@FindBy(xpath = "//input[@name=\"pgId:frmId:mainPgBlkId:j_id130:j_id131:16:j_id132:j_id134\"]")
 	@TextType()
+	@FindByLabel(label = "TIM Dealership Contact title", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
 	public WebElement TIMDealershipContactTitle;
 	@TextType()
 	@FindBy(name = "pgId:frmId:mainPgBlkId:j_id48:j_id49:4:j_id50:j_id52")

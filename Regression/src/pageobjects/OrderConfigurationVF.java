@@ -671,15 +671,15 @@ public class OrderConfigurationVF {
 
 	@TextType()
 	@FindByLabel(label = "TIM Dealership Contact", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
-	public WebElement tIMDealershipContact;
+	public WebElement TIMDealershipContact;
 
 	@TextType()
 	@FindByLabel(label = "TIM Dealership Contact Mobile Carrier", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
-	public WebElement tIMDealershipContactMobileCarrier;
+	public WebElement TIMDealershipContactMobileCarrier;
 
 	@TextType()
 	@FindByLabel(label = "TIM Dealership XML Email Address", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
-	public WebElement tIMDealershipXMLEmailAddress;
+	public WebElement TIMDealershipXMLEmailAddress;
 
 	@TextType()
 	@FindByLabel(label = "Training Headcount", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
@@ -691,15 +691,15 @@ public class OrderConfigurationVF {
 
 	@TextType()
 	@FindByLabel(label = "TIM Dealership Contact Email Address", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
-	public WebElement tIMDealershipContactEmailAddress;
+	public WebElement TIMDealershipContactEmailAddress;
 
 	@TextType()
 	@FindByLabel(label = "TIM Dealership Contact Mobile Number", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
-	public WebElement tIMDealershipContactMobileNumber;
+	public WebElement TIMDealershipContactMobileNumber;
 
 	@TextType()
 	@FindByLabel(label = "TIM Dealer Website Address", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
-	public WebElement tIMDealerWebsiteAddress;
+	public WebElement TIMDealerWebsiteAddress;
 
 	@TextType()
 	@FindByLabel(label = "vAuto ID", labelType = LabelType.PrecedingCell, qualifierXpath = "input")

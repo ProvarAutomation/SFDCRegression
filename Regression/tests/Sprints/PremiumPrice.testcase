@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="17">
+<testCase id="14">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="590" title="Create Opp">
@@ -116,7 +116,7 @@
                 </argument>
                 <argument id="OwnerId">
                   <value class="variable">
-                    <path element="BradWeber"/>
+                    <path element="DOFTestUser"/>
                   </value>
                 </argument>
               </arguments>
@@ -168,7 +168,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="594" title="Salesforce Connect: DOFSalesUser (Test)">
       <arguments>
         <argument id="connectionName">
-          <value class="value" valueClass="string">BradWeber</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="resultName">
           <value class="value" valueClass="string">DOFSalesUser</value>
@@ -8956,43 +8956,43 @@
       <value class="value" valueClass="string">Premium Plus with CPO</value>
     </argument>
     <argument id="Price1">
-      <value class="value" valueClass="string">2660.00</value>
+      <value class="value" valueClass="string">3250.00</value>
     </argument>
     <argument id="Price2">
-      <value class="value" valueClass="string">2990.00</value>
+      <value class="value" valueClass="string">2725.00</value>
     </argument>
     <argument id="Price3">
-      <value class="value" valueClass="string">4420.00</value>
+      <value class="value" valueClass="string">4205.00</value>
     </argument>
     <argument id="Price4">
-      <value class="value" valueClass="string">7025.00</value>
+      <value class="value" valueClass="string">7080.00</value>
     </argument>
     <argument id="Price5">
-      <value class="value" valueClass="string">3670.00</value>
+      <value class="value" valueClass="string">3470.00</value>
     </argument>
     <argument id="Price6">
-      <value class="value" valueClass="string">5575.00</value>
+      <value class="value" valueClass="string">6430.00</value>
     </argument>
     <argument id="Price1d">
-      <value class="value" valueClass="string">$2,660.00</value>
+      <value class="value" valueClass="string">$3,250.00</value>
     </argument>
     <argument id="Price2d">
-      <value class="value" valueClass="string">$2,990.00</value>
+      <value class="value" valueClass="string">$2,725.00</value>
     </argument>
     <argument id="Price3d">
-      <value class="value" valueClass="string">$4,420.00</value>
+      <value class="value" valueClass="string">$4,205.00</value>
     </argument>
     <argument id="Price4d">
-      <value class="value" valueClass="string">$7,025.00</value>
+      <value class="value" valueClass="string">$7,080.00</value>
     </argument>
     <argument id="Price5d">
-      <value class="value" valueClass="string">$3,670.00</value>
+      <value class="value" valueClass="string">$3,470.00</value>
     </argument>
     <argument id="Price6d">
-      <value class="value" valueClass="string">$5,575.00</value>
+      <value class="value" valueClass="string">$6,430.00</value>
     </argument>
     <argument id="Totald">
-      <value class="value" valueClass="string">$26,340.00</value>
+      <value class="value" valueClass="string">$27,160.00</value>
     </argument>
   </args>
   <tagReferences>

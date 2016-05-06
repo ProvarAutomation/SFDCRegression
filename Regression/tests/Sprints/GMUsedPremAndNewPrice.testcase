@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="19">
+<testCase id="3">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="330" title="Create Opp">
@@ -116,7 +116,7 @@
                 </argument>
                 <argument id="OwnerId">
                   <value class="variable">
-                    <path element="BradWeber"/>
+                    <path element="DOFTestUser"/>
                   </value>
                 </argument>
               </arguments>
@@ -168,7 +168,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="336" title="Salesforce Connect: DOFSalesUser (Test)">
       <arguments>
         <argument id="connectionName">
-          <value class="value" valueClass="string">BradWeber</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="resultName">
           <value class="value" valueClass="string">DOFSalesUser</value>
@@ -1616,39 +1616,256 @@
               <clauses>
                 <clause name="substeps" testItemId="139">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="140" title="UI Assert">
+                    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="778" title="Read Excel Sheet">
                       <arguments>
-                        <argument id="resultName">
-                          <value class="value" valueClass="string">Values</value>
-                        </argument>
-                        <argument id="resultScope">
-                          <value class="value" valueClass="string">Test</value>
-                        </argument>
-                        <argument id="fieldAssertions">
-                          <value class="valueList" mutable="Mutable">
-                            <uiFieldAssertion resultName="Rate_Card_Details__c">
-                              <fieldLocator uri="ui:locator?name=Rate_Card_Details__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DQuote%26field%3DRate_Card_Details__c%26relationship%3DQuoteLineItems"/>
-                              <attributeAssertions>
-                                <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="Contains">
-                                  <value class="variable">
-                                    <path element="Price1"/>
-                                  </value>
-                                </uiAttributeAssertion>
-                              </attributeAssertions>
-                            </uiFieldAssertion>
-                          </value>
-                        </argument>
-                        <argument id="captureAfter">
-                          <value class="value" valueClass="boolean">false</value>
-                        </argument>
-                        <argument id="columnAssertions">
-                          <value class="valueList" mutable="Mutable"/>
-                        </argument>
-                        <argument id="pageAssertions">
-                          <value class="valueList" mutable="Mutable"/>
+                        <argument id="description">
+                          <value class="value" valueClass="string">Read Excel Sheet</value>
                         </argument>
                       </arguments>
-                      <expectedExceptions/>
+                      <parameterValueSources>
+                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=Pricing&amp;range=A1%3AC200&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct1%7D" variableName="ExcelData" variableScope="Test">
+                          <cacheToken>C:/Users/jtjohn/Provar/Workspace/ProvarTesting2/Test/templates/FillData.xlsx;1438091420870</cacheToken>
+                          <cachedParameters>
+                            <apiParam name="RowNumber"/>
+                            <apiParam name="ProductTitle"/>
+                            <apiParam name="LineDescription"/>
+                            <apiParam name="TotalUsedCarLotSize"/>
+                            <apiParam name="TotalProductionCost"/>
+                            <apiParam name="BMWDealerCenter"/>
+                            <apiParam name="Notes"/>
+                            <apiParam name="EnhancedCallTracking"/>
+                            <apiParam name="FormCompleted"/>
+                            <apiParam name="RedirectNo"/>
+                            <apiParam name="FirstName"/>
+                            <apiParam name="LastName"/>
+                            <apiParam name="EmailAddress"/>
+                            <apiParam name="PhoneNumber"/>
+                            <apiParam name="Link"/>
+                            <apiParam name="ClickThruURL"/>
+                            <apiParam name="NewCarContactEmail"/>
+                            <apiParam name="OtherEmail"/>
+                            <apiParam name="PrimaryContactEmail"/>
+                            <apiParam name="SitelinkUsedAdvanced"/>
+                            <apiParam name="SitelinkUsedProOptIn"/>
+                            <apiParam name="SitelinkUsedUseExisting"/>
+                            <apiParam name="UseExistingFacebook"/>
+                            <apiParam name="UseExistingTwitter"/>
+                            <apiParam name="SitelinkedUsedURL"/>
+                            <apiParam name="FacebookId"/>
+                            <apiParam name="FacebookInventory"/>
+                            <apiParam name="TwitterId"/>
+                            <apiParam name="FacebookDotComSlash"/>
+                            <apiParam name="TransactionType"/>
+                            <apiParam name="AlphaFullRate"/>
+                            <apiParam name="UsedCarInventorySource"/>
+                            <apiParam name="OptOutCoOpSubmissionCPO"/>
+                            <apiParam name="Provider"/>
+                            <apiParam name="SCAArtwork"/>
+                            <apiParam name="DMA"/>
+                            <apiParam name="Zone"/>
+                            <apiParam name="Make"/>
+                            <apiParam name="Franchise"/>
+                            <apiParam name="FrontLineProModel"/>
+                            <apiParam name="NewQuantity"/>
+                            <apiParam name="SpotlightQuantity"/>
+                            <apiParam name="TotalInventoryNewUsedCertified"/>
+                            <apiParam name="TotalNewCarLotSize"/>
+                            <apiParam name="MonthlyAdvertisingBudget"/>
+                            <apiParam name="TierGovernorVehicleQuantity"/>
+                            <apiParam name="TierGovernorVehicleMonthlyRate"/>
+                            <apiParam name="NewCarMakeQuantity1"/>
+                            <apiParam name="NewCarMakeQuantity2"/>
+                            <apiParam name="NewCarMakeQuantity3"/>
+                            <apiParam name="NewCarMakeQuantity4"/>
+                            <apiParam name="NewCarMakeQuantity5"/>
+                            <apiParam name="UsedCarMakeQuantity1"/>
+                            <apiParam name="UsedCarMakeQuantity2"/>
+                            <apiParam name="UsedCarMakeQuantity3"/>
+                            <apiParam name="UsedCarMakeQuantity4"/>
+                            <apiParam name="UsedCarMakeQuantity5"/>
+                            <apiParam name="TermDuration"/>
+                            <apiParam name="Agency"/>
+                            <apiParam name="BACCode"/>
+                            <apiParam name="DealerCode"/>
+                            <apiParam name="BMWLocationId"/>
+                            <apiParam name="MINIDealerCenterId"/>
+                            <apiParam name="MINILocationId"/>
+                            <apiParam name="HaystakDealerCode"/>
+                            <apiParam name="NameOfCRMSystem"/>
+                            <apiParam name="TIMDealershipContact"/>
+                            <apiParam name="TIMDealershipContactEmailAddress"/>
+                            <apiParam name="TIMDealershipContactMobileCarrier"/>
+                            <apiParam name="TIMDealershipContactMobileNumber"/>
+                            <apiParam name="TIMDealershipXMLEmailAddress"/>
+                            <apiParam name="TIMDealerWebsiteAddress"/>
+                            <apiParam name="TrainingHeadcount"/>
+                            <apiParam name="VAutoId"/>
+                            <apiParam name="TechnicalContactEmail"/>
+                            <apiParam name="TechnicalContactName"/>
+                            <apiParam name="TechnicalContactPhone"/>
+                            <apiParam name="FullRateAmount"/>
+                            <apiParam name="ArtworkPreapproveCaseNo"/>
+                            <apiParam name="DealershipWebsite"/>
+                            <apiParam name="CarsComId"/>
+                            <apiParam name="ReportRecipientsName1"/>
+                            <apiParam name="ReportRecipientsName2"/>
+                            <apiParam name="ReportRecipientsName3"/>
+                            <apiParam name="ReportRecipientsEmailAddress1"/>
+                            <apiParam name="ReportRecipientsEmailAddress2"/>
+                            <apiParam name="ReportRecipientsEmailAddress3"/>
+                            <apiParam name="Top6Citites1"/>
+                            <apiParam name="Top6Citites2"/>
+                            <apiParam name="Top6Citites3"/>
+                            <apiParam name="Top6Citites4"/>
+                            <apiParam name="Top6Citites5"/>
+                            <apiParam name="Top6Citites6"/>
+                            <apiParam name="TrackingNumber"/>
+                            <apiParam name="CobaltURL"/>
+                            <apiParam name="DealerWebsiteURL"/>
+                            <apiParam name="Deliver1stOfTheNextMonth"/>
+                            <apiParam name="ReplaceCurrentSpotlights"/>
+                            <apiParam name="DealerSpecialtiesCustomer"/>
+                            <apiParam name="DealerLogoSubmittedToAutotrader"/>
+                            <apiParam name="SitelinkNewAdvanced"/>
+                            <apiParam name="SitelinkNewProOptIn"/>
+                            <apiParam name="SitelinkNewUseExisting"/>
+                            <apiParam name="CoOpLevelOfService"/>
+                            <apiParam name="CustomURLType"/>
+                            <apiParam name="AdvertisedMake"/>
+                            <apiParam name="SpotlightMake"/>
+                            <apiParam name="SpotlightDuration"/>
+                            <apiParam name="SkyscapersBuckets"/>
+                            <apiParam name="Skyscrapers_Slots"/>
+                            <apiParam name="Tier_Governor_Type"/>
+                            <apiParam name="TierGovernorValue"/>
+                            <apiParam name="TierGovernorAdvertisedMake"/>
+                            <apiParam name="TierGovernorCoopLevelOfService"/>
+                            <apiParam name="NewCarMake1"/>
+                            <apiParam name="NewCarMake2"/>
+                            <apiParam name="NewCarMake3"/>
+                            <apiParam name="UsedCarMake1"/>
+                            <apiParam name="UsedCarMake2"/>
+                            <apiParam name="UsedCarMake3"/>
+                            <apiParam name="NewCarInventorySource"/>
+                            <apiParam name="TierGovernorSequence"/>
+                            <apiParam name="TierGovernorSorting"/>
+                            <apiParam name="TermDurationAlphaAllOthers"/>
+                            <apiParam name="TermDurationSkyscrapers"/>
+                            <apiParam name="IMROptIn"/>
+                            <apiParam name="OptOutCoopSubmission"/>
+                            <apiParam name="CarTypeRestrictions"/>
+                            <apiParam name="ArtworkDropdown"/>
+                            <apiParam name="InlineDisplayNewCarAdArtwork"/>
+                            <apiParam name="InlineDisplayNewCarAdArtworkGM"/>
+                            <apiParam name="InlineDisplayUsedCarAdArtwork"/>
+                            <apiParam name="InlineDisplayUsedCarAdArtworkGM"/>
+                            <apiParam name="LeaderboardNewArtwork"/>
+                            <apiParam name="LeaderboardNewArtworkGMPackages"/>
+                            <apiParam name="LeaderboardUsedArtwork"/>
+                            <apiParam name="LeaderboardUsedArtworkGMPackages"/>
+                            <apiParam name="SkyscrapersCoOpArtwork"/>
+                            <apiParam name="SkyscrapersCoOpArtworkGMPackages"/>
+                            <apiParam name="FeaturedType"/>
+                            <apiParam name="FeaturedValue"/>
+                            <apiParam name="FeaturedAdvertisedMake"/>
+                            <apiParam name="FeaturedCoOpLevelOfService"/>
+                            <apiParam name="TermDuration12"/>
+                            <apiParam name="TermDuration1m2m3m6m"/>
+                            <apiParam name="TermDuration3m6m9m12m"/>
+                            <apiParam name="ProductionCost"/>
+                            <apiParam name="FeatuedVehicleQuantity"/>
+                            <apiParam name="FeaturedVehicleMonthlyRate"/>
+                            <apiParam name="CallTrackingNewRedirect"/>
+                            <apiParam name="CallTrackingUsedRedirect"/>
+                            <apiParam name="DealerRatingsLi"/>
+                            <apiParam name="KBBDealerRatingsLink"/>
+                            <apiParam name="KBBDealerRatingsProvider"/>
+                            <apiParam name="VehicleSequence"/>
+                            <apiParam name="VehicleSorting"/>
+                            <apiParam name="CallTrackingNewCallRecord"/>
+                            <apiParam name="CallTrackingNewEnhanced"/>
+                            <apiParam name="CallTrackingNewWhisper"/>
+                            <apiParam name="CallTrackingUsedCallRecord"/>
+                            <apiParam name="CallTrackingUsedEnhanced"/>
+                            <apiParam name="CallTrackingUsedWhisper"/>
+                            <apiParam name="KBBCallTrackingNewCallRecord"/>
+                            <apiParam name="KBBCallTrackingNewWhisper"/>
+                            <apiParam name="KBBCallTrackingNewRedirect"/>
+                            <apiParam name="KBBCallTrackingUsedCallRecord"/>
+                            <apiParam name="KBBCallTrackingUsedWhisper"/>
+                            <apiParam name="KBBCallTrackingUsedRedirect"/>
+                            <apiParam name="KBBShowcaseCallTrackingCallRecord"/>
+                            <apiParam name="KBBShowcaseCallTrackingWhisper"/>
+                            <apiParam name="KBBShowcaseCallTrackingRedirect"/>
+                            <apiParam name="KBBShowcaseXMLEmailAddress"/>
+                            <apiParam name="KBBShowcaseTextEmailAddress"/>
+                            <apiParam name="LeaderboardNewClickThruURL"/>
+                            <apiParam name="LeaderboardNewCoOpPreApprovalCase"/>
+                            <apiParam name="LeaderboardUsedClickThruURL"/>
+                            <apiParam name="LeaderboardUsedCoOpPreApprovalCase"/>
+                            <apiParam name="SkyscrapersClickThruURL"/>
+                            <apiParam name="SkyscrapersCoOpPreApprovalCaseNo"/>
+                            <apiParam name="LeadDriverTextEmailAddress"/>
+                            <apiParam name="LeadDriverXMLEmailAddress"/>
+                            <apiParam name="PremiumType1"/>
+                            <apiParam name="PremiumValue1"/>
+                            <apiParam name="PremiumAdvertisedMake1"/>
+                            <apiParam name="PremiumVehicleQuantity1"/>
+                            <apiParam name="PremiumVehicleMonthlyRate1"/>
+                            <apiParam name="PremiumCoOpLevelOfService1"/>
+                            <apiParam name="AddCarMakeFields"/>
+                            <apiParam name="APFDToday"/>
+                            <apiParam name="BillAccountLookup"/>
+                            <apiParam name="AdvertisedMakeGM"/>
+                            <apiParam name="APFDDate"/>
+                            <apiParam name="DealerRatingsProvider"/>
+                            <apiParam name="DBAName1"/>
+                            <apiParam name="OEMId1"/>
+                            <apiParam name="FullRateBelowRate"/>
+                          </cachedParameters>
+                        </parameterValueSource>
+                      </parameterValueSources>
+                      <clauses>
+                        <clause name="hidden" testItemId="794">
+                          <steps>
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="781" title="UI Assert">
+                              <arguments>
+                                <argument id="resultName">
+                                  <value class="value" valueClass="string">Values</value>
+                                </argument>
+                                <argument id="resultScope">
+                                  <value class="value" valueClass="string">Test</value>
+                                </argument>
+                                <argument id="fieldAssertions">
+                                  <value class="valueList" mutable="Mutable">
+                                    <uiFieldAssertion resultName="Rate_Card_Details__c">
+                                      <fieldLocator uri="ui:locator?name=Rate_Card_Details__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DQuote%26field%3DRate_Card_Details__c%26relationship%3DQuoteLineItems"/>
+                                      <attributeAssertions>
+                                        <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="Contains">
+                                          <value class="variable">
+                                            <path element="ExcelData"/>
+                                            <path element="Price"/>
+                                          </value>
+                                        </uiAttributeAssertion>
+                                      </attributeAssertions>
+                                    </uiFieldAssertion>
+                                  </value>
+                                </argument>
+                                <argument id="captureAfter">
+                                  <value class="value" valueClass="boolean">false</value>
+                                </argument>
+                                <argument id="columnAssertions">
+                                  <value class="valueList" mutable="Mutable"/>
+                                </argument>
+                                <argument id="pageAssertions">
+                                  <value class="valueList" mutable="Mutable"/>
+                                </argument>
+                              </arguments>
+                              <expectedExceptions/>
+                            </apiCall>
+                          </steps>
+                        </clause>
+                      </clauses>
                     </apiCall>
                   </steps>
                 </clause>
@@ -2113,39 +2330,256 @@
               <clauses>
                 <clause name="substeps" testItemId="267">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="268" title="UI Assert">
+                    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="779" title="Read Excel Sheet">
                       <arguments>
-                        <argument id="resultName">
-                          <value class="value" valueClass="string">Values</value>
-                        </argument>
-                        <argument id="resultScope">
-                          <value class="value" valueClass="string">Test</value>
-                        </argument>
-                        <argument id="fieldAssertions">
-                          <value class="valueList" mutable="Mutable">
-                            <uiFieldAssertion resultName="Rate_Card_Details__c">
-                              <fieldLocator uri="ui:locator?name=Rate_Card_Details__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DQuote%26field%3DRate_Card_Details__c%26relationship%3DQuoteLineItems"/>
-                              <attributeAssertions>
-                                <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="Contains">
-                                  <value class="variable">
-                                    <path element="Price2"/>
-                                  </value>
-                                </uiAttributeAssertion>
-                              </attributeAssertions>
-                            </uiFieldAssertion>
-                          </value>
-                        </argument>
-                        <argument id="captureAfter">
-                          <value class="value" valueClass="boolean">false</value>
-                        </argument>
-                        <argument id="columnAssertions">
-                          <value class="valueList" mutable="Mutable"/>
-                        </argument>
-                        <argument id="pageAssertions">
-                          <value class="valueList" mutable="Mutable"/>
+                        <argument id="description">
+                          <value class="value" valueClass="string">Read Excel Sheet</value>
                         </argument>
                       </arguments>
-                      <expectedExceptions/>
+                      <parameterValueSources>
+                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=Pricing&amp;range=A1%3AC200&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct2%7D" variableName="ExcelData" variableScope="Test">
+                          <cacheToken>C:/Users/jtjohn/Provar/Workspace/ProvarTesting2/Test/templates/FillData.xlsx;1438091420870</cacheToken>
+                          <cachedParameters>
+                            <apiParam name="RowNumber"/>
+                            <apiParam name="ProductTitle"/>
+                            <apiParam name="LineDescription"/>
+                            <apiParam name="TotalUsedCarLotSize"/>
+                            <apiParam name="TotalProductionCost"/>
+                            <apiParam name="BMWDealerCenter"/>
+                            <apiParam name="Notes"/>
+                            <apiParam name="EnhancedCallTracking"/>
+                            <apiParam name="FormCompleted"/>
+                            <apiParam name="RedirectNo"/>
+                            <apiParam name="FirstName"/>
+                            <apiParam name="LastName"/>
+                            <apiParam name="EmailAddress"/>
+                            <apiParam name="PhoneNumber"/>
+                            <apiParam name="Link"/>
+                            <apiParam name="ClickThruURL"/>
+                            <apiParam name="NewCarContactEmail"/>
+                            <apiParam name="OtherEmail"/>
+                            <apiParam name="PrimaryContactEmail"/>
+                            <apiParam name="SitelinkUsedAdvanced"/>
+                            <apiParam name="SitelinkUsedProOptIn"/>
+                            <apiParam name="SitelinkUsedUseExisting"/>
+                            <apiParam name="UseExistingFacebook"/>
+                            <apiParam name="UseExistingTwitter"/>
+                            <apiParam name="SitelinkedUsedURL"/>
+                            <apiParam name="FacebookId"/>
+                            <apiParam name="FacebookInventory"/>
+                            <apiParam name="TwitterId"/>
+                            <apiParam name="FacebookDotComSlash"/>
+                            <apiParam name="TransactionType"/>
+                            <apiParam name="AlphaFullRate"/>
+                            <apiParam name="UsedCarInventorySource"/>
+                            <apiParam name="OptOutCoOpSubmissionCPO"/>
+                            <apiParam name="Provider"/>
+                            <apiParam name="SCAArtwork"/>
+                            <apiParam name="DMA"/>
+                            <apiParam name="Zone"/>
+                            <apiParam name="Make"/>
+                            <apiParam name="Franchise"/>
+                            <apiParam name="FrontLineProModel"/>
+                            <apiParam name="NewQuantity"/>
+                            <apiParam name="SpotlightQuantity"/>
+                            <apiParam name="TotalInventoryNewUsedCertified"/>
+                            <apiParam name="TotalNewCarLotSize"/>
+                            <apiParam name="MonthlyAdvertisingBudget"/>
+                            <apiParam name="TierGovernorVehicleQuantity"/>
+                            <apiParam name="TierGovernorVehicleMonthlyRate"/>
+                            <apiParam name="NewCarMakeQuantity1"/>
+                            <apiParam name="NewCarMakeQuantity2"/>
+                            <apiParam name="NewCarMakeQuantity3"/>
+                            <apiParam name="NewCarMakeQuantity4"/>
+                            <apiParam name="NewCarMakeQuantity5"/>
+                            <apiParam name="UsedCarMakeQuantity1"/>
+                            <apiParam name="UsedCarMakeQuantity2"/>
+                            <apiParam name="UsedCarMakeQuantity3"/>
+                            <apiParam name="UsedCarMakeQuantity4"/>
+                            <apiParam name="UsedCarMakeQuantity5"/>
+                            <apiParam name="TermDuration"/>
+                            <apiParam name="Agency"/>
+                            <apiParam name="BACCode"/>
+                            <apiParam name="DealerCode"/>
+                            <apiParam name="BMWLocationId"/>
+                            <apiParam name="MINIDealerCenterId"/>
+                            <apiParam name="MINILocationId"/>
+                            <apiParam name="HaystakDealerCode"/>
+                            <apiParam name="NameOfCRMSystem"/>
+                            <apiParam name="TIMDealershipContact"/>
+                            <apiParam name="TIMDealershipContactEmailAddress"/>
+                            <apiParam name="TIMDealershipContactMobileCarrier"/>
+                            <apiParam name="TIMDealershipContactMobileNumber"/>
+                            <apiParam name="TIMDealershipXMLEmailAddress"/>
+                            <apiParam name="TIMDealerWebsiteAddress"/>
+                            <apiParam name="TrainingHeadcount"/>
+                            <apiParam name="VAutoId"/>
+                            <apiParam name="TechnicalContactEmail"/>
+                            <apiParam name="TechnicalContactName"/>
+                            <apiParam name="TechnicalContactPhone"/>
+                            <apiParam name="FullRateAmount"/>
+                            <apiParam name="ArtworkPreapproveCaseNo"/>
+                            <apiParam name="DealershipWebsite"/>
+                            <apiParam name="CarsComId"/>
+                            <apiParam name="ReportRecipientsName1"/>
+                            <apiParam name="ReportRecipientsName2"/>
+                            <apiParam name="ReportRecipientsName3"/>
+                            <apiParam name="ReportRecipientsEmailAddress1"/>
+                            <apiParam name="ReportRecipientsEmailAddress2"/>
+                            <apiParam name="ReportRecipientsEmailAddress3"/>
+                            <apiParam name="Top6Citites1"/>
+                            <apiParam name="Top6Citites2"/>
+                            <apiParam name="Top6Citites3"/>
+                            <apiParam name="Top6Citites4"/>
+                            <apiParam name="Top6Citites5"/>
+                            <apiParam name="Top6Citites6"/>
+                            <apiParam name="TrackingNumber"/>
+                            <apiParam name="CobaltURL"/>
+                            <apiParam name="DealerWebsiteURL"/>
+                            <apiParam name="Deliver1stOfTheNextMonth"/>
+                            <apiParam name="ReplaceCurrentSpotlights"/>
+                            <apiParam name="DealerSpecialtiesCustomer"/>
+                            <apiParam name="DealerLogoSubmittedToAutotrader"/>
+                            <apiParam name="SitelinkNewAdvanced"/>
+                            <apiParam name="SitelinkNewProOptIn"/>
+                            <apiParam name="SitelinkNewUseExisting"/>
+                            <apiParam name="CoOpLevelOfService"/>
+                            <apiParam name="CustomURLType"/>
+                            <apiParam name="AdvertisedMake"/>
+                            <apiParam name="SpotlightMake"/>
+                            <apiParam name="SpotlightDuration"/>
+                            <apiParam name="SkyscapersBuckets"/>
+                            <apiParam name="Skyscrapers_Slots"/>
+                            <apiParam name="Tier_Governor_Type"/>
+                            <apiParam name="TierGovernorValue"/>
+                            <apiParam name="TierGovernorAdvertisedMake"/>
+                            <apiParam name="TierGovernorCoopLevelOfService"/>
+                            <apiParam name="NewCarMake1"/>
+                            <apiParam name="NewCarMake2"/>
+                            <apiParam name="NewCarMake3"/>
+                            <apiParam name="UsedCarMake1"/>
+                            <apiParam name="UsedCarMake2"/>
+                            <apiParam name="UsedCarMake3"/>
+                            <apiParam name="NewCarInventorySource"/>
+                            <apiParam name="TierGovernorSequence"/>
+                            <apiParam name="TierGovernorSorting"/>
+                            <apiParam name="TermDurationAlphaAllOthers"/>
+                            <apiParam name="TermDurationSkyscrapers"/>
+                            <apiParam name="IMROptIn"/>
+                            <apiParam name="OptOutCoopSubmission"/>
+                            <apiParam name="CarTypeRestrictions"/>
+                            <apiParam name="ArtworkDropdown"/>
+                            <apiParam name="InlineDisplayNewCarAdArtwork"/>
+                            <apiParam name="InlineDisplayNewCarAdArtworkGM"/>
+                            <apiParam name="InlineDisplayUsedCarAdArtwork"/>
+                            <apiParam name="InlineDisplayUsedCarAdArtworkGM"/>
+                            <apiParam name="LeaderboardNewArtwork"/>
+                            <apiParam name="LeaderboardNewArtworkGMPackages"/>
+                            <apiParam name="LeaderboardUsedArtwork"/>
+                            <apiParam name="LeaderboardUsedArtworkGMPackages"/>
+                            <apiParam name="SkyscrapersCoOpArtwork"/>
+                            <apiParam name="SkyscrapersCoOpArtworkGMPackages"/>
+                            <apiParam name="FeaturedType"/>
+                            <apiParam name="FeaturedValue"/>
+                            <apiParam name="FeaturedAdvertisedMake"/>
+                            <apiParam name="FeaturedCoOpLevelOfService"/>
+                            <apiParam name="TermDuration12"/>
+                            <apiParam name="TermDuration1m2m3m6m"/>
+                            <apiParam name="TermDuration3m6m9m12m"/>
+                            <apiParam name="ProductionCost"/>
+                            <apiParam name="FeatuedVehicleQuantity"/>
+                            <apiParam name="FeaturedVehicleMonthlyRate"/>
+                            <apiParam name="CallTrackingNewRedirect"/>
+                            <apiParam name="CallTrackingUsedRedirect"/>
+                            <apiParam name="DealerRatingsLi"/>
+                            <apiParam name="KBBDealerRatingsLink"/>
+                            <apiParam name="KBBDealerRatingsProvider"/>
+                            <apiParam name="VehicleSequence"/>
+                            <apiParam name="VehicleSorting"/>
+                            <apiParam name="CallTrackingNewCallRecord"/>
+                            <apiParam name="CallTrackingNewEnhanced"/>
+                            <apiParam name="CallTrackingNewWhisper"/>
+                            <apiParam name="CallTrackingUsedCallRecord"/>
+                            <apiParam name="CallTrackingUsedEnhanced"/>
+                            <apiParam name="CallTrackingUsedWhisper"/>
+                            <apiParam name="KBBCallTrackingNewCallRecord"/>
+                            <apiParam name="KBBCallTrackingNewWhisper"/>
+                            <apiParam name="KBBCallTrackingNewRedirect"/>
+                            <apiParam name="KBBCallTrackingUsedCallRecord"/>
+                            <apiParam name="KBBCallTrackingUsedWhisper"/>
+                            <apiParam name="KBBCallTrackingUsedRedirect"/>
+                            <apiParam name="KBBShowcaseCallTrackingCallRecord"/>
+                            <apiParam name="KBBShowcaseCallTrackingWhisper"/>
+                            <apiParam name="KBBShowcaseCallTrackingRedirect"/>
+                            <apiParam name="KBBShowcaseXMLEmailAddress"/>
+                            <apiParam name="KBBShowcaseTextEmailAddress"/>
+                            <apiParam name="LeaderboardNewClickThruURL"/>
+                            <apiParam name="LeaderboardNewCoOpPreApprovalCase"/>
+                            <apiParam name="LeaderboardUsedClickThruURL"/>
+                            <apiParam name="LeaderboardUsedCoOpPreApprovalCase"/>
+                            <apiParam name="SkyscrapersClickThruURL"/>
+                            <apiParam name="SkyscrapersCoOpPreApprovalCaseNo"/>
+                            <apiParam name="LeadDriverTextEmailAddress"/>
+                            <apiParam name="LeadDriverXMLEmailAddress"/>
+                            <apiParam name="PremiumType1"/>
+                            <apiParam name="PremiumValue1"/>
+                            <apiParam name="PremiumAdvertisedMake1"/>
+                            <apiParam name="PremiumVehicleQuantity1"/>
+                            <apiParam name="PremiumVehicleMonthlyRate1"/>
+                            <apiParam name="PremiumCoOpLevelOfService1"/>
+                            <apiParam name="AddCarMakeFields"/>
+                            <apiParam name="APFDToday"/>
+                            <apiParam name="BillAccountLookup"/>
+                            <apiParam name="AdvertisedMakeGM"/>
+                            <apiParam name="APFDDate"/>
+                            <apiParam name="DealerRatingsProvider"/>
+                            <apiParam name="DBAName1"/>
+                            <apiParam name="OEMId1"/>
+                            <apiParam name="FullRateBelowRate"/>
+                          </cachedParameters>
+                        </parameterValueSource>
+                      </parameterValueSources>
+                      <clauses>
+                        <clause name="hidden" testItemId="780">
+                          <steps>
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="782" title="UI Assert">
+                              <arguments>
+                                <argument id="resultName">
+                                  <value class="value" valueClass="string">Values</value>
+                                </argument>
+                                <argument id="resultScope">
+                                  <value class="value" valueClass="string">Test</value>
+                                </argument>
+                                <argument id="fieldAssertions">
+                                  <value class="valueList" mutable="Mutable">
+                                    <uiFieldAssertion resultName="Rate_Card_Details__c">
+                                      <fieldLocator uri="ui:locator?name=Rate_Card_Details__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DQuote%26field%3DRate_Card_Details__c%26relationship%3DQuoteLineItems"/>
+                                      <attributeAssertions>
+                                        <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="Contains">
+                                          <value class="variable">
+                                            <path element="ExcelData"/>
+                                            <path element="Price"/>
+                                          </value>
+                                        </uiAttributeAssertion>
+                                      </attributeAssertions>
+                                    </uiFieldAssertion>
+                                  </value>
+                                </argument>
+                                <argument id="captureAfter">
+                                  <value class="value" valueClass="boolean">false</value>
+                                </argument>
+                                <argument id="columnAssertions">
+                                  <value class="valueList" mutable="Mutable"/>
+                                </argument>
+                                <argument id="pageAssertions">
+                                  <value class="valueList" mutable="Mutable"/>
+                                </argument>
+                              </arguments>
+                              <expectedExceptions/>
+                            </apiCall>
+                          </steps>
+                        </clause>
+                      </clauses>
                     </apiCall>
                   </steps>
                 </clause>
@@ -2627,38 +3061,256 @@
               <clauses>
                 <clause name="substeps" testItemId="314">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="315" title="UI Assert">
+                    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="783" title="Read Excel Sheet">
                       <arguments>
-                        <argument id="resultName">
-                          <value class="value" valueClass="string">Values</value>
-                        </argument>
-                        <argument id="resultScope">
-                          <value class="value" valueClass="string">Test</value>
-                        </argument>
-                        <argument id="fieldAssertions">
-                          <value class="valueList" mutable="Mutable">
-                            <uiFieldAssertion resultName="TotalPrice">
-                              <fieldLocator uri="ui:locator?name=TotalPrice&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOrder%26field%3DTotalPrice%26relationship%3DOrderItems"/>
-                              <attributeAssertions>
-                                <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
-                                  <value class="variable">
-                                    <path element="Price1d"/>
-                                  </value>
-                                </uiAttributeAssertion>
-                              </attributeAssertions>
-                            </uiFieldAssertion>
-                          </value>
-                        </argument>
-                        <argument id="captureAfter">
-                          <value class="value" valueClass="boolean">false</value>
-                        </argument>
-                        <argument id="columnAssertions">
-                          <value class="valueList" mutable="Mutable"/>
-                        </argument>
-                        <argument id="pageAssertions">
-                          <value class="valueList" mutable="Mutable"/>
+                        <argument id="description">
+                          <value class="value" valueClass="string">Read Excel Sheet</value>
                         </argument>
                       </arguments>
+                      <parameterValueSources>
+                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=Pricing&amp;range=A1%3AC200&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct1%7D" variableName="ExcelData" variableScope="Test">
+                          <cacheToken>C:/Users/jtjohn/Provar/Workspace/ProvarTesting2/Test/templates/FillData.xlsx;1438091420870</cacheToken>
+                          <cachedParameters>
+                            <apiParam name="RowNumber"/>
+                            <apiParam name="ProductTitle"/>
+                            <apiParam name="LineDescription"/>
+                            <apiParam name="TotalUsedCarLotSize"/>
+                            <apiParam name="TotalProductionCost"/>
+                            <apiParam name="BMWDealerCenter"/>
+                            <apiParam name="Notes"/>
+                            <apiParam name="EnhancedCallTracking"/>
+                            <apiParam name="FormCompleted"/>
+                            <apiParam name="RedirectNo"/>
+                            <apiParam name="FirstName"/>
+                            <apiParam name="LastName"/>
+                            <apiParam name="EmailAddress"/>
+                            <apiParam name="PhoneNumber"/>
+                            <apiParam name="Link"/>
+                            <apiParam name="ClickThruURL"/>
+                            <apiParam name="NewCarContactEmail"/>
+                            <apiParam name="OtherEmail"/>
+                            <apiParam name="PrimaryContactEmail"/>
+                            <apiParam name="SitelinkUsedAdvanced"/>
+                            <apiParam name="SitelinkUsedProOptIn"/>
+                            <apiParam name="SitelinkUsedUseExisting"/>
+                            <apiParam name="UseExistingFacebook"/>
+                            <apiParam name="UseExistingTwitter"/>
+                            <apiParam name="SitelinkedUsedURL"/>
+                            <apiParam name="FacebookId"/>
+                            <apiParam name="FacebookInventory"/>
+                            <apiParam name="TwitterId"/>
+                            <apiParam name="FacebookDotComSlash"/>
+                            <apiParam name="TransactionType"/>
+                            <apiParam name="AlphaFullRate"/>
+                            <apiParam name="UsedCarInventorySource"/>
+                            <apiParam name="OptOutCoOpSubmissionCPO"/>
+                            <apiParam name="Provider"/>
+                            <apiParam name="SCAArtwork"/>
+                            <apiParam name="DMA"/>
+                            <apiParam name="Zone"/>
+                            <apiParam name="Make"/>
+                            <apiParam name="Franchise"/>
+                            <apiParam name="FrontLineProModel"/>
+                            <apiParam name="NewQuantity"/>
+                            <apiParam name="SpotlightQuantity"/>
+                            <apiParam name="TotalInventoryNewUsedCertified"/>
+                            <apiParam name="TotalNewCarLotSize"/>
+                            <apiParam name="MonthlyAdvertisingBudget"/>
+                            <apiParam name="TierGovernorVehicleQuantity"/>
+                            <apiParam name="TierGovernorVehicleMonthlyRate"/>
+                            <apiParam name="NewCarMakeQuantity1"/>
+                            <apiParam name="NewCarMakeQuantity2"/>
+                            <apiParam name="NewCarMakeQuantity3"/>
+                            <apiParam name="NewCarMakeQuantity4"/>
+                            <apiParam name="NewCarMakeQuantity5"/>
+                            <apiParam name="UsedCarMakeQuantity1"/>
+                            <apiParam name="UsedCarMakeQuantity2"/>
+                            <apiParam name="UsedCarMakeQuantity3"/>
+                            <apiParam name="UsedCarMakeQuantity4"/>
+                            <apiParam name="UsedCarMakeQuantity5"/>
+                            <apiParam name="TermDuration"/>
+                            <apiParam name="Agency"/>
+                            <apiParam name="BACCode"/>
+                            <apiParam name="DealerCode"/>
+                            <apiParam name="BMWLocationId"/>
+                            <apiParam name="MINIDealerCenterId"/>
+                            <apiParam name="MINILocationId"/>
+                            <apiParam name="HaystakDealerCode"/>
+                            <apiParam name="NameOfCRMSystem"/>
+                            <apiParam name="TIMDealershipContact"/>
+                            <apiParam name="TIMDealershipContactEmailAddress"/>
+                            <apiParam name="TIMDealershipContactMobileCarrier"/>
+                            <apiParam name="TIMDealershipContactMobileNumber"/>
+                            <apiParam name="TIMDealershipXMLEmailAddress"/>
+                            <apiParam name="TIMDealerWebsiteAddress"/>
+                            <apiParam name="TrainingHeadcount"/>
+                            <apiParam name="VAutoId"/>
+                            <apiParam name="TechnicalContactEmail"/>
+                            <apiParam name="TechnicalContactName"/>
+                            <apiParam name="TechnicalContactPhone"/>
+                            <apiParam name="FullRateAmount"/>
+                            <apiParam name="ArtworkPreapproveCaseNo"/>
+                            <apiParam name="DealershipWebsite"/>
+                            <apiParam name="CarsComId"/>
+                            <apiParam name="ReportRecipientsName1"/>
+                            <apiParam name="ReportRecipientsName2"/>
+                            <apiParam name="ReportRecipientsName3"/>
+                            <apiParam name="ReportRecipientsEmailAddress1"/>
+                            <apiParam name="ReportRecipientsEmailAddress2"/>
+                            <apiParam name="ReportRecipientsEmailAddress3"/>
+                            <apiParam name="Top6Citites1"/>
+                            <apiParam name="Top6Citites2"/>
+                            <apiParam name="Top6Citites3"/>
+                            <apiParam name="Top6Citites4"/>
+                            <apiParam name="Top6Citites5"/>
+                            <apiParam name="Top6Citites6"/>
+                            <apiParam name="TrackingNumber"/>
+                            <apiParam name="CobaltURL"/>
+                            <apiParam name="DealerWebsiteURL"/>
+                            <apiParam name="Deliver1stOfTheNextMonth"/>
+                            <apiParam name="ReplaceCurrentSpotlights"/>
+                            <apiParam name="DealerSpecialtiesCustomer"/>
+                            <apiParam name="DealerLogoSubmittedToAutotrader"/>
+                            <apiParam name="SitelinkNewAdvanced"/>
+                            <apiParam name="SitelinkNewProOptIn"/>
+                            <apiParam name="SitelinkNewUseExisting"/>
+                            <apiParam name="CoOpLevelOfService"/>
+                            <apiParam name="CustomURLType"/>
+                            <apiParam name="AdvertisedMake"/>
+                            <apiParam name="SpotlightMake"/>
+                            <apiParam name="SpotlightDuration"/>
+                            <apiParam name="SkyscapersBuckets"/>
+                            <apiParam name="Skyscrapers_Slots"/>
+                            <apiParam name="Tier_Governor_Type"/>
+                            <apiParam name="TierGovernorValue"/>
+                            <apiParam name="TierGovernorAdvertisedMake"/>
+                            <apiParam name="TierGovernorCoopLevelOfService"/>
+                            <apiParam name="NewCarMake1"/>
+                            <apiParam name="NewCarMake2"/>
+                            <apiParam name="NewCarMake3"/>
+                            <apiParam name="UsedCarMake1"/>
+                            <apiParam name="UsedCarMake2"/>
+                            <apiParam name="UsedCarMake3"/>
+                            <apiParam name="NewCarInventorySource"/>
+                            <apiParam name="TierGovernorSequence"/>
+                            <apiParam name="TierGovernorSorting"/>
+                            <apiParam name="TermDurationAlphaAllOthers"/>
+                            <apiParam name="TermDurationSkyscrapers"/>
+                            <apiParam name="IMROptIn"/>
+                            <apiParam name="OptOutCoopSubmission"/>
+                            <apiParam name="CarTypeRestrictions"/>
+                            <apiParam name="ArtworkDropdown"/>
+                            <apiParam name="InlineDisplayNewCarAdArtwork"/>
+                            <apiParam name="InlineDisplayNewCarAdArtworkGM"/>
+                            <apiParam name="InlineDisplayUsedCarAdArtwork"/>
+                            <apiParam name="InlineDisplayUsedCarAdArtworkGM"/>
+                            <apiParam name="LeaderboardNewArtwork"/>
+                            <apiParam name="LeaderboardNewArtworkGMPackages"/>
+                            <apiParam name="LeaderboardUsedArtwork"/>
+                            <apiParam name="LeaderboardUsedArtworkGMPackages"/>
+                            <apiParam name="SkyscrapersCoOpArtwork"/>
+                            <apiParam name="SkyscrapersCoOpArtworkGMPackages"/>
+                            <apiParam name="FeaturedType"/>
+                            <apiParam name="FeaturedValue"/>
+                            <apiParam name="FeaturedAdvertisedMake"/>
+                            <apiParam name="FeaturedCoOpLevelOfService"/>
+                            <apiParam name="TermDuration12"/>
+                            <apiParam name="TermDuration1m2m3m6m"/>
+                            <apiParam name="TermDuration3m6m9m12m"/>
+                            <apiParam name="ProductionCost"/>
+                            <apiParam name="FeatuedVehicleQuantity"/>
+                            <apiParam name="FeaturedVehicleMonthlyRate"/>
+                            <apiParam name="CallTrackingNewRedirect"/>
+                            <apiParam name="CallTrackingUsedRedirect"/>
+                            <apiParam name="DealerRatingsLi"/>
+                            <apiParam name="KBBDealerRatingsLink"/>
+                            <apiParam name="KBBDealerRatingsProvider"/>
+                            <apiParam name="VehicleSequence"/>
+                            <apiParam name="VehicleSorting"/>
+                            <apiParam name="CallTrackingNewCallRecord"/>
+                            <apiParam name="CallTrackingNewEnhanced"/>
+                            <apiParam name="CallTrackingNewWhisper"/>
+                            <apiParam name="CallTrackingUsedCallRecord"/>
+                            <apiParam name="CallTrackingUsedEnhanced"/>
+                            <apiParam name="CallTrackingUsedWhisper"/>
+                            <apiParam name="KBBCallTrackingNewCallRecord"/>
+                            <apiParam name="KBBCallTrackingNewWhisper"/>
+                            <apiParam name="KBBCallTrackingNewRedirect"/>
+                            <apiParam name="KBBCallTrackingUsedCallRecord"/>
+                            <apiParam name="KBBCallTrackingUsedWhisper"/>
+                            <apiParam name="KBBCallTrackingUsedRedirect"/>
+                            <apiParam name="KBBShowcaseCallTrackingCallRecord"/>
+                            <apiParam name="KBBShowcaseCallTrackingWhisper"/>
+                            <apiParam name="KBBShowcaseCallTrackingRedirect"/>
+                            <apiParam name="KBBShowcaseXMLEmailAddress"/>
+                            <apiParam name="KBBShowcaseTextEmailAddress"/>
+                            <apiParam name="LeaderboardNewClickThruURL"/>
+                            <apiParam name="LeaderboardNewCoOpPreApprovalCase"/>
+                            <apiParam name="LeaderboardUsedClickThruURL"/>
+                            <apiParam name="LeaderboardUsedCoOpPreApprovalCase"/>
+                            <apiParam name="SkyscrapersClickThruURL"/>
+                            <apiParam name="SkyscrapersCoOpPreApprovalCaseNo"/>
+                            <apiParam name="LeadDriverTextEmailAddress"/>
+                            <apiParam name="LeadDriverXMLEmailAddress"/>
+                            <apiParam name="PremiumType1"/>
+                            <apiParam name="PremiumValue1"/>
+                            <apiParam name="PremiumAdvertisedMake1"/>
+                            <apiParam name="PremiumVehicleQuantity1"/>
+                            <apiParam name="PremiumVehicleMonthlyRate1"/>
+                            <apiParam name="PremiumCoOpLevelOfService1"/>
+                            <apiParam name="AddCarMakeFields"/>
+                            <apiParam name="APFDToday"/>
+                            <apiParam name="BillAccountLookup"/>
+                            <apiParam name="AdvertisedMakeGM"/>
+                            <apiParam name="APFDDate"/>
+                            <apiParam name="DealerRatingsProvider"/>
+                            <apiParam name="DBAName1"/>
+                            <apiParam name="OEMId1"/>
+                            <apiParam name="FullRateBelowRate"/>
+                          </cachedParameters>
+                        </parameterValueSource>
+                      </parameterValueSources>
+                      <clauses>
+                        <clause name="hidden" testItemId="802">
+                          <steps>
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="803" title="UI Assert">
+                              <arguments>
+                                <argument id="resultName">
+                                  <value class="value" valueClass="string">Values</value>
+                                </argument>
+                                <argument id="resultScope">
+                                  <value class="value" valueClass="string">Test</value>
+                                </argument>
+                                <argument id="fieldAssertions">
+                                  <value class="valueList" mutable="Mutable">
+                                    <uiFieldAssertion resultName="TotalPrice">
+                                      <fieldLocator uri="ui:locator?name=TotalPrice&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOrder%26field%3DTotalPrice%26relationship%3DOrderItems"/>
+                                      <attributeAssertions>
+                                        <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="Contains">
+                                          <value class="variable">
+                                            <path element="ExcelData"/>
+                                            <path element="Dollars"/>
+                                          </value>
+                                        </uiAttributeAssertion>
+                                      </attributeAssertions>
+                                    </uiFieldAssertion>
+                                  </value>
+                                </argument>
+                                <argument id="captureAfter">
+                                  <value class="value" valueClass="boolean">false</value>
+                                </argument>
+                                <argument id="columnAssertions">
+                                  <value class="valueList" mutable="Mutable"/>
+                                </argument>
+                                <argument id="pageAssertions">
+                                  <value class="valueList" mutable="Mutable"/>
+                                </argument>
+                              </arguments>
+                              <expectedExceptions/>
+                            </apiCall>
+                          </steps>
+                        </clause>
+                      </clauses>
                     </apiCall>
                   </steps>
                 </clause>
@@ -2708,7 +3360,482 @@
               <clauses>
                 <clause name="substeps" testItemId="321">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="322" title="UI Assert">
+                    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="784" title="Read Excel Sheet">
+                      <arguments>
+                        <argument id="description">
+                          <value class="value" valueClass="string">Read Excel Sheet</value>
+                        </argument>
+                      </arguments>
+                      <parameterValueSources>
+                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=Pricing&amp;range=A1%3AC200&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct2%7D" variableName="ExcelData" variableScope="Test">
+                          <cacheToken>C:/Users/jtjohn/Provar/Workspace/ProvarTesting2/Test/templates/FillData.xlsx;1438091420870</cacheToken>
+                          <cachedParameters>
+                            <apiParam name="RowNumber"/>
+                            <apiParam name="ProductTitle"/>
+                            <apiParam name="LineDescription"/>
+                            <apiParam name="TotalUsedCarLotSize"/>
+                            <apiParam name="TotalProductionCost"/>
+                            <apiParam name="BMWDealerCenter"/>
+                            <apiParam name="Notes"/>
+                            <apiParam name="EnhancedCallTracking"/>
+                            <apiParam name="FormCompleted"/>
+                            <apiParam name="RedirectNo"/>
+                            <apiParam name="FirstName"/>
+                            <apiParam name="LastName"/>
+                            <apiParam name="EmailAddress"/>
+                            <apiParam name="PhoneNumber"/>
+                            <apiParam name="Link"/>
+                            <apiParam name="ClickThruURL"/>
+                            <apiParam name="NewCarContactEmail"/>
+                            <apiParam name="OtherEmail"/>
+                            <apiParam name="PrimaryContactEmail"/>
+                            <apiParam name="SitelinkUsedAdvanced"/>
+                            <apiParam name="SitelinkUsedProOptIn"/>
+                            <apiParam name="SitelinkUsedUseExisting"/>
+                            <apiParam name="UseExistingFacebook"/>
+                            <apiParam name="UseExistingTwitter"/>
+                            <apiParam name="SitelinkedUsedURL"/>
+                            <apiParam name="FacebookId"/>
+                            <apiParam name="FacebookInventory"/>
+                            <apiParam name="TwitterId"/>
+                            <apiParam name="FacebookDotComSlash"/>
+                            <apiParam name="TransactionType"/>
+                            <apiParam name="AlphaFullRate"/>
+                            <apiParam name="UsedCarInventorySource"/>
+                            <apiParam name="OptOutCoOpSubmissionCPO"/>
+                            <apiParam name="Provider"/>
+                            <apiParam name="SCAArtwork"/>
+                            <apiParam name="DMA"/>
+                            <apiParam name="Zone"/>
+                            <apiParam name="Make"/>
+                            <apiParam name="Franchise"/>
+                            <apiParam name="FrontLineProModel"/>
+                            <apiParam name="NewQuantity"/>
+                            <apiParam name="SpotlightQuantity"/>
+                            <apiParam name="TotalInventoryNewUsedCertified"/>
+                            <apiParam name="TotalNewCarLotSize"/>
+                            <apiParam name="MonthlyAdvertisingBudget"/>
+                            <apiParam name="TierGovernorVehicleQuantity"/>
+                            <apiParam name="TierGovernorVehicleMonthlyRate"/>
+                            <apiParam name="NewCarMakeQuantity1"/>
+                            <apiParam name="NewCarMakeQuantity2"/>
+                            <apiParam name="NewCarMakeQuantity3"/>
+                            <apiParam name="NewCarMakeQuantity4"/>
+                            <apiParam name="NewCarMakeQuantity5"/>
+                            <apiParam name="UsedCarMakeQuantity1"/>
+                            <apiParam name="UsedCarMakeQuantity2"/>
+                            <apiParam name="UsedCarMakeQuantity3"/>
+                            <apiParam name="UsedCarMakeQuantity4"/>
+                            <apiParam name="UsedCarMakeQuantity5"/>
+                            <apiParam name="TermDuration"/>
+                            <apiParam name="Agency"/>
+                            <apiParam name="BACCode"/>
+                            <apiParam name="DealerCode"/>
+                            <apiParam name="BMWLocationId"/>
+                            <apiParam name="MINIDealerCenterId"/>
+                            <apiParam name="MINILocationId"/>
+                            <apiParam name="HaystakDealerCode"/>
+                            <apiParam name="NameOfCRMSystem"/>
+                            <apiParam name="TIMDealershipContact"/>
+                            <apiParam name="TIMDealershipContactEmailAddress"/>
+                            <apiParam name="TIMDealershipContactMobileCarrier"/>
+                            <apiParam name="TIMDealershipContactMobileNumber"/>
+                            <apiParam name="TIMDealershipXMLEmailAddress"/>
+                            <apiParam name="TIMDealerWebsiteAddress"/>
+                            <apiParam name="TrainingHeadcount"/>
+                            <apiParam name="VAutoId"/>
+                            <apiParam name="TechnicalContactEmail"/>
+                            <apiParam name="TechnicalContactName"/>
+                            <apiParam name="TechnicalContactPhone"/>
+                            <apiParam name="FullRateAmount"/>
+                            <apiParam name="ArtworkPreapproveCaseNo"/>
+                            <apiParam name="DealershipWebsite"/>
+                            <apiParam name="CarsComId"/>
+                            <apiParam name="ReportRecipientsName1"/>
+                            <apiParam name="ReportRecipientsName2"/>
+                            <apiParam name="ReportRecipientsName3"/>
+                            <apiParam name="ReportRecipientsEmailAddress1"/>
+                            <apiParam name="ReportRecipientsEmailAddress2"/>
+                            <apiParam name="ReportRecipientsEmailAddress3"/>
+                            <apiParam name="Top6Citites1"/>
+                            <apiParam name="Top6Citites2"/>
+                            <apiParam name="Top6Citites3"/>
+                            <apiParam name="Top6Citites4"/>
+                            <apiParam name="Top6Citites5"/>
+                            <apiParam name="Top6Citites6"/>
+                            <apiParam name="TrackingNumber"/>
+                            <apiParam name="CobaltURL"/>
+                            <apiParam name="DealerWebsiteURL"/>
+                            <apiParam name="Deliver1stOfTheNextMonth"/>
+                            <apiParam name="ReplaceCurrentSpotlights"/>
+                            <apiParam name="DealerSpecialtiesCustomer"/>
+                            <apiParam name="DealerLogoSubmittedToAutotrader"/>
+                            <apiParam name="SitelinkNewAdvanced"/>
+                            <apiParam name="SitelinkNewProOptIn"/>
+                            <apiParam name="SitelinkNewUseExisting"/>
+                            <apiParam name="CoOpLevelOfService"/>
+                            <apiParam name="CustomURLType"/>
+                            <apiParam name="AdvertisedMake"/>
+                            <apiParam name="SpotlightMake"/>
+                            <apiParam name="SpotlightDuration"/>
+                            <apiParam name="SkyscapersBuckets"/>
+                            <apiParam name="Skyscrapers_Slots"/>
+                            <apiParam name="Tier_Governor_Type"/>
+                            <apiParam name="TierGovernorValue"/>
+                            <apiParam name="TierGovernorAdvertisedMake"/>
+                            <apiParam name="TierGovernorCoopLevelOfService"/>
+                            <apiParam name="NewCarMake1"/>
+                            <apiParam name="NewCarMake2"/>
+                            <apiParam name="NewCarMake3"/>
+                            <apiParam name="UsedCarMake1"/>
+                            <apiParam name="UsedCarMake2"/>
+                            <apiParam name="UsedCarMake3"/>
+                            <apiParam name="NewCarInventorySource"/>
+                            <apiParam name="TierGovernorSequence"/>
+                            <apiParam name="TierGovernorSorting"/>
+                            <apiParam name="TermDurationAlphaAllOthers"/>
+                            <apiParam name="TermDurationSkyscrapers"/>
+                            <apiParam name="IMROptIn"/>
+                            <apiParam name="OptOutCoopSubmission"/>
+                            <apiParam name="CarTypeRestrictions"/>
+                            <apiParam name="ArtworkDropdown"/>
+                            <apiParam name="InlineDisplayNewCarAdArtwork"/>
+                            <apiParam name="InlineDisplayNewCarAdArtworkGM"/>
+                            <apiParam name="InlineDisplayUsedCarAdArtwork"/>
+                            <apiParam name="InlineDisplayUsedCarAdArtworkGM"/>
+                            <apiParam name="LeaderboardNewArtwork"/>
+                            <apiParam name="LeaderboardNewArtworkGMPackages"/>
+                            <apiParam name="LeaderboardUsedArtwork"/>
+                            <apiParam name="LeaderboardUsedArtworkGMPackages"/>
+                            <apiParam name="SkyscrapersCoOpArtwork"/>
+                            <apiParam name="SkyscrapersCoOpArtworkGMPackages"/>
+                            <apiParam name="FeaturedType"/>
+                            <apiParam name="FeaturedValue"/>
+                            <apiParam name="FeaturedAdvertisedMake"/>
+                            <apiParam name="FeaturedCoOpLevelOfService"/>
+                            <apiParam name="TermDuration12"/>
+                            <apiParam name="TermDuration1m2m3m6m"/>
+                            <apiParam name="TermDuration3m6m9m12m"/>
+                            <apiParam name="ProductionCost"/>
+                            <apiParam name="FeatuedVehicleQuantity"/>
+                            <apiParam name="FeaturedVehicleMonthlyRate"/>
+                            <apiParam name="CallTrackingNewRedirect"/>
+                            <apiParam name="CallTrackingUsedRedirect"/>
+                            <apiParam name="DealerRatingsLi"/>
+                            <apiParam name="KBBDealerRatingsLink"/>
+                            <apiParam name="KBBDealerRatingsProvider"/>
+                            <apiParam name="VehicleSequence"/>
+                            <apiParam name="VehicleSorting"/>
+                            <apiParam name="CallTrackingNewCallRecord"/>
+                            <apiParam name="CallTrackingNewEnhanced"/>
+                            <apiParam name="CallTrackingNewWhisper"/>
+                            <apiParam name="CallTrackingUsedCallRecord"/>
+                            <apiParam name="CallTrackingUsedEnhanced"/>
+                            <apiParam name="CallTrackingUsedWhisper"/>
+                            <apiParam name="KBBCallTrackingNewCallRecord"/>
+                            <apiParam name="KBBCallTrackingNewWhisper"/>
+                            <apiParam name="KBBCallTrackingNewRedirect"/>
+                            <apiParam name="KBBCallTrackingUsedCallRecord"/>
+                            <apiParam name="KBBCallTrackingUsedWhisper"/>
+                            <apiParam name="KBBCallTrackingUsedRedirect"/>
+                            <apiParam name="KBBShowcaseCallTrackingCallRecord"/>
+                            <apiParam name="KBBShowcaseCallTrackingWhisper"/>
+                            <apiParam name="KBBShowcaseCallTrackingRedirect"/>
+                            <apiParam name="KBBShowcaseXMLEmailAddress"/>
+                            <apiParam name="KBBShowcaseTextEmailAddress"/>
+                            <apiParam name="LeaderboardNewClickThruURL"/>
+                            <apiParam name="LeaderboardNewCoOpPreApprovalCase"/>
+                            <apiParam name="LeaderboardUsedClickThruURL"/>
+                            <apiParam name="LeaderboardUsedCoOpPreApprovalCase"/>
+                            <apiParam name="SkyscrapersClickThruURL"/>
+                            <apiParam name="SkyscrapersCoOpPreApprovalCaseNo"/>
+                            <apiParam name="LeadDriverTextEmailAddress"/>
+                            <apiParam name="LeadDriverXMLEmailAddress"/>
+                            <apiParam name="PremiumType1"/>
+                            <apiParam name="PremiumValue1"/>
+                            <apiParam name="PremiumAdvertisedMake1"/>
+                            <apiParam name="PremiumVehicleQuantity1"/>
+                            <apiParam name="PremiumVehicleMonthlyRate1"/>
+                            <apiParam name="PremiumCoOpLevelOfService1"/>
+                            <apiParam name="AddCarMakeFields"/>
+                            <apiParam name="APFDToday"/>
+                            <apiParam name="BillAccountLookup"/>
+                            <apiParam name="AdvertisedMakeGM"/>
+                            <apiParam name="APFDDate"/>
+                            <apiParam name="DealerRatingsProvider"/>
+                            <apiParam name="DBAName1"/>
+                            <apiParam name="OEMId1"/>
+                            <apiParam name="FullRateBelowRate"/>
+                          </cachedParameters>
+                        </parameterValueSource>
+                      </parameterValueSources>
+                      <clauses>
+                        <clause name="hidden" testItemId="785">
+                          <steps>
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="786" title="UI Assert">
+                              <arguments>
+                                <argument id="resultName">
+                                  <value class="value" valueClass="string">Values</value>
+                                </argument>
+                                <argument id="resultScope">
+                                  <value class="value" valueClass="string">Test</value>
+                                </argument>
+                                <argument id="fieldAssertions">
+                                  <value class="valueList" mutable="Mutable">
+                                    <uiFieldAssertion resultName="TotalPrice">
+                                      <fieldLocator uri="ui:locator?name=TotalPrice&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOrder%26field%3DTotalPrice%26relationship%3DOrderItems"/>
+                                      <attributeAssertions>
+                                        <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="Contains">
+                                          <value class="variable">
+                                            <path element="ExcelData"/>
+                                            <path element="Dollars"/>
+                                          </value>
+                                        </uiAttributeAssertion>
+                                      </attributeAssertions>
+                                    </uiFieldAssertion>
+                                  </value>
+                                </argument>
+                                <argument id="captureAfter">
+                                  <value class="value" valueClass="boolean">false</value>
+                                </argument>
+                                <argument id="columnAssertions">
+                                  <value class="valueList" mutable="Mutable"/>
+                                </argument>
+                                <argument id="pageAssertions">
+                                  <value class="valueList" mutable="Mutable"/>
+                                </argument>
+                              </arguments>
+                              <expectedExceptions/>
+                            </apiCall>
+                          </steps>
+                        </clause>
+                      </clauses>
+                    </apiCall>
+                  </steps>
+                </clause>
+              </clauses>
+              <generatedParameters>
+                <apiParam group="options" name="autoPaginate" title="Auto Paginate">
+                  <summary>Whether Show More/Next is clicked till the match condition succeeds.</summary>
+                  <type>
+                    <booleanType/>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="787" title="Read Excel Sheet">
+              <arguments>
+                <argument id="description">
+                  <value class="value" valueClass="string">Read Excel Sheet</value>
+                </argument>
+              </arguments>
+              <parameterValueSources>
+                <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=Pricing&amp;range=A1%3AC200&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=GMUsedPremAndNewPriceTotal" variableName="ExcelData" variableScope="Test">
+                  <cacheToken>C:/Users/jtjohn/Provar/Workspace/ProvarTesting2/Test/templates/FillData.xlsx;1438091420870</cacheToken>
+                  <cachedParameters>
+                    <apiParam name="RowNumber"/>
+                    <apiParam name="ProductTitle"/>
+                    <apiParam name="LineDescription"/>
+                    <apiParam name="TotalUsedCarLotSize"/>
+                    <apiParam name="TotalProductionCost"/>
+                    <apiParam name="BMWDealerCenter"/>
+                    <apiParam name="Notes"/>
+                    <apiParam name="EnhancedCallTracking"/>
+                    <apiParam name="FormCompleted"/>
+                    <apiParam name="RedirectNo"/>
+                    <apiParam name="FirstName"/>
+                    <apiParam name="LastName"/>
+                    <apiParam name="EmailAddress"/>
+                    <apiParam name="PhoneNumber"/>
+                    <apiParam name="Link"/>
+                    <apiParam name="ClickThruURL"/>
+                    <apiParam name="NewCarContactEmail"/>
+                    <apiParam name="OtherEmail"/>
+                    <apiParam name="PrimaryContactEmail"/>
+                    <apiParam name="SitelinkUsedAdvanced"/>
+                    <apiParam name="SitelinkUsedProOptIn"/>
+                    <apiParam name="SitelinkUsedUseExisting"/>
+                    <apiParam name="UseExistingFacebook"/>
+                    <apiParam name="UseExistingTwitter"/>
+                    <apiParam name="SitelinkedUsedURL"/>
+                    <apiParam name="FacebookId"/>
+                    <apiParam name="FacebookInventory"/>
+                    <apiParam name="TwitterId"/>
+                    <apiParam name="FacebookDotComSlash"/>
+                    <apiParam name="TransactionType"/>
+                    <apiParam name="AlphaFullRate"/>
+                    <apiParam name="UsedCarInventorySource"/>
+                    <apiParam name="OptOutCoOpSubmissionCPO"/>
+                    <apiParam name="Provider"/>
+                    <apiParam name="SCAArtwork"/>
+                    <apiParam name="DMA"/>
+                    <apiParam name="Zone"/>
+                    <apiParam name="Make"/>
+                    <apiParam name="Franchise"/>
+                    <apiParam name="FrontLineProModel"/>
+                    <apiParam name="NewQuantity"/>
+                    <apiParam name="SpotlightQuantity"/>
+                    <apiParam name="TotalInventoryNewUsedCertified"/>
+                    <apiParam name="TotalNewCarLotSize"/>
+                    <apiParam name="MonthlyAdvertisingBudget"/>
+                    <apiParam name="TierGovernorVehicleQuantity"/>
+                    <apiParam name="TierGovernorVehicleMonthlyRate"/>
+                    <apiParam name="NewCarMakeQuantity1"/>
+                    <apiParam name="NewCarMakeQuantity2"/>
+                    <apiParam name="NewCarMakeQuantity3"/>
+                    <apiParam name="NewCarMakeQuantity4"/>
+                    <apiParam name="NewCarMakeQuantity5"/>
+                    <apiParam name="UsedCarMakeQuantity1"/>
+                    <apiParam name="UsedCarMakeQuantity2"/>
+                    <apiParam name="UsedCarMakeQuantity3"/>
+                    <apiParam name="UsedCarMakeQuantity4"/>
+                    <apiParam name="UsedCarMakeQuantity5"/>
+                    <apiParam name="TermDuration"/>
+                    <apiParam name="Agency"/>
+                    <apiParam name="BACCode"/>
+                    <apiParam name="DealerCode"/>
+                    <apiParam name="BMWLocationId"/>
+                    <apiParam name="MINIDealerCenterId"/>
+                    <apiParam name="MINILocationId"/>
+                    <apiParam name="HaystakDealerCode"/>
+                    <apiParam name="NameOfCRMSystem"/>
+                    <apiParam name="TIMDealershipContact"/>
+                    <apiParam name="TIMDealershipContactEmailAddress"/>
+                    <apiParam name="TIMDealershipContactMobileCarrier"/>
+                    <apiParam name="TIMDealershipContactMobileNumber"/>
+                    <apiParam name="TIMDealershipXMLEmailAddress"/>
+                    <apiParam name="TIMDealerWebsiteAddress"/>
+                    <apiParam name="TrainingHeadcount"/>
+                    <apiParam name="VAutoId"/>
+                    <apiParam name="TechnicalContactEmail"/>
+                    <apiParam name="TechnicalContactName"/>
+                    <apiParam name="TechnicalContactPhone"/>
+                    <apiParam name="FullRateAmount"/>
+                    <apiParam name="ArtworkPreapproveCaseNo"/>
+                    <apiParam name="DealershipWebsite"/>
+                    <apiParam name="CarsComId"/>
+                    <apiParam name="ReportRecipientsName1"/>
+                    <apiParam name="ReportRecipientsName2"/>
+                    <apiParam name="ReportRecipientsName3"/>
+                    <apiParam name="ReportRecipientsEmailAddress1"/>
+                    <apiParam name="ReportRecipientsEmailAddress2"/>
+                    <apiParam name="ReportRecipientsEmailAddress3"/>
+                    <apiParam name="Top6Citites1"/>
+                    <apiParam name="Top6Citites2"/>
+                    <apiParam name="Top6Citites3"/>
+                    <apiParam name="Top6Citites4"/>
+                    <apiParam name="Top6Citites5"/>
+                    <apiParam name="Top6Citites6"/>
+                    <apiParam name="TrackingNumber"/>
+                    <apiParam name="CobaltURL"/>
+                    <apiParam name="DealerWebsiteURL"/>
+                    <apiParam name="Deliver1stOfTheNextMonth"/>
+                    <apiParam name="ReplaceCurrentSpotlights"/>
+                    <apiParam name="DealerSpecialtiesCustomer"/>
+                    <apiParam name="DealerLogoSubmittedToAutotrader"/>
+                    <apiParam name="SitelinkNewAdvanced"/>
+                    <apiParam name="SitelinkNewProOptIn"/>
+                    <apiParam name="SitelinkNewUseExisting"/>
+                    <apiParam name="CoOpLevelOfService"/>
+                    <apiParam name="CustomURLType"/>
+                    <apiParam name="AdvertisedMake"/>
+                    <apiParam name="SpotlightMake"/>
+                    <apiParam name="SpotlightDuration"/>
+                    <apiParam name="SkyscapersBuckets"/>
+                    <apiParam name="Skyscrapers_Slots"/>
+                    <apiParam name="Tier_Governor_Type"/>
+                    <apiParam name="TierGovernorValue"/>
+                    <apiParam name="TierGovernorAdvertisedMake"/>
+                    <apiParam name="TierGovernorCoopLevelOfService"/>
+                    <apiParam name="NewCarMake1"/>
+                    <apiParam name="NewCarMake2"/>
+                    <apiParam name="NewCarMake3"/>
+                    <apiParam name="UsedCarMake1"/>
+                    <apiParam name="UsedCarMake2"/>
+                    <apiParam name="UsedCarMake3"/>
+                    <apiParam name="NewCarInventorySource"/>
+                    <apiParam name="TierGovernorSequence"/>
+                    <apiParam name="TierGovernorSorting"/>
+                    <apiParam name="TermDurationAlphaAllOthers"/>
+                    <apiParam name="TermDurationSkyscrapers"/>
+                    <apiParam name="IMROptIn"/>
+                    <apiParam name="OptOutCoopSubmission"/>
+                    <apiParam name="CarTypeRestrictions"/>
+                    <apiParam name="ArtworkDropdown"/>
+                    <apiParam name="InlineDisplayNewCarAdArtwork"/>
+                    <apiParam name="InlineDisplayNewCarAdArtworkGM"/>
+                    <apiParam name="InlineDisplayUsedCarAdArtwork"/>
+                    <apiParam name="InlineDisplayUsedCarAdArtworkGM"/>
+                    <apiParam name="LeaderboardNewArtwork"/>
+                    <apiParam name="LeaderboardNewArtworkGMPackages"/>
+                    <apiParam name="LeaderboardUsedArtwork"/>
+                    <apiParam name="LeaderboardUsedArtworkGMPackages"/>
+                    <apiParam name="SkyscrapersCoOpArtwork"/>
+                    <apiParam name="SkyscrapersCoOpArtworkGMPackages"/>
+                    <apiParam name="FeaturedType"/>
+                    <apiParam name="FeaturedValue"/>
+                    <apiParam name="FeaturedAdvertisedMake"/>
+                    <apiParam name="FeaturedCoOpLevelOfService"/>
+                    <apiParam name="TermDuration12"/>
+                    <apiParam name="TermDuration1m2m3m6m"/>
+                    <apiParam name="TermDuration3m6m9m12m"/>
+                    <apiParam name="ProductionCost"/>
+                    <apiParam name="FeatuedVehicleQuantity"/>
+                    <apiParam name="FeaturedVehicleMonthlyRate"/>
+                    <apiParam name="CallTrackingNewRedirect"/>
+                    <apiParam name="CallTrackingUsedRedirect"/>
+                    <apiParam name="DealerRatingsLi"/>
+                    <apiParam name="KBBDealerRatingsLink"/>
+                    <apiParam name="KBBDealerRatingsProvider"/>
+                    <apiParam name="VehicleSequence"/>
+                    <apiParam name="VehicleSorting"/>
+                    <apiParam name="CallTrackingNewCallRecord"/>
+                    <apiParam name="CallTrackingNewEnhanced"/>
+                    <apiParam name="CallTrackingNewWhisper"/>
+                    <apiParam name="CallTrackingUsedCallRecord"/>
+                    <apiParam name="CallTrackingUsedEnhanced"/>
+                    <apiParam name="CallTrackingUsedWhisper"/>
+                    <apiParam name="KBBCallTrackingNewCallRecord"/>
+                    <apiParam name="KBBCallTrackingNewWhisper"/>
+                    <apiParam name="KBBCallTrackingNewRedirect"/>
+                    <apiParam name="KBBCallTrackingUsedCallRecord"/>
+                    <apiParam name="KBBCallTrackingUsedWhisper"/>
+                    <apiParam name="KBBCallTrackingUsedRedirect"/>
+                    <apiParam name="KBBShowcaseCallTrackingCallRecord"/>
+                    <apiParam name="KBBShowcaseCallTrackingWhisper"/>
+                    <apiParam name="KBBShowcaseCallTrackingRedirect"/>
+                    <apiParam name="KBBShowcaseXMLEmailAddress"/>
+                    <apiParam name="KBBShowcaseTextEmailAddress"/>
+                    <apiParam name="LeaderboardNewClickThruURL"/>
+                    <apiParam name="LeaderboardNewCoOpPreApprovalCase"/>
+                    <apiParam name="LeaderboardUsedClickThruURL"/>
+                    <apiParam name="LeaderboardUsedCoOpPreApprovalCase"/>
+                    <apiParam name="SkyscrapersClickThruURL"/>
+                    <apiParam name="SkyscrapersCoOpPreApprovalCaseNo"/>
+                    <apiParam name="LeadDriverTextEmailAddress"/>
+                    <apiParam name="LeadDriverXMLEmailAddress"/>
+                    <apiParam name="PremiumType1"/>
+                    <apiParam name="PremiumValue1"/>
+                    <apiParam name="PremiumAdvertisedMake1"/>
+                    <apiParam name="PremiumVehicleQuantity1"/>
+                    <apiParam name="PremiumVehicleMonthlyRate1"/>
+                    <apiParam name="PremiumCoOpLevelOfService1"/>
+                    <apiParam name="AddCarMakeFields"/>
+                    <apiParam name="APFDToday"/>
+                    <apiParam name="BillAccountLookup"/>
+                    <apiParam name="AdvertisedMakeGM"/>
+                    <apiParam name="APFDDate"/>
+                    <apiParam name="DealerRatingsProvider"/>
+                    <apiParam name="DBAName1"/>
+                    <apiParam name="OEMId1"/>
+                    <apiParam name="FullRateBelowRate"/>
+                  </cachedParameters>
+                </parameterValueSource>
+              </parameterValueSources>
+              <clauses>
+                <clause name="hidden" testItemId="788">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="789" title="UI Assert">
                       <arguments>
                         <argument id="resultName">
                           <value class="value" valueClass="string">Values</value>
@@ -2718,12 +3845,13 @@
                         </argument>
                         <argument id="fieldAssertions">
                           <value class="valueList" mutable="Mutable">
-                            <uiFieldAssertion resultName="TotalPrice">
-                              <fieldLocator uri="ui:locator?name=TotalPrice&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOrder%26field%3DTotalPrice%26relationship%3DOrderItems"/>
+                            <uiFieldAssertion resultName="TotalAmount">
+                              <fieldLocator uri="ui:locator?name=TotalAmount&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOrder%26field%3DTotalAmount"/>
                               <attributeAssertions>
-                                <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
+                                <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="Contains">
                                   <value class="variable">
-                                    <path element="Price2d"/>
+                                    <path element="ExcelData"/>
+                                    <path element="Dollars"/>
                                   </value>
                                 </uiAttributeAssertion>
                               </attributeAssertions>
@@ -2740,51 +3868,11 @@
                           <value class="valueList" mutable="Mutable"/>
                         </argument>
                       </arguments>
+                      <expectedExceptions/>
                     </apiCall>
                   </steps>
                 </clause>
               </clauses>
-              <generatedParameters>
-                <apiParam group="options" name="autoPaginate" title="Auto Paginate">
-                  <summary>Whether Show More/Next is clicked till the match condition succeeds.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="319" title="UI Assert">
-              <arguments>
-                <argument id="resultName">
-                  <value class="value" valueClass="string">Values</value>
-                </argument>
-                <argument id="resultScope">
-                  <value class="value" valueClass="string">Test</value>
-                </argument>
-                <argument id="fieldAssertions">
-                  <value class="valueList" mutable="Mutable">
-                    <uiFieldAssertion resultName="TotalAmount">
-                      <fieldLocator uri="ui:locator?name=TotalAmount&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOrder%26field%3DTotalAmount"/>
-                      <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
-                          <value class="variable">
-                            <path element="Totald"/>
-                          </value>
-                        </uiAttributeAssertion>
-                      </attributeAssertions>
-                    </uiFieldAssertion>
-                  </value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="columnAssertions">
-                  <value class="valueList" mutable="Mutable"/>
-                </argument>
-                <argument id="pageAssertions">
-                  <value class="valueList" mutable="Mutable"/>
-                </argument>
-              </arguments>
             </apiCall>
           </steps>
         </clause>
@@ -3586,39 +4674,6 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-          </steps>
-        </clause>
-      </clauses>
-      <generatedParameters>
-        <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
-          <summary>The Id of the SF Object to be Viewed or Edited.</summary>
-          <type>
-            <textType/>
-          </type>
-        </apiParam>
-      </generatedParameters>
-    </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="775" title="On SF Order view screen">
-      <arguments>
-        <argument id="uiConnectionName">
-          <value class="value" valueClass="string">DOFSalesUser</value>
-        </argument>
-        <argument id="target">
-          <value class="uiTarget" uri="sf:ui:target?object=Order&amp;action=View"/>
-        </argument>
-        <argument id="navigate">
-          <value class="value" valueClass="string">Dont</value>
-        </argument>
-        <argument id="sfUiTargetObjectId">
-          <value class="value" valueClass="string">801180000000RDMAA2</value>
-        </argument>
-        <argument id="targetDescription">
-          <value class="value" valueClass="string">On SF Order view screen</value>
-        </argument>
-      </arguments>
-      <clauses>
-        <clause name="substeps" testItemId="776">
-          <steps>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="777" title="Click the Send for Dealer Signature button">
               <arguments>
                 <argument id="locator">
@@ -3639,9 +4694,10 @@
                 <argument id="interactionDescription">
                   <value class="value" valueClass="string">Click the Send for Dealer Signature button</value>
                 </argument>
+                <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" name="hover" title="Hover before Clicking">
+                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
                   <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                   <type>
                     <booleanType/>
@@ -3660,6 +4716,18 @@
           </type>
         </apiParam>
       </generatedParameters>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexDeleteObject" name="ApexDeleteObject" testItemId="791" title="Delete Object: {OpportunityId}">
+      <arguments>
+        <argument id="apexConnectionName">
+          <value class="value" valueClass="string">DOFSalesUser</value>
+        </argument>
+        <argument id="objectId">
+          <value class="variable">
+            <path element="OpportunityId"/>
+          </value>
+        </argument>
+      </arguments>
     </apiCall>
   </steps>
   <params>
@@ -3756,19 +4824,19 @@
       <value class="value" valueClass="string">GM Certified Premium Plus 2012</value>
     </argument>
     <argument id="Price1">
-      <value class="value" valueClass="string">1675.00</value>
+      <value class="value" valueClass="string">2375.00</value>
     </argument>
     <argument id="Price2">
-      <value class="value" valueClass="string">1445.00</value>
+      <value class="value" valueClass="string">2070.00</value>
     </argument>
     <argument id="Price1d">
-      <value class="value" valueClass="string">$1,675.00</value>
+      <value class="value" valueClass="string">$2,375.00</value>
     </argument>
     <argument id="Price2d">
-      <value class="value" valueClass="string">$1,445.00</value>
+      <value class="value" valueClass="string">$2,070.00</value>
     </argument>
     <argument id="Totald">
-      <value class="value" valueClass="string">$3,120.00</value>
+      <value class="value" valueClass="string">$4,445.00</value>
     </argument>
   </args>
   <tagReferences>
