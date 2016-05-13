@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="16">
+<testCase id="1">
   <summary>&lt;p&gt;5/13/16 - PreProd - using Jim Ellis&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;FAIL&lt;/strong&gt; - Spotlight Product not priceable&lt;/p&gt;</summary>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="590" title="Create Opp">
@@ -435,6 +435,9 @@
                       </generatedParameters>
                     </apiCall>
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="57" title="With Product Table rows {productName = $Product1}">
+                      <tags>
+                        <string>disabled</string>
+                      </tags>
                       <arguments>
                         <argument id="uiConnectionName">
                           <value class="value" valueClass="string">DOFSalesUser</value>
@@ -511,6 +514,9 @@
                       </clauses>
                     </apiCall>
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="60" title="With Product Table rows {productName = $Product2}">
+                      <tags>
+                        <string>disabled</string>
+                      </tags>
                       <arguments>
                         <argument id="uiConnectionName">
                           <value class="value" valueClass="string">DOFSalesUser</value>
@@ -891,6 +897,9 @@
                       </clauses>
                     </apiCall>
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="874" title="With Product Table rows {productName = $Product7}">
+                      <tags>
+                        <string>disabled</string>
+                      </tags>
                       <arguments>
                         <argument id="uiConnectionName">
                           <value class="value" valueClass="string">DOFSalesUser</value>
@@ -967,6 +976,9 @@
                       </clauses>
                     </apiCall>
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="877" title="With Product Table rows {productName = $Product8}">
+                      <tags>
+                        <string>disabled</string>
+                      </tags>
                       <arguments>
                         <argument id="uiConnectionName">
                           <value class="value" valueClass="string">DOFSalesUser</value>
@@ -1116,6 +1128,9 @@
                 <clause name="substeps" testItemId="69">
                   <steps>
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="70" title="With OpportunityLineItem rows {Product2Id = $Product1}">
+                      <tags>
+                        <string>disabled</string>
+                      </tags>
                       <arguments>
                         <argument id="uiConnectionName">
                           <value class="value" valueClass="string">DOFSalesUser</value>
@@ -1256,6 +1271,9 @@
                       </clauses>
                     </apiCall>
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="74" title="With OpportunityLineItem rows {Product2Id = $Product2}">
+                      <tags>
+                        <string>disabled</string>
+                      </tags>
                       <arguments>
                         <argument id="uiConnectionName">
                           <value class="value" valueClass="string">DOFSalesUser</value>
@@ -1944,6 +1962,9 @@
                       </clauses>
                     </apiCall>
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="887" title="With OpportunityLineItem rows {Product2Id = $Product7}">
+                      <tags>
+                        <string>disabled</string>
+                      </tags>
                       <arguments>
                         <argument id="uiConnectionName">
                           <value class="value" valueClass="string">DOFSalesUser</value>
@@ -2084,6 +2105,9 @@
                       </clauses>
                     </apiCall>
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="890" title="With OpportunityLineItem rows {Product2Id = $Product8}">
+                      <tags>
+                        <string>disabled</string>
+                      </tags>
                       <arguments>
                         <argument id="uiConnectionName">
                           <value class="value" valueClass="string">DOFSalesUser</value>
@@ -2520,6 +2544,9 @@
       </clauses>
     </apiCall>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="183" title="Pricing Spotlights Any Car Base">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="description">
           <value class="value" valueClass="string">Pricing Spotlights Any Car Base</value>
@@ -3206,6 +3233,9 @@
       </clauses>
     </apiCall>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="197" title="Pricing Spotlights Any Car Platinum">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="description">
           <value class="value" valueClass="string">Pricing Spotlights Any Car Platinum</value>
@@ -6605,6 +6635,9 @@
       </clauses>
     </apiCall>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="931" title="Pricing KBB Spotlights Any Car Base (Standalone)">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="description">
           <value class="value" valueClass="string">Pricing KBB Spotlights Any Car Base (Standalone)</value>
@@ -7285,6 +7318,9 @@
       </clauses>
     </apiCall>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="914" title="Pricing KBB Spotlights New Car Base (Standalone)">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="description">
           <value class="value" valueClass="string">Pricing KBB Spotlights New Car Base (Standalone)</value>
@@ -8385,6 +8421,9 @@
         <clause name="substeps" testItemId="312">
           <steps>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="313" title="With RelatedOrderItemList rows {Product2 = $Product1}">
+              <tags>
+                <string>disabled</string>
+              </tags>
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">DOFSalesUser</value>
@@ -8686,6 +8725,9 @@
               </generatedParameters>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="320" title="With RelatedOrderItemList rows {Product2 = $Product2}">
+              <tags>
+                <string>disabled</string>
+              </tags>
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">DOFSalesUser</value>
@@ -10191,6 +10233,9 @@
               </generatedParameters>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="1107" title="With RelatedOrderItemList rows {Product2 = $Product7}">
+              <tags>
+                <string>disabled</string>
+              </tags>
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">DOFSalesUser</value>
@@ -10492,6 +10537,9 @@
               </generatedParameters>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="1110" title="With RelatedOrderItemList rows {Product2 = $Product8}">
+              <tags>
+                <string>disabled</string>
+              </tags>
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">DOFSalesUser</value>
@@ -10793,6 +10841,9 @@
               </generatedParameters>
             </apiCall>
             <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="1268" title="Read Excel Sheet">
+              <tags>
+                <string>disabled</string>
+              </tags>
               <arguments>
                 <argument id="description">
                   <value class="value" valueClass="string">Read Excel Sheet</value>
@@ -11088,6 +11139,9 @@
         <clause name="substeps" testItemId="596">
           <steps>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="597" title="With RelatedOrderItemList rows {Product2 = $Product1}">
+              <tags>
+                <string>disabled</string>
+              </tags>
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">DOFSalesUser</value>
@@ -11168,6 +11222,9 @@
               </generatedParameters>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="600" title="On OrderConfig page">
+              <tags>
+                <string>disabled</string>
+              </tags>
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">DOFSalesUser</value>
@@ -11469,6 +11526,9 @@
               </generatedParameters>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="754" title="With RelatedOrderItemList rows {Product2 = $Product2}">
+              <tags>
+                <string>disabled</string>
+              </tags>
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">DOFSalesUser</value>
@@ -11549,6 +11609,9 @@
               </generatedParameters>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="757" title="On OrderConfig page">
+              <tags>
+                <string>disabled</string>
+              </tags>
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">DOFSalesUser</value>
@@ -13378,6 +13441,9 @@
               </generatedParameters>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="1145" title="With RelatedOrderItemList rows {Product2 = $Product7}">
+              <tags>
+                <string>disabled</string>
+              </tags>
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">DOFSalesUser</value>
@@ -13459,6 +13525,9 @@
               </generatedParameters>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="1148" title="On OrderConfig page">
+              <tags>
+                <string>disabled</string>
+              </tags>
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">DOFSalesUser</value>
@@ -13760,6 +13829,9 @@
               </generatedParameters>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="1194" title="With RelatedOrderItemList rows {Product2 = $Product8}">
+              <tags>
+                <string>disabled</string>
+              </tags>
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">DOFSalesUser</value>
@@ -13841,6 +13913,9 @@
               </generatedParameters>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="1197" title="On OrderConfig page">
+              <tags>
+                <string>disabled</string>
+              </tags>
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">DOFSalesUser</value>
