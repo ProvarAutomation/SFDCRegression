@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="11">
-  <summary/>
+<testCase id="14">
+  <summary>&lt;p&gt;5/11/16 - PreProd - using Crown Kia&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;FAIL&lt;/strong&gt; - Front-Line Pro Model selection box not present&lt;/p&gt;</summary>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="323" title="Create Opp">
       <arguments>
@@ -72,7 +72,7 @@
                   <value class="value" valueClass="string">ATC</value>
                 </argument>
                 <argument id="Name">
-                  <value class="value" valueClass="string">Crown KIA - ATC Media - Test Product Using Provar</value>
+                  <value class="value" valueClass="string">ATC Media - Test Product Using Provar</value>
                 </argument>
                 <argument id="StageName">
                   <value class="value" valueClass="string">Prospect</value>
@@ -755,9 +755,7 @@
                               </generatedParameters>
                             </apiCall>
                             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="790" title="Set the Net Billing Amount field to {1000}">
-                              <tags>
-                                <string>disabled</string>
-                              </tags>
+                              <tags/>
                               <arguments>
                                 <argument id="locator">
                                   <value class="uiLocator" uri="ui:locator?name=NBA_Amount__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunityLineItem%26field%3DNBA_Amount__c"/>
@@ -891,9 +889,7 @@
                               </generatedParameters>
                             </apiCall>
                             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="791" title="Set the Net Billing Amount field to {1000}">
-                              <tags>
-                                <string>disabled</string>
-                              </tags>
+                              <tags/>
                               <arguments>
                                 <argument id="locator">
                                   <value class="uiLocator" uri="ui:locator?name=NBA_Amount__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunityLineItem%26field%3DNBA_Amount__c"/>
@@ -1033,9 +1029,7 @@
                               </generatedParameters>
                             </apiCall>
                             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="792" title="Set the Net Billing Amount field to {1000}">
-                              <tags>
-                                <string>disabled</string>
-                              </tags>
+                              <tags/>
                               <arguments>
                                 <argument id="locator">
                                   <value class="uiLocator" uri="ui:locator?name=NBA_Amount__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunityLineItem%26field%3DNBA_Amount__c"/>
@@ -6126,7 +6120,9 @@
       <value class="value" valueClass="string">Ford New Car Co-op Max 2014</value>
     </argument>
   </args>
-  <tags/>
+  <tags>
+    <string>disabled</string>
+  </tags>
   <tagReferences>
     <tagRef tagName="Brad Weber" tagTypeName="maintainer"/>
   </tagReferences>

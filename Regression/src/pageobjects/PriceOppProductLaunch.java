@@ -15,7 +15,7 @@ import com.provar.core.testapi.annotations.*;
 public class PriceOppProductLaunch {
 
 	
-	@PageWait.Timed(durationSeconds = 3)
+	@PageWait.Timed(durationSeconds = 5)
 	@TextType()
 	@FindBy(xpath = "//label/span[text()='Lot Size']/../../input")
 	public WebElement lotSize;
@@ -35,6 +35,7 @@ public class PriceOppProductLaunch {
 	@FindByLabel(label = "Remove")
 	public WebElement remove;
 	
+	@PageWait.Timed(durationSeconds = 3)
 	@ButtonType()
 	@FindByLabel(label = "Calculate")
 	public WebElement calculate;
@@ -92,9 +93,11 @@ public class PriceOppProductLaunch {
 	@ChoiceListType()
 	public WebElement County;
 	
+	@PageWait.Timed(durationSeconds = 3)
 	@FindBy(xpath = "//label/span[text()='Slots:']/../../select")
 	@ChoiceListType()
 	public WebElement Slots;
+	@PageWait.Timed(durationSeconds = 3)
 	@FindBy(xpath = "//label/span[text()='Buckets:']/../../select")
 	@ChoiceListType()
 	public WebElement Buckets;
@@ -112,8 +115,9 @@ public class PriceOppProductLaunch {
 	public WebElement AddCounty;
 
 	@ChoiceListType()
-	@FindBy(xpath = "//select[1][@id=\"24:16;a\"]")
-	public WebElement QuantitySpots;
+	@PageWait.Timed(durationSeconds = 3)
+	@FindBy(xpath = "//label/span[text()='Quantity:']/../../select")
+	public WebElement SpotQuantity;
 
 
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="14">
-  <summary/>
+<testCase id="21">
+  <summary>&lt;p&gt;5/12/16 - PreProd - using Jim Ellis&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;FAIL&lt;/strong&gt; - Front-Line Pro issue&lt;/p&gt;</summary>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="590" title="Create Opp">
       <arguments>
@@ -72,7 +72,7 @@
                   <value class="value" valueClass="string">ATC</value>
                 </argument>
                 <argument id="Name">
-                  <value class="value" valueClass="string">Crown KIA - ATC Media - Test Product Using Provar</value>
+                  <value class="value" valueClass="string">ATC Media - Test Product Using Provar</value>
                 </argument>
                 <argument id="StageName">
                   <value class="value" valueClass="string">Prospect</value>
@@ -116,7 +116,7 @@
                 </argument>
                 <argument id="OwnerId">
                   <value class="variable">
-                    <path element="BradWeber"/>
+                    <path element="DOFTestUser"/>
                   </value>
                 </argument>
               </arguments>
@@ -977,9 +977,7 @@
                               </generatedParameters>
                             </apiCall>
                             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="871" title="Set the Net Billing Amount field to {1000}">
-                              <tags>
-                                <string>disabled</string>
-                              </tags>
+                              <tags/>
                               <arguments>
                                 <argument id="locator">
                                   <value class="uiLocator" uri="ui:locator?name=NBA_Amount__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunityLineItem%26field%3DNBA_Amount__c"/>
@@ -1113,9 +1111,7 @@
                               </generatedParameters>
                             </apiCall>
                             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="872" title="Set the Net Billing Amount field to {1000}">
-                              <tags>
-                                <string>disabled</string>
-                              </tags>
+                              <tags/>
                               <arguments>
                                 <argument id="locator">
                                   <value class="uiLocator" uri="ui:locator?name=NBA_Amount__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunityLineItem%26field%3DNBA_Amount__c"/>
@@ -1249,9 +1245,7 @@
                               </generatedParameters>
                             </apiCall>
                             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="873" title="Set the Net Billing Amount field to {1000}">
-                              <tags>
-                                <string>disabled</string>
-                              </tags>
+                              <tags/>
                               <arguments>
                                 <argument id="locator">
                                   <value class="uiLocator" uri="ui:locator?name=NBA_Amount__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunityLineItem%26field%3DNBA_Amount__c"/>
@@ -1391,9 +1385,7 @@
                               </generatedParameters>
                             </apiCall>
                             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="874" title="Set the Net Billing Amount field to {1000}">
-                              <tags>
-                                <string>disabled</string>
-                              </tags>
+                              <tags/>
                               <arguments>
                                 <argument id="locator">
                                   <value class="uiLocator" uri="ui:locator?name=NBA_Amount__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunityLineItem%26field%3DNBA_Amount__c"/>
@@ -1533,9 +1525,7 @@
                               </generatedParameters>
                             </apiCall>
                             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="875" title="Set the Net Billing Amount field to {1000}">
-                              <tags>
-                                <string>disabled</string>
-                              </tags>
+                              <tags/>
                               <arguments>
                                 <argument id="locator">
                                   <value class="uiLocator" uri="ui:locator?name=NBA_Amount__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunityLineItem%26field%3DNBA_Amount__c"/>
@@ -7479,7 +7469,9 @@
           <value class="value" valueClass="string">Dont</value>
         </argument>
         <argument id="sfUiTargetObjectId">
-          <value class="value" valueClass="string">801190000009FS9</value>
+          <value class="variable">
+            <path element="OrderNumber"/>
+          </value>
         </argument>
         <argument id="targetDescription">
           <value class="value" valueClass="string">On SF Order view (Order Master Layout) screen</value>
@@ -9395,39 +9387,6 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-          </steps>
-        </clause>
-      </clauses>
-      <generatedParameters>
-        <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
-          <summary>The Id of the SF Object to be Viewed or Edited.</summary>
-          <type>
-            <textType/>
-          </type>
-        </apiParam>
-      </generatedParameters>
-    </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="864" title="On SF Order view screen">
-      <arguments>
-        <argument id="uiConnectionName">
-          <value class="value" valueClass="string">DOFSalesUser</value>
-        </argument>
-        <argument id="target">
-          <value class="uiTarget" uri="sf:ui:target?object=Order&amp;action=View"/>
-        </argument>
-        <argument id="navigate">
-          <value class="value" valueClass="string">Dont</value>
-        </argument>
-        <argument id="sfUiTargetObjectId">
-          <value class="value" valueClass="string">801180000008huLAAQ</value>
-        </argument>
-        <argument id="targetDescription">
-          <value class="value" valueClass="string">On SF Order view screen</value>
-        </argument>
-      </arguments>
-      <clauses>
-        <clause name="substeps" testItemId="865">
-          <steps>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="866" title="Click the Send for Dealer Signature button">
               <arguments>
                 <argument id="locator">
@@ -9448,9 +9407,10 @@
                 <argument id="interactionDescription">
                   <value class="value" valueClass="string">Click the Send for Dealer Signature button</value>
                 </argument>
+                <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" name="hover" title="Hover before Clicking">
+                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
                   <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                   <type>
                     <booleanType/>
@@ -9469,6 +9429,18 @@
           </type>
         </apiParam>
       </generatedParameters>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexDeleteObject" name="ApexDeleteObject" testItemId="924" title="Delete Object: {OpportunityId}">
+      <arguments>
+        <argument id="apexConnectionName">
+          <value class="value" valueClass="string">DOFSalesUser</value>
+        </argument>
+        <argument id="objectId">
+          <value class="variable">
+            <path element="OpportunityId"/>
+          </value>
+        </argument>
+      </arguments>
     </apiCall>
   </steps>
   <params>
@@ -9550,7 +9522,9 @@
       <value class="value" valueClass="string">New Car Premium Max 2014</value>
     </argument>
   </args>
-  <tags/>
+  <tags>
+    <string>disabled</string>
+  </tags>
   <tagReferences>
     <tagRef tagName="Brad Weber" tagTypeName="maintainer"/>
   </tagReferences>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="18">
-  <summary/>
+<testCase id="17">
+  <summary>5/11/16 - PreProd -</summary>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="323" title="Create Opp">
       <arguments>
@@ -72,7 +72,7 @@
                   <value class="value" valueClass="string">ATC</value>
                 </argument>
                 <argument id="Name">
-                  <value class="value" valueClass="string">Jim Ellis Mazda - ATC Media - Test Product Using Provar</value>
+                  <value class="value" valueClass="string">ATC Media - Test Product Using Provar</value>
                 </argument>
                 <argument id="StageName">
                   <value class="value" valueClass="string">Prospect</value>
@@ -757,9 +757,7 @@
                               </generatedParameters>
                             </apiCall>
                             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="796" title="Set the Net Billing Amount field to {1000}">
-                              <tags>
-                                <string>disabled</string>
-                              </tags>
+                              <tags/>
                               <arguments>
                                 <argument id="locator">
                                   <value class="uiLocator" uri="ui:locator?name=NBA_Amount__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunityLineItem%26field%3DNBA_Amount__c"/>
@@ -893,9 +891,7 @@
                               </generatedParameters>
                             </apiCall>
                             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="797" title="Set the Net Billing Amount field to {1000}">
-                              <tags>
-                                <string>disabled</string>
-                              </tags>
+                              <tags/>
                               <arguments>
                                 <argument id="locator">
                                   <value class="uiLocator" uri="ui:locator?name=NBA_Amount__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunityLineItem%26field%3DNBA_Amount__c"/>
@@ -1035,9 +1031,7 @@
                               </generatedParameters>
                             </apiCall>
                             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="798" title="Set the Net Billing Amount field to {1000}">
-                              <tags>
-                                <string>disabled</string>
-                              </tags>
+                              <tags/>
                               <arguments>
                                 <argument id="locator">
                                   <value class="uiLocator" uri="ui:locator?name=NBA_Amount__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunityLineItem%26field%3DNBA_Amount__c"/>
@@ -1540,10 +1534,10 @@
               <clauses>
                 <clause name="substeps" testItemId="97">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="98" title="Set the Type select to Cadillac">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="98" title="Set the Make select to Cadillac">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=Type"/>
+                          <value class="uiLocator" uri="ui:locator?name=Make"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
@@ -1564,7 +1558,7 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Type select to Cadillac</value>
+                          <value class="value" valueClass="string">Set the Make select to Cadillac</value>
                         </argument>
                         <argument id="wait">
                           <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
@@ -2221,10 +2215,10 @@
               <clauses>
                 <clause name="substeps" testItemId="259">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="260" title="Set the Type select to Chevrolet">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="260" title="Set the Make select to Chevrolet">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=Type"/>
+                          <value class="uiLocator" uri="ui:locator?name=Make"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
@@ -2245,7 +2239,7 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Type select to Chevrolet</value>
+                          <value class="value" valueClass="string">Set the Make select to Chevrolet</value>
                         </argument>
                         <argument id="wait">
                           <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
@@ -2255,11 +2249,7 @@
                         <apiParam group="value" name="value" seq="10000" title="Value">
                           <summary>The value to be populated.</summary>
                           <type>
-                            <choiceType>
-                              <constraints>
-                                <valueConstraint name="boundedValues">Buick|Cadillac|Chevrolet|GMC</valueConstraint>
-                              </constraints>
-                            </choiceType>
+                            <choiceType/>
                           </type>
                         </apiParam>
                         <apiParam group="value" name="blur" seq="10001" title="Tab off field">
@@ -2906,10 +2896,10 @@
               <clauses>
                 <clause name="substeps" testItemId="276">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="277" title="Set the Type select to GMC">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="277" title="Set the Make select to GMC">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=Type"/>
+                          <value class="uiLocator" uri="ui:locator?name=Make"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
@@ -2930,7 +2920,7 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Type select to GMC</value>
+                          <value class="value" valueClass="string">Set the Make select to GMC</value>
                         </argument>
                         <argument id="wait">
                           <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
@@ -2940,11 +2930,7 @@
                         <apiParam group="value" name="value" seq="10000" title="Value">
                           <summary>The value to be populated.</summary>
                           <type>
-                            <choiceType>
-                              <constraints>
-                                <valueConstraint name="boundedValues">Buick|Cadillac|Chevrolet|GMC</valueConstraint>
-                              </constraints>
-                            </choiceType>
+                            <choiceType/>
                           </type>
                         </apiParam>
                         <apiParam group="value" name="blur" seq="10001" title="Tab off field">

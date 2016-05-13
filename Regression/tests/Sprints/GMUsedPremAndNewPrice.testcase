@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="3">
-  <summary/>
+<testCase id="15">
+  <summary>&lt;p&gt;5/11/16 - PreProd - using Crown Kia&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;PASS&lt;/strong&gt;&lt;/p&gt;</summary>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="330" title="Create Opp">
       <arguments>
@@ -65,14 +65,14 @@
                 </argument>
                 <argument id="AccountId">
                   <value class="variable">
-                    <path element="CrownKiaAccount"/>
+                    <path element="Dealer"/>
                   </value>
                 </argument>
                 <argument id="RecordTypeId">
                   <value class="value" valueClass="string">ATC</value>
                 </argument>
                 <argument id="Name">
-                  <value class="value" valueClass="string">Crown KIA - ATC Media - Test Product Using Provar</value>
+                  <value class="value" valueClass="string">ATC Media - Test Product Using Provar</value>
                 </argument>
                 <argument id="StageName">
                   <value class="value" valueClass="string">Prospect</value>
@@ -681,9 +681,7 @@
                               </generatedParameters>
                             </apiCall>
                             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="773" title="Set the Net Billing Amount field to {1000}">
-                              <tags>
-                                <string>disabled</string>
-                              </tags>
+                              <tags/>
                               <arguments>
                                 <argument id="locator">
                                   <value class="uiLocator" uri="ui:locator?name=NBA_Amount__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunityLineItem%26field%3DNBA_Amount__c"/>
@@ -823,9 +821,7 @@
                               </generatedParameters>
                             </apiCall>
                             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="774" title="Set the Net Billing Amount field to {1000}">
-                              <tags>
-                                <string>disabled</string>
-                              </tags>
+                              <tags/>
                               <arguments>
                                 <argument id="locator">
                                   <value class="uiLocator" uri="ui:locator?name=NBA_Amount__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunityLineItem%26field%3DNBA_Amount__c"/>
@@ -1384,16 +1380,16 @@
                         </apiParam>
                       </generatedParameters>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="326" title="Set the Type select to Buick">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="326" title="Set the Make select to Buick">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=Type"/>
+                          <value class="uiLocator" uri="ui:locator?name=Make"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Type select to Buick</value>
+                          <value class="value" valueClass="string">Set the Make select to Buick</value>
                         </argument>
                         <argument id="wait">
                           <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
@@ -2098,16 +2094,16 @@
                         </apiParam>
                       </generatedParameters>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="328" title="Set the Type select to GMC">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="328" title="Set the Make select to GMC">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=Type"/>
+                          <value class="uiLocator" uri="ui:locator?name=Make"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Type select to GMC</value>
+                          <value class="value" valueClass="string">Set the Make select to GMC</value>
                         </argument>
                         <argument id="wait">
                           <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
@@ -4755,66 +4751,6 @@
         </textType>
       </type>
     </param>
-    <param name="Price1" title="Price1">
-      <summary/>
-      <type>
-        <textType>
-          <constraints>
-            <valueConstraint name="minLength">0</valueConstraint>
-            <valueConstraint name="maxLength">9999</valueConstraint>
-            <valueConstraint name="regex"/>
-          </constraints>
-        </textType>
-      </type>
-    </param>
-    <param name="Price2" title="Price2">
-      <summary/>
-      <type>
-        <textType>
-          <constraints>
-            <valueConstraint name="minLength">0</valueConstraint>
-            <valueConstraint name="maxLength">9999</valueConstraint>
-            <valueConstraint name="regex"/>
-          </constraints>
-        </textType>
-      </type>
-    </param>
-    <param name="Price1d" title="Price1d">
-      <summary/>
-      <type>
-        <textType>
-          <constraints>
-            <valueConstraint name="minLength">0</valueConstraint>
-            <valueConstraint name="maxLength">9999</valueConstraint>
-            <valueConstraint name="regex"/>
-          </constraints>
-        </textType>
-      </type>
-    </param>
-    <param name="Price2d" title="Price2d">
-      <summary/>
-      <type>
-        <textType>
-          <constraints>
-            <valueConstraint name="minLength">0</valueConstraint>
-            <valueConstraint name="maxLength">9999</valueConstraint>
-            <valueConstraint name="regex"/>
-          </constraints>
-        </textType>
-      </type>
-    </param>
-    <param name="Totald" title="Totald">
-      <summary/>
-      <type>
-        <textType>
-          <constraints>
-            <valueConstraint name="minLength">0</valueConstraint>
-            <valueConstraint name="maxLength">9999</valueConstraint>
-            <valueConstraint name="regex"/>
-          </constraints>
-        </textType>
-      </type>
-    </param>
   </params>
   <args>
     <argument id="Product1">
@@ -4822,21 +4758,6 @@
     </argument>
     <argument id="Product2">
       <value class="value" valueClass="string">GM Certified Premium Plus 2012</value>
-    </argument>
-    <argument id="Price1">
-      <value class="value" valueClass="string">2375.00</value>
-    </argument>
-    <argument id="Price2">
-      <value class="value" valueClass="string">2070.00</value>
-    </argument>
-    <argument id="Price1d">
-      <value class="value" valueClass="string">$2,375.00</value>
-    </argument>
-    <argument id="Price2d">
-      <value class="value" valueClass="string">$2,070.00</value>
-    </argument>
-    <argument id="Totald">
-      <value class="value" valueClass="string">$4,445.00</value>
     </argument>
   </args>
   <tagReferences>

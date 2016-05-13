@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="21">
-  <summary/>
+<testCase id="10">
+  <summary>&lt;p&gt;5/11/16 - PreProd - using Crown Kia&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;FAIL &lt;/strong&gt;- Front-Line Pro Model required but not selectable&lt;/p&gt;</summary>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="330" title="Create Opp">
       <arguments>
@@ -65,14 +65,14 @@
                 </argument>
                 <argument id="AccountId">
                   <value class="variable">
-                    <path element="CrownKiaAccount"/>
+                    <path element="Dealer"/>
                   </value>
                 </argument>
                 <argument id="RecordTypeId">
                   <value class="value" valueClass="string">ATC</value>
                 </argument>
                 <argument id="Name">
-                  <value class="value" valueClass="string">Crown KIA - ATC Media - Test Product Using Provar</value>
+                  <value class="value" valueClass="string">ATC Media - Test Product Using Provar</value>
                 </argument>
                 <argument id="StageName">
                   <value class="value" valueClass="string">Prospect</value>
@@ -116,7 +116,7 @@
                 </argument>
                 <argument id="OwnerId">
                   <value class="variable">
-                    <path element="BradWeber"/>
+                    <path element="DOFTestUser"/>
                   </value>
                 </argument>
               </arguments>
@@ -603,9 +603,7 @@
                               </generatedParameters>
                             </apiCall>
                             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="811" title="Set the Net Billing Amount field to {1000}">
-                              <tags>
-                                <string>disabled</string>
-                              </tags>
+                              <tags/>
                               <arguments>
                                 <argument id="locator">
                                   <value class="uiLocator" uri="ui:locator?name=NBA_Amount__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunityLineItem%26field%3DNBA_Amount__c"/>
@@ -1165,35 +1163,39 @@
                         </apiParam>
                       </generatedParameters>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="802" title="Set the Used Type to Buick">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="833" title="Set the Used Make to Buick">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:pageobject:field?field=UsedType&amp;pageId=pageobjects.GMUsedNewPricing"/>
+                          <value class="uiLocator" uri="ui:pageobject:field?field=UsedMake&amp;pageId=pageobjects.GMUsedNewPricing"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
-                        <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Used Type to Buick</value>
-                        </argument>
-                        <argument id="wait"/>
-                        <argument id="captureBefore"/>
-                        <argument id="captureAfter"/>
                         <argument id="value">
                           <value class="value" valueClass="string">Buick</value>
                         </argument>
-                        <argument id="blur"/>
-                        <argument id="pressEnter"/>
+                        <argument id="blur">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="pressEnter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Set the Used Make to Buick</value>
+                        </argument>
+                        <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
                         <apiParam group="value" name="value" seq="10000" title="Value">
                           <summary>The value to be populated.</summary>
                           <type>
-                            <choiceType>
-                              <constraints>
-                                <valueConstraint name="boundedValues">Buick|Cadillac|Chevrolet|GMC</valueConstraint>
-                              </constraints>
-                            </choiceType>
+                            <choiceType/>
                           </type>
                         </apiParam>
                         <apiParam group="value" name="blur" seq="10001" title="Tab off field">
@@ -1316,44 +1318,47 @@
                         </apiParam>
                       </generatedParameters>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="803" title="Set the New Type to Chevrolet">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="836" title="Set the New Make to Cadillac">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:pageobject:field?field=NewType&amp;pageId=pageobjects.GMUsedNewPricing"/>
+                          <value class="uiLocator" uri="ui:pageobject:field?field=NewMake&amp;pageId=pageobjects.GMUsedNewPricing"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
-                        <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the New Type to Chevrolet</value>
-                        </argument>
-                        <argument id="wait"/>
-                        <argument id="captureBefore"/>
-                        <argument id="captureAfter"/>
                         <argument id="value">
-                          <value class="value" valueClass="string">Chevrolet</value>
+                          <value class="value" valueClass="string">Cadillac</value>
                         </argument>
-                        <argument id="blur"/>
-                        <argument id="pressEnter"/>
+                        <argument id="blur">
+                          <value class="value" valueClass="boolean">true</value>
+                        </argument>
+                        <argument id="pressEnter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Set the New Make to Cadillac</value>
+                        </argument>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="value" seq="10000" title="Value">
+                        <apiParam group="value" name="value" title="Value">
                           <summary>The value to be populated.</summary>
                           <type>
-                            <choiceType>
-                              <constraints>
-                                <valueConstraint name="boundedValues">Buick|Cadillac|Chevrolet|GMC</valueConstraint>
-                              </constraints>
-                            </choiceType>
+                            <textType/>
                           </type>
                         </apiParam>
-                        <apiParam group="value" name="blur" seq="10001" title="Tab off field">
+                        <apiParam group="value" name="blur" title="Tab off field">
                           <summary>Whether the tab key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
                           </type>
                         </apiParam>
-                        <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
+                        <apiParam group="value" name="pressEnter" title="Press Enter">
                           <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
@@ -3231,6 +3236,27 @@
           </value>
         </argument>
       </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="831" title="On GMUsedNewPricing page">
+      <arguments>
+        <argument id="uiConnectionName">
+          <value class="value" valueClass="string">DOFSalesUser</value>
+        </argument>
+        <argument id="target">
+          <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.GMUsedNewPricing"/>
+        </argument>
+        <argument id="navigate">
+          <value class="value" valueClass="string">Always</value>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">On GMUsedNewPricing page</value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="832">
+          <steps/>
+        </clause>
+      </clauses>
     </apiCall>
   </steps>
   <params>
