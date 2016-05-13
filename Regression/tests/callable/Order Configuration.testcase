@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase failureBehaviour="Continue" id="6" registryId="e9d7016f-c3ca-4ecd-a48b-41c98cdd6cab" visibility="Internal">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: Jason_Stage (Test)">
+      <arguments>
+        <argument argId="4391283d-f43a-4558-8b8b-928741513747" id="connectionName">
+          <value class="value" valueClass="string">PricingTeam</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">Jason_Stage</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="uiApplicationName"/>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument argId="fef06079-b980-4dee-9590-5fd9b6c2bab4" id="reuseConnectionName">
+          <value class="variable">
+            <path element="reuseConnectionName"/>
+          </value>
+        </argument>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Reuse</value>
+        </argument>
+        <argument id="vfDebug"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="environment"/>
+        <argument id="securityToken"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="741" title="Read Excel Sheet">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">Read Excel Sheet</value>
+        </argument>
+      </arguments>
+      <parameterValueSources>
+        <parameterValueSource url="excel:templates/ProductConfigFields.xls?worksheet=ProductConfigs&amp;range=A1%3AFW114&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=None&amp;whereValue=%7BProductName%7D" variableName="ExcelData" variableScope="Test">
+          <cacheToken>C:/Users/jtjohn/Provar/Workspace/ProvarTesting2/Test/templates/FillData.xlsx;1438091420870</cacheToken>
+          <cachedParameters>
+            <apiParam name="RowNumber"/>
+            <apiParam name="ProductTitle"/>
+            <apiParam name="LineDescription"/>
+            <apiParam name="TotalUsedCarLotSize"/>
+            <apiParam name="TotalProductionCost"/>
+            <apiParam name="BMWDealerCenter"/>
+            <apiParam name="Notes"/>
+            <apiParam name="EnhancedCallTracking"/>
+            <apiParam name="FormCompleted"/>
+            <apiParam name="RedirectNo"/>
+            <apiParam name="FirstName"/>
+            <apiParam name="LastName"/>
+            <apiParam name="EmailAddress"/>
+            <apiParam name="PhoneNumber"/>
+            <apiParam name="Link"/>
+            <apiParam name="ClickThruURL"/>
+            <apiParam name="NewCarContactEmail"/>
+            <apiParam name="OtherEmail"/>
+            <apiParam name="PrimaryContactEmail"/>
+            <apiParam name="SitelinkUsedAdvanced"/>
+            <apiParam name="SitelinkUsedProOptIn"/>
+            <apiParam name="SitelinkUsedUseExisting"/>
+            <apiParam name="UseExistingFacebook"/>
+            <apiParam name="UseExistingTwitter"/>
+            <apiParam name="SitelinkedUsedURL"/>
+            <apiParam name="FacebookId"/>
+            <apiParam name="FacebookInventory"/>
+            <apiParam name="TwitterId"/>
+            <apiParam name="FacebookDotComSlash"/>
+            <apiParam name="TransactionType"/>
+            <apiParam name="AlphaFullRate"/>
+            <apiParam name="UsedCarInventorySource"/>
+            <apiParam name="OptOutCoOpSubmissionCPO"/>
+            <apiParam name="Provider"/>
+            <apiParam name="SCAArtwork"/>
+            <apiParam name="DMA"/>
+            <apiParam name="Zone"/>
+            <apiParam name="Make"/>
+            <apiParam name="Franchise"/>
+            <apiParam name="FrontLineProModel"/>
+            <apiParam name="NewQuantity"/>
+            <apiParam name="SpotlightQuantity"/>
+            <apiParam name="TotalInventoryNewUsedCertified"/>
+            <apiParam name="TotalNewCarLotSize"/>
+            <apiParam name="MonthlyAdvertisingBudget"/>
+            <apiParam name="TierGovernorVehicleQuantity"/>
+            <apiParam name="TierGovernorVehicleMonthlyRate"/>
+            <apiParam name="NewCarMakeQuantity1"/>
+            <apiParam name="NewCarMakeQuantity2"/>
+            <apiParam name="NewCarMakeQuantity3"/>
+            <apiParam name="NewCarMakeQuantity4"/>
+            <apiParam name="NewCarMakeQuantity5"/>
+            <apiParam name="UsedCarMakeQuantity1"/>
+            <apiParam name="UsedCarMakeQuantity2"/>
+            <apiParam name="UsedCarMakeQuantity3"/>
+            <apiParam name="UsedCarMakeQuantity4"/>
+            <apiParam name="UsedCarMakeQuantity5"/>
+            <apiParam name="TermDuration"/>
+            <apiParam name="Agency"/>
+            <apiParam name="BACCode"/>
+            <apiParam name="DealerCode"/>
+            <apiParam name="BMWLocationId"/>
+            <apiParam name="MINIDealerCenterId"/>
+            <apiParam name="MINILocationId"/>
+            <apiParam name="HaystakDealerCode"/>
+            <apiParam name="NameOfCRMSystem"/>
+            <apiParam name="TIMDealershipContact"/>
+            <apiParam name="TIMDealershipContactEmailAddress"/>
+            <apiParam name="TIMDealershipContactMobileCarrier"/>
+            <apiParam name="TIMDealershipContactMobileNumber"/>
+            <apiParam name="TIMDealershipXMLEmailAddress"/>
+            <apiParam name="TIMDealerWebsiteAddress"/>
+            <apiParam name="TrainingHeadcount"/>
+            <apiParam name="VAutoId"/>
+            <apiParam name="TechnicalContactEmail"/>
+            <apiParam name="TechnicalContactName"/>
+            <apiParam name="TechnicalContactPhone"/>
+            <apiParam name="FullRateAmount"/>
+            <apiParam name="ArtworkPreapproveCaseNo"/>
+            <apiParam name="DealershipWebsite"/>
+            <apiParam name="CarsComId"/>
+            <apiParam name="ReportRecipientsName1"/>
+            <apiParam name="ReportRecipientsName2"/>
+            <apiParam name="ReportRecipientsName3"/>
+            <apiParam name="ReportRecipientsEmailAddress1"/>
+            <apiParam name="ReportRecipientsEmailAddress2"/>
+            <apiParam name="ReportRecipientsEmailAddress3"/>
+            <apiParam name="Top6Citites1"/>
+            <apiParam name="Top6Citites2"/>
+            <apiParam name="Top6Citites3"/>
+            <apiParam name="Top6Citites4"/>
+            <apiParam name="Top6Citites5"/>
+            <apiParam name="Top6Citites6"/>
+            <apiParam name="TrackingNumber"/>
+            <apiParam name="CobaltURL"/>
+            <apiParam name="DealerWebsiteURL"/>
+            <apiParam name="Deliver1stOfTheNextMonth"/>
+            <apiParam name="ReplaceCurrentSpotlights"/>
+            <apiParam name="DealerSpecialtiesCustomer"/>
+            <apiParam name="DealerLogoSubmittedToAutotrader"/>
+            <apiParam name="SitelinkNewAdvanced"/>
+            <apiParam name="SitelinkNewProOptIn"/>
+            <apiParam name="SitelinkNewUseExisting"/>
+            <apiParam name="CoOpLevelOfService"/>
+            <apiParam name="CustomURLType"/>
+            <apiParam name="AdvertisedMake"/>
+            <apiParam name="SpotlightMake"/>
+            <apiParam name="SpotlightDuration"/>
+            <apiParam name="SkyscapersBuckets"/>
+            <apiParam name="Skyscrapers_Slots"/>
+            <apiParam name="Tier_Governor_Type"/>
+            <apiParam name="TierGovernorValue"/>
+            <apiParam name="TierGovernorAdvertisedMake"/>
+            <apiParam name="TierGovernorCoopLevelOfService"/>
+            <apiParam name="NewCarMake1"/>
+            <apiParam name="NewCarMake2"/>
+            <apiParam name="NewCarMake3"/>
+            <apiParam name="UsedCarMake1"/>
+            <apiParam name="UsedCarMake2"/>
+            <apiParam name="UsedCarMake3"/>
+            <apiParam name="NewCarInventorySource"/>
+            <apiParam name="TierGovernorSequence"/>
+            <apiParam name="TierGovernorSorting"/>
+            <apiParam name="TermDurationAlphaAllOthers"/>
+            <apiParam name="TermDurationSkyscrapers"/>
+            <apiParam name="IMROptIn"/>
+            <apiParam name="OptOutCoopSubmission"/>
+            <apiParam name="CarTypeRestrictions"/>
+            <apiParam name="ArtworkDropdown"/>
+            <apiParam name="InlineDisplayNewCarAdArtwork"/>
+            <apiParam name="InlineDisplayNewCarAdArtworkGM"/>
+            <apiParam name="InlineDisplayUsedCarAdArtwork"/>
+            <apiParam name="InlineDisplayUsedCarAdArtworkGM"/>
+            <apiParam name="LeaderboardNewArtwork"/>
+            <apiParam name="LeaderboardNewArtworkGMPackages"/>
+            <apiParam name="LeaderboardUsedArtwork"/>
+            <apiParam name="LeaderboardUsedArtworkGMPackages"/>
+            <apiParam name="SkyscrapersCoOpArtwork"/>
+            <apiParam name="SkyscrapersCoOpArtworkGMPackages"/>
+            <apiParam name="FeaturedType"/>
+            <apiParam name="FeaturedValue"/>
+            <apiParam name="FeaturedAdvertisedMake"/>
+            <apiParam name="FeaturedCoOpLevelOfService"/>
+            <apiParam name="TermDuration12"/>
+            <apiParam name="TermDuration1m2m3m6m"/>
+            <apiParam name="TermDuration3m6m9m12m"/>
+            <apiParam name="ProductionCost"/>
+            <apiParam name="FeatuedVehicleQuantity"/>
+            <apiParam name="FeaturedVehicleMonthlyRate"/>
+            <apiParam name="CallTrackingNewRedirect"/>
+            <apiParam name="CallTrackingUsedRedirect"/>
+            <apiParam name="DealerRatingsLi"/>
+            <apiParam name="KBBDealerRatingsLink"/>
+            <apiParam name="KBBDealerRatingsProvider"/>
+            <apiParam name="VehicleSequence"/>
+            <apiParam name="VehicleSorting"/>
+            <apiParam name="CallTrackingNewCallRecord"/>
+            <apiParam name="CallTrackingNewEnhanced"/>
+            <apiParam name="CallTrackingNewWhisper"/>
+            <apiParam name="CallTrackingUsedCallRecord"/>
+            <apiParam name="CallTrackingUsedEnhanced"/>
+            <apiParam name="CallTrackingUsedWhisper"/>
+            <apiParam name="KBBCallTrackingNewCallRecord"/>
+            <apiParam name="KBBCallTrackingNewWhisper"/>
+            <apiParam name="KBBCallTrackingNewRedirect"/>
+            <apiParam name="KBBCallTrackingUsedCallRecord"/>
+            <apiParam name="KBBCallTrackingUsedWhisper"/>
+            <apiParam name="KBBCallTrackingUsedRedirect"/>
+            <apiParam name="KBBShowcaseCallTrackingCallRecord"/>
+            <apiParam name="KBBShowcaseCallTrackingWhisper"/>
+            <apiParam name="KBBShowcaseCallTrackingRedirect"/>
+            <apiParam name="KBBShowcaseXMLEmailAddress"/>
+            <apiParam name="KBBShowcaseTextEmailAddress"/>
+            <apiParam name="LeaderboardNewClickThruURL"/>
+            <apiParam name="LeaderboardNewCoOpPreApprovalCase"/>
+            <apiParam name="LeaderboardUsedClickThruURL"/>
+            <apiParam name="LeaderboardUsedCoOpPreApprovalCase"/>
+            <apiParam name="SkyscrapersClickThruURL"/>
+            <apiParam name="SkyscrapersCoOpPreApprovalCaseNo"/>
+            <apiParam name="LeadDriverTextEmailAddress"/>
+            <apiParam name="LeadDriverXMLEmailAddress"/>
+            <apiParam name="PremiumType1"/>
+            <apiParam name="PremiumValue1"/>
+            <apiParam name="PremiumAdvertisedMake1"/>
+            <apiParam name="PremiumVehicleQuantity1"/>
+            <apiParam name="PremiumVehicleMonthlyRate1"/>
+            <apiParam name="PremiumCoOpLevelOfService1"/>
+            <apiParam name="AddCarMakeFields"/>
+            <apiParam name="APFDToday"/>
+            <apiParam name="BillAccountLookup"/>
+            <apiParam name="AdvertisedMakeGM"/>
+            <apiParam name="APFDDate"/>
+            <apiParam name="DealerRatingsProvider"/>
+            <apiParam name="DBAName1"/>
+            <apiParam name="OEMId1"/>
+            <apiParam name="FullRateBelowRate"/>
+          </cachedParameters>
+        </parameterValueSource>
+      </parameterValueSources>
+      <clauses>
+        <clause name="hidden" testItemId="742">
+          <steps/>
+        </clause>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="791" title="On OrderConfig page">
+      <arguments>
+        <argument id="uiConnectionName">
+          <value class="value" valueClass="string">Jason_Stage</value>
+        </argument>
+        <argument id="target">
+          <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.OrderConfig"/>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">On OrderConfig page</value>
+        </argument>
+        <argument id="navigate">
+          <value class="value" valueClass="string">IfNeccessary</value>
+        </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore"/>
+        <argument id="captureAfter"/>
+        <argument id="uiTargetUrl"/>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="792">
+          <steps>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiFill" name="UiFill" testItemId="793" title="UI Fill">
+              <arguments>
+                <argument id="values">
+                  <value class="variable">
+                    <path element="ExcelData">
+                      <filter class="index">
+                        <index valueClass="decimal">0</index>
+                      </filter>
+                    </path>
+                  </value>
+                </argument>
+                <argument id="ignoreFields">
+                  <value class="value" valueClass="string">ProductTitle, PremiumFields</value>
+                </argument>
+              </arguments>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="794" title="Click the Save">
+              <arguments>
+                <argument id="locator">
+                  <value class="uiLocator" uri="ui:pageobject:field?field=Save&amp;pageId=pageobjects.OrderConfig"/>
+                </argument>
+                <argument id="interaction">
+                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                </argument>
+                <argument id="interactionDescription">
+                  <value class="value" valueClass="string">Click the Save</value>
+                </argument>
+                <argument id="wait"/>
+                <argument id="captureBefore"/>
+                <argument id="captureAfter"/>
+                <argument id="hover"/>
+              </arguments>
+              <generatedParameters>
+                <apiParam group="value" name="hover" title="Hover before Clicking">
+                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                  <type>
+                    <booleanType/>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+      <generatedParameters>
+        <apiParam group="target" name="uiTargetUrl" title="Web Page">
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
+  </steps>
+  <params>
+    <param linkedToUrl="provar:hasvalue:fef06079-b980-4dee-9590-5fd9b6c2bab4" name="reuseConnectionName" title="Override Connection">
+      <summary>The name of an already opened connect to re-use.</summary>
+      <type>
+        <connectionType>
+          <constraints>
+            <valueConstraint name="variableName">true</valueConstraint>
+            <valueConstraint name="requiredCapabilities">sfSoapConnect</valueConstraint>
+          </constraints>
+        </connectionType>
+      </type>
+    </param>
+    <param name="ProductName" title="Product Name">
+      <summary>Product name</summary>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+            <valueConstraint name="regex"/>
+          </constraints>
+        </textType>
+      </type>
+    </param>
+  </params>
+  <args>
+    <argument id="reuseConnectionName"/>
+    <argument id="ProductName"/>
+  </args>
+  <tags/>
+</testCase>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="4">
-  <summary/>
+<testCase id="16">
+  <summary>&lt;p&gt;5/13/16 - PreProd - using Jim Ellis&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;FAIL&lt;/strong&gt; - Spotlight Product not priceable&lt;/p&gt;</summary>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="590" title="Create Opp">
       <arguments>
@@ -14321,6 +14321,9 @@
       <value class="value" valueClass="string">Spotlights Certified Car Platinum</value>
     </argument>
   </args>
+  <tags>
+    <string>disabled</string>
+  </tags>
   <tagReferences>
     <tagRef tagName="Brad Weber" tagTypeName="maintainer"/>
   </tagReferences>
