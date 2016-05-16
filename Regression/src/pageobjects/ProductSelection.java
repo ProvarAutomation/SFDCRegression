@@ -81,5 +81,9 @@ public class ProductSelection {
 	@ChoiceListType(values = { @ChoiceListValue(value = "Display 100 records per page", title = "100") })
 	@FindBy(xpath = "//*[@id=\"lineItemView_paginator_rpp_target\"]/img")
 	public WebElement paginator;
+	
+	@ButtonType()
+	@FindByLabel(label = "Cancel")
+	public WebElement cancel;
 			
 }

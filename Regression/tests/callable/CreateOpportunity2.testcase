@@ -676,7 +676,7 @@
               <clauses>
                 <clause name="substeps" testItemId="168">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="169" title="Click the Cancel">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="169" title="Click the cancel">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:pageobject:field?field=cancel&amp;pageId=pageobjects.ProductSelection"/>
@@ -694,7 +694,7 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Click the Cancel</value>
+                          <value class="value" valueClass="string">Click the cancel</value>
                         </argument>
                         <argument id="wait"/>
                       </arguments>
