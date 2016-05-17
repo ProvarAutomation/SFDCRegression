@@ -11,6 +11,7 @@
 
 <patternset id="all.tests">
     <include name="**\*.*"/>
+	<exclude name="callable\**\*.*"/>
     <exclude name="Callable Tests\**\*.*"/>
     <exclude name="Examples\**\*.*"/>
     <exclude name="Sprints\**\*.*"/>

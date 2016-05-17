@@ -49,8 +49,13 @@
           <value class="value" valueClass="string">ServiceTestUser</value>
         </argument>
         <argument id="AccountId">
-          <value class="variable">
-            <path element="CrownKiaAccount"/>
+          <value class="compound">
+            <parts>
+              <value valueClass="string"> </value>
+              <variable>
+                <path element="Dealer"/>
+              </variable>
+            </parts>
           </value>
         </argument>
         <argument id="RecordTypeId">
