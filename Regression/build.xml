@@ -18,7 +18,7 @@
 </patternset>
 
 <patternset id="sprint.tests">
-    <include name="Sprints\**\*.*"/>
+    <include name="Sales\Product Pricing\**\*.*"/>
 </patternset>
 
 <target name="init">
