@@ -69,7 +69,7 @@
                   </value>
                 </argument>
                 <argument id="RecordTypeId">
-                  <value class="value" valueClass="string">ATC</value>
+                  <value class="value" valueClass="string">&lt;default&gt;</value>
                 </argument>
                 <argument id="Name">
                   <value class="value" valueClass="string">Crown KIA - ATC Media - Test Product Using Provar</value>
