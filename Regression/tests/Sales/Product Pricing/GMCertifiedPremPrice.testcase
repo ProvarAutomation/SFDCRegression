@@ -68,9 +68,6 @@
                     <path element="Dealer"/>
                   </value>
                 </argument>
-                <argument id="RecordTypeId">
-                  <value class="value" valueClass="string">&lt;default&gt;</value>
-                </argument>
                 <argument id="Name">
                   <value class="value" valueClass="string">ATC Media - Test Product Using Provar</value>
                 </argument>
@@ -126,7 +123,6 @@
               </parameterGeneratorProperties>
               <generatedParameters>
                 <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=AccountId" name="AccountId" title="AccountId"/>
-                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=RecordTypeId" name="RecordTypeId" title="RecordTypeId"/>
                 <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=Name" name="Name" title="Name">
                   <summary>set by the system, please do not modify</summary>
                 </apiParam>
