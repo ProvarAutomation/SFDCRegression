@@ -1,4 +1,4 @@
-<project xmlns:provar="antlib:com.provar.testrunner.ant" default="runtests">
+<project xmlns:provar="antlib:com.provar.testrunner.ant" default="run-all-tests">
 
 
 <property environment="env"/>
@@ -23,9 +23,6 @@
 
 <target name="init">
   <delete dir="${testproject.results}"/>
-</target>
-
-<target name="dummy">
 </target>
 
 <target name="run-all-tests" depends="init">
