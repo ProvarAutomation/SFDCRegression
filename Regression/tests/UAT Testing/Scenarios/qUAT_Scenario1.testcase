@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="10">
+<testCase id="2">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="11" title="Read Order Product List">
@@ -29,7 +29,9 @@
               <namedValue name="valuePath">
                 <value class="value" valueClass="string">Dealer</value>
               </namedValue>
-              <namedValue name="value"/>
+              <namedValue name="value">
+                <value class="value" valueClass="string">Jim Ellis Mazda of Atlanta</value>
+              </namedValue>
               <namedValue name="valueScope">
                 <value class="value" valueClass="string">Test</value>
               </namedValue>
@@ -70,7 +72,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="763" title="Salesforce Connect: SalesforceConnection (Test)">
       <arguments>
         <argument id="connectionName">
-          <value class="value" valueClass="string">QUATSalesUser</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="reuseConnectionName"/>
         <argument id="resultName">
@@ -82,7 +84,9 @@
         <argument id="alreadyOpenBehaviour">
           <value class="value" valueClass="string">Fail</value>
         </argument>
-        <argument id="uiApplicationName"/>
+        <argument id="uiApplicationName">
+          <value class="value"/>
+        </argument>
         <argument id="closeAllPrimaryTabs">
           <value class="value" valueClass="boolean">true</value>
         </argument>
@@ -122,7 +126,9 @@
         </argument>
         <argument id="ProductSelectionName"/>
         <argument id="DealerName">
-          <value class="value" valueClass="string">Jim Ellis Mazda of Atlanta</value>
+          <value class="variable">
+            <path element="Dealer"/>
+          </value>
         </argument>
         <argument id="Identifier">
           <value class="variable">
@@ -164,12 +170,16 @@
       <clauses>
         <clause name="substeps" testItemId="27">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexSoqlQuery" name="ApexSoqlQuery" testItemId="903" title="SOQL Query: SELECT Id FROM Opportunity WHERE Name = 'Crown KIA - ATC Media - {GeneratedProductName}'=&gt;OpportunityRows">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexSoqlQuery" name="ApexSoqlQuery" testItemId="903" title="SOQL Query: SELECT Id FROM Opportunity WHERE Name = '{Dealer} - ATC Media - {GeneratedProductName}'=&gt;OpportunityRows">
               <arguments>
                 <argument id="soqlQuery">
                   <value class="compound">
                     <parts>
-                      <value valueClass="string">SELECT Id FROM Opportunity WHERE Name = 'Crown KIA - ATC Media - </value>
+                      <value valueClass="string">SELECT Id FROM Opportunity WHERE Name = '</value>
+                      <variable>
+                        <path element="Dealer"/>
+                      </variable>
+                      <value valueClass="string"> - ATC Media - </value>
                       <variable>
                         <path element="GeneratedProductName"/>
                       </variable>
@@ -1736,6 +1746,7 @@
       </generatedParameters>
     </apiCall>
     <caseCall testCaseId="0011aeb2-74fd-4320-a9ac-1fc6389fe3b9" testItemId="910">
+      <tags/>
       <arguments>
         <argument id="reuseConnectionName">
           <value class="value" valueClass="string">SalesforceConnection</value>
@@ -2436,7 +2447,7 @@
           <value class="value" valueClass="string">On SF Opportunity view (ATC) screen</value>
         </argument>
         <argument id="navigate">
-          <value class="value" valueClass="string">IfNeccessary</value>
+          <value class="value" valueClass="string">Always</value>
         </argument>
         <argument id="windowSelection">
           <value class="value" valueClass="string">Default</value>
@@ -2649,14 +2660,14 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="791" title="On SF Order view (Order Master Layout) screen">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="791" title="On SF Order view screen">
       <tags/>
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">SalesforceConnection</value>
         </argument>
         <argument id="target">
-          <value class="uiTarget" uri="sf:ui:target?object=Order&amp;action=View&amp;recordType=Order+Master+Layout"/>
+          <value class="uiTarget" uri="sf:ui:target?object=Order&amp;action=View"/>
         </argument>
         <argument id="navigate">
           <value class="value" valueClass="string">Dont</value>
@@ -2665,7 +2676,7 @@
           <value class="value" valueClass="string">801190000009FLw</value>
         </argument>
         <argument id="targetDescription">
-          <value class="value" valueClass="string">On SF Order view (Order Master Layout) screen</value>
+          <value class="value" valueClass="string">On SF Order view screen</value>
         </argument>
         <argument id="windowSelection">
           <value class="value" valueClass="string">Default</value>

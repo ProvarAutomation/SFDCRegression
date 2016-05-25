@@ -286,7 +286,17 @@
         <connection name="Google">
           <summary>Google</summary>
           <connectionUrls>
-            <connectionUrl secureStorageNodeId="54461570-6689-4a66-ad85-1bf2ba796123" url="google:user=autotradertestuser@gmail.com;accessToken={accessToken};refreshToken={refreshToken};expiry=1459272722000;proxyHost=;proxyUser="/>
+            <connectionUrl secureStorageNodeId="54461570-6689-4a66-ad85-1bf2ba796123" url="google:user=autotradertestuser@gmail.com;accessToken={accessToken};refreshToken={refreshToken};expiry=1463493724000;proxyHost=;proxyUser="/>
+          </connectionUrls>
+        </connection>
+      </connections>
+    </connectionClass>
+    <connectionClass name="ui">
+      <connections>
+        <connection name="EchoSign">
+          <summary>EchoSign</summary>
+          <connectionUrls>
+            <connectionUrl url="se:baseUrl=http://www.echosign.com"/>
           </connectionUrls>
         </connection>
       </connections>

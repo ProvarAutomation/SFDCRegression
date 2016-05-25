@@ -81,7 +81,7 @@ public class OrderConfig {
 	public WebElement SitelinkUsedAdvanced;
 	@BooleanType()
 	@FindByLabel(label = "Sitelink Used Pro OPT IN", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
-	public WebElement SitelinkUsedProOptIn;
+	public WebElement SitelinkUsedProOPTIN;
 	@BooleanType()
 	@FindByLabel(label = "Sitelink Used Use Existing", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
 	public WebElement SitelinkUsedUseExisting;
@@ -541,25 +541,15 @@ public class OrderConfig {
 	@FindByLabel(label = "Leaderboard New Artwork", labelType = LabelType.PrecedingCell, qualifierXpath = "select")
 	public WebElement LeaderboardNewArtwork;
 	@ChoiceListType(values = {
-			@ChoiceListValue(value = "Use GM New Car Templates"),
-			@ChoiceListValue(value = "Use GM Used Car Templates") })
+			@ChoiceListValue(value = "Use GM New Car Templates"), @ChoiceListValue(value = "Use GM Used Car Templates") })
 	@FindByLabel(label = "Leaderboard New Artwork (Gm packages)", labelType = LabelType.PrecedingCell, qualifierXpath = "select")
 	public WebElement LeaderboardNewArtworkGmpackages;
 	@ChoiceListType(values = {
-			@ChoiceListValue(value = "Co-Op Pre-Approval Case"),
-			@ChoiceListValue(value = "Enclosed"),
-			@ChoiceListValue(value = "Make simple logo"),
-			@ChoiceListValue(value = "Sent EQS"),
-			@ChoiceListValue(value = "Use Co-op Template"),
-			@ChoiceListValue(value = "Use Dealer Site"),
-			@ChoiceListValue(value = "Use Existing"),
-			@ChoiceListValue(value = "Use GM New Car Templates"),
-			@ChoiceListValue(value = "Use GM Used Car Templates") })
+			@ChoiceListValue(value = "Co-Op Pre-Approval Case"), @ChoiceListValue(value = "Enclosed"), @ChoiceListValue(value = "Make simple logo"), @ChoiceListValue(value = "Sent EQS"), @ChoiceListValue(value = "Use Co-op Template"), @ChoiceListValue(value = "Use Dealer Site"), @ChoiceListValue(value = "Use Existing"), @ChoiceListValue(value = "Use GM New Car Templates"), @ChoiceListValue(value = "Use GM Used Car Templates") })
 	@FindByLabel(label = "Leaderboard Used Artwork", labelType = LabelType.PrecedingCell, qualifierXpath = "select")
 	public WebElement LeaderboardUsedArtwork;
 	@ChoiceListType(values = {
-			@ChoiceListValue(value = "Use GM New Car Templates"),
-			@ChoiceListValue(value = "Use GM Used Car Templates") })
+			@ChoiceListValue(value = "Use GM New Car Templates"), @ChoiceListValue(value = "Use GM Used Car Templates") })
 	@FindByLabel(label = "Leaderboard Used Artwork (GM Packages)", labelType = LabelType.PrecedingCell, qualifierXpath = "select")
 	public WebElement LeaderboardUsedArtworkGMPackages;
 	@ChoiceListType(values = {
@@ -689,7 +679,7 @@ public class OrderConfig {
 	public WebElement LeaderboardNewCoOpPreApprovalCase;
 	@TextType()
 	@FindByLabel(label = "Leaderboard Used Click-thru URL", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
-	public WebElement LeaderboardUsedClickThruURL;
+	public WebElement LeaderboardUsedClickthruURL;
 	@TextType()
 	@FindByLabel(label = "Leaderboard Used Co-Op Pre-Approval Case", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
 	public WebElement LeaderboardUsedCoOpPreApprovalCase;
