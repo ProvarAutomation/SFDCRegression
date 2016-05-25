@@ -178,10 +178,10 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.messaging.Subscribe" name="Subscribe" testItemId="117" title="Subscribe: Email">
+            <apiCall apiId="com.provar.plugins.bundled.apis.messaging.Subscribe" name="Subscribe" testItemId="117" title="Subscribe: Google">
               <arguments>
                 <argument id="sourceConnectionName">
-                  <value class="value" valueClass="string">Email</value>
+                  <value class="value" valueClass="string">Google</value>
                 </argument>
                 <argument id="resultName">
                   <value class="value" valueClass="string">Email</value>

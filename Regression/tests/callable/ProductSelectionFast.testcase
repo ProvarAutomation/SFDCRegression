@@ -419,7 +419,9 @@
                                   <value class="value" valueClass="string">Set the Net Billing Amount field to {1000}</value>
                                 </argument>
                                 <argument id="wait"/>
-                                <argument id="captureBefore"/>
+                                <argument id="captureBefore">
+                                  <value class="value" valueClass="boolean">true</value>
+                                </argument>
                                 <argument id="captureAfter"/>
                                 <argument id="value">
                                   <value class="value" valueClass="decimal">1000</value>
@@ -427,6 +429,11 @@
                                 <argument id="blur"/>
                                 <argument id="pressEnter"/>
                               </arguments>
+                              <expectedExceptions>
+                                <expectedException comparisonType="Contains" title="Error">
+                                  <assertionValue class="value" valueClass="string">Error</assertionValue>
+                                </expectedException>
+                              </expectedExceptions>
                               <generatedParameters>
                                 <apiParam group="value" modelBinding="sf:ui:binding:object?object=OpportunityLineItem&amp;field=NBA_Amount__c" name="value" seq="10000" title="Value">
                                   <summary>The value to be populated.</summary>

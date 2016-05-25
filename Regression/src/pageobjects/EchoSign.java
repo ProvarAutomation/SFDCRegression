@@ -8,7 +8,7 @@ import com.provar.core.testapi.annotations.*;
 @Page( title="EchoSign"                                
      , summary=""
      , relativeUrl=""
-     , connection="Jason_Stage"
+     , connection="JasonJohn"
      )             
 public class EchoSign {
 
@@ -50,8 +50,9 @@ public class EchoSign {
 	@TextType()
 	@FindByLabel(label = "DBA Name", labelType = LabelType.PrecedingCell, qualifierXpath = "/td[1]")
 	public WebElement DBAName;
+	@PageWait.Timed(durationSeconds = 10)
+	@FindBy(css = "div.faux_field")
 	@LinkType()
-	@FindBy(xpath = "//*[@id=\"document\"]/ul/li/div[1]/div[3]")
 	public WebElement DealershipAuthorizedSignature;
 			
 }
