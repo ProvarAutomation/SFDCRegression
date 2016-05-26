@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="1">
+<testCase id="2">
   <summary/>
   <steps>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="71" title="Salesforce Connect: ServiceUser (Test)">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="83" title="Salesforce Connect: ServiceUser (Test)">
       <arguments>
         <argument id="connectionName">
-          <value class="value" valueClass="string">wefhjk</value>
+          <value class="value" valueClass="string">ServiceTestUser</value>
         </argument>
         <argument id="reuseConnectionName"/>
         <argument id="resultName">
@@ -17,7 +17,9 @@
         <argument id="alreadyOpenBehaviour">
           <value class="value" valueClass="string">Fail</value>
         </argument>
-        <argument id="uiApplicationName"/>
+        <argument id="uiApplicationName">
+          <value class="value"/>
+        </argument>
         <argument id="closeAllPrimaryTabs">
           <value class="value" valueClass="boolean">true</value>
         </argument>
@@ -37,87 +39,35 @@
         <argument id="securityToken"/>
       </arguments>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="76" title="Create Object: Case=&gt;CaseId">
+    <caseCall testCaseId="092b89d3-99ff-4505-b853-7998e6742542" testItemId="77">
       <arguments>
-        <argument id="objectType">
-          <value class="value" valueClass="string">Case</value>
-        </argument>
-        <argument id="resultIdName">
-          <value class="value" valueClass="string">CaseId</value>
-        </argument>
-        <argument id="apexConnectionName">
+        <argument id="reuseConnectionName">
           <value class="value" valueClass="string">ServiceUser</value>
         </argument>
-        <argument id="AccountId">
-          <value class="variable">
-            <path element="CrownKiaAccount"/>
-          </value>
-        </argument>
-        <argument id="RecordTypeId">
-          <value class="value" valueClass="string">ATC Dealer Service</value>
-        </argument>
-        <argument id="Status">
-          <value class="value" valueClass="string">Work In Progress</value>
-        </argument>
-        <argument id="Origin">
-          <value class="value" valueClass="string">Phone</value>
-        </argument>
-        <argument id="Subject">
-          <value class="value" valueClass="string">Dealer Account Issue</value>
-        </argument>
-        <argument id="Priority">
-          <value class="value" valueClass="string">Low</value>
-        </argument>
-        <argument id="Description">
-          <value class="value" valueClass="string">sdf</value>
-        </argument>
-        <argument id="ATC_Sub_Reason__c">
-          <value class="value" valueClass="string">Other - Reseller</value>
-        </argument>
-        <argument id="ATC_Case_Reason__c">
-          <value class="value" valueClass="string">CDG Customer Create</value>
-        </argument>
-        <argument id="Last_Touch_Point__c">
-          <value class="value" valueClass="date">1449514559000</value>
-        </argument>
-        <argument id="assignmentRuleId"/>
-        <argument id="resultScope">
-          <value class="value" valueClass="string">Test</value>
-        </argument>
       </arguments>
-      <parameterGeneratorProperties>
-        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.ConnectionName">ServiceTestUser</propertyValue>
-        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.CustomObjectName">Case</propertyValue>
-      </parameterGeneratorProperties>
-      <generatedParameters>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Case&amp;field=AccountId" name="AccountId" title="AccountId"/>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Case&amp;field=RecordTypeId" name="RecordTypeId" title="RecordTypeId"/>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Case&amp;field=Status" name="Status" title="Status"/>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Case&amp;field=Origin" name="Origin" title="Origin"/>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Case&amp;field=Subject" name="Subject" title="Subject"/>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Case&amp;field=Priority" name="Priority" title="Priority"/>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Case&amp;field=Description" name="Description" title="Description"/>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Case&amp;field=ATC_Sub_Reason__c" name="ATC_Sub_Reason__c" title="ATC_Sub_Reason__c"/>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Case&amp;field=ATC_Case_Reason__c" name="ATC_Case_Reason__c" title="ATC_Case_Reason__c"/>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Case&amp;field=Last_Touch_Point__c" name="Last_Touch_Point__c" title="Last_Touch_Point__c"/>
-      </generatedParameters>
-    </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="7" title="On SF Case edit screen">
+    </caseCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="78" title="On SF Case view screen">
+      <tags/>
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">ServiceUser</value>
         </argument>
         <argument id="target">
-          <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=Edit"/>
+          <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=View"/>
         </argument>
         <argument id="navigate">
-          <value class="value" valueClass="string">Always</value>
+          <value class="value" valueClass="string">Dont</value>
         </argument>
         <argument id="scTabType">
           <value class="value" valueClass="string">CurrentTab</value>
         </argument>
+        <argument id="sfUiTargetObjectId">
+          <value class="variable">
+            <path element="CaseId"/>
+          </value>
+        </argument>
         <argument id="targetDescription">
-          <value class="value" valueClass="string">On SF Case edit screen</value>
+          <value class="value" valueClass="string">On SF Case view screen</value>
         </argument>
         <argument id="windowSelection">
           <value class="value" valueClass="string">Default</value>
@@ -128,16 +78,36 @@
         <argument id="closeWindow"/>
         <argument id="captureBefore"/>
         <argument id="captureAfter"/>
-        <argument id="uiTargetUrl"/>
-        <argument id="sfUiTargetObjectId">
-          <value class="variable">
-            <path element="CaseId"/>
-          </value>
-        </argument>
       </arguments>
       <clauses>
-        <clause name="substeps" testItemId="8">
-          <steps/>
+        <clause name="substeps" testItemId="56">
+          <steps>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="85" title="Click the Emails Send an Email button">
+              <arguments>
+                <argument id="locator">
+                  <value class="uiLocator" uri="ui:locator?name=newEmail&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26action%3DnewEmail%26relationship%3DEmailMessages"/>
+                </argument>
+                <argument id="interaction">
+                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                </argument>
+                <argument id="interactionDescription">
+                  <value class="value" valueClass="string">Click the Emails Send an Email button</value>
+                </argument>
+                <argument id="wait"/>
+                <argument id="captureBefore"/>
+                <argument id="captureAfter"/>
+                <argument id="hover"/>
+              </arguments>
+              <generatedParameters>
+                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
+                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                  <type>
+                    <booleanType/>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+          </steps>
         </clause>
       </clauses>
       <generatedParameters>
@@ -283,6 +253,15 @@
         <argument id="targetDescription">
           <value class="value" valueClass="string">On SF File Picker screen</value>
         </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore"/>
+        <argument id="captureAfter"/>
       </arguments>
       <clauses>
         <clause name="substeps" testItemId="27">
@@ -296,7 +275,7 @@
                   <value class="uiInteraction" uri="ui:interaction?name=file"/>
                 </argument>
                 <argument id="fileLocation">
-                  <value class="value" valueClass="string">/src/tesr.txt</value>
+                  <value class="value" valueClass="string">/templates/testfile.txt</value>
                 </argument>
                 <argument id="fileContents"/>
                 <argument id="captureBefore">
@@ -390,31 +369,7 @@
           </steps>
         </clause>
       </clauses>
-      <generatedParameters>
-        <apiParam group="target" name="scTabType" seq="1000" title="Tab Type">
-          <summary>The tab type for Scaffolds</summary>
-          <type>
-            <choiceType>
-              <constraints>
-                <valueConstraint name="valuesSource">com.provar.plugins.sf.eclipse.ui:com.provar.plugins.forcedotcom.ui.valuesources.SfEnumChoiceListValuesSource</valueConstraint>
-                <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
-              </constraints>
-            </choiceType>
-          </type>
-        </apiParam>
-        <apiParam group="target" name="scPrimaryTabName" seq="1001" title="Primary Tab Name">
-          <summary>The main tab name</summary>
-          <type>
-            <textType/>
-          </type>
-        </apiParam>
-        <apiParam group="target" name="scSecondaryTabName" seq="1002" title="Secondary Tab Name">
-          <summary>The sub-tab name</summary>
-          <type>
-            <textType/>
-          </type>
-        </apiParam>
-      </generatedParameters>
+      <generatedParameters/>
     </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="31" title="On SF Send an Email screen">
       <arguments>
@@ -502,6 +457,15 @@
         <argument id="targetDescription">
           <value class="value" valueClass="string">On SF Contact lookup screen</value>
         </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore"/>
+        <argument id="captureAfter"/>
       </arguments>
       <clauses>
         <clause name="substeps" testItemId="35">
@@ -509,7 +473,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="36" title="Click the Full Name button">
               <arguments>
                 <argument id="locator">
-                  <value class="uiLocator" uri="ui:locator?name=Name&amp;path=resultsFrame%2FresultsTable%2FresultsRow&amp;rowLocator=Name+%3D+%27Diane+Williamson%27"/>
+                  <value class="uiLocator" uri="ui:locator?name=Name&amp;path=resultsFrame%2FresultsTable%2FresultsRow&amp;rowLocator=Name+%3D+%27Test+Contact%27"/>
                 </argument>
                 <argument id="interaction">
                   <value class="uiInteraction" uri="ui:interaction?name=action"/>
@@ -529,7 +493,7 @@
                 <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" name="hover" title="Hover before Clicking">
+                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
                   <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                   <type>
                     <booleanType/>
@@ -540,31 +504,7 @@
           </steps>
         </clause>
       </clauses>
-      <generatedParameters>
-        <apiParam group="target" name="scTabType" seq="1000" title="Tab Type">
-          <summary>The tab type for Scaffolds</summary>
-          <type>
-            <choiceType>
-              <constraints>
-                <valueConstraint name="valuesSource">com.provar.plugins.sf.eclipse.ui:com.provar.plugins.forcedotcom.ui.valuesources.SfEnumChoiceListValuesSource</valueConstraint>
-                <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
-              </constraints>
-            </choiceType>
-          </type>
-        </apiParam>
-        <apiParam group="target" name="scPrimaryTabName" seq="1001" title="Primary Tab Name">
-          <summary>The main tab name</summary>
-          <type>
-            <textType/>
-          </type>
-        </apiParam>
-        <apiParam group="target" name="scSecondaryTabName" seq="1002" title="Secondary Tab Name">
-          <summary>The sub-tab name</summary>
-          <type>
-            <textType/>
-          </type>
-        </apiParam>
-      </generatedParameters>
+      <generatedParameters/>
     </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="37" title="On SF Send an Email screen">
       <arguments>
@@ -1056,9 +996,9 @@
         </argument>
       </arguments>
       <clauses>
-        <clause name="substeps" testItemId="56">
+        <clause name="substeps" testItemId="79">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="57" title="Lookup the Look Up">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="80" title="Lookup the Look Up">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:pageobject:field?field=LookUp&amp;pageId=pageobjects.CaseView"/>
@@ -1094,7 +1034,7 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="58" title="On SF User lookup screen">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="81" title="On SF User lookup screen">
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">ServiceUser</value>
@@ -1124,12 +1064,12 @@
         <argument id="captureAfter"/>
       </arguments>
       <clauses>
-        <clause name="substeps" testItemId="59">
+        <clause name="substeps" testItemId="82">
           <steps>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="73" title="Click the Full Name button">
               <arguments>
                 <argument id="locator">
-                  <value class="uiLocator" uri="ui:locator?name=Name&amp;path=resultsFrame%2FresultsTable%2FresultsRow&amp;rowLocator=Name+%3D+%27Diane+Williamson%27"/>
+                  <value class="uiLocator" uri="ui:locator?name=Name&amp;path=resultsFrame%2FresultsTable%2FresultsRow&amp;rowLocator=Name+%3D+%27Service+Test+User+1%27"/>
                 </argument>
                 <argument id="interaction">
                   <value class="uiInteraction" uri="ui:interaction?name=action"/>
@@ -1346,6 +1286,9 @@
                         </argument>
                         <argument id="captureAfter">
                           <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="columnAssertions">
+                          <value class="valueList" mutable="Mutable"/>
                         </argument>
                       </arguments>
                     </apiCall>
