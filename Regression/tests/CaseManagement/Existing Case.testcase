@@ -231,7 +231,7 @@
           <value class="value" valueClass="string">ServiceUser</value>
         </argument>
         <argument id="target">
-          <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=Edit&amp;recordType=ATC+Dealer+Service&amp;consoleTabType=CurrentTab"/>
+          <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=Edit&amp;recordType=ATC+Dealer+Service"/>
         </argument>
         <argument id="navigate">
           <value class="value" valueClass="string">Dont</value>
@@ -245,6 +245,15 @@
         <argument id="targetDescription">
           <value class="value" valueClass="string">On SF Case edit (ATC Dealer Service) screen</value>
         </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore"/>
+        <argument id="captureAfter"/>
       </arguments>
       <clauses>
         <clause name="substeps" testItemId="15">

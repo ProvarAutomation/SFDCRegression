@@ -6,7 +6,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="173" title="Salesforce Connect: QUATSalesUser (Test)">
       <arguments>
         <argument id="connectionName">
-          <value class="value" valueClass="string">QUATSalesUser</value>
+          <value class="value" valueClass="string">BradWeber</value>
         </argument>
         <argument id="resultName">
           <value class="value" valueClass="string">QUATSalesUser</value>

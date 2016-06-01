@@ -1,4 +1,5 @@
-# Git Ignor
+# Git Ignore
 /provarAnt
 /.settings
 /.metadata
+/Regression/bin
