@@ -81,5 +81,8 @@ public class AccountOverview {
 	@LinkType()
 	@FindBy(linkText = "Opportunities")
 	public WebElement opportunities;
+	@LinkType()
+	@FindBy(linkText = "Back to ATC Service Console")
+	public WebElement BackToATCServiceConsole;
 			
 }

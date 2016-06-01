@@ -89,12 +89,25 @@
               <resultAssertions>
                 <resultAssertion comparisonType="IsPresent" negative="true" resultName="field__ATC_Collection_Status__c" title="Check ATC_Collection_Status__c value"/>
                 <resultAssertion comparisonType="IsPresent" negative="true" resultName="field__ATC_Security_Question__c" title="Check ATC_Security_Question__c value"/>
+                <resultAssertion resultName="field__Current_AC__c" title="Check Current_AC__c value">
+                  <expected class="value" valueClass="string">Jeff Shuker</expected>
+                </resultAssertion>
               </resultAssertions>
               <parameterGeneratorProperties>
                 <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.UiReadTestStepCommand.ConnectionName">ServiceTestUser</propertyValue>
                 <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.UiReadTestStepCommand.CustomObjectName"/>
               </parameterGeneratorProperties>
               <generatedParameters>
+                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Current_AC__c" name="field__Current_AC__c" title="Current AC">
+                  <type>
+                    <textType>
+                      <constraints>
+                        <valueConstraint name="maxLength">150</valueConstraint>
+                        <valueConstraint name="maxLines">1</valueConstraint>
+                      </constraints>
+                    </textType>
+                  </type>
+                </apiParam>
                 <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=ATC_Collection_Status__c" name="field__ATC_Collection_Status__c" title="ATC Collection Status">
                   <summary>ATC</summary>
                   <type>
