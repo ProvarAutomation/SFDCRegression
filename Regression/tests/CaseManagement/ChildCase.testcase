@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="21">
+<testCase id="0">
   <summary>undefined</summary>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: ServiceUser (Test)">
@@ -43,7 +43,7 @@
       <tags/>
       <arguments>
         <argument id="reuseConnectionName">
-          <value class="value" valueClass="string">ServiceTestUser</value>
+          <value class="value" valueClass="string">ServiceUser</value>
         </argument>
       </arguments>
     </caseCall>
@@ -1715,7 +1715,5 @@
       </generatedParameters>
     </apiCall>
   </steps>
-  <tags>
-    <string>disabled</string>
-  </tags>
+  <tags/>
 </testCase>
