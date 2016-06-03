@@ -451,21 +451,27 @@
                 <argument id="interactionDescription">
                   <value class="value" valueClass="string">Set the ATC Case Reason picklist to Dealer Account</value>
                 </argument>
+                <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" name="value" title="Value">
+                <apiParam group="value" modelBinding="sf:ui:binding:object?object=Case&amp;field=ATC_Case_Reason__c" name="value" seq="10000" title="Value">
                   <summary>The value to be populated.</summary>
                   <type>
-                    <textType/>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="boundedValues">Applications:Applications|CDG Customer Create:CDG Customer Create|CDG Customer Maintain:CDG Customer Maintain|Co-Op - Dealer Activity:Co-Op - Dealer Activity|Corporate Affairs:Corporate Affairs|Credit Memo:Credit Memo|Dealer Account:Dealer Account|Dealer Products:Dealer Products|Inventory:Inventory|KBB Ops - Dealer Information:KBB Ops - Dealer Information|KBB Ops - Sales Order:KBB Ops - Sales Order|KBB Showcase Graphics:KBB Showcase Graphics|Non Service Related (Call Routing):Non Service Related (Call Routing)|Sales Order:Sales Order|Trade-In Marketplace:Trade-In Marketplace</valueConstraint>
+                        <valueConstraint name="unrestricted">true</valueConstraint>
+                      </constraints>
+                    </choiceType>
                   </type>
                 </apiParam>
-                <apiParam group="value" name="blur" title="Tab off field">
+                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
                   <summary>Whether the tab key should be pressed after the value is populated.</summary>
                   <type>
                     <booleanType/>
                   </type>
                 </apiParam>
-                <apiParam group="value" name="pressEnter" title="Press Enter">
+                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
                   <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                   <type>
                     <booleanType/>
