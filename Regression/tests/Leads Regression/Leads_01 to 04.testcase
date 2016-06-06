@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="9">
+<testCase id="4">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="2" title="AC - Adam Grill">
@@ -1871,7 +1871,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="101" title="Click the Convert button">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=Convert&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DLead%26action%3DConvert"/>
+                          <value class="uiLocator" uri="ui:locator?name=CustomConvert&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DLead%26action%3DCustomConvert"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=action"/>
@@ -1994,7 +1994,7 @@
                         </apiParam>
                       </generatedParameters>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="104" title="Set the Task Subject control to New Test Lead">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="104" title="Set the Task Subject field to New Test Lead">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=taskSubject&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DTask%26field%3DSubject"/>
@@ -2018,24 +2018,24 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Task Subject control to New Test Lead</value>
+                          <value class="value" valueClass="string">Set the Task Subject field to New Test Lead</value>
                         </argument>
                         <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" modelBinding="sf:ui:binding:object?object=Task&amp;field=Subject" name="value" title="Value">
+                        <apiParam group="value" modelBinding="sf:ui:binding:object?object=Task&amp;field=Subject" name="value" seq="10000" title="Value">
                           <summary>The value to be populated.</summary>
                           <type>
                             <textType/>
                           </type>
                         </apiParam>
-                        <apiParam group="value" name="blur" title="Tab off field">
+                        <apiParam group="value" name="blur" seq="10001" title="Tab off field">
                           <summary>Whether the tab key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
                           </type>
                         </apiParam>
-                        <apiParam group="value" name="pressEnter" title="Press Enter">
+                        <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
                           <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
@@ -2843,7 +2843,7 @@
                         </apiParam>
                       </generatedParameters>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="194" title="Set the Business_ Type__c to Affiliate Network">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="194" title="Set the Business_ Type__c to Dealership">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:pageobject:field?field=Business_Type__c&amp;pageId=pageobjects.LeadNew"/>
@@ -2852,7 +2852,7 @@
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">Affiliate Network</value>
+                          <value class="value" valueClass="string">Dealership</value>
                         </argument>
                         <argument id="blur">
                           <value class="value" valueClass="boolean">false</value>
@@ -2867,12 +2867,12 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Business_ Type__c to Affiliate Network</value>
+                          <value class="value" valueClass="string">Set the Business_ Type__c to Dealership</value>
                         </argument>
                         <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="value" title="Value">
+                        <apiParam group="value" name="value" seq="10000" title="Value">
                           <summary>The value to be populated.</summary>
                           <type>
                             <choiceType>
@@ -2882,13 +2882,13 @@
                             </choiceType>
                           </type>
                         </apiParam>
-                        <apiParam group="value" name="blur" title="Tab off field">
+                        <apiParam group="value" name="blur" seq="10001" title="Tab off field">
                           <summary>Whether the tab key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
                           </type>
                         </apiParam>
-                        <apiParam group="value" name="pressEnter" title="Press Enter">
+                        <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
                           <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
@@ -2897,6 +2897,9 @@
                       </generatedParameters>
                     </apiCall>
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="195" title="Set the Business_ Size__c to Small">
+                      <tags>
+                        <string>disabled</string>
+                      </tags>
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:pageobject:field?field=Business_Size__c&amp;pageId=pageobjects.LeadNew"/>
@@ -2922,21 +2925,26 @@
                         <argument id="interactionDescription">
                           <value class="value" valueClass="string">Set the Business_ Size__c to Small</value>
                         </argument>
+                        <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="value" title="Value">
+                        <apiParam group="value" name="value" seq="10000" title="Value">
                           <summary>The value to be populated.</summary>
                           <type>
-                            <textType/>
+                            <choiceType>
+                              <constraints>
+                                <valueConstraint name="boundedValues">Small|Medium|Large</valueConstraint>
+                              </constraints>
+                            </choiceType>
                           </type>
                         </apiParam>
-                        <apiParam group="value" name="blur" title="Tab off field">
+                        <apiParam group="value" name="blur" seq="10001" title="Tab off field">
                           <summary>Whether the tab key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
                           </type>
                         </apiParam>
-                        <apiParam group="value" name="pressEnter" title="Press Enter">
+                        <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
                           <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
@@ -3956,6 +3964,9 @@
                       </generatedParameters>
                     </apiCall>
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="217" title="Set the Monthly Sales Volume to 1000">
+                      <tags>
+                        <string>disabled</string>
+                      </tags>
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:pageobject:field?field=MonthlySalesVolume&amp;pageId=pageobjects.LeadNew"/>
@@ -3984,7 +3995,7 @@
                         <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="value" title="Value">
+                        <apiParam group="value" name="value" seq="10000" title="Value">
                           <summary>The value to be populated.</summary>
                           <type>
                             <textType>
@@ -3994,13 +4005,13 @@
                             </textType>
                           </type>
                         </apiParam>
-                        <apiParam group="value" name="blur" title="Tab off field">
+                        <apiParam group="value" name="blur" seq="10001" title="Tab off field">
                           <summary>Whether the tab key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
                           </type>
                         </apiParam>
-                        <apiParam group="value" name="pressEnter" title="Press Enter">
+                        <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
                           <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
@@ -4083,7 +4094,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="221" title="Click the Convert button">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=Convert&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DLead%26action%3DConvert"/>
+                          <value class="uiLocator" uri="ui:locator?name=CustomConvert&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DLead%26action%3DCustomConvert"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=action"/>
@@ -4100,9 +4111,10 @@
                         <argument id="interactionDescription">
                           <value class="value" valueClass="string">Click the Convert button</value>
                         </argument>
+                        <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="hover" title="Hover before Clicking">
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
                           <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                           <type>
                             <booleanType/>
@@ -5039,7 +5051,7 @@
                         </apiParam>
                       </generatedParameters>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="310" title="Set the Business_ Type__c to Affiliate Network">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="310" title="Set the Business_ Type__c to Dealership">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:pageobject:field?field=Business_Type__c&amp;pageId=pageobjects.LeadNew"/>
@@ -5048,7 +5060,7 @@
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">Affiliate Network</value>
+                          <value class="value" valueClass="string">Dealership</value>
                         </argument>
                         <argument id="blur">
                           <value class="value" valueClass="boolean">false</value>
@@ -5063,12 +5075,12 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Business_ Type__c to Affiliate Network</value>
+                          <value class="value" valueClass="string">Set the Business_ Type__c to Dealership</value>
                         </argument>
                         <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="value" title="Value">
+                        <apiParam group="value" name="value" seq="10000" title="Value">
                           <summary>The value to be populated.</summary>
                           <type>
                             <choiceType>
@@ -5078,13 +5090,13 @@
                             </choiceType>
                           </type>
                         </apiParam>
-                        <apiParam group="value" name="blur" title="Tab off field">
+                        <apiParam group="value" name="blur" seq="10001" title="Tab off field">
                           <summary>Whether the tab key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
                           </type>
                         </apiParam>
-                        <apiParam group="value" name="pressEnter" title="Press Enter">
+                        <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
                           <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
@@ -5093,6 +5105,9 @@
                       </generatedParameters>
                     </apiCall>
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="311" title="Set the Business_ Size__c to Small">
+                      <tags>
+                        <string>disabled</string>
+                      </tags>
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:pageobject:field?field=Business_Size__c&amp;pageId=pageobjects.LeadNew"/>
@@ -5118,21 +5133,26 @@
                         <argument id="interactionDescription">
                           <value class="value" valueClass="string">Set the Business_ Size__c to Small</value>
                         </argument>
+                        <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="value" title="Value">
+                        <apiParam group="value" name="value" seq="10000" title="Value">
                           <summary>The value to be populated.</summary>
                           <type>
-                            <textType/>
+                            <choiceType>
+                              <constraints>
+                                <valueConstraint name="boundedValues">Small|Medium|Large</valueConstraint>
+                              </constraints>
+                            </choiceType>
                           </type>
                         </apiParam>
-                        <apiParam group="value" name="blur" title="Tab off field">
+                        <apiParam group="value" name="blur" seq="10001" title="Tab off field">
                           <summary>Whether the tab key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
                           </type>
                         </apiParam>
-                        <apiParam group="value" name="pressEnter" title="Press Enter">
+                        <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
                           <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
@@ -6152,6 +6172,9 @@
                       </generatedParameters>
                     </apiCall>
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="333" title="Set the Monthly Sales Volume to 1000">
+                      <tags>
+                        <string>disabled</string>
+                      </tags>
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:pageobject:field?field=MonthlySalesVolume&amp;pageId=pageobjects.LeadNew"/>
@@ -6180,7 +6203,7 @@
                         <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="value" title="Value">
+                        <apiParam group="value" name="value" seq="10000" title="Value">
                           <summary>The value to be populated.</summary>
                           <type>
                             <textType>
@@ -6190,13 +6213,13 @@
                             </textType>
                           </type>
                         </apiParam>
-                        <apiParam group="value" name="blur" title="Tab off field">
+                        <apiParam group="value" name="blur" seq="10001" title="Tab off field">
                           <summary>Whether the tab key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
                           </type>
                         </apiParam>
-                        <apiParam group="value" name="pressEnter" title="Press Enter">
+                        <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
                           <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
@@ -6296,9 +6319,10 @@
                         <argument id="interactionDescription">
                           <value class="value" valueClass="string">Click the Convert button</value>
                         </argument>
+                        <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="hover" title="Hover before Clicking">
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
                           <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                           <type>
                             <booleanType/>
@@ -7234,7 +7258,7 @@
                         </apiParam>
                       </generatedParameters>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="426" title="Set the Business_ Type__c to Affiliate Network">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="426" title="Set the Business_ Type__c to Dealership">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:pageobject:field?field=Business_Type__c&amp;pageId=pageobjects.LeadNew"/>
@@ -7243,7 +7267,7 @@
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">Affiliate Network</value>
+                          <value class="value" valueClass="string">Dealership</value>
                         </argument>
                         <argument id="blur">
                           <value class="value" valueClass="boolean">false</value>
@@ -7258,12 +7282,12 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Business_ Type__c to Affiliate Network</value>
+                          <value class="value" valueClass="string">Set the Business_ Type__c to Dealership</value>
                         </argument>
                         <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="value" title="Value">
+                        <apiParam group="value" name="value" seq="10000" title="Value">
                           <summary>The value to be populated.</summary>
                           <type>
                             <choiceType>
@@ -7273,13 +7297,13 @@
                             </choiceType>
                           </type>
                         </apiParam>
-                        <apiParam group="value" name="blur" title="Tab off field">
+                        <apiParam group="value" name="blur" seq="10001" title="Tab off field">
                           <summary>Whether the tab key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
                           </type>
                         </apiParam>
-                        <apiParam group="value" name="pressEnter" title="Press Enter">
+                        <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
                           <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
@@ -7288,6 +7312,9 @@
                       </generatedParameters>
                     </apiCall>
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="427" title="Set the Business_ Size__c to Small">
+                      <tags>
+                        <string>disabled</string>
+                      </tags>
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:pageobject:field?field=Business_Size__c&amp;pageId=pageobjects.LeadNew"/>
@@ -7313,21 +7340,26 @@
                         <argument id="interactionDescription">
                           <value class="value" valueClass="string">Set the Business_ Size__c to Small</value>
                         </argument>
+                        <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="value" title="Value">
+                        <apiParam group="value" name="value" seq="10000" title="Value">
                           <summary>The value to be populated.</summary>
                           <type>
-                            <textType/>
+                            <choiceType>
+                              <constraints>
+                                <valueConstraint name="boundedValues">Small|Medium|Large</valueConstraint>
+                              </constraints>
+                            </choiceType>
                           </type>
                         </apiParam>
-                        <apiParam group="value" name="blur" title="Tab off field">
+                        <apiParam group="value" name="blur" seq="10001" title="Tab off field">
                           <summary>Whether the tab key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
                           </type>
                         </apiParam>
-                        <apiParam group="value" name="pressEnter" title="Press Enter">
+                        <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
                           <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
@@ -8347,6 +8379,9 @@
                       </generatedParameters>
                     </apiCall>
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="449" title="Set the Monthly Sales Volume to 1000">
+                      <tags>
+                        <string>disabled</string>
+                      </tags>
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:pageobject:field?field=MonthlySalesVolume&amp;pageId=pageobjects.LeadNew"/>
@@ -8375,7 +8410,7 @@
                         <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="value" title="Value">
+                        <apiParam group="value" name="value" seq="10000" title="Value">
                           <summary>The value to be populated.</summary>
                           <type>
                             <textType>
@@ -8385,13 +8420,13 @@
                             </textType>
                           </type>
                         </apiParam>
-                        <apiParam group="value" name="blur" title="Tab off field">
+                        <apiParam group="value" name="blur" seq="10001" title="Tab off field">
                           <summary>Whether the tab key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
                           </type>
                         </apiParam>
-                        <apiParam group="value" name="pressEnter" title="Press Enter">
+                        <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
                           <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
@@ -8474,7 +8509,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="453" title="Click the Convert button">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=Convert&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DLead%26action%3DConvert"/>
+                          <value class="uiLocator" uri="ui:locator?name=CustomConvert&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DLead%26action%3DCustomConvert"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=action"/>
@@ -8491,9 +8526,10 @@
                         <argument id="interactionDescription">
                           <value class="value" valueClass="string">Click the Convert button</value>
                         </argument>
+                        <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="hover" title="Hover before Clicking">
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
                           <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                           <type>
                             <booleanType/>
