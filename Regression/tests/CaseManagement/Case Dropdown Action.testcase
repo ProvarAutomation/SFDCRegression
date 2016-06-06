@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="5">
+<testCase id="18">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="13" title="Grab excel values">
@@ -69,6 +69,7 @@
                 <argument id="environment">
                   <value class="value" valueClass="string">SANDBOX</value>
                 </argument>
+                <argument id="securityToken"/>
               </arguments>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="20" title="On SF Case list screen">
@@ -161,4 +162,7 @@
       <value class="value" valueClass="string">pamela.barksdale@atgdealer.atg.qa</value>
     </argument>
   </args>
+  <tags>
+    <string>disabled</string>
+  </tags>
 </testCase>

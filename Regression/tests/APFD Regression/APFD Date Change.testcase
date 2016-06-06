@@ -40,7 +40,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="2" title="On SF Contract view (ATC Contract) screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">Admin</value>
+          <value class="value" valueClass="string">DOFSalesUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Contract&amp;action=View&amp;recordType=ATC+Contract"/>
@@ -105,4 +105,7 @@
       </generatedParameters>
     </apiCall>
   </steps>
+  <tags>
+    <string>disabled</string>
+  </tags>
 </testCase>
