@@ -81,7 +81,7 @@ public class OrderConfig {
 	public WebElement SitelinkUsedAdvanced;
 	@BooleanType()
 	@FindByLabel(label = "Sitelink Used Pro OPT IN", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
-	public WebElement SitelinkUsedProOPTIN;
+	public WebElement SitelinkUsedProOptIN;
 	@BooleanType()
 	@FindByLabel(label = "Sitelink Used Use Existing", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
 	public WebElement SitelinkUsedUseExisting;

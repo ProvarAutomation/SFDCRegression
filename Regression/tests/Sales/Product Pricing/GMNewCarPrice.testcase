@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="17">
-  <summary>5/11/16 - PreProd -</summary>
+<testCase id="1">
+  <summary>&lt;p&gt;manual run - 6/6/16 - PreProd&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;FAIL&lt;/strong&gt; - GM Front-line pro issue&lt;/p&gt;</summary>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="323" title="Create Opp">
       <arguments>

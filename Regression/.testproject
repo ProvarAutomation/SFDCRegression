@@ -277,6 +277,7 @@
             <connectionUrl url="sf:user=brad.weber@autotrader.com.prod.stage;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="PreProd" url="sf:user=brad.weber@autotrader.com.prod.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="Stage" url="sf:user=brad.weber@autotrader.com.prod.stage;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="Quoting" url="sf:user=brad.weber@autotrader.com.prod.quoting;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
       </connections>

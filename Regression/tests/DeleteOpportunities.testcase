@@ -39,10 +39,10 @@
         <argument id="environment"/>
       </arguments>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexSoqlQuery" name="ApexSoqlQuery" testItemId="4" title="SOQL Query: select AccountId\n    ,CreatedById\n    ,Id from Opportunity where CreatedById = '005E00000073fX6'=&gt;OpportunityRows">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexSoqlQuery" name="ApexSoqlQuery" testItemId="4" title="SOQL Query: select AccountId\n    ,CreatedById\n    ,Id from Opportunity where AccountId = '001E000000MZN0B' and CreatedById = '0051b000000RCG1'=&gt;OpportunityRows">
       <arguments>
         <argument id="soqlQuery">
-          <value class="value" valueClass="string">select AccountId\n    ,CreatedById\n    ,Id from Opportunity where CreatedById = '005E00000073fX6'</value>
+          <value class="value" valueClass="string">select AccountId\n    ,CreatedById\n    ,Id from Opportunity where AccountId = '001E000000MZN0B' and CreatedById = '0051b000000RCG1'</value>
         </argument>
         <argument id="apexConnectionName">
           <value class="value" valueClass="string">Admin</value>

@@ -52,7 +52,7 @@ public class PriceOppProductLaunch {
 	@FindBy(xpath = "//div[5]/div[2]//input")
 	public WebElement discountPercent;
 	
-	@PageWait.Timed(durationSeconds = 3)
+	@PageWait.Timed(durationSeconds = 10)
 	@FindBy(xpath = "//label/span[text()='DMA:']/../../select")
 	@ChoiceListType()
 	public WebElement Dma;

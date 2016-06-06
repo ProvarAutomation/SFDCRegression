@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="9" registryId="ad01e3bb-4813-4a90-8598-81a2505b5a8d">
-  <summary>&lt;p&gt;5/11/16 - PreProd - using Crown Kia&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;PASS&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;</summary>
+<testCase id="5" registryId="ad01e3bb-4813-4a90-8598-81a2505b5a8d">
+  <summary>&lt;p&gt;manual run - 6/1/16 - PreProd - using Crown Kia&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;PASS&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;</summary>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="329" title="Create Opp">
       <arguments>
@@ -1633,9 +1633,7 @@
                         <argument id="interactionDescription">
                           <value class="value" valueClass="string">Set the Dma select to ATLANTA</value>
                         </argument>
-                        <argument id="wait">
-                          <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
-                        </argument>
+                        <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
                         <apiParam group="value" name="value" seq="10000" title="Value">
