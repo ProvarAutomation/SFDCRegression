@@ -85,9 +85,7 @@
         <testVariableValue envName="qUAT">
           <value class="value" valueClass="string">005180000014oZs</value>
         </testVariableValue>
-        <testVariableValue envName="Quoting">
-          <value class="value" valueClass="string">005E0000001tWvj</value>
-        </testVariableValue>
+        <testVariableValue envName="Quoting"/>
         <testVariableValue envName="PreProd">
           <value class="value" valueClass="string">005E00000073fX6</value>
         </testVariableValue>
@@ -110,6 +108,7 @@
         <testVariableValue envName="PreProd">
           <value class="value" valueClass="string">005E00000073fX6</value>
         </testVariableValue>
+        <testVariableValue envName="Quoting"/>
       </values>
     </testVariable>
     <testVariable name="StageHeritageMitsubishi">
@@ -269,7 +268,6 @@
             <connectionUrl url="sf:user=dof.sales.test@atg.com.quat;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="PreProd" url="sf:user=brad.weber@autotrader.com.prod.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="qUAT" url="sf:user=dof.sales.test@atg.com.quat;environment=PROD_DEV;logonAsConnection=Admin"/>
-            <connectionUrl envName="Quoting" url="sf:user=brad.weber@autotrader.com.prod.quoting;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
         <connection name="BradWeber">

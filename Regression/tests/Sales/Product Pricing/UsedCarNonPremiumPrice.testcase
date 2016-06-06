@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="19">
-  <summary>&lt;p&gt;5/12/16 - PreProd - using Jim Ellis&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;PASS&lt;/strong&gt; - disabled Porsche product as Porsche products are not in PreProd&lt;/p&gt;</summary>
+<testCase id="18">
+  <summary>&lt;p&gt;manual run - 6/6/16 - PreProd - using Jim Ellis&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;PASS&lt;/strong&gt; - disabled Porsche product as Porsche products are not in PreProd&lt;/p&gt;</summary>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="590" title="Create Opp">
       <arguments>
