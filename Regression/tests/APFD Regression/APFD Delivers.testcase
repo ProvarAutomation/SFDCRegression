@@ -395,4 +395,7 @@
       </generatedParameters>
     </apiCall>
   </steps>
+  <tagReferences>
+    <tagRef tagName="Jason John" tagTypeName="maintainer"/>
+  </tagReferences>
 </testCase>

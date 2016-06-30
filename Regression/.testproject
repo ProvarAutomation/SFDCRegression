@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testProject selectedBrowserConfigurationName="Full Screen" selectedEnvironment="PreProd" selectedWebBrowserType="Chrome">
+<testProject selectedBrowserConfigurationName="Full Screen" selectedEnvironment="Quoting" selectedWebBrowserType="Chrome">
   <title>/Regression/.testproject</title>
   <configPath>config</configPath>
   <testsPath>tests</testsPath>
@@ -278,6 +278,12 @@
             <connectionUrl url="sf:user=brad.weber@autotrader.com.prod.stage;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="PreProd" url="sf:user=brad.weber@autotrader.com.prod.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="Stage" url="sf:user=brad.weber@autotrader.com.prod.stage;environment=PROD_DEV;logonAsConnection=Admin"/>
+          </connectionUrls>
+        </connection>
+        <connection name="DavidHall">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl url="sf:user=david.hall@autotradergroup.com.quoting;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
       </connections>

@@ -119,5 +119,13 @@ public class PriceOppProductLaunch {
 	@FindBy(xpath = "//label/span[text()='Quantity:']/../../select")
 	public WebElement SpotQuantity;
 
+	@ChoiceListType()
+	@FindBy(xpath = "//*[@id=\"418:23;a\"]")
+	public WebElement New_Make_1;
+
+	@TextType()
+	@FindBy(xpath = "//div[4]//div[2]/div/input")
+	public WebElement New_Quantity_1;
+
 
 }

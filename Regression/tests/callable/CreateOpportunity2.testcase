@@ -649,6 +649,9 @@
               </generatedParameters>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="179" title="On ChoosePriceBook page">
+              <tags>
+                <string>disabled</string>
+              </tags>
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">QUATSalesUser</value>
