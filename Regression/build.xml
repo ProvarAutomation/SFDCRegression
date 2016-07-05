@@ -41,7 +41,7 @@
 
 <target name="run" depends="compile">
     <provar:run projectPath="${testproject.home}" 
-            licensePath="C:\Jenkins\workspace\ProvarAutomation\Regression\provar.license"
+            licensePath="C:\Jenkins\workspace\ProvarAutomation2\Regression\provar.license"
             webBrowserConfiguration="Full Screen" 
             testEnvironment="PreProd" 
             resultsPath="${testproject.results}">
@@ -53,7 +53,7 @@
 
 <target name="run2" depends="compile">
     <provar:run projectPath="${testproject.home}" 
-            licensePath="C:\Jenkins\workspace\ProvarAutomation\Regression\provar.license"
+            licensePath="C:\Jenkins\workspace\SprintAutomation\Regression\provar.license"
             webBrowserConfiguration="Full Screen" 
             testEnvironment="PreProd" 
             resultsPath="${testproject.results}">
