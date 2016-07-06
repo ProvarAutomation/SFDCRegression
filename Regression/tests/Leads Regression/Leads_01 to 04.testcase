@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="26">
+<testCase id="27">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="2" title="AC - Adam Grill">
@@ -32,7 +32,11 @@
                 <argument id="closeAllPrimaryTabs">
                   <value class="value" valueClass="boolean">true</value>
                 </argument>
-                <argument id="reuseConnectionName"/>
+                <argument id="reuseConnectionName">
+                  <value class="variable">
+                    <path element="reuseConnectionName"/>
+                  </value>
+                </argument>
                 <argument id="alreadyOpenBehaviour">
                   <value class="value" valueClass="string">Fail</value>
                 </argument>
@@ -2153,7 +2157,11 @@
                 <argument id="closeAllPrimaryTabs">
                   <value class="value" valueClass="boolean">true</value>
                 </argument>
-                <argument id="reuseConnectionName"/>
+                <argument id="reuseConnectionName">
+                  <value class="variable">
+                    <path element="reuseConnectionName"/>
+                  </value>
+                </argument>
                 <argument id="alreadyOpenBehaviour">
                   <value class="value" valueClass="string">Fail</value>
                 </argument>
@@ -4275,7 +4283,11 @@
                 <argument id="closeAllPrimaryTabs">
                   <value class="value" valueClass="boolean">true</value>
                 </argument>
-                <argument id="reuseConnectionName"/>
+                <argument id="reuseConnectionName">
+                  <value class="variable">
+                    <path element="reuseConnectionName"/>
+                  </value>
+                </argument>
                 <argument id="alreadyOpenBehaviour">
                   <value class="value" valueClass="string">Fail</value>
                 </argument>
@@ -6393,7 +6405,11 @@
                 <argument id="closeAllPrimaryTabs">
                   <value class="value" valueClass="boolean">true</value>
                 </argument>
-                <argument id="reuseConnectionName"/>
+                <argument id="reuseConnectionName">
+                  <value class="variable">
+                    <path element="reuseConnectionName"/>
+                  </value>
+                </argument>
                 <argument id="alreadyOpenBehaviour">
                   <value class="value" valueClass="string">Fail</value>
                 </argument>
