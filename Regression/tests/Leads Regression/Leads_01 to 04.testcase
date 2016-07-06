@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="24">
+<testCase id="26">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="2" title="AC - Adam Grill">
@@ -12,16 +12,16 @@
       <clauses>
         <clause name="hidden" testItemId="3">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="4" title="Salesforce Connect: UiConnection (GroupStep)">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="4" title="Salesforce Connect: AdamGrille (Test)">
               <arguments>
                 <argument id="connectionName">
                   <value class="value" valueClass="string">AdamGrille</value>
                 </argument>
                 <argument id="resultName">
-                  <value class="value" valueClass="string">UiConnection</value>
+                  <value class="value" valueClass="string">AdamGrille</value>
                 </argument>
                 <argument id="resultScope">
-                  <value class="value" valueClass="string">GroupStep</value>
+                  <value class="value" valueClass="string">Test</value>
                 </argument>
                 <argument id="uiApplicationName">
                   <value class="value" valueClass="string">ATC_Sales</value>
@@ -52,7 +52,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="22" title="On SF Lead home screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">UiConnection</value>
+                  <value class="value" valueClass="string">AdamGrille</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=Lead&amp;action=ObjectHome"/>
@@ -114,7 +114,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="465" title="On SF Lead new (Unqualified Lead) screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">UiConnection</value>
+                  <value class="value" valueClass="string">AdamGrille</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=Lead&amp;action=New&amp;recordType=Unqualified+Lead"/>
@@ -123,7 +123,7 @@
                   <value class="value" valueClass="string">Dont</value>
                 </argument>
                 <argument id="sfUiTargetResultName">
-                  <value class="value" valueClass="string">leadId</value>
+                  <value class="value" valueClass="string">leadIdAG</value>
                 </argument>
                 <argument id="sfUiTargetResultScope">
                   <value class="value" valueClass="string">Test</value>
@@ -1728,7 +1728,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="99" title="On SF Lead view (Qualified Lead) screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">UiConnection</value>
+                  <value class="value" valueClass="string">AdamGrille</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=Lead&amp;action=View&amp;recordType=Qualified+Lead"/>
@@ -1738,7 +1738,7 @@
                 </argument>
                 <argument id="sfUiTargetObjectId">
                   <value class="variable">
-                    <path element="leadId"/>
+                    <path element="leadIdAG"/>
                   </value>
                 </argument>
                 <argument id="targetDescription">
@@ -1805,7 +1805,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="102" title="On SF Lead convert screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">UiConnection</value>
+                  <value class="value" valueClass="string">AdamGrille</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=Lead&amp;action=Convert"/>
@@ -1815,7 +1815,7 @@
                 </argument>
                 <argument id="sfUiTargetObjectId">
                   <value class="variable">
-                    <path element="leadId"/>
+                    <path element="leadIdAG"/>
                   </value>
                 </argument>
                 <argument id="targetDescription">
@@ -2045,7 +2045,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="109" title="On SF Account view (Unverified Prospect - Ready to Submit) screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">UiConnection</value>
+                  <value class="value" valueClass="string">AdamGrille</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=Account&amp;action=View&amp;recordType=Unverified+Prospect+-+Ready+to+Submit"/>
@@ -2133,13 +2133,13 @@
       <clauses>
         <clause name="hidden" testItemId="175">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="176" title="Salesforce Connect: UiConnection (GroupStep)">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="176" title="Salesforce Connect: DavidLumpkin (GroupStep)">
               <arguments>
                 <argument id="connectionName">
                   <value class="value" valueClass="string">DavidLumpkin</value>
                 </argument>
                 <argument id="resultName">
-                  <value class="value" valueClass="string">UiConnection</value>
+                  <value class="value" valueClass="string">DavidLumpkin</value>
                 </argument>
                 <argument id="resultScope">
                   <value class="value" valueClass="string">GroupStep</value>
@@ -2153,9 +2153,7 @@
                 <argument id="closeAllPrimaryTabs">
                   <value class="value" valueClass="boolean">true</value>
                 </argument>
-                <argument id="reuseConnectionName">
-                  <value class="value" valueClass="string">UiConnection</value>
-                </argument>
+                <argument id="reuseConnectionName"/>
                 <argument id="alreadyOpenBehaviour">
                   <value class="value" valueClass="string">Fail</value>
                 </argument>
@@ -2175,7 +2173,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="179" title="On SF Lead home screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">UiConnection</value>
+                  <value class="value" valueClass="string">DavidLumpkin</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=Lead&amp;action=ObjectHome"/>
@@ -2219,9 +2217,10 @@
                         <argument id="interactionDescription">
                           <value class="value" valueClass="string">Click the New button</value>
                         </argument>
+                        <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="hover" title="Hover before Clicking">
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
                           <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                           <type>
                             <booleanType/>
@@ -2233,25 +2232,25 @@
                 </clause>
               </clauses>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="541" title="On SF Lead new (Unqualified Lead) screen">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="541" title="On SF Lead new screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">UiConnection</value>
+                  <value class="value" valueClass="string">DavidLumpkin</value>
                 </argument>
                 <argument id="target">
-                  <value class="uiTarget" uri="sf:ui:target?object=Lead&amp;action=New&amp;recordType=Unqualified+Lead"/>
+                  <value class="uiTarget" uri="sf:ui:target?object=Lead&amp;action=New"/>
                 </argument>
                 <argument id="navigate">
                   <value class="value" valueClass="string">Dont</value>
                 </argument>
                 <argument id="sfUiTargetResultName">
-                  <value class="value" valueClass="string">leadId</value>
+                  <value class="value" valueClass="string">leadIdDL</value>
                 </argument>
                 <argument id="sfUiTargetResultScope">
                   <value class="value" valueClass="string">Test</value>
                 </argument>
                 <argument id="targetDescription">
-                  <value class="value" valueClass="string">On SF Lead new (Unqualified Lead) screen</value>
+                  <value class="value" valueClass="string">On SF Lead new screen</value>
                 </argument>
                 <argument id="windowSelection">
                   <value class="value" valueClass="string">Default</value>
@@ -3846,24 +3845,24 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="219" title="On SF Lead view (Qualified Lead) screen">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="219" title="On SF Lead view screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">UiConnection</value>
+                  <value class="value" valueClass="string">DavidLumpkin</value>
                 </argument>
                 <argument id="target">
-                  <value class="uiTarget" uri="sf:ui:target?object=Lead&amp;action=View&amp;recordType=Qualified+Lead"/>
+                  <value class="uiTarget" uri="sf:ui:target?object=Lead&amp;action=View"/>
                 </argument>
                 <argument id="navigate">
                   <value class="value" valueClass="string">Dont</value>
                 </argument>
                 <argument id="sfUiTargetObjectId">
                   <value class="variable">
-                    <path element="leadId"/>
+                    <path element="leadIdDL"/>
                   </value>
                 </argument>
                 <argument id="targetDescription">
-                  <value class="value" valueClass="string">On SF Lead view (Qualified Lead) screen</value>
+                  <value class="value" valueClass="string">On SF Lead view screen</value>
                 </argument>
                 <argument id="windowSelection">
                   <value class="value" valueClass="string">Default</value>
@@ -3874,6 +3873,8 @@
                 <argument id="closeWindow"/>
                 <argument id="captureBefore"/>
                 <argument id="captureAfter"/>
+                <argument id="sfUiTargetResultName"/>
+                <argument id="sfUiTargetResultScope"/>
               </arguments>
               <clauses>
                 <clause name="substeps" testItemId="220">
@@ -3926,7 +3927,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="222" title="On SF Lead convert screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">UiConnection</value>
+                  <value class="value" valueClass="string">DavidLumpkin</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=Lead&amp;action=Convert"/>
@@ -3936,7 +3937,7 @@
                 </argument>
                 <argument id="sfUiTargetObjectId">
                   <value class="variable">
-                    <path element="leadId"/>
+                    <path element="leadIdDL"/>
                   </value>
                 </argument>
                 <argument id="targetDescription">
@@ -4163,13 +4164,13 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="229" title="On SF Account view (Unverified Prospect - Ready to Submit) screen">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="229" title="On SF Account view screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">UiConnection</value>
+                  <value class="value" valueClass="string">DavidLumpkin</value>
                 </argument>
                 <argument id="target">
-                  <value class="uiTarget" uri="sf:ui:target?object=Account&amp;action=View&amp;recordType=Unverified+Prospect+-+Ready+to+Submit"/>
+                  <value class="uiTarget" uri="sf:ui:target?object=Account&amp;action=View"/>
                 </argument>
                 <argument id="navigate">
                   <value class="value" valueClass="string">Dont</value>
@@ -4180,7 +4181,7 @@
                   </value>
                 </argument>
                 <argument id="targetDescription">
-                  <value class="value" valueClass="string">On SF Account view (Unverified Prospect - Ready to Submit) screen</value>
+                  <value class="value" valueClass="string">On SF Account view screen</value>
                 </argument>
                 <argument id="windowSelection">
                   <value class="value" valueClass="string">Default</value>
@@ -4254,13 +4255,13 @@
       <clauses>
         <clause name="hidden" testItemId="291">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="292" title="Salesforce Connect: UiConnection (GroupStep)">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="292" title="Salesforce Connect: RichardDearden (GroupStep)">
               <arguments>
                 <argument id="connectionName">
                   <value class="value" valueClass="string">RichardDearden</value>
                 </argument>
                 <argument id="resultName">
-                  <value class="value" valueClass="string">UiConnection</value>
+                  <value class="value" valueClass="string">RichardDearden</value>
                 </argument>
                 <argument id="resultScope">
                   <value class="value" valueClass="string">GroupStep</value>
@@ -4294,7 +4295,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="295" title="On SF Lead home screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">UiConnection</value>
+                  <value class="value" valueClass="string">RichardDearden</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=Lead&amp;action=ObjectHome"/>
@@ -4352,85 +4353,25 @@
                 </clause>
               </clauses>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="298" title="On SF Lead new (Unqualified Lead) screen">
-              <tags>
-                <string>disabled</string>
-              </tags>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="603" title="On SF Lead new screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">UiConnection</value>
+                  <value class="value" valueClass="string">RichardDearden</value>
                 </argument>
                 <argument id="target">
-                  <value class="uiTarget" uri="sf:ui:target?object=Lead&amp;action=New&amp;recordType=Unqualified+Lead"/>
+                  <value class="uiTarget" uri="sf:ui:target?object=Lead&amp;action=New"/>
                 </argument>
                 <argument id="navigate">
                   <value class="value" valueClass="string">Dont</value>
                 </argument>
                 <argument id="sfUiTargetResultName">
-                  <value class="value" valueClass="string">leadId</value>
+                  <value class="value" valueClass="string">leadIdRD</value>
                 </argument>
                 <argument id="sfUiTargetResultScope">
                   <value class="value" valueClass="string">Test</value>
                 </argument>
                 <argument id="targetDescription">
-                  <value class="value" valueClass="string">On SF Lead new (Unqualified Lead) screen</value>
-                </argument>
-                <argument id="windowSelection">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-                <argument id="windowSize">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-                <argument id="closeWindow"/>
-                <argument id="captureBefore"/>
-                <argument id="captureAfter"/>
-              </arguments>
-              <clauses>
-                <clause name="substeps" testItemId="299">
-                  <steps/>
-                </clause>
-              </clauses>
-              <generatedParameters>
-                <apiParam group="result" name="sfUiTargetResultName" resultNameParameter="true" title="Result Name">
-                  <summary>The name under which the resulting Lead Id will be stored.</summary>
-                  <type>
-                    <textType/>
-                  </type>
-                  <resultValueClasses>
-                    <string>ApexObjectId</string>
-                  </resultValueClasses>
-                </apiParam>
-                <apiParam group="result" name="sfUiTargetResultScope" title="Result Scope">
-                  <summary>The life-span of the resulting identifiers.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="boundedValues">Global:Test Run|Folder:Test Folder|Test:Test Case|GroupStep:Group Step|Local:Test Step</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="603" title="On SF Lead new (Unqualified Lead) screen">
-              <arguments>
-                <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">UiConnection</value>
-                </argument>
-                <argument id="target">
-                  <value class="uiTarget" uri="sf:ui:target?object=Lead&amp;action=New&amp;recordType=Unqualified+Lead"/>
-                </argument>
-                <argument id="navigate">
-                  <value class="value" valueClass="string">Dont</value>
-                </argument>
-                <argument id="sfUiTargetResultName">
-                  <value class="value" valueClass="string">leadId</value>
-                </argument>
-                <argument id="sfUiTargetResultScope">
-                  <value class="value" valueClass="string">Test</value>
-                </argument>
-                <argument id="targetDescription">
-                  <value class="value" valueClass="string">On SF Lead new (Unqualified Lead) screen</value>
+                  <value class="value" valueClass="string">On SF Lead new screen</value>
                 </argument>
                 <argument id="windowSelection">
                   <value class="value" valueClass="string">Default</value>
@@ -6025,24 +5966,24 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="335" title="On SF Lead view (Qualified Lead) screen">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="335" title="On SF Lead view screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">UiConnection</value>
+                  <value class="value" valueClass="string">RichardDearden</value>
                 </argument>
                 <argument id="target">
-                  <value class="uiTarget" uri="sf:ui:target?object=Lead&amp;action=View&amp;recordType=Qualified+Lead"/>
+                  <value class="uiTarget" uri="sf:ui:target?object=Lead&amp;action=View"/>
                 </argument>
                 <argument id="navigate">
                   <value class="value" valueClass="string">Always</value>
                 </argument>
                 <argument id="sfUiTargetObjectId">
                   <value class="variable">
-                    <path element="leadId"/>
+                    <path element="leadIdRD"/>
                   </value>
                 </argument>
                 <argument id="targetDescription">
-                  <value class="value" valueClass="string">On SF Lead view (Qualified Lead) screen</value>
+                  <value class="value" valueClass="string">On SF Lead view screen</value>
                 </argument>
                 <argument id="windowSelection">
                   <value class="value" valueClass="string">Default</value>
@@ -6053,6 +5994,8 @@
                 <argument id="closeWindow"/>
                 <argument id="captureBefore"/>
                 <argument id="captureAfter"/>
+                <argument id="sfUiTargetResultName"/>
+                <argument id="sfUiTargetResultScope"/>
               </arguments>
               <clauses>
                 <clause name="substeps" testItemId="336">
@@ -6103,7 +6046,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="338" title="On SF Lead convert screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">UiConnection</value>
+                  <value class="value" valueClass="string">RichardDearden</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=Lead&amp;action=Convert"/>
@@ -6113,7 +6056,7 @@
                 </argument>
                 <argument id="sfUiTargetObjectId">
                   <value class="variable">
-                    <path element="leadId"/>
+                    <path element="leadIdRD"/>
                   </value>
                 </argument>
                 <argument id="targetDescription">
@@ -6343,7 +6286,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="345" title="On SF Account view (Unverified Prospect - Ready to Submit) screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">UiConnection</value>
+                  <value class="value" valueClass="string">RichardDearden</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=Account&amp;action=View&amp;recordType=Unverified+Prospect+-+Ready+to+Submit"/>
@@ -6430,13 +6373,13 @@
       <clauses>
         <clause name="hidden" testItemId="407">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="408" title="Salesforce Connect: UiConnection (GroupStep)">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="408" title="Salesforce Connect: PhilipWeber (GroupStep)">
               <arguments>
                 <argument id="connectionName">
-                  <value class="value" valueClass="string">RichardDearden</value>
+                  <value class="value" valueClass="string">PhilipWeber</value>
                 </argument>
                 <argument id="resultName">
-                  <value class="value" valueClass="string">UiConnection</value>
+                  <value class="value" valueClass="string">PhilipWeber</value>
                 </argument>
                 <argument id="resultScope">
                   <value class="value" valueClass="string">GroupStep</value>
@@ -6470,7 +6413,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="411" title="On SF Lead home screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">UiConnection</value>
+                  <value class="value" valueClass="string">PhilipWeber</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=Lead&amp;action=ObjectHome"/>
@@ -6529,70 +6472,10 @@
                 </clause>
               </clauses>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="414" title="On SF Lead new (Unqualified Lead) screen">
-              <tags>
-                <string>disabled</string>
-              </tags>
-              <arguments>
-                <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">UiConnection</value>
-                </argument>
-                <argument id="target">
-                  <value class="uiTarget" uri="sf:ui:target?object=Lead&amp;action=New&amp;recordType=Unqualified+Lead"/>
-                </argument>
-                <argument id="navigate">
-                  <value class="value" valueClass="string">Dont</value>
-                </argument>
-                <argument id="sfUiTargetResultName">
-                  <value class="value" valueClass="string">leadId</value>
-                </argument>
-                <argument id="sfUiTargetResultScope">
-                  <value class="value" valueClass="string">Test</value>
-                </argument>
-                <argument id="targetDescription">
-                  <value class="value" valueClass="string">On SF Lead new (Unqualified Lead) screen</value>
-                </argument>
-                <argument id="windowSelection">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-                <argument id="windowSize">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-                <argument id="closeWindow"/>
-                <argument id="captureBefore"/>
-                <argument id="captureAfter"/>
-              </arguments>
-              <clauses>
-                <clause name="substeps" testItemId="415">
-                  <steps/>
-                </clause>
-              </clauses>
-              <generatedParameters>
-                <apiParam group="result" name="sfUiTargetResultName" resultNameParameter="true" title="Result Name">
-                  <summary>The name under which the resulting Lead Id will be stored.</summary>
-                  <type>
-                    <textType/>
-                  </type>
-                  <resultValueClasses>
-                    <string>ApexObjectId</string>
-                  </resultValueClasses>
-                </apiParam>
-                <apiParam group="result" name="sfUiTargetResultScope" title="Result Scope">
-                  <summary>The life-span of the resulting identifiers.</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="boundedValues">Global:Test Run|Folder:Test Folder|Test:Test Case|GroupStep:Group Step|Local:Test Step</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="665" title="On SF Lead new (Unqualified Lead) screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">UiConnection</value>
+                  <value class="value" valueClass="string">PhilipWeber</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=Lead&amp;action=New&amp;recordType=Unqualified+Lead"/>
@@ -6601,7 +6484,7 @@
                   <value class="value" valueClass="string">Always</value>
                 </argument>
                 <argument id="sfUiTargetResultName">
-                  <value class="value" valueClass="string">leadId</value>
+                  <value class="value" valueClass="string">leadIdPW</value>
                 </argument>
                 <argument id="sfUiTargetResultScope">
                   <value class="value" valueClass="string">Test</value>
@@ -8205,7 +8088,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="451" title="On SF Lead view (Qualified Lead) screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">UiConnection</value>
+                  <value class="value" valueClass="string">PhilipWeber</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=Lead&amp;action=View&amp;recordType=Qualified+Lead"/>
@@ -8215,7 +8098,7 @@
                 </argument>
                 <argument id="sfUiTargetObjectId">
                   <value class="variable">
-                    <path element="leadId"/>
+                    <path element="leadIdPW"/>
                   </value>
                 </argument>
                 <argument id="targetDescription">
@@ -8282,7 +8165,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="454" title="On SF Lead convert screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">UiConnection</value>
+                  <value class="value" valueClass="string">PhilipWeber</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=Lead&amp;action=Convert"/>
@@ -8291,10 +8174,25 @@
                   <value class="value" valueClass="string">Dont</value>
                 </argument>
                 <argument id="sfUiTargetObjectId">
-                  <value class="value" valueClass="string">Lead</value>
+                  <value class="variable">
+                    <path element="leadIdPW"/>
+                  </value>
                 </argument>
                 <argument id="targetDescription">
                   <value class="value" valueClass="string">On SF Lead convert screen</value>
+                </argument>
+                <argument id="windowSelection">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="windowSize">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="closeWindow"/>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="string">false</value>
                 </argument>
               </arguments>
               <clauses>
@@ -8488,7 +8386,7 @@
                         <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="hover" title="Hover before Clicking">
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
                           <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                           <type>
                             <booleanType/>
@@ -8511,7 +8409,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="461" title="On SF Account view (Unverified Prospect - Ready to Submit) screen">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">UiConnection</value>
+                  <value class="value" valueClass="string">PhilipWeber</value>
                 </argument>
                 <argument id="target">
                   <value class="uiTarget" uri="sf:ui:target?object=Account&amp;action=View&amp;recordType=Unverified+Prospect+-+Ready+to+Submit"/>
