@@ -2665,7 +2665,9 @@
   </steps>
   <params/>
   <args/>
-  <tags/>
+  <tags>
+    <string>disabled</string>
+  </tags>
   <tagReferences>
     <tagRef tagName="Jason John" tagTypeName="maintainer"/>
   </tagReferences>
