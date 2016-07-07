@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="0">
-  <summary/>
+<testCase id="26">
+  <summary>no longer applicable. Prospect is no longer an opportunity type</summary>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: Connection (Test)">
       <arguments>
@@ -53,7 +53,7 @@
         </argument>
         <argument id="sfUiTargetObjectId">
           <value class="variable">
-            <path element="CrownKiaAccount"/>
+            <path element="Dealer"/>
           </value>
         </argument>
         <argument id="targetDescription">
@@ -416,10 +416,10 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="14" title="Click the Save and New button">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="14" title="Click the Save button">
               <arguments>
                 <argument id="locator">
-                  <value class="uiLocator" uri="ui:locator?name=save_new&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26action%3Dsave_new"/>
+                  <value class="uiLocator" uri="ui:locator?name=save&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26action%3Dsave"/>
                 </argument>
                 <argument id="interaction">
                   <value class="uiInteraction" uri="ui:interaction?name=action"/>
@@ -434,14 +434,14 @@
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Save and New button</value>
+                  <value class="value" valueClass="string">Click the Save button</value>
                 </argument>
                 <argument id="wait">
                   <value class="uiWait" uri="ui:wait:pageload?timeout=60"/>
                 </argument>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" name="hover" title="Hover before Clicking">
+                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
                   <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                   <type>
                     <booleanType/>
@@ -542,8 +542,8 @@
                     <uiFieldAssertion resultName="pageErrors">
                       <fieldLocator uri="ui:pageobject:field?field=pageErrors&amp;pageId=pageobjects.OpportunityCreate"/>
                       <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" comparisonType="Contains">
-                          <value class="value" valueClass="string">Error</value>
+                        <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="Contains">
+                          <value class="value" valueClass="string">pageErrors</value>
                         </uiAttributeAssertion>
                       </attributeAssertions>
                     </uiFieldAssertion>
@@ -602,7 +602,5 @@
   </steps>
   <params/>
   <args/>
-  <tags>
-    <string>disabled</string>
-  </tags>
+  <tags/>
 </testCase>

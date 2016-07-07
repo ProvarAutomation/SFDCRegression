@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="2">
+<testCase id="5">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: UiConnection (Test)">
@@ -62,7 +62,7 @@
         <argument id="captureAfter"/>
         <argument id="sfUiTargetObjectId">
           <value class="variable">
-            <path element="CrownKiaAccount"/>
+            <path element="Dealer"/>
           </value>
         </argument>
       </arguments>
@@ -352,7 +352,7 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="17" title="Set the Stage picklist to Closed Won">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="17" title="Set the Stage picklist to Closed/Won - Planned">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=StageName&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DStageName"/>
@@ -361,7 +361,7 @@
                   <value class="uiInteraction" uri="ui:interaction?name=set"/>
                 </argument>
                 <argument id="value">
-                  <value class="value" valueClass="string">Closed Won</value>
+                  <value class="value" valueClass="string">Closed/Won - Planned</value>
                 </argument>
                 <argument id="blur">
                   <value class="value" valueClass="boolean">false</value>
@@ -376,29 +376,29 @@
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the Stage picklist to Closed Won</value>
+                  <value class="value" valueClass="string">Set the Stage picklist to Closed/Won - Planned</value>
                 </argument>
                 <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=StageName" name="value" title="Value">
+                <apiParam group="value" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=StageName" name="value" seq="10000" title="Value">
                   <summary>The value to be populated.</summary>
                   <type>
                     <choiceType>
                       <constraints>
-                        <valueConstraint name="boundedValues">Prospect:Prospect|Planning:Planning|Presentation:Presentation|Contract Submitted:Contract Submitted|Closed Won:Closed Won|Closed Lost:Closed Lost|Closed Realized:Closed Realized</valueConstraint>
+                        <valueConstraint name="boundedValues">Prospect:Prospect|Planning:Planning|Presentation:Presentation|Contract Submitted:Contract Submitted|Closed/Won - Planned:Closed/Won - Planned|Closed/Won - Booked:Closed/Won - Booked|Closed Realized:Closed Realized|Closed Lost:Closed Lost</valueConstraint>
                         <valueConstraint name="unrestricted">true</valueConstraint>
                       </constraints>
                     </choiceType>
                   </type>
                 </apiParam>
-                <apiParam group="value" name="blur" title="Tab off field">
+                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
                   <summary>Whether the tab key should be pressed after the value is populated.</summary>
                   <type>
                     <booleanType/>
                   </type>
                 </apiParam>
-                <apiParam group="value" name="pressEnter" title="Press Enter">
+                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
                   <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                   <type>
                     <booleanType/>
@@ -460,10 +460,10 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="19" title="Click the Save and New button">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="19" title="Click the Save button">
               <arguments>
                 <argument id="locator">
-                  <value class="uiLocator" uri="ui:locator?name=save_new&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26action%3Dsave_new"/>
+                  <value class="uiLocator" uri="ui:locator?name=save&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26action%3Dsave"/>
                 </argument>
                 <argument id="interaction">
                   <value class="uiInteraction" uri="ui:interaction?name=action"/>
@@ -478,7 +478,7 @@
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Save and New button</value>
+                  <value class="value" valueClass="string">Click the Save button</value>
                 </argument>
                 <argument id="wait"/>
               </arguments>
@@ -583,7 +583,5 @@
       </generatedParameters>
     </apiCall>
   </steps>
-  <tags>
-    <string>disabled</string>
-  </tags>
+  <tags/>
 </testCase>
