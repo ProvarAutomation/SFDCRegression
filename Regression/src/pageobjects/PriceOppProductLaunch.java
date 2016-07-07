@@ -52,7 +52,7 @@ public class PriceOppProductLaunch {
 	@FindBy(xpath = "//div[5]/div[2]//input")
 	public WebElement discountPercent;
 	
-	@PageWait.Timed(durationSeconds = 10)
+	@PageWait.Timed(durationSeconds = 3)
 	@FindBy(xpath = "//label/span[text()='DMA:']/../../select")
 	@ChoiceListType()
 	public WebElement Dma;
@@ -118,6 +118,14 @@ public class PriceOppProductLaunch {
 	@PageWait.Timed(durationSeconds = 3)
 	@FindBy(xpath = "//label/span[text()='Quantity:']/../../select")
 	public WebElement SpotQuantity;
+
+	@ChoiceListType()
+	@FindBy(xpath = "//*[@id=\"418:23;a\"]")
+	public WebElement New_Make_1;
+
+	@TextType()
+	@FindBy(xpath = "//div[4]//div[2]/div/input")
+	public WebElement New_Quantity_1;
 
 
 }
