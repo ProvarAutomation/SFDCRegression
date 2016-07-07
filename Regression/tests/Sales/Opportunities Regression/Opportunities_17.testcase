@@ -62,7 +62,7 @@
         <argument id="captureAfter"/>
         <argument id="sfUiTargetObjectId">
           <value class="variable">
-            <path element="CrownKiaAccount"/>
+            <path element="Dealer"/>
           </value>
         </argument>
       </arguments>
@@ -586,7 +586,9 @@
           <value class="value" valueClass="string">Dont</value>
         </argument>
         <argument id="sfUiTargetObjectId">
-          <value class="value" valueClass="string">OpportunityId</value>
+          <value class="variable">
+            <path element="OpportunityId"/>
+          </value>
         </argument>
         <argument id="targetDescription">
           <value class="value" valueClass="string">On SF Opportunity view (ATC) screen</value>

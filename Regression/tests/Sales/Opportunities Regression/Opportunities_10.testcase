@@ -81,7 +81,7 @@
         <argument id="captureAfter"/>
         <argument id="sfUiTargetObjectId">
           <value class="variable">
-            <path element="CrownKiaAccount"/>
+            <path element="Dealer"/>
           </value>
         </argument>
       </arguments>

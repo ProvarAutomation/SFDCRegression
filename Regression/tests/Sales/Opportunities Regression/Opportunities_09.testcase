@@ -53,7 +53,7 @@
         </argument>
         <argument id="sfUiTargetObjectId">
           <value class="variable">
-            <path element="CrownKiaAccount"/>
+            <path element="Dealer"/>
           </value>
         </argument>
         <argument id="targetDescription">
@@ -96,11 +96,12 @@
                 <argument id="resultScope">
                   <value class="value" valueClass="string">Local</value>
                 </argument>
+                <argument id="autoPaginate"/>
               </arguments>
               <clauses>
                 <clause name="substeps" testItemId="57">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="58" title="Click the OPPORTUNITY.NAME field">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="58" title="Click the Name field">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=OPPORTUNITY_NAME&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DAccount%26field%3DNAME%26relationship%3DOpportunities"/>
@@ -109,7 +110,7 @@
                           <value class="uiInteraction" uri="ui:interaction?name=action"/>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Click the OPPORTUNITY.NAME field</value>
+                          <value class="value" valueClass="string">Click the Name field</value>
                         </argument>
                         <argument id="wait"/>
                         <argument id="captureBefore"/>
@@ -117,7 +118,7 @@
                         <argument id="hover"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="hover" title="Hover before Clicking">
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
                           <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                           <type>
                             <booleanType/>
@@ -554,17 +555,6 @@
         </clause>
       </clauses>
       <generatedParameters>
-        <apiParam group="target" name="scTabType" seq="1000" title="Tab Type">
-          <summary>The tab type for Scaffolds</summary>
-          <type>
-            <choiceType>
-              <constraints>
-                <valueConstraint name="valuesSource">com.provar.plugins.sf.eclipse.ui:com.provar.plugins.forcedotcom.ui.valuesources.SfEnumChoiceListValuesSource</valueConstraint>
-                <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
-              </constraints>
-            </choiceType>
-          </type>
-        </apiParam>
         <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
           <summary>The Id of the SF Object to be Viewed or Edited.</summary>
           <type>
