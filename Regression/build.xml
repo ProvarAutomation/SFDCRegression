@@ -5,13 +5,12 @@
 
 <property name="testproject.home" value="."/>
 
-<property name="testproject.results" value="../RegressionRunResults"/>
+<property name="testproject.results" value="../../RegressionRunResults"/>
 
 <property name="tests.dir" value=".\tests\"/>
 
 <patternset id="all.tests">
     <include name="**\*.*"/>
-	<exclude name="callable\**\*.*"/>
     <exclude name="Callable Tests\**\*.*"/>
     <exclude name="Examples\**\*.*"/>
     <exclude name="Sprints\**\*.*"/>
