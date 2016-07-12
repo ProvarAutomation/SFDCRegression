@@ -685,7 +685,7 @@ public class OrderConfig {
 	public WebElement LeaderboardUsedCoOpPreApprovalCase;
 	@TextType()
 	@FindByLabel(label = "Skyscrapers Click-thru URL", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
-	public WebElement SkyscrapersClickThruURL;
+	public WebElement SkyscrapersClickthruURL;
 	@TextType()
 	@FindByLabel(label = "Skyscrapers Co-Op Pre-Approval Case #", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
 	public WebElement SkyscrapersCoOpPreApprovalCaseNo;
