@@ -776,7 +776,9 @@
                         <argument id="interactionDescription">
                           <value class="value" valueClass="string">Check the Select control</value>
                         </argument>
-                        <argument id="wait"/>
+                        <argument id="wait">
+                          <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
+                        </argument>
                       </arguments>
                       <generatedParameters>
                         <apiParam group="value" name="blur" title="Tab off field">
