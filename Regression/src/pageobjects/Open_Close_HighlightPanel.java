@@ -14,11 +14,11 @@ public class Open_Close_HighlightPanel {
 	@PageWait.Timed(durationSeconds = 2)
 	@FindBy(xpath = "(//div[contains(@class,'x-layout-mini')])[2]")
 	@LinkType()
-	public WebElement openHighlighPanel;
+	public WebElement openHighlightPanel;
 	
 	@FindBy(xpath = "(//div[contains(@class,'layout-mini')])[1]")
 	@LinkType()
-	public WebElement closeHighlighPanel;
+	public WebElement closeHighlightPanel;
 
 	@TextType
 	@FindBy(xpath="//*[@id=\"ext-gen218\"]")

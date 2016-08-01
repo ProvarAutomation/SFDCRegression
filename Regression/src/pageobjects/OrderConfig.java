@@ -679,7 +679,7 @@ public class OrderConfig {
 	public WebElement LeaderboardNewCoOpPreApprovalCase;
 	@TextType()
 	@FindByLabel(label = "Leaderboard Used Click-thru URL", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
-	public WebElement LeaderboardUsedClickthruURL;
+	public WebElement LeaderboardUsedClickThruURL;
 	@TextType()
 	@FindByLabel(label = "Leaderboard Used Co-Op Pre-Approval Case", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
 	public WebElement LeaderboardUsedCoOpPreApprovalCase;
@@ -864,4 +864,28 @@ public class OrderConfig {
 	@TextType()
 	@FindByLabel(label = "Porsche Inventory Quantity", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
 	public WebElement PorscheInventoryQuantity;
+//	@TextType()
+//	@FindByLabel(label = "New Spotlight Quantity 1", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
+//	public WebElement NewSpotlightQuantity1;
+//	@TextType()
+//	@FindByLabel(label = "New Spotlight Quantity 2", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
+//	public WebElement NewSpotlightQuantity2;
+//	@TextType()
+//	@FindByLabel(label = "New Spotlight Quantity 3", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
+//	public WebElement NewSpotlightQuantity3;
+//	@TextType()
+//	@FindByLabel(label = "New Spotlight Quantity 4", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
+//	public WebElement NewSpotlightQuantity4;
+//	@TextType()
+//	@FindByLabel(label = "New Spotlight Quantity 5", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
+//	public WebElement NewSpotlightQuantity5;
+//	@TextType()
+//	@FindByLabel(label = "New Spotlight Quantity 6", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
+//	public WebElement NewSpotlightQuantity6;
+//	@TextType()
+//	@FindByLabel(label = "New Spotlight Quantity 7", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
+//	public WebElement NewSpotlightQuantity7;
+//	@TextType()
+//	@FindByLabel(label = "New Spotlight Quantity 8", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
+//	public WebElement NewSpotlightQuantity8;
 }

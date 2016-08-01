@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="3">
+<testCase id="11">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="11" title="Read Order Product List">
@@ -30,7 +30,7 @@
                 <value class="value" valueClass="string">Dealer</value>
               </namedValue>
               <namedValue name="value">
-                <value class="value" valueClass="string">Tomball Dodge Chrysler Jeep</value>
+                <value class="value" valueClass="string">Crown KIA</value>
               </namedValue>
               <namedValue name="valueScope">
                 <value class="value" valueClass="string">Test</value>
@@ -95,7 +95,9 @@
         <argument id="enableObjectIdLogging">
           <value class="value" valueClass="boolean">true</value>
         </argument>
-        <argument id="autoCleanup"/>
+        <argument id="autoCleanup">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
         <argument id="cleanupConnectionName"/>
         <argument id="logFileLocation"/>
         <argument id="username"/>
@@ -124,7 +126,7 @@
         </argument>
         <argument id="ProductSelectionName"/>
         <argument id="DealerName">
-          <value class="value" valueClass="string">Tomball Dodge Chrysler Jeep</value>
+          <value class="value" valueClass="string">Crown KIA</value>
         </argument>
         <argument id="Identifier">
           <value class="variable">
@@ -536,7 +538,9 @@
           <value class="value" valueClass="string">Dont</value>
         </argument>
         <argument id="sfUiTargetObjectId">
-          <value class="value" valueClass="string">0Q019000000A2Aq</value>
+          <value class="variable">
+            <path element="quoteId"/>
+          </value>
         </argument>
         <argument id="targetDescription">
           <value class="value" valueClass="string">On SF Quote detail (Quote Not Priced) screen</value>
@@ -1763,7 +1767,9 @@
           <value class="value" valueClass="string">Dont</value>
         </argument>
         <argument id="sfUiTargetObjectId">
-          <value class="value" valueClass="string">0Q019000000A1ux</value>
+          <value class="variable">
+            <path element="quoteId"/>
+          </value>
         </argument>
         <argument id="targetDescription">
           <value class="value" valueClass="string">On SF Quote detail (Quote Synced) screen</value>
@@ -1801,9 +1807,10 @@
                 <argument id="interactionDescription">
                   <value class="value" valueClass="string">Click the Generate Order button</value>
                 </argument>
+                <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" name="hover" title="Hover before Clicking">
+                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
                   <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                   <type>
                     <booleanType/>
@@ -2526,10 +2533,25 @@
           <value class="value" valueClass="string">Dont</value>
         </argument>
         <argument id="sfUiTargetObjectId">
-          <value class="value" valueClass="string">0Q019000000A2L0</value>
+          <value class="variable">
+            <path element="quoteId"/>
+          </value>
         </argument>
         <argument id="targetDescription">
           <value class="value" valueClass="string">On SF Quote detail (Quote Synced) screen</value>
+        </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="captureAfter">
+          <value class="value" valueClass="string">false</value>
         </argument>
       </arguments>
       <clauses>
@@ -2620,23 +2642,22 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="791" title="On SF Order view (Order Master Layout) screen">
-      <tags/>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="908" title="On SF Order view screen">
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">SalesforceConnection</value>
         </argument>
         <argument id="target">
-          <value class="uiTarget" uri="sf:ui:target?object=Order&amp;action=View&amp;recordType=Order+Master+Layout"/>
+          <value class="uiTarget" uri="sf:ui:target?object=Order&amp;action=View"/>
         </argument>
         <argument id="navigate">
           <value class="value" valueClass="string">Dont</value>
         </argument>
         <argument id="sfUiTargetObjectId">
-          <value class="value" valueClass="string">801190000009FLw</value>
+          <value class="value" valueClass="string">8011b000000D7YS</value>
         </argument>
         <argument id="targetDescription">
-          <value class="value" valueClass="string">On SF Order view (Order Master Layout) screen</value>
+          <value class="value" valueClass="string">On SF Order view screen</value>
         </argument>
         <argument id="windowSelection">
           <value class="value" valueClass="string">Default</value>
@@ -2645,14 +2666,17 @@
           <value class="value" valueClass="string">Default</value>
         </argument>
         <argument id="closeWindow"/>
-        <argument id="captureBefore"/>
-        <argument id="captureAfter"/>
+        <argument id="captureBefore">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="captureAfter">
+          <value class="value" valueClass="string">false</value>
+        </argument>
       </arguments>
       <clauses>
-        <clause name="substeps" testItemId="792">
+        <clause name="substeps" testItemId="909">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="793" title="UI Assert">
-              <tags/>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="911" title="UI Assert">
               <arguments>
                 <argument id="resultName">
                   <value class="value" valueClass="string">Values</value>
