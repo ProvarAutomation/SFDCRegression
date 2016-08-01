@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testProject selectedBrowserConfigurationName="Full Screen" selectedEnvironment="PreProd" selectedWebBrowserType="Chrome">
+<testProject selectedBrowserConfigurationName="Full Screen" selectedEnvironment="MedPreProd" selectedWebBrowserType="PhantomJS">
   <title>/Regression/.testproject</title>
   <configPath>config</configPath>
   <testsPath>tests</testsPath>
@@ -8,7 +8,7 @@
   <secureStoragePath>.secrets</secureStoragePath>
   <browserDebugPort>0</browserDebugPort>
   <environments>
-    <environment name="PreProd">
+    <environment name="MedPreProd">
       <summary>SalesForce PreProd</summary>
     </environment>
     <environment name="QA">
@@ -38,7 +38,7 @@
         <testVariableValue>
           <value class="value" valueClass="string">001E000000MZN0B</value>
         </testVariableValue>
-        <testVariableValue envName="PreProd">
+        <testVariableValue envName="MedPreProd">
           <value class="value" valueClass="string">001E000000MZN0B</value>
         </testVariableValue>
         <testVariableValue envName="Quoting">
@@ -63,7 +63,7 @@
         <testVariableValue envName="qUAT">
           <value class="value" valueClass="string">0011800000KvTqN</value>
         </testVariableValue>
-        <testVariableValue envName="PreProd">
+        <testVariableValue envName="MedPreProd">
           <value class="value" valueClass="string">001E000000mEZRc</value>
         </testVariableValue>
         <testVariableValue envName="Quoting">
@@ -86,7 +86,7 @@
           <value class="value" valueClass="string">005180000014oZs</value>
         </testVariableValue>
         <testVariableValue envName="Quoting"/>
-        <testVariableValue envName="PreProd">
+        <testVariableValue envName="MedPreProd">
           <value class="value" valueClass="string">005E00000073fX6</value>
         </testVariableValue>
       </values>
@@ -105,7 +105,7 @@
         <testVariableValue envName="Stage">
           <value class="value" valueClass="string">005E00000073fX6</value>
         </testVariableValue>
-        <testVariableValue envName="PreProd">
+        <testVariableValue envName="MedPreProd">
           <value class="value" valueClass="string">005E00000073fX6</value>
         </testVariableValue>
         <testVariableValue envName="Quoting"/>
@@ -139,7 +139,7 @@
         <testVariableValue>
           <value class="value" valueClass="string">001E000000MZN0B</value>
         </testVariableValue>
-        <testVariableValue envName="PreProd">
+        <testVariableValue envName="MedPreProd">
           <value class="value" valueClass="string">001E000000MZN0B</value>
         </testVariableValue>
         <testVariableValue envName="Quoting">
@@ -159,7 +159,7 @@
           <connectionUrls>
             <connectionUrl secureStorageNodeId="3cf849ee-e3bf-4728-a4bc-e8778e6f7b43" url="sf:user=provar.tester@coxauto.com.qa;password={password};securityToken={securityToken};environment=SANDBOX;userLoginUrl=https://atgdealer--quoting.cs24.my.salesforce.com"/>
             <connectionUrl envName="QA" secureStorageNodeId="5ed7d772-11fb-4964-be1a-a40e641a66fe" url="sf:user=provar.tester@coxauto.com.qa;password={password};securityToken={securityToken};environment=SANDBOX"/>
-            <connectionUrl envName="PreProd" secureStorageNodeId="cb695e41-0284-4116-90ce-182ff8a37ef4" url="sf:user=provar.tester@autotrader.com.preprod;password={password};securityToken={securityToken};environment=SANDBOX"/>
+            <connectionUrl envName="MedPreProd" secureStorageNodeId="cb695e41-0284-4116-90ce-182ff8a37ef4" url="sf:user=provar.tester@coxauto.com.medpreprod;password={password};securityToken={securityToken};environment=SANDBOX"/>
             <connectionUrl envName="Quoting" secureStorageNodeId="535e0277-3a98-44ea-af13-a2c834d4c311" url="sf:user=provar.tester@coxauto.com.quoting;password={password};environment=SANDBOX;userLoginUrl=https://atgdealer--preprod.cs25.my.salesforce.com"/>
             <connectionUrl envName="qUAT" secureStorageNodeId="b6cc7348-a3d4-4566-8fb6-75f61bf1edeb" url="sf:user=provar.tester@coxauto.com.quat;password={password};environment=SANDBOX;userLoginUrl=https://atgdealer--quoting.cs24.my.salesforce.com"/>
             <connectionUrl envName="Stage" secureStorageNodeId="236c485b-360c-42b2-822c-813dced4385e" url="sf:user=provar.tester@autotrader.com.stage;password={password};environment=SANDBOX;userLoginUrl=https://atgdealer--quoting.cs24.my.salesforce.com"/>
@@ -169,7 +169,7 @@
           <summary/>
           <connectionUrls>
             <connectionUrl url="sf:user=servicetest1@autotrader.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
-            <connectionUrl envName="PreProd" url="sf:user=servicetest1@autotrader.com.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="MedPreProd" url="sf:user=servicetest1@autotrader.com.medpreprod;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="QA" url="sf:user=servicetest1@autotrader.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="Quoting" url="sf:user=servicetest1@autotrader.com.quoting;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
@@ -177,8 +177,8 @@
         <connection name="AdamGrille">
           <summary>AC</summary>
           <connectionUrls>
-            <connectionUrl url="sf:user=adam.grill@atg.com.qa;logonAsConnection=Admin"/>
-            <connectionUrl envName="PreProd" url="sf:user=adam.grill@atg.com.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl url="sf:user=adam.grill@atg.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="MedPreProd" url="sf:user=adam.grill@atg.com.medpreprod;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="QA" url="sf:user=adam.grill@atg.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="Quoting" url="sf:user=adam.grill@atg.com.quoting;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
@@ -186,72 +186,72 @@
         <connection name="DavidLumpkin">
           <summary>The PC</summary>
           <connectionUrls>
-            <connectionUrl url="sf:user=david.lumpkin@atgdealer.atg.qa;logonAsConnection=Admin"/>
+            <connectionUrl url="sf:user=david.lumpkin@atgdealer.atg.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="QA" url="sf:user=david.lumpkin@atgdealer.atg.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
-            <connectionUrl envName="PreProd" url="sf:user=david.lumpkin@atgdealer.atg.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="MedPreProd" url="sf:user=david.lumpkin@atgdealer.atg.medpreprod;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="Quoting" url="sf:user=david.lumpkin@atgdealer.atg.quoting;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
         <connection name="RichardDearden">
           <summary>IC</summary>
           <connectionUrls>
-            <connectionUrl url="sf:user=Richard.dearden@atg.atg.qa;logonAsConnection=Admin"/>
+            <connectionUrl url="sf:user=Richard.dearden@atg.atg.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="QA" url="sf:user=Richard.dearden@atg.atg.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
-            <connectionUrl envName="PreProd" url="sf:user=Richard.dearden@atg.atg.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="MedPreProd" url="sf:user=Richard.dearden@atg.atg.medpreprod;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="Quoting" url="sf:user=Richard.dearden@atg.atg.quoting;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
         <connection name="PhilipWeber">
           <summary>DSC/ISM</summary>
           <connectionUrls>
-            <connectionUrl url="sf:user=Philip.weber@autotrader.com.qa;logonAsConnection=Admin"/>
+            <connectionUrl url="sf:user=Philip.weber@autotrader.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="QA" url="sf:user=Philip.weber@autotrader.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
-            <connectionUrl envName="PreProd" url="sf:user=Philip.weber@autotrader.com.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="MedPreProd" url="sf:user=Philip.weber@autotrader.com.medpreprod;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="Quoting" url="sf:user=Philip.weber@autotrader.com.quoting;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
         <connection name="MegGrady">
           <summary/>
           <connectionUrls>
-            <connectionUrl url="sf:user=meg.grady@autotrader.com.qa;logonAsConnection=Admin"/>
+            <connectionUrl url="sf:user=meg.grady@autotrader.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="QA" url="sf:user=meg.grady@autotrader.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
-            <connectionUrl envName="PreProd" url="sf:user=meg.grady@autotrader.com.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="MedPreProd" url="sf:user=meg.grady@autotrader.com.medpreprod;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="Quoting" url="sf:user=meg.grady@autotrader.com.quoting;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
         <connection name="ServiceUser">
           <summary/>
           <connectionUrls>
-            <connectionUrl secureStorageNodeId="f04bce51-79e8-4ef8-a824-4bb947b2f7ba" url="sf:user=servicetest1@autotrader.com.qa;logonAsConnection=Admin"/>
+            <connectionUrl secureStorageNodeId="f04bce51-79e8-4ef8-a824-4bb947b2f7ba" url="sf:user=servicetest1@autotrader.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="QA" url="sf:user=servicetest1@autotrader.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
-            <connectionUrl envName="PreProd" url="sf:user=servicetest1@autotrader.com.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="MedPreProd" url="sf:user=servicetest1@autotrader.com.medpreprod;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="Quoting" url="sf:user=servicetest1@autotrader.com.quoting;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
         <connection name="AmeliaGoldman">
           <summary/>
           <connectionUrls>
-            <connectionUrl url="sf:user=amelia.goldman@autotrader.com.qa;logonAsConnection=Admin"/>
+            <connectionUrl url="sf:user=amelia.goldman@autotrader.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="QA" url="sf:user=amelia.goldman@autotrader.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
-            <connectionUrl envName="PreProd" url="sf:user=amelia.goldman@autotrader.com.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="MedPreProd" url="sf:user=amelia.goldman@autotrader.com.medpreprod;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="Quoting" url="sf:user=amelia.goldman@autotrader.com.quoting;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
         <connection name="WendyHatfield">
           <summary>Wendy</summary>
           <connectionUrls>
-            <connectionUrl url="sf:user=wendy.hatfield@autotrader.com.qa;logonAsConnection=Admin"/>
+            <connectionUrl url="sf:user=wendy.hatfield@autotrader.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="QA" url="sf:user=wendy.hatfield@autotrader.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
-            <connectionUrl envName="PreProd" url="sf:user=wendy.hatfield@autotrader.com.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="MedPreProd" url="sf:user=wendy.hatfield@autotrader.com.medpreprod;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="Quoting" url="sf:user=wendy.hatfield@autotrader.com.quoting;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
         <connection name="EdMerrick">
           <summary>\t</summary>
           <connectionUrls>
-            <connectionUrl url="sf:user=ed.merrick@autotrader.com.qa;logonAsConnection=Admin"/>
+            <connectionUrl url="sf:user=ed.merrick@autotrader.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="QA" url="sf:user=ed.merrick@autotrader.com.qa;environment=PROD_DEV;logonAsConnection=Admin"/>
-            <connectionUrl envName="PreProd" url="sf:user=ed.merrick@autotrader.com.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="MedPreProd" url="sf:user=ed.merrick@autotrader.com.medpreprod;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="Quoting" url="sf:user=ed.merrick@autotrader.com.quoting;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
@@ -266,7 +266,7 @@
           <summary/>
           <connectionUrls>
             <connectionUrl url="sf:user=dof.sales.test@atg.com.quat;environment=PROD_DEV;logonAsConnection=Admin"/>
-            <connectionUrl envName="PreProd" url="sf:user=brad.weber@autotrader.com.prod.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="MedPreProd" url="sf:user=brad.weber@autotrader.com.prod.medpreprod;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="qUAT" url="sf:user=dof.sales.test@atg.com.quat;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
@@ -274,7 +274,7 @@
           <summary/>
           <connectionUrls>
             <connectionUrl url="sf:user=brad.weber@autotrader.com.prod.stage;environment=PROD_DEV;logonAsConnection=Admin"/>
-            <connectionUrl envName="PreProd" url="sf:user=brad.weber@autotrader.com.prod.preprod;environment=PROD_DEV;logonAsConnection=Admin"/>
+            <connectionUrl envName="MedPreProd" url="sf:user=brad.weber@autotrader.com.prod.medpreprod;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="Stage" url="sf:user=brad.weber@autotrader.com.prod.stage;environment=PROD_DEV;logonAsConnection=Admin"/>
             <connectionUrl envName="Quoting" url="sf:user=brad.weber@autotrader.com.prod.quoting;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
