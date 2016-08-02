@@ -85,5 +85,9 @@ public class ProductSelection {
 	@ButtonType()
 	@FindByLabel(label = "Cancel")
 	public WebElement cancel;
+
+	@ChoiceListType()
+	@FindByLabel(label = "Price Book")
+	public WebElement priceBook;
 			
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="28" registryId="ad01e3bb-4813-4a90-8598-81a2505b5a8d">
+<testCase id="23" registryId="ad01e3bb-4813-4a90-8598-81a2505b5a8d">
   <summary>&lt;p&gt;manual run - 6/1/16 - PreProd - using Crown Kia&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;PASS&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;</summary>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="329" title="Create Opp">
@@ -43,7 +43,9 @@
                 <argument id="enableObjectIdLogging">
                   <value class="value" valueClass="boolean">true</value>
                 </argument>
-                <argument id="autoCleanup"/>
+                <argument id="autoCleanup">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
                 <argument id="cleanupConnectionName"/>
                 <argument id="logFileLocation"/>
                 <argument id="username"/>
@@ -52,7 +54,7 @@
                 <argument id="securityToken"/>
               </arguments>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="3" title="Create Object: Opportunity=&gt;OpportunityId">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="846" title="Create Object: Opportunity=&gt;OpportunityId">
               <arguments>
                 <argument id="objectType">
                   <value class="value" valueClass="string">Opportunity</value>
@@ -74,14 +76,8 @@
                 <argument id="StageName">
                   <value class="value" valueClass="string">Prospect</value>
                 </argument>
-                <argument id="Amount">
-                  <value class="value" valueClass="decimal">2000.0</value>
-                </argument>
-                <argument id="Probability">
-                  <value class="value" valueClass="decimal">0.0</value>
-                </argument>
                 <argument id="CloseDate">
-                  <value class="value" valueClass="date">1453939200000</value>
+                  <value class="value" valueClass="date">1493078400000</value>
                 </argument>
                 <argument id="Type">
                   <value class="value" valueClass="string">New Business</value>
@@ -99,12 +95,6 @@
                 <argument id="Product_Line__c">
                   <value class="value" valueClass="string">Provar 1-Weber2</value>
                 </argument>
-                <argument id="BU_Type__c">
-                  <value class="value" valueClass="string">Media</value>
-                </argument>
-                <argument id="mti_pb__PriceBook_To_Use__c">
-                  <value class="value" valueClass="string">ATC Price book</value>
-                </argument>
                 <argument id="assignmentRuleId"/>
                 <argument id="resultScope">
                   <value class="value" valueClass="string">Test</value>
@@ -115,9 +105,8 @@
                   </value>
                 </argument>
               </arguments>
-              <parameterValueSources/>
               <parameterGeneratorProperties>
-                <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.ConnectionName">Admin</propertyValue>
+                <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.ConnectionName">BradWeber</propertyValue>
                 <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.CustomObjectName">Opportunity</propertyValue>
               </parameterGeneratorProperties>
               <generatedParameters>
@@ -126,10 +115,6 @@
                   <summary>set by the system, please do not modify</summary>
                 </apiParam>
                 <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=StageName" name="StageName" title="StageName"/>
-                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=Amount" name="Amount" title="Amount"/>
-                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=Probability" name="Probability" title="Probability">
-                  <summary>users can override the probability during a stage</summary>
-                </apiParam>
                 <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=CloseDate" name="CloseDate" title="CloseDate">
                   <summary>upon creation of Opportunity the system sets the close date to 30 days from the create date by workflow - user can update the date accordingly</summary>
                 </apiParam>
@@ -141,8 +126,6 @@
                 <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=Product_Line__c" name="Product_Line__c" title="Product_Line__c">
                   <summary>The BU Type must be selected with the appropriate BU (i.e. ATC Media, KBB, TIM, vAuto,etc ) in order to be captured in reporting. The “Dealer Interested Product” field is only added to the opportunity title.</summary>
                 </apiParam>
-                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=BU_Type__c" name="BU_Type__c" title="BU_Type__c"/>
-                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=mti_pb__PriceBook_To_Use__c" name="mti_pb__PriceBook_To_Use__c" title="mti_pb__PriceBook_To_Use__c"/>
                 <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=OwnerId" name="OwnerId" title="OwnerId"/>
               </generatedParameters>
             </apiCall>
@@ -179,7 +162,7 @@
           <value class="value" valueClass="string">ATC_Sales</value>
         </argument>
         <argument id="closeAllPrimaryTabs">
-          <value class="value" valueClass="boolean">false</value>
+          <value class="value" valueClass="boolean">true</value>
         </argument>
         <argument id="quickUiLogin">
           <value class="value" valueClass="boolean">true</value>
@@ -188,7 +171,9 @@
         <argument id="enableObjectIdLogging">
           <value class="value" valueClass="boolean">true</value>
         </argument>
-        <argument id="autoCleanup"/>
+        <argument id="autoCleanup">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
         <argument id="cleanupConnectionName"/>
         <argument id="logFileLocation"/>
         <argument id="username"/>
@@ -312,6 +297,127 @@
       <generatedParameters>
         <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
           <summary>The Id of the SF Object to be Viewed or Edited.</summary>
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="855" title="On ProductSelection page">
+      <arguments>
+        <argument id="uiConnectionName">
+          <value class="value" valueClass="string">DOFSalesUser</value>
+        </argument>
+        <argument id="target">
+          <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.ProductSelection"/>
+        </argument>
+        <argument id="navigate">
+          <value class="value" valueClass="string">Dont</value>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">On ProductSelection page</value>
+        </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="captureAfter">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="uiTargetUrl"/>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="856">
+          <steps>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="857" title="Set the Price Book to ATC Price book">
+              <arguments>
+                <argument id="locator">
+                  <value class="uiLocator" uri="ui:pageobject:field?field=priceBook&amp;pageId=pageobjects.ProductSelection"/>
+                </argument>
+                <argument id="interaction">
+                  <value class="uiInteraction" uri="ui:interaction?name=set"/>
+                </argument>
+                <argument id="value">
+                  <value class="value" valueClass="string">ATC Price book</value>
+                </argument>
+                <argument id="blur">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="pressEnter">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="interactionDescription">
+                  <value class="value" valueClass="string">Set the Price Book to ATC Price book</value>
+                </argument>
+              </arguments>
+              <generatedParameters>
+                <apiParam group="value" name="value" title="Value">
+                  <summary>The value to be populated.</summary>
+                  <type>
+                    <textType/>
+                  </type>
+                </apiParam>
+                <apiParam group="value" name="blur" title="Tab off field">
+                  <summary>Whether the tab key should be pressed after the value is populated.</summary>
+                  <type>
+                    <booleanType/>
+                  </type>
+                </apiParam>
+                <apiParam group="value" name="pressEnter" title="Press Enter">
+                  <summary>Whether the Enter key should be pressed after the value is populated.</summary>
+                  <type>
+                    <booleanType/>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="858" title="Click the Save">
+              <arguments>
+                <argument id="locator">
+                  <value class="uiLocator" uri="ui:pageobject:field?field=save&amp;pageId=pageobjects.ProductSelection"/>
+                </argument>
+                <argument id="interaction">
+                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                </argument>
+                <argument id="hover">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="interactionDescription">
+                  <value class="value" valueClass="string">Click the Save</value>
+                </argument>
+              </arguments>
+              <generatedParameters>
+                <apiParam group="value" name="hover" title="Hover before Clicking">
+                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                  <type>
+                    <booleanType/>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+      <generatedParameters>
+        <apiParam group="target" name="uiTargetUrl" title="Web Page">
           <type>
             <textType/>
           </type>
@@ -819,7 +925,7 @@
                                 </apiParam>
                               </generatedParameters>
                             </apiCall>
-                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="783" title="Set the Net Billing Amount field to {1000}">
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="783" title="Set the Product Net Billable Amount field to {1000}">
                               <tags/>
                               <arguments>
                                 <argument id="locator">
@@ -844,7 +950,7 @@
                                   <value class="value" valueClass="boolean">false</value>
                                 </argument>
                                 <argument id="interactionDescription">
-                                  <value class="value" valueClass="string">Set the Net Billing Amount field to {1000}</value>
+                                  <value class="value" valueClass="string">Set the Product Net Billable Amount field to {1000}</value>
                                 </argument>
                                 <argument id="wait"/>
                               </arguments>
@@ -1209,24 +1315,19 @@
       <clauses>
         <clause name="hidden" testItemId="174">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="83" title="On SF Opportunity view screen">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="859" title="On NewQuote page">
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
-                  <value class="uiTarget" uri="sf:ui:target?object=Opportunity&amp;action=View"/>
+                  <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.NewQuote"/>
                 </argument>
                 <argument id="navigate">
                   <value class="value" valueClass="string">Dont</value>
                 </argument>
-                <argument id="sfUiTargetObjectId">
-                  <value class="variable">
-                    <path element="OpportunityId"/>
-                  </value>
-                </argument>
                 <argument id="targetDescription">
-                  <value class="value" valueClass="string">On SF Opportunity view screen</value>
+                  <value class="value" valueClass="string">On NewQuote page</value>
                 </argument>
                 <argument id="windowSelection">
                   <value class="value" valueClass="string">Default</value>
@@ -1235,16 +1336,21 @@
                   <value class="value" valueClass="string">Default</value>
                 </argument>
                 <argument id="closeWindow"/>
-                <argument id="captureBefore"/>
-                <argument id="captureAfter"/>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="uiTargetUrl"/>
               </arguments>
               <clauses>
-                <clause name="substeps" testItemId="84">
+                <clause name="substeps" testItemId="860">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="85" title="Click the Quotes NewQuote button">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="861" title="Click the New Quote">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=NewQuote&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26action%3DNewQuote%26relationship%3DQuotes"/>
+                          <value class="uiLocator" uri="ui:pageobject:field?field=NewQuote&amp;pageId=pageobjects.NewQuote"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=action"/>
@@ -1259,7 +1365,7 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Click the Quotes NewQuote button</value>
+                          <value class="value" valueClass="string">Click the New Quote</value>
                         </argument>
                       </arguments>
                       <generatedParameters>
@@ -1275,8 +1381,7 @@
                 </clause>
               </clauses>
               <generatedParameters>
-                <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
-                  <summary>The Id of the SF Object to be Viewed or Edited.</summary>
+                <apiParam group="target" name="uiTargetUrl" title="Web Page">
                   <type>
                     <textType/>
                   </type>
@@ -3908,19 +4013,19 @@
       <clauses>
         <clause name="substeps" testItemId="303">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="308" title="With RelatedOrderList rows {1}">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="862" title="With Orders rows {1}">
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="locator">
-                  <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FRelatedOrderList%2FRelatedOrderListTable"/>
+                  <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FOrders%2FOrdersTable"/>
                 </argument>
                 <argument id="uiRowLocator">
                   <value class="value" valueClass="decimal">1</value>
                 </argument>
                 <argument id="locatorDescription">
-                  <value class="value" valueClass="string">With RelatedOrderList rows {1}</value>
+                  <value class="value" valueClass="string">With Orders rows {1}</value>
                 </argument>
                 <argument id="failIfNotFound">
                   <value class="value" valueClass="boolean">true</value>
@@ -3935,22 +4040,24 @@
                 <argument id="autoPaginate"/>
               </arguments>
               <clauses>
-                <clause name="substeps" testItemId="309">
+                <clause name="substeps" testItemId="863">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="773" title="UI Assert">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="864" title="UI Assert">
                       <arguments>
                         <argument id="resultName">
-                          <value class="value" valueClass="string">OrderNumber</value>
+                          <value class="value" valueClass="string">Values</value>
                         </argument>
                         <argument id="resultScope">
                           <value class="value" valueClass="string">Test</value>
                         </argument>
                         <argument id="fieldAssertions">
                           <value class="valueList" mutable="Mutable">
-                            <uiFieldAssertion resultName="ORDERS_ORDER_NUMBER">
-                              <fieldLocator uri="ui:locator?name=ORDERS_ORDER_NUMBER&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DQuote%26field%3DORDER_NUMBER%26relationship%3DOrders"/>
+                            <uiFieldAssertion resultName="ORDERS_TOTAL_AMOUNT">
+                              <fieldLocator uri="ui:locator?name=ORDERS_TOTAL_AMOUNT&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DQuote%26field%3DTOTAL_AMOUNT%26relationship%3DOrders"/>
                               <attributeAssertions>
-                                <uiAttributeAssertion attributeName="value" comparisonType="None"/>
+                                <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
+                                  <value class="value" valueClass="string">$1,342.00</value>
+                                </uiAttributeAssertion>
                               </attributeAssertions>
                             </uiFieldAssertion>
                           </value>
@@ -3958,15 +4065,9 @@
                         <argument id="captureAfter">
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
-                        <argument id="columnAssertions">
-                          <value class="valueList" mutable="Mutable"/>
-                        </argument>
-                        <argument id="pageAssertions">
-                          <value class="valueList" mutable="Mutable"/>
-                        </argument>
                       </arguments>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="310" title="Click the ORDERS.ORDER_NUMBER link">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="865" title="Click the Order Number link">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=ORDERS_ORDER_NUMBER&amp;rowLocator=1&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DQuote%26field%3DORDER_NUMBER%26relationship%3DOrders"/>
@@ -3984,7 +4085,7 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Click the ORDERS.ORDER_NUMBER link</value>
+                          <value class="value" valueClass="string">Click the Order Number link</value>
                         </argument>
                         <argument id="wait"/>
                       </arguments>
@@ -6427,18 +6528,6 @@
           </type>
         </apiParam>
       </generatedParameters>
-    </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexDeleteObject" name="ApexDeleteObject" testItemId="821" title="Delete Object: {OpportunityId}">
-      <arguments>
-        <argument id="apexConnectionName">
-          <value class="value" valueClass="string">DOFSalesUser</value>
-        </argument>
-        <argument id="objectId">
-          <value class="variable">
-            <path element="OpportunityId"/>
-          </value>
-        </argument>
-      </arguments>
     </apiCall>
   </steps>
   <params>
