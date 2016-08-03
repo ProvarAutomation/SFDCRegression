@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="4">
+<testCase id="26">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: DOFSalesUser (Test)">
@@ -139,21 +139,22 @@
                 <argument id="interactionDescription">
                   <value class="value" valueClass="string">Set the Account reference to Jim Ellis Mazda of Atlanta</value>
                 </argument>
+                <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" name="value" title="Value">
+                <apiParam group="value" modelBinding="sf:ui:binding:object?object=Contract&amp;field=AccountId" name="value" seq="10000" title="Value">
                   <summary>The value to be populated.</summary>
                   <type>
                     <textType/>
                   </type>
                 </apiParam>
-                <apiParam group="value" name="blur" title="Tab off field">
+                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
                   <summary>Whether the tab key should be pressed after the value is populated.</summary>
                   <type>
                     <booleanType/>
                   </type>
                 </apiParam>
-                <apiParam group="value" name="pressEnter" title="Press Enter">
+                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
                   <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                   <type>
                     <booleanType/>
@@ -162,6 +163,9 @@
               </generatedParameters>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="8" title="Today link the Contract Start Date field">
+              <tags>
+                <string>disabled</string>
+              </tags>
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=StartDate&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DContract%26field%3DStartDate"/>

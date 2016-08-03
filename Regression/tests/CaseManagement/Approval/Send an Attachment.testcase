@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="2">
+<testCase id="7">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="83" title="Salesforce Connect: ServiceUser (Test)">
@@ -30,7 +30,9 @@
         <argument id="enableObjectIdLogging">
           <value class="value" valueClass="boolean">true</value>
         </argument>
-        <argument id="autoCleanup"/>
+        <argument id="autoCleanup">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
         <argument id="cleanupConnectionName"/>
         <argument id="logFileLocation"/>
         <argument id="username"/>
@@ -45,21 +47,20 @@
           <value class="value" valueClass="string">ServiceUser</value>
         </argument>
       </arguments>
+      <outputArguments>
+        <outputArgument id="CaseId"/>
+      </outputArguments>
     </caseCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="78" title="On SF Case view screen">
-      <tags/>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="86" title="On SF Case view (ATC Dealer Service) screen">
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">ServiceUser</value>
         </argument>
         <argument id="target">
-          <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=View"/>
+          <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=View&amp;recordType=ATC+Dealer+Service"/>
         </argument>
         <argument id="navigate">
           <value class="value" valueClass="string">Dont</value>
-        </argument>
-        <argument id="scTabType">
-          <value class="value" valueClass="string">CurrentTab</value>
         </argument>
         <argument id="sfUiTargetObjectId">
           <value class="variable">
@@ -67,7 +68,7 @@
           </value>
         </argument>
         <argument id="targetDescription">
-          <value class="value" valueClass="string">On SF Case view screen</value>
+          <value class="value" valueClass="string">On SF Case view (ATC Dealer Service) screen</value>
         </argument>
         <argument id="windowSelection">
           <value class="value" valueClass="string">Default</value>
@@ -76,30 +77,39 @@
           <value class="value" valueClass="string">Default</value>
         </argument>
         <argument id="closeWindow"/>
-        <argument id="captureBefore"/>
-        <argument id="captureAfter"/>
+        <argument id="captureBefore">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="captureAfter">
+          <value class="value" valueClass="string">false</value>
+        </argument>
       </arguments>
       <clauses>
-        <clause name="substeps" testItemId="56">
+        <clause name="substeps" testItemId="87">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="85" title="Click the Emails Send an Email button">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="88" title="Click the Open Activities New Task button">
               <arguments>
                 <argument id="locator">
-                  <value class="uiLocator" uri="ui:locator?name=newEmail&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26action%3DnewEmail%26relationship%3DEmailMessages"/>
+                  <value class="uiLocator" uri="ui:locator?name=task&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26action%3Dtask%26relationship%3DOpenActivities"/>
                 </argument>
                 <argument id="interaction">
                   <value class="uiInteraction" uri="ui:interaction?name=action"/>
                 </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Emails Send an Email button</value>
+                <argument id="hover">
+                  <value class="value" valueClass="boolean">false</value>
                 </argument>
-                <argument id="wait"/>
-                <argument id="captureBefore"/>
-                <argument id="captureAfter"/>
-                <argument id="hover"/>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="interactionDescription">
+                  <value class="value" valueClass="string">Click the Open Activities New Task button</value>
+                </argument>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
+                <apiParam group="value" name="hover" title="Hover before Clicking">
                   <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                   <type>
                     <booleanType/>
@@ -119,22 +129,25 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="11" title="On SF Send an Email screen">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="89" title="On SF Task new screen">
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">ServiceUser</value>
         </argument>
         <argument id="target">
-          <value class="uiTarget" uri="sf:ui:target?action=email"/>
+          <value class="uiTarget" uri="sf:ui:target?object=Task&amp;action=New"/>
         </argument>
         <argument id="navigate">
           <value class="value" valueClass="string">Dont</value>
         </argument>
-        <argument id="scTabType">
-          <value class="value" valueClass="string">CurrentTab</value>
+        <argument id="sfUiTargetResultName">
+          <value class="value" valueClass="string">taskId</value>
+        </argument>
+        <argument id="sfUiTargetResultScope">
+          <value class="value" valueClass="string">Test</value>
         </argument>
         <argument id="targetDescription">
-          <value class="value" valueClass="string">On SF Send an Email screen</value>
+          <value class="value" valueClass="string">On SF Task new screen</value>
         </argument>
         <argument id="windowSelection">
           <value class="value" valueClass="string">Default</value>
@@ -143,22 +156,26 @@
           <value class="value" valueClass="string">Default</value>
         </argument>
         <argument id="closeWindow"/>
-        <argument id="captureBefore"/>
-        <argument id="captureAfter"/>
+        <argument id="captureBefore">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="captureAfter">
+          <value class="value" valueClass="string">false</value>
+        </argument>
       </arguments>
       <clauses>
-        <clause name="substeps" testItemId="12">
+        <clause name="substeps" testItemId="90">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="13" title="Set the Subject control to TEST">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="91" title="Set the Subject field to Test Email Subject">
               <arguments>
                 <argument id="locator">
-                  <value class="uiLocator" uri="ui:locator?name=subject"/>
+                  <value class="uiLocator" uri="ui:locator?name=Subject&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DTask%26field%3DSubject"/>
                 </argument>
                 <argument id="interaction">
                   <value class="uiInteraction" uri="ui:interaction?name=set"/>
                 </argument>
                 <argument id="value">
-                  <value class="value" valueClass="string">TEST</value>
+                  <value class="value" valueClass="string">Test Email Subject</value>
                 </argument>
                 <argument id="blur">
                   <value class="value" valueClass="boolean">false</value>
@@ -173,9 +190,8 @@
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the Subject control to TEST</value>
+                  <value class="value" valueClass="string">Set the Subject field to Test Email Subject</value>
                 </argument>
-                <argument id="wait"/>
               </arguments>
               <generatedParameters>
                 <apiParam group="value" name="value" title="Value">
@@ -198,10 +214,188 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="22" title="Click the Attach File Button button">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="92" title="Today link the Due Date Only field">
               <arguments>
                 <argument id="locator">
-                  <value class="uiLocator" uri="ui:locator?name=attachFileButton"/>
+                  <value class="uiLocator" uri="ui:locator?name=ActivityDate&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DTask%26field%3DActivityDate"/>
+                </argument>
+                <argument id="interaction">
+                  <value class="uiInteraction" uri="ui:interaction?name=sfToday"/>
+                </argument>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="interactionDescription">
+                  <value class="value" valueClass="string">Today link the Due Date Only field</value>
+                </argument>
+              </arguments>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="93" title="Set the Task Status picklist to Not Started">
+              <arguments>
+                <argument id="locator">
+                  <value class="uiLocator" uri="ui:locator?name=Status&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DTask%26field%3DStatus"/>
+                </argument>
+                <argument id="interaction">
+                  <value class="uiInteraction" uri="ui:interaction?name=set"/>
+                </argument>
+                <argument id="value">
+                  <value class="value" valueClass="string">Not Started</value>
+                </argument>
+                <argument id="blur">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="pressEnter">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="interactionDescription">
+                  <value class="value" valueClass="string">Set the Task Status picklist to Not Started</value>
+                </argument>
+              </arguments>
+              <generatedParameters>
+                <apiParam group="value" name="value" title="Value">
+                  <summary>The value to be populated.</summary>
+                  <type>
+                    <textType/>
+                  </type>
+                </apiParam>
+                <apiParam group="value" name="blur" title="Tab off field">
+                  <summary>Whether the tab key should be pressed after the value is populated.</summary>
+                  <type>
+                    <booleanType/>
+                  </type>
+                </apiParam>
+                <apiParam group="value" name="pressEnter" title="Press Enter">
+                  <summary>Whether the Enter key should be pressed after the value is populated.</summary>
+                  <type>
+                    <booleanType/>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="94" title="Set the Priority picklist to High">
+              <arguments>
+                <argument id="locator">
+                  <value class="uiLocator" uri="ui:locator?name=Priority&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DTask%26field%3DPriority"/>
+                </argument>
+                <argument id="interaction">
+                  <value class="uiInteraction" uri="ui:interaction?name=set"/>
+                </argument>
+                <argument id="value">
+                  <value class="value" valueClass="string">High</value>
+                </argument>
+                <argument id="blur">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="pressEnter">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="interactionDescription">
+                  <value class="value" valueClass="string">Set the Priority picklist to High</value>
+                </argument>
+                <argument id="wait"/>
+              </arguments>
+              <generatedParameters>
+                <apiParam group="value" modelBinding="sf:ui:binding:object?object=Task&amp;field=Priority" name="value" seq="10000" title="Value">
+                  <summary>The value to be populated.</summary>
+                  <type>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="boundedValues">High:High|Normal:Normal|Low:Low</valueConstraint>
+                        <valueConstraint name="unrestricted">true</valueConstraint>
+                      </constraints>
+                    </choiceType>
+                  </type>
+                </apiParam>
+                <apiParam group="value" name="blur" seq="10001" title="Tab off field">
+                  <summary>Whether the tab key should be pressed after the value is populated.</summary>
+                  <type>
+                    <booleanType/>
+                  </type>
+                </apiParam>
+                <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
+                  <summary>Whether the Enter key should be pressed after the value is populated.</summary>
+                  <type>
+                    <booleanType/>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+      <generatedParameters>
+        <apiParam group="result" name="sfUiTargetResultName" resultNameParameter="true" title="Result Name">
+          <summary>The name under which the resulting Task Id will be stored.</summary>
+          <type>
+            <textType/>
+          </type>
+          <resultValueClasses>
+            <string>ApexObjectId</string>
+          </resultValueClasses>
+        </apiParam>
+        <apiParam group="result" name="sfUiTargetResultScope" title="Result Scope">
+          <summary>The life-span of the resulting identifiers.</summary>
+          <type>
+            <choiceType>
+              <constraints>
+                <valueConstraint name="boundedValues">Global:Test Run|Folder:Test Folder|Test:Test Case|GroupStep:Group Step|Local:Test Step</valueConstraint>
+              </constraints>
+            </choiceType>
+          </type>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="102" title="On NewTask page">
+      <arguments>
+        <argument id="uiConnectionName">
+          <value class="value" valueClass="string">ServiceUser</value>
+        </argument>
+        <argument id="target">
+          <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.NewTask"/>
+        </argument>
+        <argument id="navigate">
+          <value class="value" valueClass="string">Dont</value>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">On NewTask page</value>
+        </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="captureAfter">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="uiTargetUrl"/>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="103">
+          <steps>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="104" title="Click the Attach File">
+              <arguments>
+                <argument id="locator">
+                  <value class="uiLocator" uri="ui:pageobject:field?field=attachFile&amp;pageId=pageobjects.NewTask"/>
                 </argument>
                 <argument id="interaction">
                   <value class="uiInteraction" uri="ui:interaction?name=action"/>
@@ -216,12 +410,12 @@
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Attach File Button button</value>
+                  <value class="value" valueClass="string">Click the Attach File</value>
                 </argument>
                 <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" name="hover" title="Hover before Clicking">
+                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
                   <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                   <type>
                     <booleanType/>
@@ -232,7 +426,13 @@
           </steps>
         </clause>
       </clauses>
-      <generatedParameters/>
+      <generatedParameters>
+        <apiParam group="target" name="uiTargetUrl" title="Web Page">
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+      </generatedParameters>
     </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="26" title="On SF File Picker screen">
       <arguments>
@@ -243,7 +443,7 @@
           <value class="uiTarget" uri="sf:ui:target?action=filePicker"/>
         </argument>
         <argument id="navigate">
-          <value class="value" valueClass="string">Dont</value>
+          <value class="value" valueClass="string">Always</value>
         </argument>
         <argument id="scTabType">
           <value class="value" valueClass="string">ExistingTab</value>
@@ -262,6 +462,7 @@
         <argument id="closeWindow"/>
         <argument id="captureBefore"/>
         <argument id="captureAfter"/>
+        <argument id="uiTargetUrl"/>
       </arguments>
       <clauses>
         <clause name="substeps" testItemId="27">

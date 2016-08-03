@@ -5,7 +5,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: Jason_Stage (Test)">
       <arguments>
         <argument argId="4391283d-f43a-4558-8b8b-928741513747" id="connectionName">
-          <value class="value" valueClass="string">PricingTeam</value>
+          <value class="value" valueClass="string">Admin</value>
         </argument>
         <argument id="resultName">
           <value class="value" valueClass="string">Jason_Stage</value>

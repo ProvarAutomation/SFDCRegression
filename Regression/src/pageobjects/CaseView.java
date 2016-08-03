@@ -88,5 +88,8 @@ public class CaseView {
 	@TextType()
 	@FindByLabel(label = "Parent Case")
 	public WebElement parentCase;
+	@ButtonType()
+	@FindByLabel(label = "Attach File")
+	public WebElement attachFile;
 			
 }

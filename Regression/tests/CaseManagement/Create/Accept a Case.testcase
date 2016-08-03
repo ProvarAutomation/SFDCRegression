@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="6">
+<testCase id="10">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: ServiceTestUser (Test)">
@@ -20,6 +20,23 @@
         <argument id="closeAllPrimaryTabs">
           <value class="value" valueClass="boolean">true</value>
         </argument>
+        <argument id="reuseConnectionName"/>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="vfDebug"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
       </arguments>
     </apiCall>
     <caseCall testCaseId="092b89d3-99ff-4505-b853-7998e6742542" testItemId="2">
@@ -29,6 +46,9 @@
           <value class="value" valueClass="string">ServiceTestUser</value>
         </argument>
       </arguments>
+      <outputArguments>
+        <outputArgument id="CaseId"/>
+      </outputArguments>
     </caseCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="9" title="On SF Case view (ATC Dealer Service) screen">
       <arguments>
@@ -41,7 +61,11 @@
         <argument id="navigate">
           <value class="value" valueClass="string">Dont</value>
         </argument>
-        <argument id="sfUiTargetObjectId"/>
+        <argument id="sfUiTargetObjectId">
+          <value class="variable">
+            <path element="CaseId"/>
+          </value>
+        </argument>
         <argument id="targetDescription">
           <value class="value" valueClass="string">On SF Case view (ATC Dealer Service) screen</value>
         </argument>
@@ -113,7 +137,9 @@
           <value class="value" valueClass="string">Dont</value>
         </argument>
         <argument id="sfUiTargetObjectId">
-          <value class="value" valueClass="string">5001b0000013TbE</value>
+          <value class="variable">
+            <path element="CaseId"/>
+          </value>
         </argument>
         <argument id="targetDescription">
           <value class="value" valueClass="string">On SF Case change owner screen</value>
@@ -148,6 +174,7 @@
                 <argument id="interactionDescription">
                   <value class="value" valueClass="string">Lookup the Owner reference</value>
                 </argument>
+                <argument id="wait"/>
               </arguments>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="18" title="On SF User lookup screen">
@@ -164,14 +191,76 @@
                 <argument id="targetDescription">
                   <value class="value" valueClass="string">On SF User lookup screen</value>
                 </argument>
+                <argument id="windowSelection">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="windowSize">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="closeWindow"/>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
               </arguments>
               <clauses>
                 <clause name="substeps" testItemId="19">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="20" title="Click the Full Name button">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="27" title="Set the Search text to Brad Weber">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=Name&amp;path=resultsFrame%2FresultsTable%2FresultsRow&amp;rowLocator=Name+%3D+%27Brian+Mooney%27"/>
+                          <value class="uiLocator" uri="ui:locator?name=SearchName&amp;path=searchFrame"/>
+                        </argument>
+                        <argument id="interaction">
+                          <value class="uiInteraction" uri="ui:interaction?name=set"/>
+                        </argument>
+                        <argument id="value">
+                          <value class="value" valueClass="string">Brad Weber</value>
+                        </argument>
+                        <argument id="blur">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="pressEnter">
+                          <value class="value" valueClass="boolean">true</value>
+                        </argument>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Set the Search text to Brad Weber</value>
+                        </argument>
+                        <argument id="wait"/>
+                      </arguments>
+                      <generatedParameters>
+                        <apiParam group="value" name="value" seq="10000" title="Value">
+                          <summary>The value to be populated.</summary>
+                          <type>
+                            <textType/>
+                          </type>
+                        </apiParam>
+                        <apiParam group="value" name="blur" seq="10001" title="Tab off field">
+                          <summary>Whether the tab key should be pressed after the value is populated.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                        <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
+                          <summary>Whether the Enter key should be pressed after the value is populated.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="28" title="Click the Full Name button">
+                      <arguments>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:locator?name=Name&amp;path=resultsFrame%2FresultsTable%2FresultsRow&amp;rowLocator=1"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=action"/>
@@ -202,7 +291,7 @@
                 </clause>
               </clauses>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="21" title="Click the Save button">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="29" title="Click the Save button">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=save&amp;path=selectOwner"/>
@@ -210,13 +299,19 @@
                 <argument id="interaction">
                   <value class="uiInteraction" uri="ui:interaction?name=action"/>
                 </argument>
+                <argument id="hover">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
                 <argument id="interactionDescription">
                   <value class="value" valueClass="string">Click the Save button</value>
                 </argument>
                 <argument id="wait"/>
-                <argument id="captureBefore"/>
-                <argument id="captureAfter"/>
-                <argument id="hover"/>
               </arguments>
               <generatedParameters>
                 <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
@@ -251,10 +346,25 @@
           <value class="value" valueClass="string">Dont</value>
         </argument>
         <argument id="sfUiTargetObjectId">
-          <value class="value" valueClass="string">5001b0000013TbE</value>
+          <value class="variable">
+            <path element="CaseId"/>
+          </value>
         </argument>
         <argument id="targetDescription">
           <value class="value" valueClass="string">On SF Case view (ATC Dealer Service) screen</value>
+        </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="captureAfter">
+          <value class="value" valueClass="string">false</value>
         </argument>
       </arguments>
       <clauses>
@@ -274,7 +384,7 @@
                       <fieldLocator uri="ui:locator?name=OwnerId&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26field%3DOwnerId"/>
                       <attributeAssertions>
                         <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
-                          <value class="value" valueClass="string">Brian Mooney</value>
+                          <value class="value" valueClass="string">Brad Weber</value>
                         </uiAttributeAssertion>
                       </attributeAssertions>
                     </uiFieldAssertion>
@@ -282,6 +392,12 @@
                 </argument>
                 <argument id="captureAfter">
                   <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="columnAssertions">
+                  <value class="valueList" mutable="Mutable"/>
+                </argument>
+                <argument id="pageAssertions">
+                  <value class="valueList" mutable="Mutable"/>
                 </argument>
               </arguments>
             </apiCall>
@@ -337,6 +453,12 @@
                 </argument>
                 <argument id="captureAfter">
                   <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="columnAssertions">
+                  <value class="valueList" mutable="Mutable"/>
+                </argument>
+                <argument id="pageAssertions">
+                  <value class="valueList" mutable="Mutable"/>
                 </argument>
               </arguments>
             </apiCall>

@@ -6116,9 +6116,7 @@
       <value class="value" valueClass="string">Ford New Car Co-op Max 2014</value>
     </argument>
   </args>
-  <tags>
-    <string>disabled</string>
-  </tags>
+  <tags/>
   <tagReferences>
     <tagRef tagName="Brad Weber" tagTypeName="maintainer"/>
   </tagReferences>
