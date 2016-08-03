@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="13">
+<testCase id="19">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: AdamGrille (Test)">
@@ -28,7 +28,9 @@
         <argument id="enableObjectIdLogging">
           <value class="value" valueClass="boolean">true</value>
         </argument>
-        <argument id="autoCleanup"/>
+        <argument id="autoCleanup">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
         <argument id="cleanupConnectionName"/>
         <argument id="logFileLocation"/>
         <argument id="username"/>
@@ -887,42 +889,33 @@
       <clauses>
         <clause name="substeps" testItemId="50">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="69" title="On SalesUserProductAdd page">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="78" title="With OpportunityLineItemTable {Product2Id = &quot;Alpha 2014&quot;}">
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">AdamGrille</value>
                 </argument>
-                <argument id="target">
-                  <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.SalesUserProductAdd"/>
+                <argument id="locator">
+                  <value class="uiLocator" uri="sf:ui:locator:row?table=OpportunityLineItemTable"/>
                 </argument>
-                <argument id="navigate">
-                  <value class="value" valueClass="string">Dont</value>
+                <argument id="uiRowLocator">
+                  <value class="eq">
+                    <lhs class="variable">
+                      <path element="Product2Id"/>
+                    </lhs>
+                    <rhs class="value" valueClass="string">Alpha 2014</rhs>
+                  </value>
                 </argument>
-                <argument id="targetDescription">
-                  <value class="value" valueClass="string">On SalesUserProductAdd page</value>
+                <argument id="locatorDescription">
+                  <value class="value" valueClass="string">With OpportunityLineItemTable {Product2Id = "Alpha 2014"}</value>
                 </argument>
-                <argument id="windowSelection">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-                <argument id="windowSize">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-                <argument id="closeWindow"/>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="uiTargetUrl"/>
               </arguments>
               <clauses>
-                <clause name="substeps" testItemId="70">
+                <clause name="substeps" testItemId="79">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="71" title="Set the Quantity to 1">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="80" title="Set the Quantity field to 1">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:pageobject:field?field=Quantity&amp;pageId=pageobjects.SalesUserProductAdd"/>
+                          <value class="uiLocator" uri="ui:locator?name=Quantity&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunityLineItem%26field%3DQuantity&amp;rowLocator=Product2Id+%3D+%27Alpha+2014%27"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
@@ -943,7 +936,7 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Quantity to 1</value>
+                          <value class="value" valueClass="string">Set the Quantity field to 1</value>
                         </argument>
                       </arguments>
                       <generatedParameters>
@@ -967,10 +960,10 @@
                         </apiParam>
                       </generatedParameters>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="72" title="Set the Sales Price to 1000">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="81" title="Set the Product Net Billable Amount field to 1000">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:pageobject:field?field=SalesPrice&amp;pageId=pageobjects.SalesUserProductAdd"/>
+                          <value class="uiLocator" uri="ui:locator?name=NBA_Amount__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunityLineItem%26field%3DNBA_Amount__c&amp;rowLocator=Product2Id+%3D+%27Alpha+2014%27"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
@@ -991,7 +984,7 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Sales Price to 1000</value>
+                          <value class="value" valueClass="string">Set the Product Net Billable Amount field to 1000</value>
                         </argument>
                       </arguments>
                       <generatedParameters>
@@ -1018,15 +1011,8 @@
                   </steps>
                 </clause>
               </clauses>
-              <generatedParameters>
-                <apiParam group="target" name="uiTargetUrl" title="Web Page">
-                  <type>
-                    <textType/>
-                  </type>
-                </apiParam>
-              </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="75" title="Click the Save button">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="82" title="Click the Save button">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=save&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunityLineItem%26action%3Dsave"/>

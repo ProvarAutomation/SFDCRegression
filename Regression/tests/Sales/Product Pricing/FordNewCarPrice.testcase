@@ -101,9 +101,6 @@
                 <argument id="Product_Line__c">
                   <value class="value" valueClass="string">Provar 1-Weber2</value>
                 </argument>
-                <argument id="BU_Type__c">
-                  <value class="value" valueClass="string">Media</value>
-                </argument>
                 <argument id="mti_pb__PriceBook_To_Use__c">
                   <value class="value" valueClass="string">ATC Price book</value>
                 </argument>
@@ -142,7 +139,6 @@
                 <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=Product_Line__c" name="Product_Line__c" title="Product_Line__c">
                   <summary>The BU Type must be selected with the appropriate BU (i.e. ATC Media, KBB, TIM, vAuto,etc ) in order to be captured in reporting. The “Dealer Interested Product” field is only added to the opportunity title.</summary>
                 </apiParam>
-                <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=BU_Type__c" name="BU_Type__c" title="BU_Type__c"/>
                 <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=mti_pb__PriceBook_To_Use__c" name="mti_pb__PriceBook_To_Use__c" title="mti_pb__PriceBook_To_Use__c"/>
                 <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Opportunity&amp;field=OwnerId" name="OwnerId" title="OwnerId"/>
               </generatedParameters>

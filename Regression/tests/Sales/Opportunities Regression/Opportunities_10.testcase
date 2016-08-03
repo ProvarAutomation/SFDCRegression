@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="18">
+<testCase id="23">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: UiConnection (Test)">
@@ -28,7 +28,9 @@
         <argument id="enableObjectIdLogging">
           <value class="value" valueClass="boolean">true</value>
         </argument>
-        <argument id="autoCleanup"/>
+        <argument id="autoCleanup">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
         <argument id="cleanupConnectionName"/>
         <argument id="logFileLocation"/>
         <argument id="username"/>
@@ -573,7 +575,7 @@
                         </argument>
                       </arguments>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="52" title="Set the Stage picklist to Closed/Won - Planned">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="52" title="Set the Stage picklist to Closed Won">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=StageName&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DStageName"/>
@@ -582,7 +584,7 @@
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">Closed/Won - Planned</value>
+                          <value class="value" valueClass="string">Closed Won</value>
                         </argument>
                         <argument id="blur">
                           <value class="value" valueClass="boolean">false</value>
@@ -597,7 +599,7 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Stage picklist to Closed/Won - Planned</value>
+                          <value class="value" valueClass="string">Set the Stage picklist to Closed Won</value>
                         </argument>
                         <argument id="wait">
                           <value class="uiWait" uri="ui:wait:pageload?timeout=60"/>
@@ -609,7 +611,7 @@
                           <type>
                             <choiceType>
                               <constraints>
-                                <valueConstraint name="boundedValues">Prospect:Prospect|Planning:Planning|Presentation:Presentation|Contract Submitted:Contract Submitted|Closed/Won - Planned:Closed/Won - Planned|Closed/Won - Booked:Closed/Won - Booked|Closed Realized:Closed Realized|Closed Lost:Closed Lost</valueConstraint>
+                                <valueConstraint name="boundedValues">Prospect:Prospect|Planning:Planning|Presentation:Presentation|Contract Submitted:Contract Submitted|Closed Won:Closed Won|Closed Lost:Closed Lost|Closed Realized:Closed Realized</valueConstraint>
                                 <valueConstraint name="unrestricted">true</valueConstraint>
                               </constraints>
                             </choiceType>
@@ -1263,7 +1265,7 @@
                         </argument>
                       </arguments>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="338" title="Set the Stage picklist to Closed/Won - Planned">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="338" title="Set the Stage picklist to Closed Won">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=StageName&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DStageName"/>
@@ -1272,7 +1274,7 @@
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">Closed/Won - Planned</value>
+                          <value class="value" valueClass="string">Closed Won</value>
                         </argument>
                         <argument id="blur">
                           <value class="value" valueClass="boolean">false</value>
@@ -1287,7 +1289,7 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Stage picklist to Closed/Won - Planned</value>
+                          <value class="value" valueClass="string">Set the Stage picklist to Closed Won</value>
                         </argument>
                         <argument id="wait">
                           <value class="uiWait" uri="ui:wait:pageload?timeout=60"/>
@@ -1299,7 +1301,7 @@
                           <type>
                             <choiceType>
                               <constraints>
-                                <valueConstraint name="boundedValues">Prospect:Prospect|Planning:Planning|Presentation:Presentation|Contract Submitted:Contract Submitted|Closed/Won - Planned:Closed/Won - Planned|Closed/Won - Booked:Closed/Won - Booked|Closed Realized:Closed Realized|Closed Lost:Closed Lost</valueConstraint>
+                                <valueConstraint name="boundedValues">Prospect:Prospect|Planning:Planning|Presentation:Presentation|Contract Submitted:Contract Submitted|Closed Won:Closed Won|Closed Lost:Closed Lost|Closed Realized:Closed Realized</valueConstraint>
                                 <valueConstraint name="unrestricted">true</valueConstraint>
                               </constraints>
                             </choiceType>
@@ -1953,7 +1955,7 @@
                         </argument>
                       </arguments>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="353" title="Set the Stage picklist to Closed/Won - Planned">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="353" title="Set the Stage picklist to Closed Won">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=StageName&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DStageName"/>
@@ -1962,7 +1964,7 @@
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">Closed/Won - Planned</value>
+                          <value class="value" valueClass="string">Closed Won</value>
                         </argument>
                         <argument id="blur">
                           <value class="value" valueClass="boolean">false</value>
@@ -1977,7 +1979,7 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Stage picklist to Closed/Won - Planned</value>
+                          <value class="value" valueClass="string">Set the Stage picklist to Closed Won</value>
                         </argument>
                         <argument id="wait">
                           <value class="uiWait" uri="ui:wait:pageload?timeout=60"/>
@@ -1989,7 +1991,7 @@
                           <type>
                             <choiceType>
                               <constraints>
-                                <valueConstraint name="boundedValues">Prospect:Prospect|Planning:Planning|Presentation:Presentation|Contract Submitted:Contract Submitted|Closed/Won - Planned:Closed/Won - Planned|Closed/Won - Booked:Closed/Won - Booked|Closed Realized:Closed Realized|Closed Lost:Closed Lost</valueConstraint>
+                                <valueConstraint name="boundedValues">Prospect:Prospect|Planning:Planning|Presentation:Presentation|Contract Submitted:Contract Submitted|Closed Won:Closed Won|Closed Lost:Closed Lost|Closed Realized:Closed Realized</valueConstraint>
                                 <valueConstraint name="unrestricted">true</valueConstraint>
                               </constraints>
                             </choiceType>
@@ -2643,7 +2645,7 @@
                         </argument>
                       </arguments>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="368" title="Set the Stage picklist to Closed/Won - Planned">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="368" title="Set the Stage picklist to Closed Won">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=StageName&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DStageName"/>
@@ -2652,7 +2654,7 @@
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">Closed/Won - Planned</value>
+                          <value class="value" valueClass="string">Closed Won</value>
                         </argument>
                         <argument id="blur">
                           <value class="value" valueClass="boolean">false</value>
@@ -2667,7 +2669,7 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Stage picklist to Closed/Won - Planned</value>
+                          <value class="value" valueClass="string">Set the Stage picklist to Closed Won</value>
                         </argument>
                         <argument id="wait">
                           <value class="uiWait" uri="ui:wait:pageload?timeout=60"/>
@@ -2679,7 +2681,7 @@
                           <type>
                             <choiceType>
                               <constraints>
-                                <valueConstraint name="boundedValues">Prospect:Prospect|Planning:Planning|Presentation:Presentation|Contract Submitted:Contract Submitted|Closed/Won - Planned:Closed/Won - Planned|Closed/Won - Booked:Closed/Won - Booked|Closed Realized:Closed Realized|Closed Lost:Closed Lost</valueConstraint>
+                                <valueConstraint name="boundedValues">Prospect:Prospect|Planning:Planning|Presentation:Presentation|Contract Submitted:Contract Submitted|Closed Won:Closed Won|Closed Lost:Closed Lost|Closed Realized:Closed Realized</valueConstraint>
                                 <valueConstraint name="unrestricted">true</valueConstraint>
                               </constraints>
                             </choiceType>
@@ -3333,7 +3335,7 @@
                         </argument>
                       </arguments>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="383" title="Set the Stage picklist to Closed/Won - Planned">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="383" title="Set the Stage picklist to Closed Won">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=StageName&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DStageName"/>
@@ -3342,7 +3344,7 @@
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">Closed/Won - Planned</value>
+                          <value class="value" valueClass="string">Closed Won</value>
                         </argument>
                         <argument id="blur">
                           <value class="value" valueClass="boolean">false</value>
@@ -3357,7 +3359,7 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Stage picklist to Closed/Won - Planned</value>
+                          <value class="value" valueClass="string">Set the Stage picklist to Closed Won</value>
                         </argument>
                         <argument id="wait">
                           <value class="uiWait" uri="ui:wait:pageload?timeout=60"/>
@@ -3369,7 +3371,7 @@
                           <type>
                             <choiceType>
                               <constraints>
-                                <valueConstraint name="boundedValues">Prospect:Prospect|Planning:Planning|Presentation:Presentation|Contract Submitted:Contract Submitted|Closed/Won - Planned:Closed/Won - Planned|Closed/Won - Booked:Closed/Won - Booked|Closed Realized:Closed Realized|Closed Lost:Closed Lost</valueConstraint>
+                                <valueConstraint name="boundedValues">Prospect:Prospect|Planning:Planning|Presentation:Presentation|Contract Submitted:Contract Submitted|Closed Won:Closed Won|Closed Lost:Closed Lost|Closed Realized:Closed Realized</valueConstraint>
                                 <valueConstraint name="unrestricted">true</valueConstraint>
                               </constraints>
                             </choiceType>

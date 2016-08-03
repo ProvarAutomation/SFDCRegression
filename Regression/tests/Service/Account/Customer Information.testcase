@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="45">
+<testCase id="42">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="21" title="Salesforce Connect: ServiceTestUser (Test)">
@@ -28,12 +28,15 @@
         <argument id="enableObjectIdLogging">
           <value class="value" valueClass="boolean">true</value>
         </argument>
-        <argument id="autoCleanup"/>
+        <argument id="autoCleanup">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
         <argument id="cleanupConnectionName"/>
         <argument id="logFileLocation"/>
         <argument id="username"/>
         <argument id="password"/>
         <argument id="environment"/>
+        <argument id="securityToken"/>
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="22" title="On SF Account view (Dealer) screen">
@@ -60,9 +63,7 @@
         <argument id="captureBefore"/>
         <argument id="captureAfter"/>
         <argument id="sfUiTargetObjectId">
-          <value class="variable">
-            <path element="CrownKiaAccount"/>
-          </value>
+          <value class="value" valueClass="string">001E000000mEUj8</value>
         </argument>
       </arguments>
       <clauses>
@@ -193,7 +194,7 @@
                       <fieldLocator uri="ui:pageobject:field?field=SVOC_Id__c&amp;pageId=pageobjects.CaseView"/>
                       <attributeAssertions>
                         <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
-                          <value class="value" valueClass="string">582944</value>
+                          <value class="value" valueClass="string">1328598</value>
                         </uiAttributeAssertion>
                       </attributeAssertions>
                     </uiFieldAssertion>
