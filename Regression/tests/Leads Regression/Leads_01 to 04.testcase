@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="27">
+<testCase id="25">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="2" title="AC - Adam Grill">
@@ -44,7 +44,9 @@
                 <argument id="enableObjectIdLogging">
                   <value class="value" valueClass="boolean">true</value>
                 </argument>
-                <argument id="autoCleanup"/>
+                <argument id="autoCleanup">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
                 <argument id="cleanupConnectionName"/>
                 <argument id="logFileLocation"/>
                 <argument id="username"/>
@@ -572,7 +574,7 @@
                         </apiParam>
                       </generatedParameters>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="488" title="Set the Lead Source picklist to 20 Group">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="488" title="Set the Lead Source picklist to Trade Show">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=LeadSource&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DLead%26field%3DLeadSource"/>
@@ -581,7 +583,7 @@
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">20 Group</value>
+                          <value class="value" valueClass="string">Trade Show</value>
                         </argument>
                         <argument id="blur">
                           <value class="value" valueClass="boolean">false</value>
@@ -596,17 +598,18 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Lead Source picklist to 20 Group</value>
+                          <value class="value" valueClass="string">Set the Lead Source picklist to Trade Show</value>
                         </argument>
                         <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="value" seq="10000" title="Value">
+                        <apiParam group="value" modelBinding="sf:ui:binding:object?object=Lead&amp;field=LeadSource" name="value" seq="10000" title="Value">
                           <summary>The value to be populated.</summary>
                           <type>
                             <choiceType>
                               <constraints>
-                                <valueConstraint name="boundedValues">20 Group|Advertisement|Advertisement - Banner|Advertisement - Print|App Store|ATC â&#128;&#147; 20 Group|ATC Teaser|Auction Genius|AutoTrader|AutoTrader Major Accounts|Call In|Call in - ATC Directed|Cold Call|Customer Referral|Direct Mail|Editorial / Press Coverage|Email Blast|Employee Referral|External Referral|Harvest|Internal Referral|Migrated Customer|NADA|OEM Referral|Other|Partner|Partner Referral|Press Release|Public Relations|Seminar - Internal|Seminar - Partner|Telemarketing|Trade Show|Trade Show or Conference|Web|Webinars|Website|Website - ATC Directed|Website â&#128;&#147; Stocking Teaser|Word of mouth</valueConstraint>
+                                <valueConstraint name="boundedValues">Auction:Auction|BHPH Center:BHPH Center|Call In:Call In|Client Association:Client Association|Client Referral:Client Referral|Cold Call:Cold Call|Digital Marketing:Digital Marketing|Direct Mail:Direct Mail|Email Blast:Email Blast|Industry Relations:Industry Relations|Internal Referral:Internal Referral|Internal Special Project:Internal Special Project|Other:Other|Trade Show:Trade Show|Web-AGame:Web-AGame|Web-B2BKBB:Web-B2BKBB</valueConstraint>
+                                <valueConstraint name="unrestricted">true</valueConstraint>
                               </constraints>
                             </choiceType>
                           </type>
@@ -2696,7 +2699,7 @@
                         </apiParam>
                       </generatedParameters>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="550" title="Set the Lead Source picklist to 20 Group">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="550" title="Set the Lead Source picklist to Trade Show">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=LeadSource&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DLead%26field%3DLeadSource"/>
@@ -2705,7 +2708,7 @@
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">20 Group</value>
+                          <value class="value" valueClass="string">Trade Show</value>
                         </argument>
                         <argument id="blur">
                           <value class="value" valueClass="boolean">false</value>
@@ -2720,17 +2723,18 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Lead Source picklist to 20 Group</value>
+                          <value class="value" valueClass="string">Set the Lead Source picklist to Trade Show</value>
                         </argument>
                         <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="value" seq="10000" title="Value">
+                        <apiParam group="value" modelBinding="sf:ui:binding:object?object=Lead&amp;field=LeadSource" name="value" seq="10000" title="Value">
                           <summary>The value to be populated.</summary>
                           <type>
                             <choiceType>
                               <constraints>
-                                <valueConstraint name="boundedValues">20 Group|Advertisement|Advertisement - Banner|Advertisement - Print|App Store|ATC â&#128;&#147; 20 Group|ATC Teaser|Auction Genius|AutoTrader|AutoTrader Major Accounts|Call In|Call in - ATC Directed|Cold Call|Customer Referral|Direct Mail|Editorial / Press Coverage|Email Blast|Employee Referral|External Referral|Harvest|Internal Referral|Migrated Customer|NADA|OEM Referral|Other|Partner|Partner Referral|Press Release|Public Relations|Seminar - Internal|Seminar - Partner|Telemarketing|Trade Show|Trade Show or Conference|Web|Webinars|Website|Website - ATC Directed|Website â&#128;&#147; Stocking Teaser|Word of mouth</valueConstraint>
+                                <valueConstraint name="boundedValues">Auction:Auction|BHPH Center:BHPH Center|Call In:Call In|Client Association:Client Association|Client Referral:Client Referral|Cold Call:Cold Call|Digital Marketing:Digital Marketing|Direct Mail:Direct Mail|Email Blast:Email Blast|Industry Relations:Industry Relations|Internal Referral:Internal Referral|Internal Special Project:Internal Special Project|Other:Other|Trade Show:Trade Show|Web-AGame:Web-AGame|Web-B2BKBB:Web-B2BKBB</valueConstraint>
+                                <valueConstraint name="unrestricted">true</valueConstraint>
                               </constraints>
                             </choiceType>
                           </type>
@@ -4821,7 +4825,7 @@
                         </apiParam>
                       </generatedParameters>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="612" title="Set the Lead Source picklist to 20 Group">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="612" title="Set the Lead Source picklist to Trade Show">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=LeadSource&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DLead%26field%3DLeadSource"/>
@@ -4830,7 +4834,7 @@
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">20 Group</value>
+                          <value class="value" valueClass="string">Trade Show</value>
                         </argument>
                         <argument id="blur">
                           <value class="value" valueClass="boolean">false</value>
@@ -4845,17 +4849,18 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Lead Source picklist to 20 Group</value>
+                          <value class="value" valueClass="string">Set the Lead Source picklist to Trade Show</value>
                         </argument>
                         <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="value" seq="10000" title="Value">
+                        <apiParam group="value" modelBinding="sf:ui:binding:object?object=Lead&amp;field=LeadSource" name="value" seq="10000" title="Value">
                           <summary>The value to be populated.</summary>
                           <type>
                             <choiceType>
                               <constraints>
-                                <valueConstraint name="boundedValues">20 Group|Advertisement|Advertisement - Banner|Advertisement - Print|App Store|ATC â&#128;&#147; 20 Group|ATC Teaser|Auction Genius|AutoTrader|AutoTrader Major Accounts|Call In|Call in - ATC Directed|Cold Call|Customer Referral|Direct Mail|Editorial / Press Coverage|Email Blast|Employee Referral|External Referral|Harvest|Internal Referral|Migrated Customer|NADA|OEM Referral|Other|Partner|Partner Referral|Press Release|Public Relations|Seminar - Internal|Seminar - Partner|Telemarketing|Trade Show|Trade Show or Conference|Web|Webinars|Website|Website - ATC Directed|Website â&#128;&#147; Stocking Teaser|Word of mouth</valueConstraint>
+                                <valueConstraint name="boundedValues">Auction:Auction|BHPH Center:BHPH Center|Call In:Call In|Client Association:Client Association|Client Referral:Client Referral|Cold Call:Cold Call|Digital Marketing:Digital Marketing|Direct Mail:Direct Mail|Email Blast:Email Blast|Industry Relations:Industry Relations|Internal Referral:Internal Referral|Internal Special Project:Internal Special Project|Other:Other|Trade Show:Trade Show|Web-AGame:Web-AGame|Web-B2BKBB:Web-B2BKBB</valueConstraint>
+                                <valueConstraint name="unrestricted">true</valueConstraint>
                               </constraints>
                             </choiceType>
                           </type>
@@ -6944,7 +6949,7 @@
                         </apiParam>
                       </generatedParameters>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="674" title="Set the Lead Source picklist to 20 Group">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="674" title="Set the Lead Source picklist to Trade Show">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=LeadSource&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DLead%26field%3DLeadSource"/>
@@ -6953,7 +6958,7 @@
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">20 Group</value>
+                          <value class="value" valueClass="string">Trade Show</value>
                         </argument>
                         <argument id="blur">
                           <value class="value" valueClass="boolean">false</value>
@@ -6968,17 +6973,18 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Lead Source picklist to 20 Group</value>
+                          <value class="value" valueClass="string">Set the Lead Source picklist to Trade Show</value>
                         </argument>
                         <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="value" seq="10000" title="Value">
+                        <apiParam group="value" modelBinding="sf:ui:binding:object?object=Lead&amp;field=LeadSource" name="value" seq="10000" title="Value">
                           <summary>The value to be populated.</summary>
                           <type>
                             <choiceType>
                               <constraints>
-                                <valueConstraint name="boundedValues">20 Group|Advertisement|Advertisement - Banner|Advertisement - Print|App Store|ATC â&#128;&#147; 20 Group|ATC Teaser|Auction Genius|AutoTrader|AutoTrader Major Accounts|Call In|Call in - ATC Directed|Cold Call|Customer Referral|Direct Mail|Editorial / Press Coverage|Email Blast|Employee Referral|External Referral|Harvest|Internal Referral|Migrated Customer|NADA|OEM Referral|Other|Partner|Partner Referral|Press Release|Public Relations|Seminar - Internal|Seminar - Partner|Telemarketing|Trade Show|Trade Show or Conference|Web|Webinars|Website|Website - ATC Directed|Website â&#128;&#147; Stocking Teaser|Word of mouth</valueConstraint>
+                                <valueConstraint name="boundedValues">Auction:Auction|BHPH Center:BHPH Center|Call In:Call In|Client Association:Client Association|Client Referral:Client Referral|Cold Call:Cold Call|Digital Marketing:Digital Marketing|Direct Mail:Direct Mail|Email Blast:Email Blast|Industry Relations:Industry Relations|Internal Referral:Internal Referral|Internal Special Project:Internal Special Project|Other:Other|Trade Show:Trade Show|Web-AGame:Web-AGame|Web-B2BKBB:Web-B2BKBB</valueConstraint>
+                                <valueConstraint name="unrestricted">true</valueConstraint>
                               </constraints>
                             </choiceType>
                           </type>

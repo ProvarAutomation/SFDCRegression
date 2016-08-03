@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="2">
+<testCase id="29">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: AdamGrille (Test)">
@@ -28,12 +28,15 @@
         <argument id="enableObjectIdLogging">
           <value class="value" valueClass="boolean">true</value>
         </argument>
-        <argument id="autoCleanup"/>
+        <argument id="autoCleanup">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
         <argument id="cleanupConnectionName"/>
         <argument id="logFileLocation"/>
         <argument id="username"/>
         <argument id="password"/>
         <argument id="environment"/>
+        <argument id="securityToken"/>
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="2" title="On SF BU Referral home screen">
@@ -185,7 +188,7 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="11" title="Set the Dealer reference to Case Subject">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="55" title="Set the Dealer reference to Crown KIA">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=Dealer__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DBU_Referrals__c%26field%3DDealer__c"/>
@@ -194,7 +197,7 @@
                   <value class="uiInteraction" uri="ui:interaction?name=set"/>
                 </argument>
                 <argument id="value">
-                  <value class="value" valueClass="string">Case Subject</value>
+                  <value class="value" valueClass="string">Crown KIA</value>
                 </argument>
                 <argument id="blur">
                   <value class="value" valueClass="boolean">false</value>
@@ -209,7 +212,7 @@
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the Dealer reference to Case Subject</value>
+                  <value class="value" valueClass="string">Set the Dealer reference to Crown KIA</value>
                 </argument>
                 <argument id="wait"/>
               </arguments>
@@ -234,7 +237,7 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="12" title="Set the Dealer Contact reference to Provar Test">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="12" title="Set the Dealer Contact reference to Test Dealer">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=Dealer_Contact__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DBU_Referrals__c%26field%3DDealer_Contact__c"/>
@@ -243,7 +246,7 @@
                   <value class="uiInteraction" uri="ui:interaction?name=set"/>
                 </argument>
                 <argument id="value">
-                  <value class="value" valueClass="string">Provar Test</value>
+                  <value class="value" valueClass="string">Test Dealer</value>
                 </argument>
                 <argument id="blur">
                   <value class="value" valueClass="boolean">false</value>
@@ -258,7 +261,7 @@
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the Dealer Contact reference to Provar Test</value>
+                  <value class="value" valueClass="string">Set the Dealer Contact reference to Test Dealer</value>
                 </argument>
                 <argument id="wait"/>
               </arguments>

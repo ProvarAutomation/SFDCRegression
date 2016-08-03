@@ -40,7 +40,9 @@
                 <argument id="enableObjectIdLogging">
                   <value class="value" valueClass="boolean">true</value>
                 </argument>
-                <argument id="autoCleanup"/>
+                <argument id="autoCleanup">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
                 <argument id="cleanupConnectionName"/>
                 <argument id="logFileLocation"/>
                 <argument id="username"/>
@@ -727,7 +729,7 @@
                         </apiParam>
                       </generatedParameters>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="67" title="Set the Lead Source to 20 Group">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="67" title="Set the Lead Source to Trade Show">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:pageobject:field?field=LeadSource&amp;pageId=pageobjects.LeadNew"/>
@@ -736,7 +738,7 @@
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">20 Group</value>
+                          <value class="value" valueClass="string">Trade Show</value>
                         </argument>
                         <argument id="blur">
                           <value class="value" valueClass="boolean">false</value>
@@ -751,23 +753,28 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Lead Source to 20 Group</value>
+                          <value class="value" valueClass="string">Set the Lead Source to Trade Show</value>
                         </argument>
+                        <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="value" title="Value">
+                        <apiParam group="value" name="value" seq="10000" title="Value">
                           <summary>The value to be populated.</summary>
                           <type>
-                            <textType/>
+                            <choiceType>
+                              <constraints>
+                                <valueConstraint name="boundedValues">20 Group|Advertisement|Advertisement - Banner|Advertisement - Print|App Store|ATC â&#128;&#147; 20 Group|ATC Teaser|Auction Genius|AutoTrader|AutoTrader Major Accounts|Call In|Call in - ATC Directed|Cold Call|Customer Referral|Direct Mail|Editorial / Press Coverage|Email Blast|Employee Referral|External Referral|Harvest|Internal Referral|Migrated Customer|NADA|OEM Referral|Other|Partner|Partner Referral|Press Release|Public Relations|Seminar - Internal|Seminar - Partner|Telemarketing|Trade Show|Trade Show or Conference|Web|Webinars|Website|Website - ATC Directed|Website â&#128;&#147; Stocking Teaser|Word of mouth</valueConstraint>
+                              </constraints>
+                            </choiceType>
                           </type>
                         </apiParam>
-                        <apiParam group="value" name="blur" title="Tab off field">
+                        <apiParam group="value" name="blur" seq="10001" title="Tab off field">
                           <summary>Whether the tab key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
                           </type>
                         </apiParam>
-                        <apiParam group="value" name="pressEnter" title="Press Enter">
+                        <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
                           <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
