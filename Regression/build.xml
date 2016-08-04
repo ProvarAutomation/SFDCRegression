@@ -55,7 +55,8 @@
             licensePath="C:\Jenkins\workspace\SprintAutomation\Regression\provar.license"
             webBrowserConfiguration="Full Screen" 
             testEnvironment="MedPreProd" 
-            resultsPath="${testproject.results}">
+            resultsPath="${testproject.results}"
+    	    projectCachePath="C:\Users\bjweber\Provar\SFDCRegression\.metadata\.plugins\com.provar.eclipse.ui">
             <fileset dir="${tests.dir}">
                 <patternset refid="${test.patternset}"/>
             </fileset>
