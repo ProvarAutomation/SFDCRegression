@@ -42,7 +42,7 @@
     <provar:run projectPath="${testproject.home}" 
             licensePath="C:\Jenkins\workspace\ProvarAutomation2\Regression\provar.license"
             webBrowserConfiguration="Full Screen" 
-            testEnvironment="PreProd" 
+            testEnvironment="MedPreProd" 
             resultsPath="${testproject.results}">
             <fileset dir="${tests.dir}">
                 <patternset refid="${test.patternset}"/>
@@ -54,7 +54,7 @@
     <provar:run projectPath="${testproject.home}" 
             licensePath="C:\Jenkins\workspace\SprintAutomation\Regression\provar.license"
             webBrowserConfiguration="Full Screen" 
-            testEnvironment="PreProd" 
+            testEnvironment="MedPreProd" 
             resultsPath="${testproject.results}">
             <fileset dir="${tests.dir}">
                 <patternset refid="${test.patternset}"/>
