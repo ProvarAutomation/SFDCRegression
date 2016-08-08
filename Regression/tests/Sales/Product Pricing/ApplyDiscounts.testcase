@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="11">
+<testCase id="36">
   <summary>&lt;p&gt;manual run - 6/1/16 - PreProd - using Crown Kia&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;PASS&lt;/strong&gt;&lt;/p&gt;</summary>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="329" title="Create Opp">
@@ -44,7 +44,7 @@
                   <value class="value" valueClass="boolean">true</value>
                 </argument>
                 <argument id="autoCleanup">
-                  <value class="value" valueClass="boolean">true</value>
+                  <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="cleanupConnectionName"/>
                 <argument id="logFileLocation"/>
@@ -189,9 +189,7 @@
         <argument id="autoCleanup">
           <value class="value" valueClass="boolean">true</value>
         </argument>
-        <argument id="cleanupConnectionName">
-          <value class="value" valueClass="string">Admin</value>
-        </argument>
+        <argument id="cleanupConnectionName"/>
         <argument id="logFileLocation"/>
         <argument id="username"/>
         <argument id="password"/>
@@ -1593,6 +1591,9 @@
                       </generatedParameters>
                     </apiCall>
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="820" title="Set the Discount Amount select to 1000">
+                      <tags>
+                        <string>disabled</string>
+                      </tags>
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=DiscountAmount"/>
@@ -2656,19 +2657,19 @@
       <clauses>
         <clause name="substeps" testItemId="303">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="308" title="With RelatedOrderList rows {1}">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="308" title="With Orders rows {1}">
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="locator">
-                  <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FRelatedOrderList%2FRelatedOrderListTable"/>
+                  <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FOrders%2FOrdersTable"/>
                 </argument>
                 <argument id="uiRowLocator">
                   <value class="value" valueClass="decimal">1</value>
                 </argument>
                 <argument id="locatorDescription">
-                  <value class="value" valueClass="string">With RelatedOrderList rows {1}</value>
+                  <value class="value" valueClass="string">With Orders rows {1}</value>
                 </argument>
                 <argument id="failIfNotFound">
                   <value class="value" valueClass="boolean">true</value>
@@ -2714,7 +2715,7 @@
                         </argument>
                       </arguments>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="310" title="Click the ORDERS.ORDER_NUMBER link">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="310" title="Click the Order Number link">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=ORDERS_ORDER_NUMBER&amp;rowLocator=1&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DQuote%26field%3DORDER_NUMBER%26relationship%3DOrders"/>
@@ -2732,7 +2733,7 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Click the ORDERS.ORDER_NUMBER link</value>
+                          <value class="value" valueClass="string">Click the Order Number link</value>
                         </argument>
                         <argument id="wait"/>
                       </arguments>
@@ -3953,19 +3954,19 @@
       <value class="value" valueClass="string">Alpha 2014</value>
     </argument>
     <argument id="Price1">
-      <value class="value" valueClass="string">1809.92</value>
+      <value class="value" valueClass="string">2905.00</value>
     </argument>
     <argument id="Price2">
       <value class="value" valueClass="string">1507.50</value>
     </argument>
     <argument id="Price1d">
-      <value class="value" valueClass="string">$1,809.92</value>
+      <value class="value" valueClass="string">$2,905.00</value>
     </argument>
     <argument id="Price2d">
       <value class="value" valueClass="string">$1,507.50</value>
     </argument>
     <argument id="Totald">
-      <value class="value" valueClass="string">$3,317.42</value>
+      <value class="value" valueClass="string">$4,412.50</value>
     </argument>
   </args>
   <tagReferences>
