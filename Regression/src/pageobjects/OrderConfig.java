@@ -888,4 +888,10 @@ public class OrderConfig {
 //	@TextType()
 //	@FindByLabel(label = "New Spotlight Quantity 8", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
 //	public WebElement NewSpotlightQuantity8;
+	@TextType()
+	@FindBy(xpath = "//input[@name=\"pgId:frmId:mainPgBlkId:j_id43:j_id44:8:j_id45:j_id47\"]")
+	public WebElement FrontLineProModel1;
+	@TextType()
+	@FindBy(xpath = "//*[@id=\"pgId:frmId:mainPgBlkId:j_id43:j_id44:8:j_id45:j_id47_lkwgt\"]")
+	public WebElement FrontLineProModelSearch;
 }

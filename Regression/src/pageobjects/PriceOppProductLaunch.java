@@ -40,6 +40,8 @@ public class PriceOppProductLaunch {
 	@FindByLabel(label = "Calculate")
 	public WebElement calculate;
 	
+	@PageWait.Timed(durationSeconds = 3)
+	@PageWaitAfter.Timed(durationSeconds = 5)
 	@ButtonType()
 	@FindByLabel(label = "Save Price")
 	public WebElement savePrice;
@@ -126,6 +128,10 @@ public class PriceOppProductLaunch {
 	@TextType()
 	@FindBy(xpath = "//div[4]//div[2]/div/input")
 	public WebElement New_Quantity_1;
+
+	@TextType()
+	@FindBy(xpath = "//div[3]//div/span")
+	public WebElement PricingAppAlert;
 
 
 }
