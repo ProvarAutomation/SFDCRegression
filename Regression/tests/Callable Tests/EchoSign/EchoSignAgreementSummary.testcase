@@ -5,7 +5,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: SalesforceConnection (Test)">
       <arguments>
         <argument argId="1b8e2cb6-fc83-4ddd-aa2c-2e2128bc41e7" id="connectionName">
-          <value class="value" valueClass="string">JasonJohn</value>
+          <value class="value" valueClass="string">BradWeber</value>
         </argument>
         <argument id="resultName">
           <value class="value" valueClass="string">SalesforceConnection</value>
@@ -302,19 +302,7 @@
       </clauses>
     </apiCall>
   </steps>
-  <params>
-    <param linkedToUrl="provar:hasvalue:436fb12a-253e-4119-a2b0-9ea1d00be7f8" name="reuseConnectionName" title="Override Connection">
-      <summary>The name of an already opened connect to re-use.</summary>
-      <type>
-        <connectionType>
-          <constraints>
-            <valueConstraint name="variableName">true</valueConstraint>
-            <valueConstraint name="requiredCapabilities">sfSoapConnect</valueConstraint>
-          </constraints>
-        </connectionType>
-      </type>
-    </param>
-  </params>
+  <params/>
   <outputParams>
     <param defaultScope="Global" name="URL" title="URL">
       <summary>The name that the resulting matches will be stored under.</summary>
@@ -332,9 +320,7 @@
       </sourceValue>
     </param>
   </outputParams>
-  <args>
-    <argument id="reuseConnectionName"/>
-  </args>
+  <args/>
   <outputArgs>
     <outputArgument id="URL" scope="Global">
       <name class="value" valueClass="string">URL</name>

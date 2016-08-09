@@ -406,7 +406,7 @@
                                 </apiParam>
                               </generatedParameters>
                             </apiCall>
-                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="244" title="Set the Net Billing Amount field to {1000}">
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="244" title="Set the Product Net Billable Amount field to {1000}">
                               <tags/>
                               <arguments>
                                 <argument id="locator">
@@ -416,11 +416,11 @@
                                   <value class="uiInteraction" uri="ui:interaction?name=set"/>
                                 </argument>
                                 <argument id="interactionDescription">
-                                  <value class="value" valueClass="string">Set the Net Billing Amount field to {1000}</value>
+                                  <value class="value" valueClass="string">Set the Product Net Billable Amount field to {1000}</value>
                                 </argument>
                                 <argument id="wait"/>
                                 <argument id="captureBefore">
-                                  <value class="value" valueClass="boolean">true</value>
+                                  <value class="value" valueClass="string">false</value>
                                 </argument>
                                 <argument id="captureAfter"/>
                                 <argument id="value">

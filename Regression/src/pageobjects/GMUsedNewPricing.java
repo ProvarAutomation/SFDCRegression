@@ -39,5 +39,12 @@ public class GMUsedNewPricing {
 	@ChoiceListType()
 	@FindBy(xpath = "//*[@id=\"418:22;a\"]")
 	public WebElement NewMake;
+	@ButtonType()
+	@FindByLabel(label = " Sync ")
+	public WebElement sync;
+	@PageWait.Field(timeoutSeconds = 10)
+	@ButtonType()
+	@FindByLabel(label = " Done ")
+	public WebElement done;
 			
 }
