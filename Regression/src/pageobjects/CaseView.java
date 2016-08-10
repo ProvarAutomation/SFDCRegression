@@ -40,15 +40,9 @@ public class CaseView {
 	@ButtonType()
 	@FindBy(xpath = "//*[@id=\"massActionForm_001E000000mEZZY_RelatedCaseList\"]/div[1]/table/tbody/tr/td[2]/input[1]")
 	public WebElement Create_Case_from_account;
-	@LinkType()
-	@FindBy(linkText = "Show all results")
-	public WebElement showAllResults;
-	@LinkType()
 	@FindBy(xpath = "//*[@id=\"msgBox\"]/table/tbody/tr/td[2]/div/div/a")
-	public WebElement showAllResults1;
 	@LinkType()
-	@FindBy(linkText = "Show all results")
-	public WebElement showAllResults2;
+	public WebElement showAllResults;
 	@TextType()
 	@FindBy(xpath = "//*[@id=\"newOwn_mlktp\"]")
 	public WebElement User_Queue;
@@ -91,5 +85,8 @@ public class CaseView {
 	@ButtonType()
 	@FindByLabel(label = "Attach File")
 	public WebElement attachFile;
+	@LinkType()
+	@FindBy(linkText = "Show all results")
+	public WebElement showAllResults3;
 			
 }

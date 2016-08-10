@@ -2,22 +2,6 @@
 <testCase id="11">
   <summary/>
   <steps>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexDeleteObject" name="ApexDeleteObject" testItemId="906" title="Delete Object: {OpportunityRows.Id}">
-      <tags>
-        <string>disabled</string>
-      </tags>
-      <arguments>
-        <argument id="objectId">
-          <value class="variable">
-            <path element="OpportunityRows"/>
-            <path element="Id"/>
-          </value>
-        </argument>
-        <argument id="apexConnectionName">
-          <value class="value" valueClass="string">SalesforceConnection</value>
-        </argument>
-      </arguments>
-    </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1028" title="Salesforce Connect: SalesforceConnection (Test)">
       <arguments>
         <argument id="connectionName">

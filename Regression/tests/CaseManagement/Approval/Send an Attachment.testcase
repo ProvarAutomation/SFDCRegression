@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="7">
-  <summary/>
+<testCase id="6" registryId="2436f9d0-dde8-4163-9549-bef0d24e5cfe">
+  <summary>attachment picker issue</summary>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="83" title="Salesforce Connect: ServiceUser (Test)">
       <arguments>
@@ -435,6 +435,9 @@
       </generatedParameters>
     </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="26" title="On SF File Picker screen">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">ServiceUser</value>
@@ -476,7 +479,7 @@
                   <value class="uiInteraction" uri="ui:interaction?name=file"/>
                 </argument>
                 <argument id="fileLocation">
-                  <value class="value" valueClass="string">/templates/testfile.txt</value>
+                  <value class="value" valueClass="string">templates/testfile.txt</value>
                 </argument>
                 <argument id="fileContents"/>
                 <argument id="captureBefore">
@@ -1521,4 +1524,7 @@
       </generatedParameters>
     </apiCall>
   </steps>
+  <tags>
+    <string>disabled</string>
+  </tags>
 </testCase>
