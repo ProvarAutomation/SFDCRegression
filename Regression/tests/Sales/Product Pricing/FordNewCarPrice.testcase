@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <testCase id="14">
-  <summary>&lt;p&gt;5/11/16 - PreProd - using Crown Kia&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;FAIL&lt;/strong&gt; - Front-Line Pro Model selection box not present&lt;/p&gt;</summary>
+  <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="323" title="Create Opp">
       <arguments>
@@ -185,7 +185,9 @@
         <argument id="enableObjectIdLogging">
           <value class="value" valueClass="boolean">true</value>
         </argument>
-        <argument id="autoCleanup"/>
+        <argument id="autoCleanup">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
         <argument id="cleanupConnectionName"/>
         <argument id="logFileLocation"/>
         <argument id="username"/>
@@ -6049,18 +6051,6 @@
           </type>
         </apiParam>
       </generatedParameters>
-    </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexDeleteObject" name="ApexDeleteObject" testItemId="813" title="Delete Object: {OpportunityId}">
-      <arguments>
-        <argument id="apexConnectionName">
-          <value class="value" valueClass="string">DOFSalesUser</value>
-        </argument>
-        <argument id="objectId">
-          <value class="variable">
-            <path element="OpportunityId"/>
-          </value>
-        </argument>
-      </arguments>
     </apiCall>
   </steps>
   <params>

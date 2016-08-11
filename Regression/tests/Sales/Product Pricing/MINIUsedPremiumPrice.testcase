@@ -184,7 +184,9 @@
         <argument id="enableObjectIdLogging">
           <value class="value" valueClass="boolean">true</value>
         </argument>
-        <argument id="autoCleanup"/>
+        <argument id="autoCleanup">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
         <argument id="cleanupConnectionName"/>
         <argument id="logFileLocation"/>
         <argument id="username"/>
@@ -3074,18 +3076,6 @@
           </type>
         </apiParam>
       </generatedParameters>
-    </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexDeleteObject" name="ApexDeleteObject" testItemId="924" title="Delete Object: {OpportunityId}">
-      <arguments>
-        <argument id="apexConnectionName">
-          <value class="value" valueClass="string">DOFSalesUser</value>
-        </argument>
-        <argument id="objectId">
-          <value class="variable">
-            <path element="OpportunityId"/>
-          </value>
-        </argument>
-      </arguments>
     </apiCall>
   </steps>
   <params>

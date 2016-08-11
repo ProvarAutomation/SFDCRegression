@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="13">
-  <summary>5/12/16 - PreProd - using</summary>
+<testCase id="36">
+  <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="329" title="Create Opp">
       <arguments>
@@ -184,7 +184,9 @@
         <argument id="enableObjectIdLogging">
           <value class="value" valueClass="boolean">true</value>
         </argument>
-        <argument id="autoCleanup"/>
+        <argument id="autoCleanup">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
         <argument id="cleanupConnectionName"/>
         <argument id="logFileLocation"/>
         <argument id="username"/>
@@ -3608,19 +3610,19 @@
       <clauses>
         <clause name="substeps" testItemId="303">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="308" title="With RelatedOrderList rows {1}">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="308" title="With Orders rows {1}">
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="locator">
-                  <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FRelatedOrderList%2FRelatedOrderListTable"/>
+                  <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FOrders%2FOrdersTable"/>
                 </argument>
                 <argument id="uiRowLocator">
                   <value class="value" valueClass="decimal">1</value>
                 </argument>
                 <argument id="locatorDescription">
-                  <value class="value" valueClass="string">With RelatedOrderList rows {1}</value>
+                  <value class="value" valueClass="string">With Orders rows {1}</value>
                 </argument>
                 <argument id="failIfNotFound">
                   <value class="value" valueClass="boolean">true</value>
@@ -4872,8 +4874,8 @@
                         </argument>
                         <argument id="fieldAssertions">
                           <value class="valueList" mutable="Mutable">
-                            <uiFieldAssertion resultName="TotalPrice">
-                              <fieldLocator uri="ui:locator?name=TotalPrice&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOrder%26field%3DTotalPrice%26relationship%3DOrderItems"/>
+                            <uiFieldAssertion resultName="TotalAmount">
+                              <fieldLocator uri="ui:locator?name=TotalAmount&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOrder%26field%3DTotalAmount"/>
                               <attributeAssertions>
                                 <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="EqualTo">
                                   <value class="variable">
@@ -6043,6 +6045,148 @@
                         </argument>
                       </arguments>
                     </apiCall>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="1015" title="Click the Front Line Pro Model Search">
+                      <arguments>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:pageobject:field?field=FrontLineProModelSearch&amp;pageId=pageobjects.OrderConfig"/>
+                        </argument>
+                        <argument id="interaction">
+                          <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                        </argument>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Click the Front Line Pro Model Search</value>
+                        </argument>
+                        <argument id="wait"/>
+                        <argument id="hover"/>
+                      </arguments>
+                      <generatedParameters>
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
+                          <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="1016" title="On SF Model lookup screen">
+                      <arguments>
+                        <argument id="uiConnectionName">
+                          <value class="value" valueClass="string">DOFSalesUser</value>
+                        </argument>
+                        <argument id="target">
+                          <value class="uiTarget" uri="sf:ui:target?lookup=Model__c"/>
+                        </argument>
+                        <argument id="navigate">
+                          <value class="value" valueClass="string">Dont</value>
+                        </argument>
+                        <argument id="targetDescription">
+                          <value class="value" valueClass="string">On SF Model lookup screen</value>
+                        </argument>
+                        <argument id="windowSelection">
+                          <value class="value" valueClass="string">Default</value>
+                        </argument>
+                        <argument id="windowSize">
+                          <value class="value" valueClass="string">Default</value>
+                        </argument>
+                        <argument id="closeWindow"/>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="string">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="string">false</value>
+                        </argument>
+                      </arguments>
+                      <clauses>
+                        <clause name="substeps" testItemId="1017">
+                          <steps>
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="1018" title="Set the Search text to Cooper Clubman">
+                              <arguments>
+                                <argument id="locator">
+                                  <value class="uiLocator" uri="ui:locator?name=SearchName&amp;path=searchFrame"/>
+                                </argument>
+                                <argument id="interaction">
+                                  <value class="uiInteraction" uri="ui:interaction?name=set"/>
+                                </argument>
+                                <argument id="value">
+                                  <value class="value" valueClass="string">Cooper Clubman</value>
+                                </argument>
+                                <argument id="blur">
+                                  <value class="value" valueClass="boolean">false</value>
+                                </argument>
+                                <argument id="pressEnter">
+                                  <value class="value" valueClass="boolean">true</value>
+                                </argument>
+                                <argument id="captureBefore">
+                                  <value class="value" valueClass="boolean">false</value>
+                                </argument>
+                                <argument id="captureAfter">
+                                  <value class="value" valueClass="boolean">false</value>
+                                </argument>
+                                <argument id="interactionDescription">
+                                  <value class="value" valueClass="string">Set the Search text to Cooper Clubman</value>
+                                </argument>
+                              </arguments>
+                              <generatedParameters>
+                                <apiParam group="value" name="value" title="Value">
+                                  <summary>The value to be populated.</summary>
+                                  <type>
+                                    <textType/>
+                                  </type>
+                                </apiParam>
+                                <apiParam group="value" name="blur" title="Tab off field">
+                                  <summary>Whether the tab key should be pressed after the value is populated.</summary>
+                                  <type>
+                                    <booleanType/>
+                                  </type>
+                                </apiParam>
+                                <apiParam group="value" name="pressEnter" title="Press Enter">
+                                  <summary>Whether the Enter key should be pressed after the value is populated.</summary>
+                                  <type>
+                                    <booleanType/>
+                                  </type>
+                                </apiParam>
+                              </generatedParameters>
+                            </apiCall>
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="1019" title="Click the Model Name button">
+                              <arguments>
+                                <argument id="locator">
+                                  <value class="uiLocator" uri="ui:locator?name=Name&amp;path=resultsFrame%2FresultsTable%2FresultsRow&amp;rowLocator=1"/>
+                                </argument>
+                                <argument id="interaction">
+                                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                                </argument>
+                                <argument id="hover">
+                                  <value class="value" valueClass="boolean">false</value>
+                                </argument>
+                                <argument id="captureBefore">
+                                  <value class="value" valueClass="boolean">false</value>
+                                </argument>
+                                <argument id="captureAfter">
+                                  <value class="value" valueClass="boolean">false</value>
+                                </argument>
+                                <argument id="interactionDescription">
+                                  <value class="value" valueClass="string">Click the Model Name button</value>
+                                </argument>
+                              </arguments>
+                              <generatedParameters>
+                                <apiParam group="value" name="hover" title="Hover before Clicking">
+                                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                                  <type>
+                                    <booleanType/>
+                                  </type>
+                                </apiParam>
+                              </generatedParameters>
+                            </apiCall>
+                          </steps>
+                        </clause>
+                      </clauses>
+                    </apiCall>
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="743" title="Click the Save">
                       <arguments>
                         <argument id="locator">
@@ -6128,18 +6272,6 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexDeleteObject" name="ApexDeleteObject" testItemId="1012" title="Delete Object: {OpportunityId}">
-      <arguments>
-        <argument id="apexConnectionName">
-          <value class="value" valueClass="string">DOFSalesUser</value>
-        </argument>
-        <argument id="objectId">
-          <value class="variable">
-            <path element="OpportunityId"/>
-          </value>
-        </argument>
-      </arguments>
-    </apiCall>
   </steps>
   <params>
     <param name="Product1" title="Product1">
@@ -6190,9 +6322,7 @@
       <value class="value" valueClass="string">MINI New Car Co-op Max 2014</value>
     </argument>
   </args>
-  <tags>
-    <string>disabled</string>
-  </tags>
+  <tags/>
   <tagReferences>
     <tagRef tagName="Brad Weber" tagTypeName="maintainer"/>
   </tagReferences>

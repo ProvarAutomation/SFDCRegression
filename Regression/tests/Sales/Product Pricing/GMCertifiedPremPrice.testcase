@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="27">
-  <summary>&lt;p&gt;5/11/16 - PreProd - using Crown Kia&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;FAIL &lt;/strong&gt;- Front-Line Pro Model required but not selectable&lt;/p&gt;</summary>
+<testCase id="28">
+  <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="330" title="Create Opp">
       <arguments>

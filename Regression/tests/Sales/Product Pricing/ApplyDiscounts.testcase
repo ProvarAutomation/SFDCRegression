@@ -3844,21 +3844,6 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexDeleteObject" name="ApexDeleteObject" testItemId="826" title="Delete Object: {OpportunityId}">
-      <tags>
-        <string>disabled</string>
-      </tags>
-      <arguments>
-        <argument id="apexConnectionName">
-          <value class="value" valueClass="string">DOFSalesUser</value>
-        </argument>
-        <argument id="objectId">
-          <value class="variable">
-            <path element="OpportunityId"/>
-          </value>
-        </argument>
-      </arguments>
-    </apiCall>
   </steps>
   <params>
     <param name="Product1" title="Product1">
