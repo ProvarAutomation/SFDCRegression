@@ -894,4 +894,7 @@ public class OrderConfig {
 	@TextType()
 	@FindBy(xpath = "//*[@id=\"pgId:frmId:mainPgBlkId:j_id43:j_id44:8:j_id45:j_id47_lkwgt\"]")
 	public WebElement FrontLineProModelSearch;
+	@TextType()
+	@FindBy(xpath = "//*[@id=\"pgId:frmId:mainPgBlkId:j_id48:j_id49:4:j_id50:j_id52_lkwgt\"]")
+	public WebElement GMFrontLineProModel1Lookup;
 }

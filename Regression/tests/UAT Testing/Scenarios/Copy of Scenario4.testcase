@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="23" registryId="6bc265ff-3970-44c2-9e3b-95620a26fdf9">
+<testCase id="5" registryId="6bc265ff-3970-44c2-9e3b-95620a26fdf9">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1028" title="Salesforce Connect: SalesforceConnection (Test)">
@@ -3670,6 +3670,9 @@
       <value class="value" valueClass="string">Alpha Open</value>
     </argument>
   </args>
+  <tags>
+    <string>disabled</string>
+  </tags>
   <tagReferences>
     <tagRef tagName="Brad Weber" tagTypeName="maintainer"/>
   </tagReferences>

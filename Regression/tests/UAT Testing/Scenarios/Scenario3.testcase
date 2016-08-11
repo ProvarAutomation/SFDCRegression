@@ -2859,13 +2859,13 @@
                 </argument>
               </arguments>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="1192" title="Lookup the Front Line Pro Model Search">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="1192" title="Click the Front Line Pro Model Search">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:pageobject:field?field=FrontLineProModelSearch&amp;pageId=pageobjects.OrderConfig"/>
                 </argument>
                 <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=sfLookup"/>
+                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
                 </argument>
                 <argument id="captureBefore">
                   <value class="value" valueClass="boolean">false</value>
@@ -2874,9 +2874,19 @@
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Lookup the Front Line Pro Model Search</value>
+                  <value class="value" valueClass="string">Click the Front Line Pro Model Search</value>
                 </argument>
+                <argument id="wait"/>
+                <argument id="hover"/>
               </arguments>
+              <generatedParameters>
+                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
+                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                  <type>
+                    <booleanType/>
+                  </type>
+                </apiParam>
+              </generatedParameters>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="1193" title="On SF Model lookup screen">
               <arguments>
@@ -2922,21 +2932,22 @@
                         <argument id="interactionDescription">
                           <value class="value" valueClass="string">Set the Search text to F150</value>
                         </argument>
+                        <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="value" title="Value">
+                        <apiParam group="value" name="value" seq="10000" title="Value">
                           <summary>The value to be populated.</summary>
                           <type>
                             <textType/>
                           </type>
                         </apiParam>
-                        <apiParam group="value" name="blur" title="Tab off field">
+                        <apiParam group="value" name="blur" seq="10001" title="Tab off field">
                           <summary>Whether the tab key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
                           </type>
                         </apiParam>
-                        <apiParam group="value" name="pressEnter" title="Press Enter">
+                        <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
                           <summary>Whether the Enter key should be pressed after the value is populated.</summary>
                           <type>
                             <booleanType/>
@@ -2947,7 +2958,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="1196" title="Click the Model Name button">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=Name&amp;path=resultsFrame%2FresultsTable%2FresultsRow&amp;rowLocator=Name+%3D+%27F150%27"/>
+                          <value class="uiLocator" uri="ui:locator?name=Name&amp;path=resultsFrame%2FresultsTable%2FresultsRow&amp;rowLocator=1"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=action"/>
@@ -2964,9 +2975,10 @@
                         <argument id="interactionDescription">
                           <value class="value" valueClass="string">Click the Model Name button</value>
                         </argument>
+                        <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="hover" title="Hover before Clicking">
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
                           <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                           <type>
                             <booleanType/>
