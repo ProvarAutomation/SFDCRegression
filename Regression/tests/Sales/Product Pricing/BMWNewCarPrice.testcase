@@ -5418,13 +5418,13 @@
                       <clauses>
                         <clause name="substeps" testItemId="827">
                           <steps>
-                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="828" title="Lookup the Front Line Pro Model Search">
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="828" title="Click the Front Line Pro Model Search">
                               <arguments>
                                 <argument id="locator">
                                   <value class="uiLocator" uri="ui:pageobject:field?field=FrontLineProModelSearch&amp;pageId=pageobjects.OrderConfig"/>
                                 </argument>
                                 <argument id="interaction">
-                                  <value class="uiInteraction" uri="ui:interaction?name=sfLookup"/>
+                                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
                                 </argument>
                                 <argument id="captureBefore">
                                   <value class="value" valueClass="boolean">false</value>
@@ -5433,9 +5433,19 @@
                                   <value class="value" valueClass="boolean">false</value>
                                 </argument>
                                 <argument id="interactionDescription">
-                                  <value class="value" valueClass="string">Lookup the Front Line Pro Model Search</value>
+                                  <value class="value" valueClass="string">Click the Front Line Pro Model Search</value>
                                 </argument>
+                                <argument id="wait"/>
+                                <argument id="hover"/>
                               </arguments>
+                              <generatedParameters>
+                                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
+                                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                                  <type>
+                                    <booleanType/>
+                                  </type>
+                                </apiParam>
+                              </generatedParameters>
                             </apiCall>
                             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="829" title="On SF Model lookup screen">
                               <arguments>
@@ -5450,6 +5460,19 @@
                                 </argument>
                                 <argument id="targetDescription">
                                   <value class="value" valueClass="string">On SF Model lookup screen</value>
+                                </argument>
+                                <argument id="windowSelection">
+                                  <value class="value" valueClass="string">Default</value>
+                                </argument>
+                                <argument id="windowSize">
+                                  <value class="value" valueClass="string">Default</value>
+                                </argument>
+                                <argument id="closeWindow"/>
+                                <argument id="captureBefore">
+                                  <value class="value" valueClass="string">false</value>
+                                </argument>
+                                <argument id="captureAfter">
+                                  <value class="value" valueClass="string">false</value>
                                 </argument>
                               </arguments>
                               <clauses>
