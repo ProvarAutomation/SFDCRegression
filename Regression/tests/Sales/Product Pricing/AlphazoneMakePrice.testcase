@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="15" registryId="ad01e3bb-4813-4a90-8598-81a2505b5a8d">
+<testCase id="52" registryId="ad01e3bb-4813-4a90-8598-81a2505b5a8d">
   <summary>&lt;p&gt;8/15/2016&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;PASS&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;</summary>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="329" title="Create Opp">
@@ -156,7 +156,7 @@
           <value class="value" valueClass="string">Test</value>
         </argument>
         <argument id="alreadyOpenBehaviour">
-          <value class="value" valueClass="string">Fail</value>
+          <value class="value" valueClass="string">Reopen</value>
         </argument>
         <argument id="uiApplicationName">
           <value class="value" valueClass="string">ATC_Sales</value>
@@ -4158,7 +4158,7 @@
                         </argument>
                       </arguments>
                       <parameterValueSources>
-                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=Pricing&amp;range=A1%3AC200&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo" variableName="ExcelData" variableScope="Test">
+                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=Pricing&amp;range=A1%3AC200&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct1%7D" variableName="ExcelData" variableScope="Test">
                           <cacheToken>C:/Users/jtjohn/Provar/Workspace/ProvarTesting2/Test/templates/FillData.xlsx;1438091420870</cacheToken>
                           <cachedParameters>
                             <apiParam name="RowNumber"/>
