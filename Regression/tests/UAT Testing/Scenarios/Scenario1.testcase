@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="15">
-  <summary/>
+<testCase id="11">
+  <summary>&lt;p&gt;8/17/2016&lt;/p&gt;\n&lt;p&gt;PASS&lt;/p&gt;</summary>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1028" title="Salesforce Connect: SalesforceConnection (Test)">
       <arguments>
