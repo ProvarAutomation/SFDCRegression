@@ -22,13 +22,13 @@ public class BUStatus {
 	@FindBy(xpath = "//img[@src=\"/resource/Flair_Logos/KBB_Active.png\"]")
 	public WebElement KBBStatus;
 	@TextType()
-	@FindBy(xpath = "//img[@src=\"/resource/Flair_Logos/vAuto_Former.png\"]")
+	@FindBy(xpath = "//img[@src=\"/resource/Flair_Logos/vAuto_Active.png\"]")
 	public WebElement vAutoStatus;
 	@TextType()
 	@FindBy(xpath = "//img[@src=\"/resource/Flair_Logos/VIN_Prospect.png\"]")
 	public WebElement VinSolutionsStatus;
 	@TextType()
-	@FindBy(xpath = "//img[@src=\"/resource/Flair_Logos/TIM_Prospect.png\"]")
+	@FindBy(xpath = "//img[@src=\"/resource/Flair_Logos/TIM_Prospect-2.png\"]")
 	public WebElement TIMStatus;
 	@TextType()
 	@FindBy(xpath = "//img[@src=\"/resource/Flair_Logos/Haystak_Former.png\"]")

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="21">
+<testCase id="22">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1028" title="Salesforce Connect: SalesforceConnection (Test)">
@@ -3348,6 +3348,19 @@
         <argument id="targetDescription">
           <value class="value" valueClass="string">On SF Order view screen</value>
         </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="captureAfter">
+          <value class="value" valueClass="string">false</value>
+        </argument>
       </arguments>
       <clauses>
         <clause name="substeps" testItemId="1123">
@@ -3372,9 +3385,10 @@
                 <argument id="interactionDescription">
                   <value class="value" valueClass="string">Click the Send for Dealer Signature button</value>
                 </argument>
+                <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" name="hover" title="Hover before Clicking">
+                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
                   <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                   <type>
                     <booleanType/>
