@@ -49,9 +49,7 @@
                 <argument id="alreadyOpenBehaviour">
                   <value class="value" valueClass="string">Fail</value>
                 </argument>
-                <argument id="uiApplicationName">
-                  <value class="value" valueClass="string">ATC_Service_Console</value>
-                </argument>
+                <argument id="uiApplicationName"/>
                 <argument id="closeAllPrimaryTabs">
                   <value class="value" valueClass="boolean">true</value>
                 </argument>
@@ -72,6 +70,7 @@
                 </argument>
                 <argument id="password"/>
                 <argument id="environment"/>
+                <argument id="securityToken"/>
               </arguments>
               <parameterValueSources/>
             </apiCall>
