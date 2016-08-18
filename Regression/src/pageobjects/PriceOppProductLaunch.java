@@ -121,8 +121,9 @@ public class PriceOppProductLaunch {
 	@FindBy(xpath = "//label/span[text()='Quantity:']/../../select")
 	public WebElement SpotQuantity;
 
+	@FindBy(id = "47:23;a")
+	@PageWait.Timed(durationSeconds = 5)
 	@ChoiceListType()
-	@FindBy(xpath = "//*[@id=\"418:23;a\"]")
 	public WebElement New_Make_1;
 
 	@TextType()
@@ -132,6 +133,11 @@ public class PriceOppProductLaunch {
 	@TextType()
 	@FindBy(xpath = "//div[3]//div/span")
 	public WebElement PricingAppAlert;
+
+	@PageWait.Timed(durationSeconds = 5)
+	@ChoiceListType()
+	@FindBy(id = "418:23;a")
+	public WebElement New_Make_2;
 
 
 }
