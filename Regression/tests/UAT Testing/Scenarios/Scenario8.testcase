@@ -2325,7 +2325,7 @@
         </argument>
       </arguments>
       <outputArguments>
-        <outputArgument id="URL" scope="Global">
+        <outputArgument id="URL">
           <name class="value" valueClass="string">URL</name>
         </outputArgument>
       </outputArguments>
