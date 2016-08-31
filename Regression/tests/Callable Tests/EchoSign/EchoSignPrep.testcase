@@ -181,19 +181,19 @@
       <clauses>
         <clause name="substeps" testItemId="13">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="14" title="With OrderItems rows 1">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="14" title="With RelatedOrderItemList rows 1">
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">Jason_STAGE</value>
                 </argument>
                 <argument id="locator">
-                  <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FOrderItems%2FOrderItemsTable"/>
+                  <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FRelatedOrderItemList%2FRelatedOrderItemListTable"/>
                 </argument>
                 <argument argId="e018d31a-d146-409b-8845-f134ba8e53b5" id="uiRowLocator">
                   <value class="value" valueClass="string">1</value>
                 </argument>
                 <argument id="locatorDescription">
-                  <value class="value" valueClass="string">With OrderItems rows 1</value>
+                  <value class="value" valueClass="string">With RelatedOrderItemList rows 1</value>
                 </argument>
                 <argument id="failIfNotFound">
                   <value class="value" valueClass="boolean">true</value>
@@ -233,7 +233,7 @@
                         <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="hover" title="Hover before Clicking">
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
                           <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                           <type>
                             <booleanType/>

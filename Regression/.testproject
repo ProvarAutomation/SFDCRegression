@@ -255,13 +255,6 @@
             <connectionUrl envName="Quoting" url="sf:user=ed.merrick@autotrader.com.quoting;environment=PROD_DEV;logonAsConnection=Admin"/>
           </connectionUrls>
         </connection>
-        <connection name="JasonJohn">
-          <summary/>
-          <connectionUrls>
-            <connectionUrl url="sf:user=jason.john@autotradergroup.com.quoting;environment=PROD_DEV;logonAsConnection=Admin"/>
-            <connectionUrl envName="qUAT" url="sf:user=jason.john@autotradergroup.com.quat;environment=PROD_DEV;logonAsConnection=Admin"/>
-          </connectionUrls>
-        </connection>
         <connection name="DOFSalesUser">
           <summary/>
           <connectionUrls>
