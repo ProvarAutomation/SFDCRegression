@@ -2025,7 +2025,7 @@
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="1166" title="Click the Order Number link">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=ORDERS_ORDER_NUMBER&amp;rowLocator=ORDERS_ORDER_NUMBER+%3D+%2700003894%27&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DQuote%26field%3DORDER_NUMBER%26relationship%3DRelatedOrderList"/>
+                          <value class="uiLocator" uri="ui:locator?name=ORDERS_ORDER_NUMBER&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DQuote%26field%3DORDER_NUMBER%26relationship%3DOrders"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=action"/>

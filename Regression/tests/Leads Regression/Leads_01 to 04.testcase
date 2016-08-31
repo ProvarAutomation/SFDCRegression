@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="52">
+<testCase id="3">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="2" title="AC - Adam Grill">
@@ -2481,9 +2481,10 @@
                                 <argument id="interactionDescription">
                                   <value class="value" valueClass="string">Click the Account Name button</value>
                                 </argument>
+                                <argument id="wait"/>
                               </arguments>
                               <generatedParameters>
-                                <apiParam group="value" name="hover" title="Hover before Clicking">
+                                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
                                   <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                                   <type>
                                     <booleanType/>
