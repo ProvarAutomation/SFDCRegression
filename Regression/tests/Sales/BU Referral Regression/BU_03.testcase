@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="42">
+<testCase id="3">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: AdamGrille (Test)">
@@ -257,7 +257,7 @@
               <clauses>
                 <clause name="substeps" testItemId="77">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="83" title="Set the Search text to Jason John">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="83" title="Set the Search text to Brad Weber">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=SearchName&amp;path=searchFrame"/>
@@ -266,7 +266,7 @@
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Search text to Jason John</value>
+                          <value class="value" valueClass="string">Set the Search text to Brad Weber</value>
                         </argument>
                         <argument id="wait"/>
                         <argument id="captureBefore">
@@ -276,7 +276,7 @@
                           <value class="value" valueClass="string">false</value>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">Jason John</value>
+                          <value class="value" valueClass="string">Brad Weber</value>
                         </argument>
                         <argument id="blur"/>
                         <argument id="pressEnter">
