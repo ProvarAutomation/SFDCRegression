@@ -62,5 +62,8 @@ public class AccountColumns {
 	@TextType()
 	@FindBy(xpath = "//*[@id=\"500E000000IoJle_RelatedEntityHistoryList_body\"]/table/tbody/tr[2]/td[3]")
 	public WebElement Action;
+	@LinkType()
+	@FindBy(linkText = "Back to ATC Service Console")
+	public WebElement backToATCServiceConsole;
 			
 }

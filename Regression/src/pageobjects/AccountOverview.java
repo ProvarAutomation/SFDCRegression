@@ -84,5 +84,8 @@ public class AccountOverview {
 	@LinkType()
 	@FindBy(linkText = "Back to ATC Service Console")
 	public WebElement BackToATCServiceConsole;
+	@LinkType()
+	@FindBy(linkText = "Back to ATC Service Console")
+	public WebElement backToATCServiceConsole;
 			
 }
