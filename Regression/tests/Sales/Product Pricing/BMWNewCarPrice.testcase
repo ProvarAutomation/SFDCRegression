@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="10">
+<testCase id="3">
   <summary>&lt;p&gt;8/15/16&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;PASS&lt;/strong&gt;&lt;/p&gt;</summary>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="327" title="Create Opp">
@@ -3712,7 +3712,7 @@
                         </argument>
                       </arguments>
                       <parameterValueSources>
-                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=Pricing&amp;range=A1%3ABZ200&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct1%7D" variableName="ExcelData" variableScope="GroupStep">
+                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=Pricing&amp;range=A1%3ABZ200&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct1%7D" variableName="ExcelData" variableScope="Test">
                           <cacheToken>C:/Users/jtjohn/Provar/Workspace/ProvarTesting2/Test/templates/FillData.xlsx;1438091420870</cacheToken>
                           <cachedParameters>
                             <apiParam name="RowNumber"/>
@@ -4011,7 +4011,7 @@
                         </argument>
                       </arguments>
                       <parameterValueSources>
-                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=Pricing&amp;range=A1%3AC200&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct2%7D" variableName="ExcelData" variableScope="GroupStep">
+                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=Pricing&amp;range=A1%3AC200&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct2%7D" variableName="ExcelData" variableScope="Test">
                           <cacheToken>C:/Users/jtjohn/Provar/Workspace/ProvarTesting2/Test/templates/FillData.xlsx;1438091420870</cacheToken>
                           <cachedParameters>
                             <apiParam name="RowNumber"/>
@@ -4310,7 +4310,7 @@
                         </argument>
                       </arguments>
                       <parameterValueSources>
-                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=Pricing&amp;range=A1%3AC200&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct3%7D" variableName="ExcelData" variableScope="GroupStep">
+                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=Pricing&amp;range=A1%3AC200&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct3%7D" variableName="ExcelData" variableScope="Test">
                           <cacheToken>C:/Users/jtjohn/Provar/Workspace/ProvarTesting2/Test/templates/FillData.xlsx;1438091420870</cacheToken>
                           <cachedParameters>
                             <apiParam name="RowNumber"/>
@@ -4573,7 +4573,7 @@
                 </argument>
               </arguments>
               <parameterValueSources>
-                <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=Pricing&amp;range=A1%3AC200&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo" variableName="ExcelData" variableScope="GroupStep">
+                <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=Pricing&amp;range=A1%3AC200&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=BMWNewCarPriceTotal" variableName="ExcelData" variableScope="Test">
                   <cacheToken>C:/Users/bjweber/ProvarProjects/SFDCRegression/Regression/templates/PriceProductGroups.xlsx;1462490126884</cacheToken>
                   <cachedParameters>
                     <apiParam name="RowNumber"/>
@@ -4670,6 +4670,7 @@
         <clause name="substeps" testItemId="338">
           <steps>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="339" title="With RelatedOrderItemList rows {Product2 = $Product1}">
+              <tags/>
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">DOFSalesUser</value>
@@ -4749,6 +4750,7 @@
               </generatedParameters>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="342" title="On OrderConfig page">
+              <tags/>
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">DOFSalesUser</value>
@@ -4783,7 +4785,7 @@
                         </argument>
                       </arguments>
                       <parameterValueSources>
-                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=New+Car&amp;range=A1%3ABZ21&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct1%7D" variableName="ExcelData" variableScope="GroupStep">
+                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=New+Car&amp;range=A1%3ACZ21&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct1%7D" variableName="ExcelData" variableScope="Test">
                           <cacheToken>C:/Users/jtjohn/Provar/Workspace/ProvarTesting2/Test/templates/FillData.xlsx;1438091420870</cacheToken>
                           <cachedParameters>
                             <apiParam name="RowNumber"/>
@@ -5162,7 +5164,7 @@
                         </argument>
                       </arguments>
                       <parameterValueSources>
-                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=New+Car&amp;range=A1%3ABZ21&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct2%7D" variableName="ExcelData" variableScope="GroupStep">
+                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=New+Car&amp;range=A1%3ACZ21&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct2%7D" variableName="ExcelData" variableScope="Test">
                           <cacheToken>C:/Users/jtjohn/Provar/Workspace/ProvarTesting2/Test/templates/FillData.xlsx;1438091420870</cacheToken>
                           <cachedParameters>
                             <apiParam name="RowNumber"/>
@@ -5727,7 +5729,7 @@
                         </argument>
                       </arguments>
                       <parameterValueSources>
-                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=New+Car&amp;range=A1%3ABZ21&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct3%7D" variableName="ExcelData" variableScope="GroupStep">
+                        <parameterValueSource url="excel:templates/PriceProductGroups.xlsx?worksheet=New+Car&amp;range=A1%3ACZ21&amp;namesLocation=FirstRowOfRange&amp;whereName=ProductTitle&amp;whereComparison=EqualTo&amp;whereValue=%7BProduct3%7D" variableName="ExcelData" variableScope="Test">
                           <cacheToken>C:/Users/jtjohn/Provar/Workspace/ProvarTesting2/Test/templates/FillData.xlsx;1438091420870</cacheToken>
                           <cachedParameters>
                             <apiParam name="RowNumber"/>
