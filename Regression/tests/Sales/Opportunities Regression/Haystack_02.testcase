@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="13">
+<testCase id="40">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="327" title="Create Opp">
@@ -43,7 +43,9 @@
                 <argument id="enableObjectIdLogging">
                   <value class="value" valueClass="boolean">true</value>
                 </argument>
-                <argument id="autoCleanup"/>
+                <argument id="autoCleanup">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
                 <argument id="cleanupConnectionName"/>
                 <argument id="logFileLocation"/>
                 <argument id="username"/>
@@ -1211,19 +1213,19 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="783" title="On OpportunityCreate page">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="818" title="On OpportunityEdit page">
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">DOFSalesUser</value>
                 </argument>
                 <argument id="target">
-                  <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.OpportunityCreate"/>
+                  <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.OpportunityEdit"/>
                 </argument>
                 <argument id="navigate">
-                  <value class="value" valueClass="string">Always</value>
+                  <value class="value" valueClass="string">Dont</value>
                 </argument>
                 <argument id="targetDescription">
-                  <value class="value" valueClass="string">On OpportunityCreate page</value>
+                  <value class="value" valueClass="string">On OpportunityEdit page</value>
                 </argument>
                 <argument id="windowSelection">
                   <value class="value" valueClass="string">Default</value>
@@ -1241,9 +1243,9 @@
                 <argument id="uiTargetUrl"/>
               </arguments>
               <clauses>
-                <clause name="substeps" testItemId="784">
+                <clause name="substeps" testItemId="819">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="785" title="UI Assert">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="820" title="UI Assert">
                       <arguments>
                         <argument id="resultName">
                           <value class="value" valueClass="string">Values</value>
@@ -1253,8 +1255,8 @@
                         </argument>
                         <argument id="fieldAssertions">
                           <value class="valueList" mutable="Mutable">
-                            <uiFieldAssertion resultName="UnlockRecord">
-                              <fieldLocator uri="ui:pageobject:field?field=UnlockRecord&amp;pageId=pageobjects.OpportunityCreate"/>
+                            <uiFieldAssertion resultName="unlockRecord">
+                              <fieldLocator uri="ui:pageobject:field?field=unlockRecord&amp;pageId=pageobjects.OpportunityEdit"/>
                               <attributeAssertions>
                                 <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
                                   <value class="value" valueClass="string">Unlock Record</value>
@@ -1265,43 +1267,6 @@
                         </argument>
                         <argument id="captureAfter">
                           <value class="value" valueClass="boolean">false</value>
-                        </argument>
-                        <argument id="columnAssertions">
-                          <value class="valueList" mutable="Mutable"/>
-                        </argument>
-                        <argument id="pageAssertions">
-                          <value class="valueList" mutable="Mutable"/>
-                        </argument>
-                      </arguments>
-                    </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="796" title="UI Assert">
-                      <arguments>
-                        <argument id="resultName">
-                          <value class="value" valueClass="string">Values</value>
-                        </argument>
-                        <argument id="resultScope">
-                          <value class="value" valueClass="string">Test</value>
-                        </argument>
-                        <argument id="fieldAssertions">
-                          <value class="valueList" mutable="Mutable">
-                            <uiFieldAssertion resultName="StepAssignment">
-                              <fieldLocator uri="ui:pageobject:field?field=StepAssignment&amp;pageId=pageobjects.OpportunityCreate"/>
-                              <attributeAssertions>
-                                <uiAttributeAssertion attributeName="value" comparisonType="Contains">
-                                  <value class="value" valueClass="string">Accounting</value>
-                                </uiAttributeAssertion>
-                              </attributeAssertions>
-                            </uiFieldAssertion>
-                          </value>
-                        </argument>
-                        <argument id="captureAfter">
-                          <value class="value" valueClass="boolean">false</value>
-                        </argument>
-                        <argument id="columnAssertions">
-                          <value class="valueList" mutable="Mutable"/>
-                        </argument>
-                        <argument id="pageAssertions">
-                          <value class="valueList" mutable="Mutable"/>
                         </argument>
                       </arguments>
                     </apiCall>
@@ -1389,89 +1354,6 @@
               <generatedParameters>
                 <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
                   <summary>The Id of the SF Object to be Viewed or Edited.</summary>
-                  <type>
-                    <textType/>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="814" title="On OpportunityCreate page">
-              <arguments>
-                <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">DOFSalesUser</value>
-                </argument>
-                <argument id="target">
-                  <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.OpportunityCreate"/>
-                </argument>
-                <argument id="navigate">
-                  <value class="value" valueClass="string">Dont</value>
-                </argument>
-                <argument id="targetDescription">
-                  <value class="value" valueClass="string">On OpportunityCreate page</value>
-                </argument>
-                <argument id="windowSelection">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-                <argument id="windowSize">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-                <argument id="closeWindow"/>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="uiTargetUrl"/>
-              </arguments>
-              <clauses>
-                <clause name="substeps" testItemId="815">
-                  <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="817" title="UI Assert">
-                      <arguments>
-                        <argument id="resultName">
-                          <value class="value" valueClass="string">Values</value>
-                        </argument>
-                        <argument id="resultScope">
-                          <value class="value" valueClass="string">Test</value>
-                        </argument>
-                        <argument id="fieldAssertions">
-                          <value class="valueList" mutable="Mutable">
-                            <uiFieldAssertion resultName="ApprovalDate">
-                              <fieldLocator uri="ui:pageobject:field?field=ApprovalDate&amp;pageId=pageobjects.OpportunityCreate"/>
-                              <attributeAssertions>
-                                <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="Contains">
-                                  <value class="funcCall" id="DateFormat">
-                                    <argument id="date">
-                                      <value class="variable">
-                                        <path element="TODAY"/>
-                                      </value>
-                                    </argument>
-                                    <argument id="outputFormat">
-                                      <value class="value" valueClass="string">M/dd/YYYY</value>
-                                    </argument>
-                                  </value>
-                                </uiAttributeAssertion>
-                              </attributeAssertions>
-                            </uiFieldAssertion>
-                          </value>
-                        </argument>
-                        <argument id="captureAfter">
-                          <value class="value" valueClass="boolean">false</value>
-                        </argument>
-                        <argument id="columnAssertions">
-                          <value class="valueList" mutable="Mutable"/>
-                        </argument>
-                        <argument id="pageAssertions">
-                          <value class="valueList" mutable="Mutable"/>
-                        </argument>
-                      </arguments>
-                    </apiCall>
-                  </steps>
-                </clause>
-              </clauses>
-              <generatedParameters>
-                <apiParam group="target" name="uiTargetUrl" title="Web Page">
                   <type>
                     <textType/>
                   </type>

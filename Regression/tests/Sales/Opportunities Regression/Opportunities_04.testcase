@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="10">
+<testCase id="72">
   <summary/>
   <steps>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: Admin (Test)">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: AdamGrill (Test)">
       <arguments>
         <argument id="connectionName">
-          <value class="value" valueClass="string">Admin</value>
+          <value class="value" valueClass="string">AdamGrille</value>
         </argument>
         <argument id="resultName">
-          <value class="value" valueClass="string">Admin</value>
+          <value class="value" valueClass="string">AdamGrill</value>
         </argument>
         <argument id="resultScope">
           <value class="value" valueClass="string">Test</value>
@@ -42,7 +42,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="7" title="On SF Account view (Dealer) screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">Admin</value>
+          <value class="value" valueClass="string">AdamGrill</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Account&amp;action=View&amp;recordType=Dealer"/>
@@ -111,7 +111,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="10" title="On SF Opportunity new screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">Admin</value>
+          <value class="value" valueClass="string">AdamGrill</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Opportunity&amp;action=New"/>
@@ -574,7 +574,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="71" title="On SF Opportunity view (ATC) screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">Admin</value>
+          <value class="value" valueClass="string">AdamGrill</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Opportunity&amp;action=View&amp;recordType=ATC"/>
@@ -651,7 +651,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="56" title="On SF Opportunity Product add product screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">Admin</value>
+          <value class="value" valueClass="string">AdamGrill</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=OpportunityLineItem&amp;action=addProd"/>
@@ -704,7 +704,9 @@
                 <argument id="interactionDescription">
                   <value class="value" valueClass="string">Set the By Keyword control to Alpha 2014</value>
                 </argument>
-                <argument id="wait"/>
+                <argument id="wait">
+                  <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
+                </argument>
               </arguments>
               <generatedParameters>
                 <apiParam group="value" name="value" seq="10000" title="Value">
@@ -734,7 +736,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="65" title="With Product Table rows {productName = &quot;Alpha 2014&quot;}">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">Admin</value>
+                  <value class="value" valueClass="string">AdamGrill</value>
                 </argument>
                 <argument id="locator">
                   <value class="uiLocator" uri="sf:ui:locator:row?table=productTable"/>
@@ -846,7 +848,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="37" title="On SF Opportunity Product add product2 screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">Admin</value>
+          <value class="value" valueClass="string">AdamGrill</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=OpportunityLineItem&amp;action=addProd2"/>
@@ -876,7 +878,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="39" title="With OpportunityLineItem rows {Product2Id = &quot;Alpha 2014&quot;}">
               <arguments>
                 <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">Admin</value>
+                  <value class="value" valueClass="string">AdamGrill</value>
                 </argument>
                 <argument id="locator">
                   <value class="uiLocator" uri="sf:ui:locator:row?table=OpportunityLineItemTable"/>
@@ -1100,10 +1102,10 @@
       </clauses>
       <generatedParameters/>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="50" title="On SF Opportunity view (ATC) screen">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="74" title="On SF Opportunity view (ATC) screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">Admin</value>
+          <value class="value" valueClass="string">AdamGrill</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Opportunity&amp;action=View&amp;recordType=ATC"/>
@@ -1112,9 +1114,7 @@
           <value class="value" valueClass="string">Dont</value>
         </argument>
         <argument id="sfUiTargetObjectId">
-          <value class="variable">
-            <path element="OpportunityId"/>
-          </value>
+          <value class="value" valueClass="string">006230000073c8y</value>
         </argument>
         <argument id="targetDescription">
           <value class="value" valueClass="string">On SF Opportunity view (ATC) screen</value>
@@ -1126,44 +1126,123 @@
           <value class="value" valueClass="string">Default</value>
         </argument>
         <argument id="closeWindow"/>
-        <argument id="captureBefore"/>
-        <argument id="captureAfter"/>
+        <argument id="captureBefore">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="captureAfter">
+          <value class="value" valueClass="string">false</value>
+        </argument>
       </arguments>
       <clauses>
-        <clause name="substeps" testItemId="51">
+        <clause name="substeps" testItemId="75">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="52" title="UI Assert">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="76" title="With OpportunityLineItems rows {Product2 = &quot;Alpha 2014&quot;}">
               <arguments>
+                <argument id="uiConnectionName">
+                  <value class="value" valueClass="string">AdamGrill</value>
+                </argument>
+                <argument id="locator">
+                  <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FOpportunityLineItems%2FOpportunityLineItemsTable"/>
+                </argument>
+                <argument id="uiRowLocator">
+                  <value class="eq">
+                    <lhs class="variable">
+                      <path element="Product2"/>
+                    </lhs>
+                    <rhs class="value" valueClass="string">Alpha 2014</rhs>
+                  </value>
+                </argument>
+                <argument id="locatorDescription">
+                  <value class="value" valueClass="string">With OpportunityLineItems rows {Product2 = "Alpha 2014"}</value>
+                </argument>
+                <argument id="failIfNotFound">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
+                <argument id="debugRowLocator"/>
                 <argument id="resultName">
-                  <value class="value" valueClass="string">Values</value>
+                  <value class="value" valueClass="string">Row</value>
                 </argument>
                 <argument id="resultScope">
-                  <value class="value" valueClass="string">Test</value>
+                  <value class="value" valueClass="string">Local</value>
                 </argument>
-                <argument id="pageAssertions">
-                  <value class="valueList" mutable="Mutable">
-                    <uiPageAssertion/>
-                  </value>
-                </argument>
-                <argument id="fieldAssertions">
-                  <value class="valueList" mutable="Mutable">
-                    <uiFieldAssertion resultName="Amount">
-                      <fieldLocator uri="ui:locator?name=Amount&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DAmount"/>
-                      <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
-                          <value class="value" valueClass="string">$1,000.00</value>
-                        </uiAttributeAssertion>
-                      </attributeAssertions>
-                    </uiFieldAssertion>
-                  </value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="columnAssertions">
-                  <value class="valueList" mutable="Mutable"/>
-                </argument>
+                <argument id="autoPaginate"/>
               </arguments>
+              <clauses>
+                <clause name="substeps" testItemId="77">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="78" title="UI Assert">
+                      <arguments>
+                        <argument id="resultName">
+                          <value class="value" valueClass="string">Values</value>
+                        </argument>
+                        <argument id="resultScope">
+                          <value class="value" valueClass="string">Test</value>
+                        </argument>
+                        <argument id="fieldAssertions">
+                          <value class="valueList" mutable="Mutable">
+                            <uiFieldAssertion resultName="UnitPrice">
+                              <fieldLocator uri="ui:locator?name=UnitPrice&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DUnitPrice%26relationship%3DOpportunityLineItems"/>
+                              <attributeAssertions>
+                                <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
+                                  <value class="value" valueClass="string">$1,000.00</value>
+                                </uiAttributeAssertion>
+                              </attributeAssertions>
+                            </uiFieldAssertion>
+                          </value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="columnAssertions">
+                          <value class="valueList" mutable="Mutable"/>
+                        </argument>
+                        <argument id="pageAssertions">
+                          <value class="valueList" mutable="Mutable"/>
+                        </argument>
+                      </arguments>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="80" title="UI Assert">
+                      <arguments>
+                        <argument id="resultName">
+                          <value class="value" valueClass="string">Values</value>
+                        </argument>
+                        <argument id="resultScope">
+                          <value class="value" valueClass="string">Test</value>
+                        </argument>
+                        <argument id="fieldAssertions">
+                          <value class="valueList" mutable="Mutable">
+                            <uiFieldAssertion resultName="NBA_Amount__c">
+                              <fieldLocator uri="ui:locator?name=NBA_Amount__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DOpportunity%26field%3DNBA_Amount__c%26relationship%3DOpportunityLineItems"/>
+                              <attributeAssertions>
+                                <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
+                                  <value class="value" valueClass="string">$100.00</value>
+                                </uiAttributeAssertion>
+                              </attributeAssertions>
+                            </uiFieldAssertion>
+                          </value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="columnAssertions">
+                          <value class="valueList" mutable="Mutable"/>
+                        </argument>
+                        <argument id="pageAssertions">
+                          <value class="valueList" mutable="Mutable"/>
+                        </argument>
+                      </arguments>
+                    </apiCall>
+                  </steps>
+                </clause>
+              </clauses>
+              <generatedParameters>
+                <apiParam group="options" name="autoPaginate" title="Auto Paginate">
+                  <summary>Whether Show More/Next is clicked till the match condition succeeds.</summary>
+                  <type>
+                    <booleanType/>
+                  </type>
+                </apiParam>
+              </generatedParameters>
             </apiCall>
           </steps>
         </clause>
