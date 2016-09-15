@@ -34,10 +34,10 @@ public class GMUsedNewPricing {
 	@FindByLabel(label = "Save Price")
 	public WebElement SavePrice;
 	@ChoiceListType()
-	@FindBy(xpath = "//*[@id=\"34:23;a\"]")
+	@FindBy(xpath = "//*[@id=\"34:21;a\"]")
 	public WebElement UsedMake;
 	@ChoiceListType()
-	@FindBy(xpath = "//*[@id=\"418:23;a\"]")
+	@FindBy(xpath = "//*[@id=\"418:21;a\"]")
 	public WebElement NewMake;
 	@ButtonType()
 	@FindByLabel(label = " Sync ")
