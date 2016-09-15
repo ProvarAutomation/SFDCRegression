@@ -37,75 +37,6 @@
         <argument id="environment"/>
       </arguments>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="7" title="Create Object: Case=&gt;CaseId">
-      <tags>
-        <string>disabled</string>
-      </tags>
-      <arguments>
-        <argument id="objectType">
-          <value class="value" valueClass="string">Case</value>
-        </argument>
-        <argument id="resultIdName">
-          <value class="value" valueClass="string">CaseId</value>
-        </argument>
-        <argument id="apexConnectionName">
-          <value class="value" valueClass="string">ServiceTestUser</value>
-        </argument>
-        <argument id="AccountId">
-          <value class="compound">
-            <parts>
-              <value valueClass="string"> </value>
-              <variable>
-                <path element="Dealer"/>
-              </variable>
-            </parts>
-          </value>
-        </argument>
-        <argument id="Status">
-          <value class="value" valueClass="string">Work In Progress</value>
-        </argument>
-        <argument id="Origin">
-          <value class="value" valueClass="string">Phone</value>
-        </argument>
-        <argument id="Subject">
-          <value class="value" valueClass="string">Collections Request</value>
-        </argument>
-        <argument id="Priority">
-          <value class="value" valueClass="string">Low</value>
-        </argument>
-        <argument id="Description">
-          <value class="value" valueClass="string">One Line Create Case</value>
-        </argument>
-        <argument id="ATC_Sub_Reason__c">
-          <value class="value" valueClass="string">Billing Related</value>
-        </argument>
-        <argument id="ATC_Case_Reason__c">
-          <value class="value" valueClass="string">Dealer Products</value>
-        </argument>
-        <argument id="Last_Touch_Point__c">
-          <value class="value" valueClass="dateTime">1455044100000</value>
-        </argument>
-        <argument id="assignmentRuleId"/>
-        <argument id="resultScope">
-          <value class="value" valueClass="string">Test</value>
-        </argument>
-      </arguments>
-      <parameterGeneratorProperties>
-        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.ConnectionName">Admin</propertyValue>
-        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.CustomObjectName">Case</propertyValue>
-      </parameterGeneratorProperties>
-      <generatedParameters>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Case&amp;field=AccountId" name="AccountId" title="AccountId"/>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Case&amp;field=Status" name="Status" title="Status"/>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Case&amp;field=Origin" name="Origin" title="Origin"/>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Case&amp;field=Subject" name="Subject" title="Subject"/>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Case&amp;field=Priority" name="Priority" title="Priority"/>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Case&amp;field=Description" name="Description" title="Description"/>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Case&amp;field=ATC_Sub_Reason__c" name="ATC_Sub_Reason__c" title="ATC_Sub_Reason__c"/>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Case&amp;field=ATC_Case_Reason__c" name="ATC_Case_Reason__c" title="ATC_Case_Reason__c"/>
-        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Case&amp;field=Last_Touch_Point__c" name="Last_Touch_Point__c" title="Last_Touch_Point__c"/>
-      </generatedParameters>
-    </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="12" title="Create Object: Case=&gt;CaseId">
       <arguments>
         <argument id="objectType">
@@ -196,4 +127,7 @@
       <name class="value" valueClass="string">CaseId</name>
     </outputArgument>
   </outputArgs>
+  <tags>
+    <string>disabled</string>
+  </tags>
 </testCase>

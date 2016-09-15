@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="11" registryId="092b89d3-99ff-4505-b853-7998e6742542" visibility="Internal">
+<testCase id="1" registryId="092b89d3-99ff-4505-b853-7998e6742542" visibility="Internal">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: ServiceUser (Test)">
@@ -32,7 +32,9 @@
         <argument id="enableObjectIdLogging">
           <value class="value" valueClass="boolean">true</value>
         </argument>
-        <argument id="autoCleanup"/>
+        <argument id="autoCleanup">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
         <argument id="cleanupConnectionName"/>
         <argument id="logFileLocation"/>
         <argument id="username"/>
@@ -73,10 +75,10 @@
       <clauses>
         <clause name="substeps" testItemId="19">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="20" title="Click the Cases Create Case button">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="20" title="Click the Cases New button">
               <arguments>
                 <argument id="locator">
-                  <value class="uiLocator" uri="ui:locator?name=Create_Case_from_account&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DAccount%26action%3DCreate_Case_from_account%26relationship%3DCases"/>
+                  <value class="uiLocator" uri="ui:locator?name=New&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DAccount%26relationship%3DCases%26action%3DNew"/>
                 </argument>
                 <argument id="interaction">
                   <value class="uiInteraction" uri="ui:interaction?name=action"/>
@@ -91,7 +93,7 @@
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Cases Create Case button</value>
+                  <value class="value" valueClass="string">Click the Cases New button</value>
                 </argument>
                 <argument id="wait"/>
               </arguments>
@@ -383,4 +385,7 @@
   <outputArgs>
     <outputArgument id="CaseId"/>
   </outputArgs>
+  <tags>
+    <string>disabled</string>
+  </tags>
 </testCase>
