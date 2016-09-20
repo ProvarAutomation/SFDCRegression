@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="15">
+<testCase id="3">
   <summary/>
   <steps>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: ServiceTestUser (Test)">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: ServiceUser (Test)">
       <arguments>
         <argument id="connectionName">
-          <value class="value" valueClass="string">ServiceTestUser</value>
+          <value class="value" valueClass="string">ServiceUser</value>
         </argument>
         <argument id="resultName">
-          <value class="value" valueClass="string">ServiceTestUser</value>
+          <value class="value" valueClass="string">ServiceUser</value>
         </argument>
         <argument id="resultScope">
           <value class="value" valueClass="string">Test</value>
@@ -47,17 +47,19 @@
       <tags/>
       <arguments>
         <argument id="reuseConnectionName">
-          <value class="value" valueClass="string">ServiceTestUser</value>
+          <value class="value" valueClass="string">ServiceUser</value>
         </argument>
       </arguments>
       <outputArguments>
-        <outputArgument id="CaseId"/>
+        <outputArgument id="CaseId">
+          <name class="value" valueClass="string">CaseId</name>
+        </outputArgument>
       </outputArguments>
     </caseCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="80" title="On SF Case view (ATC Dealer Service) screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">ServiceTestUser</value>
+          <value class="value" valueClass="string">ServiceUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=View&amp;recordType=ATC+Dealer+Service"/>
@@ -135,7 +137,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="60" title="On SF Case edit (ATC Dealer Service) screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">ServiceTestUser</value>
+          <value class="value" valueClass="string">ServiceUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=Edit&amp;recordType=ATC+Dealer+Service"/>
@@ -311,7 +313,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="18" title="On SF Case view (ATC Dealer Service) screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">ServiceTestUser</value>
+          <value class="value" valueClass="string">ServiceUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=View&amp;recordType=ATC+Dealer+Service"/>
@@ -396,7 +398,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="29" title="On Case View page">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">ServiceTestUser</value>
+          <value class="value" valueClass="string">ServiceUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.CaseView"/>
@@ -467,7 +469,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="32" title="On SF User lookup screen">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">ServiceTestUser</value>
+          <value class="value" valueClass="string">ServiceUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="sf:ui:target?lookup=User"/>
@@ -584,7 +586,7 @@
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="35" title="On Case View page">
       <arguments>
         <argument id="uiConnectionName">
-          <value class="value" valueClass="string">ServiceTestUser</value>
+          <value class="value" valueClass="string">ServiceUser</value>
         </argument>
         <argument id="target">
           <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.CaseView"/>
