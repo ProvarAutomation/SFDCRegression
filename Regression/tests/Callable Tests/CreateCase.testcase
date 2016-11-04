@@ -618,7 +618,7 @@
     </param>
   </params>
   <outputParams>
-    <param name="CaseId" title="CaseId">
+    <param defaultScope="Global" name="CaseId" title="CaseId">
       <summary/>
       <type>
         <textType>
@@ -635,7 +635,9 @@
     <argument id="reuseConnectionName"/>
   </args>
   <outputArgs>
-    <outputArgument id="CaseId"/>
+    <outputArgument id="CaseId" scope="Global">
+      <name class="value" valueClass="string">CaseId</name>
+    </outputArgument>
   </outputArgs>
   <tags/>
 </testCase>

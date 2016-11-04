@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="61">
+<testCase id="16">
   <summary>&lt;p&gt;8/15/2016&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;PASS&lt;/strong&gt;&lt;/p&gt;</summary>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="590" title="Create Opp">
@@ -1888,13 +1888,15 @@
                         <argument id="wait"/>
                         <argument id="captureBefore"/>
                         <argument id="captureAfter"/>
-                        <argument id="pressEnter"/>
+                        <argument id="pressEnter">
+                          <value class="value" valueClass="boolean">true</value>
+                        </argument>
                         <argument id="hover"/>
                         <argument id="value">
                           <value class="value" valueClass="string">Audi</value>
                         </argument>
                         <argument id="blur">
-                          <value class="value" valueClass="boolean">true</value>
+                          <value class="value" valueClass="boolean">false</value>
                         </argument>
                       </arguments>
                       <generatedParameters>
@@ -2567,9 +2569,11 @@
                           <value class="value" valueClass="string">Dodge</value>
                         </argument>
                         <argument id="blur">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="pressEnter">
                           <value class="value" valueClass="boolean">true</value>
                         </argument>
-                        <argument id="pressEnter"/>
                       </arguments>
                       <generatedParameters>
                         <apiParam group="value" name="value" seq="10000" title="Value">
@@ -3240,8 +3244,12 @@
                         <argument id="value">
                           <value class="value" valueClass="string">Acura</value>
                         </argument>
-                        <argument id="blur"/>
-                        <argument id="pressEnter"/>
+                        <argument id="blur">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="pressEnter">
+                          <value class="value" valueClass="boolean">true</value>
+                        </argument>
                       </arguments>
                       <generatedParameters>
                         <apiParam group="value" name="value" seq="10000" title="Value">
@@ -3915,9 +3923,11 @@
                           <value class="value" valueClass="string">Honda</value>
                         </argument>
                         <argument id="blur">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="pressEnter">
                           <value class="value" valueClass="boolean">true</value>
                         </argument>
-                        <argument id="pressEnter"/>
                       </arguments>
                       <generatedParameters>
                         <apiParam group="value" name="value" seq="10000" title="Value">

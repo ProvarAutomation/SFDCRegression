@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="68">
+<testCase id="24">
   <summary>&lt;p&gt;8/15/2016&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;PASS&lt;/strong&gt;&lt;/p&gt;</summary>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="329" title="Create Opp">
@@ -1600,10 +1600,10 @@
                           <value class="value" valueClass="string">100</value>
                         </argument>
                         <argument id="blur">
-                          <value class="value" valueClass="boolean">true</value>
+                          <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="pressEnter">
-                          <value class="value" valueClass="boolean">false</value>
+                          <value class="value" valueClass="boolean">true</value>
                         </argument>
                         <argument id="captureBefore">
                           <value class="value" valueClass="boolean">false</value>
@@ -2231,10 +2231,10 @@
                           <value class="value" valueClass="string">100</value>
                         </argument>
                         <argument id="blur">
-                          <value class="value" valueClass="boolean">true</value>
+                          <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="pressEnter">
-                          <value class="value" valueClass="boolean">false</value>
+                          <value class="value" valueClass="boolean">true</value>
                         </argument>
                         <argument id="captureBefore">
                           <value class="value" valueClass="boolean">false</value>
@@ -2862,10 +2862,10 @@
                           <value class="value" valueClass="string">100</value>
                         </argument>
                         <argument id="blur">
-                          <value class="value" valueClass="boolean">true</value>
+                          <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="pressEnter">
-                          <value class="value" valueClass="boolean">false</value>
+                          <value class="value" valueClass="boolean">true</value>
                         </argument>
                         <argument id="captureBefore">
                           <value class="value" valueClass="boolean">false</value>

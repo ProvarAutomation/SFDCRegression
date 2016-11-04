@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="74">
+<testCase id="30">
   <summary>&lt;p&gt;manual run - 6/6/16 - PreProd - using Jim Ellis&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;PASS&lt;/strong&gt; - disabled Porsche product as Porsche products are not in PreProd&lt;/p&gt;</summary>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="590" title="Create Opp">
@@ -2689,10 +2689,10 @@
                           <value class="value" valueClass="string">100</value>
                         </argument>
                         <argument id="blur">
-                          <value class="value" valueClass="boolean">true</value>
+                          <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="pressEnter">
-                          <value class="value" valueClass="boolean">false</value>
+                          <value class="value" valueClass="boolean">true</value>
                         </argument>
                         <argument id="captureBefore">
                           <value class="value" valueClass="boolean">false</value>
@@ -3321,10 +3321,10 @@
                           <value class="value" valueClass="string">100</value>
                         </argument>
                         <argument id="blur">
-                          <value class="value" valueClass="boolean">true</value>
+                          <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="pressEnter">
-                          <value class="value" valueClass="boolean">false</value>
+                          <value class="value" valueClass="boolean">true</value>
                         </argument>
                         <argument id="captureBefore">
                           <value class="value" valueClass="boolean">false</value>
@@ -3955,10 +3955,10 @@
                           <value class="value" valueClass="string">100</value>
                         </argument>
                         <argument id="blur">
-                          <value class="value" valueClass="boolean">true</value>
+                          <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="pressEnter">
-                          <value class="value" valueClass="boolean">false</value>
+                          <value class="value" valueClass="boolean">true</value>
                         </argument>
                         <argument id="captureBefore">
                           <value class="value" valueClass="boolean">false</value>
@@ -4590,10 +4590,10 @@
                           <value class="value" valueClass="string">100</value>
                         </argument>
                         <argument id="blur">
-                          <value class="value" valueClass="boolean">true</value>
+                          <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="pressEnter">
-                          <value class="value" valueClass="boolean">false</value>
+                          <value class="value" valueClass="boolean">true</value>
                         </argument>
                         <argument id="captureBefore">
                           <value class="value" valueClass="boolean">false</value>
@@ -5226,10 +5226,10 @@
                           <value class="value" valueClass="string">100</value>
                         </argument>
                         <argument id="blur">
-                          <value class="value" valueClass="boolean">true</value>
+                          <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="pressEnter">
-                          <value class="value" valueClass="boolean">false</value>
+                          <value class="value" valueClass="boolean">true</value>
                         </argument>
                         <argument id="captureBefore">
                           <value class="value" valueClass="boolean">false</value>
@@ -5858,10 +5858,10 @@
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="blur">
-                          <value class="value" valueClass="boolean">true</value>
+                          <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="pressEnter">
-                          <value class="value" valueClass="boolean">false</value>
+                          <value class="value" valueClass="boolean">true</value>
                         </argument>
                         <argument id="captureBefore">
                           <value class="value" valueClass="boolean">false</value>
@@ -6497,10 +6497,10 @@
                           <value class="value" valueClass="string">100</value>
                         </argument>
                         <argument id="blur">
-                          <value class="value" valueClass="boolean">true</value>
+                          <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="pressEnter">
-                          <value class="value" valueClass="boolean">false</value>
+                          <value class="value" valueClass="boolean">true</value>
                         </argument>
                         <argument id="captureBefore">
                           <value class="value" valueClass="boolean">false</value>
@@ -7132,10 +7132,10 @@
                           <value class="value" valueClass="string">100</value>
                         </argument>
                         <argument id="blur">
-                          <value class="value" valueClass="boolean">true</value>
+                          <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="pressEnter">
-                          <value class="value" valueClass="boolean">false</value>
+                          <value class="value" valueClass="boolean">true</value>
                         </argument>
                         <argument id="captureBefore">
                           <value class="value" valueClass="boolean">false</value>

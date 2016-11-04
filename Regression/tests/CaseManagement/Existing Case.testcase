@@ -353,7 +353,7 @@
                 <argument id="wait"/>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" name="hover" title="Hover before Clicking">
+                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
                   <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                   <type>
                     <booleanType/>
@@ -364,31 +364,7 @@
           </steps>
         </clause>
       </clauses>
-      <generatedParameters>
-        <apiParam group="target" name="scTabType" seq="1000" title="Tab Type">
-          <summary>The tab type for Scaffolds</summary>
-          <type>
-            <choiceType>
-              <constraints>
-                <valueConstraint name="valuesSource">com.provar.plugins.sf.eclipse.ui:com.provar.plugins.forcedotcom.ui.valuesources.SfEnumChoiceListValuesSource</valueConstraint>
-                <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
-              </constraints>
-            </choiceType>
-          </type>
-        </apiParam>
-        <apiParam group="target" name="scPrimaryTabName" seq="1001" title="Primary Tab Name">
-          <summary>The main tab name</summary>
-          <type>
-            <textType/>
-          </type>
-        </apiParam>
-        <apiParam group="target" name="scSecondaryTabName" seq="1002" title="Secondary Tab Name">
-          <summary>The sub-tab name</summary>
-          <type>
-            <textType/>
-          </type>
-        </apiParam>
-      </generatedParameters>
+      <generatedParameters/>
     </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="20" title="On SF Case edit (ATC Dealer Service) screen">
       <arguments>
@@ -753,6 +729,15 @@
       <clauses>
         <clause name="substeps" testItemId="42">
           <steps>
+            <apiCall apiId="customapis.FixDate" name="FixDate" testItemId="51" title="Fix Date: ⇒ ">
+              <arguments>
+                <argument id="date"/>
+                <argument id="resultName"/>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+              </arguments>
+            </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="43" title="Lookup the Contact reference">
               <arguments>
                 <argument id="locator">

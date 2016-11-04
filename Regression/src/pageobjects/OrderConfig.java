@@ -897,4 +897,13 @@ public class OrderConfig {
 	@TextType()
 	@FindBy(xpath = "//*[@id=\"pgId:frmId:mainPgBlkId:j_id48:j_id49:4:j_id50:j_id52_lkwgt\"]")
 	public WebElement GMFrontLineProModel1Lookup;
+	@LinkType()
+	@FindBy(xpath = "//*[@id=\"00NE0000005tAGS_ileinner\"]/a[2]")
+	public WebElement ChangeSigner;
+	@ChoiceListType()
+	@FindByLabel(label = "Select Contact")
+	public WebElement selectContact;
+	@ButtonType()
+	@FindByLabel(label = "Next")
+	public WebElement next;
 }

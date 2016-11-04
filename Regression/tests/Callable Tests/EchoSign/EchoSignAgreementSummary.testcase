@@ -151,7 +151,7 @@
                   <value class="value" valueClass="string">Set the Recipient to autotradertestuser@gmail.com</value>
                 </argument>
                 <argument id="wait">
-                  <value class="uiWait" uri="ui:wait:pageload?timeout=60"/>
+                  <value class="uiWait" uri="ui:wait:timed?seconds=5"/>
                 </argument>
               </arguments>
               <generatedParameters>
