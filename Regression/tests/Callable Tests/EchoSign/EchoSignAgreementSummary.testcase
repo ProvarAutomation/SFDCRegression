@@ -96,7 +96,7 @@
                   <value class="value" valueClass="string">Set the Recipient Type to Email</value>
                 </argument>
                 <argument id="wait">
-                  <value class="uiWait" uri="ui:wait:pageload?timeout=60"/>
+                  <value class="uiWait" uri="ui:wait:autoRetry:timeout=10"/>
                 </argument>
               </arguments>
               <generatedParameters>
@@ -151,7 +151,7 @@
                   <value class="value" valueClass="string">Set the Recipient to autotradertestuser@gmail.com</value>
                 </argument>
                 <argument id="wait">
-                  <value class="uiWait" uri="ui:wait:timed?seconds=5"/>
+                  <value class="uiWait" uri="ui:wait:autoRetry:timeout=10"/>
                 </argument>
               </arguments>
               <generatedParameters>
@@ -239,11 +239,11 @@
                   <value class="value" valueClass="string">Click the Send For Signature</value>
                 </argument>
                 <argument id="wait">
-                  <value class="uiWait" uri="ui:wait:pageload?timeout=60"/>
+                  <value class="uiWait" uri="ui:wait:autoRetry:timeout=10"/>
                 </argument>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" name="hover" title="Hover before Clicking">
+                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
                   <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                   <type>
                     <booleanType/>

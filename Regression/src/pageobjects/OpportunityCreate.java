@@ -17,5 +17,8 @@ public class OpportunityCreate {
 	@BooleanType()
 	@FindBy(id = "01uE0000004UbZb")
 	public WebElement select;
+	@FindBy(name = "newQuote")
+	@LinkType()
+	public WebElement NewQuote;
 			
 }

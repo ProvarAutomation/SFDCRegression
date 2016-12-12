@@ -906,4 +906,7 @@ public class OrderConfig {
 	@ButtonType()
 	@FindByLabel(label = "Next")
 	public WebElement next;
+	@TextType()
+	@FindByLabel(label = "Finance URL", labelType = LabelType.PrecedingCell, qualifierXpath = "input")
+	public WebElement FinanceURL;
 }

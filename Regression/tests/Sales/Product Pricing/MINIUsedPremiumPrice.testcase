@@ -821,9 +821,10 @@
                         <argument id="interactionDescription">
                           <value class="value" valueClass="string">Click the Quotes NewQuote button</value>
                         </argument>
+                        <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="hover" title="Hover before Clicking">
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
                           <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                           <type>
                             <booleanType/>
@@ -842,6 +843,72 @@
                   </type>
                 </apiParam>
               </generatedParameters>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="925" title="On SF Quote Record Type selection screen">
+              <arguments>
+                <argument id="uiConnectionName">
+                  <value class="value" valueClass="string">Admin</value>
+                </argument>
+                <argument id="target">
+                  <value class="uiTarget" uri="sf:ui:target?object=Quote&amp;action=recordTypeNew"/>
+                </argument>
+                <argument id="navigate">
+                  <value class="value" valueClass="string">Dont</value>
+                </argument>
+                <argument id="targetDescription">
+                  <value class="value" valueClass="string">On SF Quote Record Type selection screen</value>
+                </argument>
+                <argument id="windowSelection">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="windowSize">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="closeWindow"/>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+              </arguments>
+              <clauses>
+                <clause name="substeps" testItemId="926">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="927" title="Click the Continue button">
+                      <arguments>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:locator?name=save&amp;path=selectRecordType"/>
+                        </argument>
+                        <argument id="interaction">
+                          <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                        </argument>
+                        <argument id="hover">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Click the Continue button</value>
+                        </argument>
+                        <argument id="wait"/>
+                      </arguments>
+                      <generatedParameters>
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
+                          <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
+                  </steps>
+                </clause>
+              </clauses>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="86" title="On SF Quote new (Quote Not Priced) screen">
               <arguments>
@@ -984,7 +1051,7 @@
               </clauses>
               <generatedParameters>
                 <apiParam group="result" name="sfUiTargetResultName" resultNameParameter="true" title="Result Name">
-                  <summary>The name under which the resulting Quote Id will be stored.</summary>
+                  <summary>The name under which the resulting Object Id will be stored.</summary>
                   <type>
                     <textType/>
                   </type>

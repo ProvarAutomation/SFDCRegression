@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="14">
-  <summary/>
+<testCase>
   <steps>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: DOFSalesUser (Test)">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: Admin (Test)">
       <arguments>
         <argument id="connectionName">
-          <value class="value" valueClass="string">DOFSalesUser</value>
+          <value class="value" valueClass="string">Admin</value>
         </argument>
         <argument id="resultName">
-          <value class="value" valueClass="string">DOFSalesUser</value>
+          <value class="value" valueClass="string">Admin</value>
         </argument>
         <argument id="resultScope">
           <value class="value" valueClass="string">Test</value>
         </argument>
-        <argument id="uiApplicationName">
-          <value class="value" valueClass="string">ATC_Sales</value>
-        </argument>
+        <argument id="uiApplicationName"/>
         <argument id="quickUiLogin">
           <value class="value" valueClass="boolean">true</value>
         </argument>
@@ -41,157 +38,6 @@
           <value class="value" valueClass="string">default</value>
         </argument>
       </arguments>
-    </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="2" title="On test page">
-      <arguments>
-        <argument id="uiConnectionName">
-          <value class="value" valueClass="string">DOFSalesUser</value>
-        </argument>
-        <argument id="target">
-          <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.test"/>
-        </argument>
-        <argument id="navigate">
-          <value class="value" valueClass="string">Always</value>
-        </argument>
-        <argument id="targetDescription">
-          <value class="value" valueClass="string">On test page</value>
-        </argument>
-        <argument id="windowSelection">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="windowSize">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="closeWindow"/>
-        <argument id="captureBefore">
-          <value class="value" valueClass="string">false</value>
-        </argument>
-        <argument id="captureAfter">
-          <value class="value" valueClass="string">false</value>
-        </argument>
-        <argument id="uiTargetUrl"/>
-      </arguments>
-      <clauses>
-        <clause name="substeps" testItemId="3">
-          <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="4" title="Click the Opportunities">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:pageobject:field?field=opportunities&amp;pageId=pageobjects.test"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Opportunities</value>
-                </argument>
-                <argument id="wait"/>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-          </steps>
-        </clause>
-      </clauses>
-      <generatedParameters>
-        <apiParam group="target" name="uiTargetUrl" title="Web Page">
-          <type>
-            <textType/>
-          </type>
-        </apiParam>
-      </generatedParameters>
-    </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="5" title="On SF Account View screen">
-      <arguments>
-        <argument id="uiConnectionName">
-          <value class="value" valueClass="string">DOFSalesUser</value>
-        </argument>
-        <argument id="target">
-          <value class="uiTarget" uri="sf:ui:target?object=Account&amp;action=View&amp;recordType=Dealer"/>
-        </argument>
-        <argument id="navigate">
-          <value class="value" valueClass="string">Dont</value>
-        </argument>
-        <argument id="targetDescription">
-          <value class="value" valueClass="string">On SF Account View screen</value>
-        </argument>
-        <argument id="windowSelection">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="windowSize">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="closeWindow"/>
-        <argument id="captureBefore">
-          <value class="value" valueClass="string">false</value>
-        </argument>
-        <argument id="captureAfter">
-          <value class="value" valueClass="string">false</value>
-        </argument>
-        <argument id="sfUiTargetObjectId">
-          <value class="value" valueClass="string">001E000000MZN0B</value>
-        </argument>
-      </arguments>
-      <clauses>
-        <clause name="substeps" testItemId="6">
-          <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="7" title="Click the Opportunities New Opportunity (ATC) button">
-              <arguments>
-                <argument id="locator">
-                  <value class="uiLocator" uri="ui:locator?name=newOpp&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DAccount%26action%3DNew%26recordType%3DATC%26relationship%3DOpportunities"/>
-                </argument>
-                <argument id="interaction">
-                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
-                </argument>
-                <argument id="hover">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Opportunities New Opportunity (ATC) button</value>
-                </argument>
-                <argument id="wait"/>
-              </arguments>
-              <generatedParameters>
-                <apiParam group="value" name="hover" title="Hover before Clicking">
-                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
-                  <type>
-                    <booleanType/>
-                  </type>
-                </apiParam>
-              </generatedParameters>
-            </apiCall>
-          </steps>
-        </clause>
-      </clauses>
-      <generatedParameters>
-        <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
-          <summary>The Id of the SF Object to be Viewed or Edited.</summary>
-          <type>
-            <textType/>
-          </type>
-        </apiParam>
-      </generatedParameters>
     </apiCall>
   </steps>
 </testCase>

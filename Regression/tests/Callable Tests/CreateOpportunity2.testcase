@@ -42,6 +42,9 @@
         <argument id="password"/>
         <argument id="securityToken"/>
         <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
       </arguments>
       <parameterValueSources/>
     </apiCall>
@@ -66,9 +69,7 @@
                   <value class="value" valueClass="string">Always</value>
                 </argument>
                 <argument argId="e64e46a5-7a87-4a20-b31f-638ca187c731" id="sfUiTargetResultName">
-                  <value class="variable">
-                    <path element="OpportunityId"/>
-                  </value>
+                  <value class="value" valueClass="string">OpportunityId</value>
                 </argument>
                 <argument id="sfUiTargetResultScope">
                   <value class="value" valueClass="string">Test</value>
@@ -322,7 +323,7 @@
                           <type>
                             <choiceType>
                               <constraints>
-                                <valueConstraint name="boundedValues">ATC Media:ATC Media|Haystak:Haystak|HomeNet:HomeNet|KBB:KBB|TIM:TIM|vAuto:vAuto|VinSolutions:VinSolutions</valueConstraint>
+                                <valueConstraint name="boundedValues">ATC Media:ATC Media|Dealer.com:Dealer.com|Haystak:Haystak|HomeNet:HomeNet|KBB:KBB|TIM:TIM|vAuto:vAuto|VinSolutions:VinSolutions</valueConstraint>
                                 <valueConstraint name="unrestricted">true</valueConstraint>
                               </constraints>
                             </choiceType>
@@ -524,7 +525,7 @@
                           <type>
                             <choiceType>
                               <constraints>
-                                <valueConstraint name="boundedValues">New Business:New Business|Upsell:Upsell|Cancellation:Cancellation|Downsell:Downsell|Renewal:Renewal</valueConstraint>
+                                <valueConstraint name="boundedValues">Cancellation:Cancellation|Downsell:Downsell|New Business:New Business|No Change:No Change|Renewal:Renewal|Upsell:Upsell</valueConstraint>
                                 <valueConstraint name="unrestricted">true</valueConstraint>
                               </constraints>
                             </choiceType>
@@ -676,7 +677,7 @@
               </clauses>
               <generatedParameters>
                 <apiParam group="result" name="sfUiTargetResultName" resultNameParameter="true" title="Result Name">
-                  <summary>The name under which the resulting Opportunity Id will be stored.</summary>
+                  <summary>The name under which the resulting Object Id will be stored.</summary>
                   <type>
                     <textType/>
                   </type>

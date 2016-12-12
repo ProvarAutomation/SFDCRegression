@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="19">
-  <summary>&lt;p&gt;8/15/2016&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;PASS&lt;/strong&gt;&lt;/p&gt;</summary>
+<testCase id="0">
+  <summary>&lt;p&gt;12/1/2016&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;PASS&lt;/strong&gt;&lt;/p&gt;</summary>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="329" title="Create Opp">
       <arguments>
@@ -193,53 +193,10 @@
         <argument id="password"/>
         <argument id="securityToken"/>
         <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
       </arguments>
-    </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="6" title="On SF Opportunity view screen">
-      <tags/>
-      <arguments>
-        <argument id="uiConnectionName">
-          <value class="value" valueClass="string">DOFSalesUser</value>
-        </argument>
-        <argument id="target">
-          <value class="uiTarget" uri="sf:ui:target?object=Opportunity&amp;action=View"/>
-        </argument>
-        <argument id="targetDescription">
-          <value class="value" valueClass="string">On SF Opportunity view screen</value>
-        </argument>
-        <argument id="navigate">
-          <value class="value" valueClass="string">IfNeccessary</value>
-        </argument>
-        <argument id="windowSelection">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="windowSize">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="closeWindow"/>
-        <argument id="captureBefore"/>
-        <argument id="captureAfter"/>
-        <argument id="sfUiTargetObjectId">
-          <value class="variable">
-            <path element="OpportunityId"/>
-          </value>
-        </argument>
-        <argument id="Name"/>
-        <argument id="OpportunityId"/>
-      </arguments>
-      <clauses>
-        <clause name="substeps" testItemId="7">
-          <steps/>
-        </clause>
-      </clauses>
-      <generatedParameters>
-        <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
-          <summary>The Id of the SF Object to be Viewed or Edited.</summary>
-          <type>
-            <textType/>
-          </type>
-        </apiParam>
-      </generatedParameters>
     </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="24" title="On SF Opportunity view screen">
       <arguments>
@@ -250,7 +207,7 @@
           <value class="uiTarget" uri="sf:ui:target?object=Opportunity&amp;action=View"/>
         </argument>
         <argument id="navigate">
-          <value class="value" valueClass="string">Dont</value>
+          <value class="value" valueClass="string">Always</value>
         </argument>
         <argument id="sfUiTargetObjectId">
           <value class="variable">
@@ -1192,7 +1149,23 @@
         </clause>
       </clauses>
     </apiCall>
+    <caseCall testCaseId="317304ad-3c6c-463e-a15c-580edd8bf90d" testItemId="1020">
+      <tags/>
+      <arguments>
+        <argument id="QuoteName">
+          <value class="variable">
+            <path element="QuoteName"/>
+          </value>
+        </argument>
+        <argument id="reuseConnectionName">
+          <value class="value" valueClass="string">DOFSalesUser</value>
+        </argument>
+      </arguments>
+    </caseCall>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="173" title="Create Quote">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="description">
           <value class="value" valueClass="string">Create Quote</value>
@@ -1380,6 +1353,7 @@
                         <argument id="interactionDescription">
                           <value class="value" valueClass="string">Today link the Expiration Date field</value>
                         </argument>
+                        <argument id="wait"/>
                       </arguments>
                     </apiCall>
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="90" title="Click the Save button">
@@ -1600,10 +1574,10 @@
               <clauses>
                 <clause name="substeps" testItemId="97">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="98" title="Set the Lot Size control to 100">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="98" title="Set the Lot Size Re Do field to 100">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=lotSize"/>
+                          <value class="uiLocator" uri="ui:locator?name=LotSizeReDo"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
@@ -1612,10 +1586,10 @@
                           <value class="value" valueClass="string">100</value>
                         </argument>
                         <argument id="blur">
-                          <value class="value" valueClass="boolean">false</value>
+                          <value class="value" valueClass="boolean">true</value>
                         </argument>
                         <argument id="pressEnter">
-                          <value class="value" valueClass="boolean">true</value>
+                          <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="captureBefore">
                           <value class="value" valueClass="boolean">false</value>
@@ -1624,10 +1598,10 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Lot Size control to 100</value>
+                          <value class="value" valueClass="string">Set the Lot Size Re Do field to 100</value>
                         </argument>
                         <argument id="wait">
-                          <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
+                          <value class="uiWait" uri="ui:wait:autoRetry:timeout=10"/>
                         </argument>
                       </arguments>
                       <generatedParameters>
@@ -1676,7 +1650,7 @@
                           <value class="value" valueClass="string">Click the Calculate button</value>
                         </argument>
                         <argument id="wait">
-                          <value class="uiWait" uri="ui:wait:timed?seconds=5"/>
+                          <value class="uiWait" uri="ui:wait:autoRetry:timeout=10"/>
                         </argument>
                       </arguments>
                       <generatedParameters>
@@ -1709,7 +1683,7 @@
                           <value class="value" valueClass="string">Click the Save Price button</value>
                         </argument>
                         <argument id="wait">
-                          <value class="uiWait" uri="ui:wait:timed?seconds=5"/>
+                          <value class="uiWait" uri="ui:wait:autoRetry:timeout=10"/>
                         </argument>
                       </arguments>
                       <generatedParameters>
@@ -1737,7 +1711,7 @@
                   <value class="value" valueClass="string">On SF Quote detail (Quote Not Priced) screen</value>
                 </argument>
                 <argument id="navigate">
-                  <value class="value" valueClass="string">Always</value>
+                  <value class="value" valueClass="string">Dont</value>
                 </argument>
                 <argument id="windowSelection">
                   <value class="value" valueClass="string">Default</value>
@@ -2231,10 +2205,10 @@
               <clauses>
                 <clause name="substeps" testItemId="877">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="878" title="Set the Lot Size control to 100">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="878" title="Set the Lot Size Re Do field to 100">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=lotSize"/>
+                          <value class="uiLocator" uri="ui:locator?name=LotSizeReDo"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
@@ -2243,10 +2217,10 @@
                           <value class="value" valueClass="string">100</value>
                         </argument>
                         <argument id="blur">
-                          <value class="value" valueClass="boolean">false</value>
+                          <value class="value" valueClass="boolean">true</value>
                         </argument>
                         <argument id="pressEnter">
-                          <value class="value" valueClass="boolean">true</value>
+                          <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="captureBefore">
                           <value class="value" valueClass="boolean">false</value>
@@ -2255,10 +2229,10 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Lot Size control to 100</value>
+                          <value class="value" valueClass="string">Set the Lot Size Re Do field to 100</value>
                         </argument>
                         <argument id="wait">
-                          <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
+                          <value class="uiWait" uri="ui:wait:autoRetry:timeout=10"/>
                         </argument>
                       </arguments>
                       <generatedParameters>
@@ -2307,7 +2281,7 @@
                           <value class="value" valueClass="string">Click the Calculate button</value>
                         </argument>
                         <argument id="wait">
-                          <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
+                          <value class="uiWait" uri="ui:wait:autoRetry:timeout=10"/>
                         </argument>
                       </arguments>
                       <generatedParameters>
@@ -2340,7 +2314,7 @@
                           <value class="value" valueClass="string">Click the Save Price button</value>
                         </argument>
                         <argument id="wait">
-                          <value class="uiWait" uri="ui:wait:timed?seconds=5"/>
+                          <value class="uiWait" uri="ui:wait:autoRetry:timeout=10"/>
                         </argument>
                       </arguments>
                       <generatedParameters>
@@ -2368,7 +2342,7 @@
                   <value class="value" valueClass="string">On SF Quote detail (Quote Not Priced) screen</value>
                 </argument>
                 <argument id="navigate">
-                  <value class="value" valueClass="string">Always</value>
+                  <value class="value" valueClass="string">Dont</value>
                 </argument>
                 <argument id="windowSelection">
                   <value class="value" valueClass="string">Default</value>
@@ -2862,10 +2836,10 @@
               <clauses>
                 <clause name="substeps" testItemId="926">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="927" title="Set the Lot Size control to 100">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="927" title="Set the Lot Size Re Do field to 100">
                       <arguments>
                         <argument id="locator">
-                          <value class="uiLocator" uri="ui:locator?name=lotSize"/>
+                          <value class="uiLocator" uri="ui:locator?name=LotSizeReDo"/>
                         </argument>
                         <argument id="interaction">
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
@@ -2874,10 +2848,10 @@
                           <value class="value" valueClass="string">100</value>
                         </argument>
                         <argument id="blur">
-                          <value class="value" valueClass="boolean">false</value>
+                          <value class="value" valueClass="boolean">true</value>
                         </argument>
                         <argument id="pressEnter">
-                          <value class="value" valueClass="boolean">true</value>
+                          <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="captureBefore">
                           <value class="value" valueClass="boolean">false</value>
@@ -2886,10 +2860,10 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Lot Size control to 100</value>
+                          <value class="value" valueClass="string">Set the Lot Size Re Do field to 100</value>
                         </argument>
                         <argument id="wait">
-                          <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
+                          <value class="uiWait" uri="ui:wait:autoRetry:timeout=10"/>
                         </argument>
                       </arguments>
                       <generatedParameters>
@@ -2938,7 +2912,7 @@
                           <value class="value" valueClass="string">Click the Calculate button</value>
                         </argument>
                         <argument id="wait">
-                          <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
+                          <value class="uiWait" uri="ui:wait:autoRetry:timeout=10"/>
                         </argument>
                       </arguments>
                       <generatedParameters>
@@ -2971,7 +2945,7 @@
                           <value class="value" valueClass="string">Click the Save Price button</value>
                         </argument>
                         <argument id="wait">
-                          <value class="uiWait" uri="ui:wait:timed?seconds=5"/>
+                          <value class="uiWait" uri="ui:wait:autoRetry:timeout=10"/>
                         </argument>
                       </arguments>
                       <generatedParameters>
@@ -2999,7 +2973,7 @@
                   <value class="value" valueClass="string">On SF Quote detail (Quote Not Priced) screen</value>
                 </argument>
                 <argument id="navigate">
-                  <value class="value" valueClass="string">Always</value>
+                  <value class="value" valueClass="string">Dont</value>
                 </argument>
                 <argument id="windowSelection">
                   <value class="value" valueClass="string">Default</value>
@@ -3587,7 +3561,7 @@
           <value class="uiTarget" uri="sf:ui:target?object=Quote&amp;action=View&amp;recordType=Quote+Synced"/>
         </argument>
         <argument id="navigate">
-          <value class="value" valueClass="string">Always</value>
+          <value class="value" valueClass="string">Dont</value>
         </argument>
         <argument id="sfUiTargetObjectId">
           <value class="variable">
@@ -6310,6 +6284,18 @@
         </textType>
       </type>
     </param>
+    <param name="QuoteName" title="QuoteName">
+      <summary/>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+            <valueConstraint name="regex"/>
+          </constraints>
+        </textType>
+      </type>
+    </param>
   </params>
   <args>
     <argument id="Product1">
@@ -6320,6 +6306,9 @@
     </argument>
     <argument id="Product3">
       <value class="value" valueClass="string">MINI New Car Co-op Max 2014</value>
+    </argument>
+    <argument id="QuoteName">
+      <value class="value" valueClass="string">Weber MINI New Products</value>
     </argument>
   </args>
   <tags/>

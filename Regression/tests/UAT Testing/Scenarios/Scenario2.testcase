@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="18" registryId="cfa01eeb-e03b-4624-b86f-c2512b0a9553">
+<testCase id="10" registryId="cfa01eeb-e03b-4624-b86f-c2512b0a9553">
   <summary>&lt;p&gt;8/23/2016&lt;/p&gt;\n&lt;p&gt;PASS&lt;/p&gt;</summary>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1028" title="Salesforce Connect: SalesforceConnection (Test)">
@@ -579,7 +579,7 @@
       </clauses>
       <generatedParameters>
         <apiParam group="result" name="sfUiTargetResultName" resultNameParameter="true" title="Result Name">
-          <summary>The name under which the resulting Opportunity Id will be stored.</summary>
+          <summary>The name under which the resulting Object Id will be stored.</summary>
           <type>
             <textType/>
           </type>
@@ -1779,7 +1779,7 @@
       <clauses>
         <clause name="substeps" testItemId="1085">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="1086" title="Set the Lot Size Re Do control to 200">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="1086" title="Set the Lot Size Re Do field to 200">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=LotSizeReDo"/>
@@ -1803,7 +1803,7 @@
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the Lot Size Re Do control to 200</value>
+                  <value class="value" valueClass="string">Set the Lot Size Re Do field to 200</value>
                 </argument>
                 <argument id="wait"/>
               </arguments>
@@ -1881,7 +1881,7 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="1088" title="Set the Quantity control to 55">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="1088" title="Set the Quantity field to 55">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=Quantity"/>
@@ -1905,7 +1905,7 @@
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the Quantity control to 55</value>
+                  <value class="value" valueClass="string">Set the Quantity field to 55</value>
                 </argument>
                 <argument id="wait"/>
               </arguments>
@@ -3672,9 +3672,10 @@
                         <argument id="interactionDescription">
                           <value class="value" valueClass="string">Click the Change Signer</value>
                         </argument>
+                        <argument id="wait"/>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="hover" title="Hover before Clicking">
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
                           <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                           <type>
                             <booleanType/>

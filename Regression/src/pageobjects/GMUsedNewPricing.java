@@ -30,6 +30,8 @@ public class GMUsedNewPricing {
 	@ButtonType()
 	@FindByLabel(label = "Calculate")
 	public WebElement Calculate;
+	@PageWait.Timed(durationSeconds = 3)
+	@PageWaitAfter.Timed(durationSeconds = 5)
 	@ButtonType()
 	@FindByLabel(label = "Save Price")
 	public WebElement SavePrice;

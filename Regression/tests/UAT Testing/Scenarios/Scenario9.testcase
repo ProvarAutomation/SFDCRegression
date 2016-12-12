@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="10">
+<testCase id="19">
   <summary>&lt;p&gt;8/23/2016&lt;/p&gt;\n&lt;p&gt;PASS&lt;/p&gt;</summary>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1028" title="Salesforce Connect: SalesforceConnection (Test)">
@@ -1549,16 +1549,16 @@
       <clauses>
         <clause name="substeps" testItemId="1085">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="1136" title="Set the Lot Size control to 150">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="1136" title="Set the Lotsizeagain field to 150">
               <arguments>
                 <argument id="locator">
-                  <value class="uiLocator" uri="ui:locator?name=lotSize"/>
+                  <value class="uiLocator" uri="ui:locator?name=Lotsizeagain"/>
                 </argument>
                 <argument id="interaction">
                   <value class="uiInteraction" uri="ui:interaction?name=set"/>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the Lot Size control to 150</value>
+                  <value class="value" valueClass="string">Set the Lotsizeagain field to 150</value>
                 </argument>
                 <argument id="wait"/>
                 <argument id="captureBefore">

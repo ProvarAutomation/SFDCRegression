@@ -768,6 +768,10 @@ public class OrderConfigurationVF {
 	@ButtonType()
 	@VisualforceBy(componentXPath = "apex:commandButton[@action='{!saveAction}']")
 	public WebElement save2;
+
+	@TextType()
+	@FindBy(id = "pgId:frmId:mainPgBlkId:j_id43:j_id44:8:j_id45:j_id47_lkwgt")
+	public WebElement FrontlineProSearch;
 	
 	
 	

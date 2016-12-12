@@ -125,7 +125,7 @@
                       <clauses>
                         <clause name="substeps" testItemId="205">
                           <steps>
-                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="206" title="Check the Select control">
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="206" title="Check the Select field">
                               <arguments>
                                 <argument id="locator">
                                   <value class="uiLocator" uri="ui:locator?name=select&amp;rowLocator=productName+%3D+%27Alpha+2014%27"/>
@@ -143,11 +143,12 @@
                                   <value class="value" valueClass="boolean">false</value>
                                 </argument>
                                 <argument id="interactionDescription">
-                                  <value class="value" valueClass="string">Check the Select control</value>
+                                  <value class="value" valueClass="string">Check the Select field</value>
                                 </argument>
                                 <argument id="wait">
-                                  <value class="uiWait" uri="ui:wait:pageload?timeout=60"/>
+                                  <value class="uiWait" uri="ui:wait:autoRetry:timeout=10"/>
                                 </argument>
+                                <argument id="blur"/>
                               </arguments>
                               <generatedParameters>
                                 <apiParam group="value" name="blur" title="Tab off field">
@@ -205,14 +206,7 @@
           </steps>
         </clause>
       </clauses>
-      <generatedParameters>
-        <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
-          <summary>The Id of the SF Object to be Viewed or Edited.</summary>
-          <type>
-            <textType/>
-          </type>
-        </apiParam>
-      </generatedParameters>
+      <generatedParameters/>
     </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="208" title="On SF Opportunity Product add product2 screen">
       <arguments>

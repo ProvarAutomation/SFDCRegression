@@ -37,6 +37,7 @@ public class PriceOppProductLaunch {
 	@FindByLabel(label = "Remove")
 	public WebElement remove;
 	
+	@PageWaitAfter.Timed(durationSeconds = 3)
 	@PageWait.Timed(durationSeconds = 3)
 	@ButtonType()
 	@FindByLabel(label = "Calculate")
@@ -66,8 +67,8 @@ public class PriceOppProductLaunch {
 	@ChoiceListType()
 	public WebElement AlphaZone;
 	
+	@PageWait.Timed(durationSeconds = 3)
 	@PageWaitAfter.Timed(durationSeconds = 3)
-	@PageWait.Field(timeoutSeconds = 10)
 	@FindBy(xpath = "//label/span[text()='Make:']/../../select")
 	@ChoiceListType()
 	public WebElement Make;
@@ -139,11 +140,11 @@ public class PriceOppProductLaunch {
 
 	@PageWait.Timed(durationSeconds = 5)
 	@ChoiceListType()
-	@FindBy(id = "418:23;a")
+	@FindBy(id = "418:21;a")
 	public WebElement New_Make_2;
 
+	@FindBy(id = "12:21;a")
 	@TextType()
-	@FindBy(xpath = "//form/div[1]/div[3]//input")
 	public WebElement LotSize21;
 
 	@PageWait.Timed(durationSeconds = 3)
@@ -155,6 +156,11 @@ public class PriceOppProductLaunch {
 	@TextType()
 	@FindBy(xpath = "//div[contains(@class, \"slds-m-top--medium\")]/div/div/input")
 	public WebElement Lotsizeagain;
+
+	@ChoiceListType(values = { @ChoiceListValue(value = "Select a Make"), @ChoiceListValue(value = "Early Model"),
+			@ChoiceListValue(value = "Any Make") })
+	@FindBy(xpath = "//*[@id=\"34:21;a\"]")
+	public WebElement UsedMake;
 
 
 }

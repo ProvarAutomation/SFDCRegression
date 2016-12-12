@@ -2871,7 +2871,7 @@
               <clauses>
                 <clause name="substeps" testItemId="259">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="260" title="Set the Lot Size control to 100">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="260" title="Set the Lot Size field to 100">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=lotSize"/>
@@ -2895,7 +2895,7 @@
                           <value class="value" valueClass="boolean">false</value>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Lot Size control to 100</value>
+                          <value class="value" valueClass="string">Set the Lot Size field to 100</value>
                         </argument>
                         <argument id="wait">
                           <value class="uiWait" uri="ui:wait:timed?seconds=3"/>
